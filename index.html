@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shree Varsha V K | Psychology • Social Impact • Entrepreneurship • ProtoSem</title>
-  <meta name="description" content="Portfolio of Shree Varsha V K - Psychology undergraduate, Innovation Engineer Trainee at PRICE ProtoSem, Founder of Memorea, and Social Impact Leader.">
+  <title>Shree Varsha V K — Psychology, Social Impact & Entrepreneurship</title>
+  <meta name="description" content="Personal editorial portfolio of Shree Varsha V K - B.Sc. Psychology student, Innovation Engineer Trainee at PRICE ProtoSem, Founder of Memorea, and Social Impact Leader.">
 
-  <!-- Google Fonts: Inter, Outfit, Fira Code -->
+  <!-- Google Fonts: Cormorant Garamond, Playfair Display, Plus Jakarta Sans, Caveat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,31 +19,31 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            heading: ['Outfit', 'sans-serif'],
-            mono: ['Fira Code', 'monospace'],
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'sans-serif'],
+            handwriting: ['"Caveat"', 'cursive'],
           },
           colors: {
-            brand: {
-              50: '#fff1f2',
-              100: '#ffe4e6',
-              200: '#fecdd3',
-              300: '#fda4af',
-              400: '#fb7185',
-              500: '#f43f5e',
-              600: '#e11d48',
-              700: '#be123c',
-              800: '#9f1239',
-              900: '#881337',
-              terracotta: '#E07A5F',
-              roseGold: '#F2CC8F',
-              clay: '#C85A32'
+            ivory: {
+              50: '#FDFCF9',
+              100: '#FAF8F5',
+              200: '#F4EFEB',
+              300: '#EBE4DC',
+              400: '#DDD5C8',
             },
-            dark: {
-              base: '#0f0f13',
-              card: '#16161f',
-              border: '#272738',
-              hover: '#1e1e2d'
+            charcoal: {
+              900: '#1C1917',
+              800: '#292524',
+              700: '#44403C',
+              600: '#57534E',
+              500: '#78716C',
+            },
+            terracotta: {
+              DEFAULT: '#C85A32',
+              light: '#E27650',
+              dark: '#A64320',
+              muted: '#D47A58',
+              soft: 'rgba(200, 90, 50, 0.08)',
             }
           }
         }
@@ -57,805 +57,962 @@
   <!-- AOS (Animate on Scroll) CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Custom CSS for Glows, Bento Cards, and Timeline Styling -->
+  <!-- Editorial Magazine Styling -->
   <style>
     body {
-      background-color: #0d0d12;
-      color: #e2e8f0;
-      font-family: 'Inter', sans-serif;
+      background-color: #FAF8F5;
+      color: #1C1917;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
-    }
-    
-    .glow-rose {
-      box-shadow: 0 0 40px -10px rgba(225, 29, 72, 0.35);
-    }
-    
-    .glow-terracotta {
-      box-shadow: 0 0 35px -8px rgba(224, 122, 95, 0.35);
+      -webkit-font-smoothing: antialiased;
     }
 
-    .terminal-bg {
-      background: linear-gradient(180deg, #181824 0%, #111119 100%);
-      border: 1px solid #2d2d42;
+    ::selection {
+      background-color: #C85A32;
+      color: #FAF8F5;
     }
 
-    .bento-card {
-      background: linear-gradient(145deg, rgba(26, 26, 38, 0.85) 0%, rgba(18, 18, 27, 0.95) 100%);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      backdrop-filter: blur(12px);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Editorial lines and borders */
+    .editorial-border {
+      border-color: #E6DFD5;
     }
 
-    .bento-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(251, 113, 133, 0.4);
-      box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5), 0 0 25px -5px rgba(244, 63, 94, 0.15);
+    .editorial-card {
+      background-color: #FFFFFF;
+      border: 1px solid #EBE4DC;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .editorial-card:hover {
+      border-color: #C85A32;
+      transform: translateY(-2px);
     }
 
-    .week-card {
-      background: linear-gradient(135deg, rgba(28, 28, 42, 0.7) 0%, rgba(18, 18, 28, 0.9) 100%);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
+    .week-entry {
+      background-color: #FFFFFF;
+      border: 1px solid #EBE4DC;
+      transition: all 0.25s ease;
     }
-
-    .week-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(251, 113, 133, 0.5);
-      background: linear-gradient(135deg, rgba(38, 38, 56, 0.85) 0%, rgba(24, 24, 38, 0.95) 100%);
-      box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.4), 0 0 20px -3px rgba(244, 63, 94, 0.2);
-    }
-
-    .week-card:hover .week-arrow {
-      transform: translateX(4px);
-      color: #fb7185;
-    }
-
-    .week-card:hover .week-number {
-      color: #fda4af;
-    }
-
-    .gradient-text {
-      background: linear-gradient(135deg, #fda4af 0%, #fb7185 40%, #E07A5F 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .week-entry:hover {
+      border-color: #C85A32;
+      background-color: #FDFCF9;
+      transform: translateY(-2px);
     }
 
     .phase-tab.active {
-      background: linear-gradient(135deg, #e11d48 0%, #E07A5F 100%);
-      color: #ffffff;
-      border-color: transparent;
-      box-shadow: 0 4px 15px -3px rgba(225, 29, 72, 0.4);
+      background-color: #C85A32;
+      color: #FAF8F5;
+      border-color: #C85A32;
     }
 
     .custom-scrollbar::-webkit-scrollbar {
-      width: 6px;
+      width: 5px;
     }
     .custom-scrollbar::-webkit-scrollbar-track {
-      background: #0f0f14;
+      background: #FAF8F5;
     }
     .custom-scrollbar::-webkit-scrollbar-thumb {
-      background: #2b2b3d;
-      border-radius: 4px;
+      background: #DDD5C8;
+      border-radius: 2px;
     }
     .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-      background: #e11d48;
+      background: #C85A32;
     }
   </style>
 </head>
-<body class="custom-scrollbar selection:bg-brand-500 selection:text-white">
+<body class="custom-scrollbar bg-[#FAF8F5] text-charcoal-900 selection:bg-terracotta selection:text-ivory-50">
 
-  <!-- Ambient Glow Elements -->
-  <div class="fixed top-0 left-1/4 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
-  <div class="fixed bottom-1/3 right-10 w-96 h-96 bg-brand-terracotta/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
-
-  <!-- Navigation Bar -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0d0d12]/85 backdrop-blur-md border-b border-white/5">
-    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="#hero" class="flex items-center gap-3 group">
-        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-brand-terracotta flex items-center justify-center text-white font-heading font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
-          SV
-        </div>
-        <span class="font-heading font-semibold text-lg tracking-tight text-white group-hover:text-brand-300 transition-colors">
-          Shree Varsha<span class="text-brand-400">.</span>
+  <!-- Top Editorial Header & Navigation -->
+  <header class="sticky top-0 z-50 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-[#E6DFD5] transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 sm:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand & Name -->
+      <a href="#hero" class="group flex flex-col">
+        <span class="font-serif text-2xl font-bold tracking-tight text-charcoal-900 group-hover:text-terracotta transition-colors">
+          Shree Varsha V K
+        </span>
+        <span class="text-[10px] tracking-widest uppercase font-mono text-charcoal-500">
+          Portfolio & Archive
         </span>
       </a>
 
-      <!-- Desktop Nav Links -->
-      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
-        <a href="#about" class="hover:text-brand-300 transition-colors">About</a>
-        <a href="#ventures" class="hover:text-brand-300 transition-colors">Memorea</a>
-        <a href="#leadership" class="hover:text-brand-300 transition-colors">Leadership</a>
-        <a href="#protosem" class="hover:text-brand-300 transition-colors flex items-center gap-1.5 text-brand-300 font-semibold">
-          <span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span> ProtoSem
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8 text-xs font-medium uppercase tracking-widest text-charcoal-700">
+        <a href="#about" class="hover:text-terracotta transition-colors py-1">About</a>
+        <a href="#ventures" class="hover:text-terracotta transition-colors py-1">Memorea</a>
+        <a href="#leadership" class="hover:text-terracotta transition-colors py-1">Leadership</a>
+        <a href="#protosem" class="hover:text-terracotta transition-colors py-1 flex items-center gap-1.5 text-terracotta font-semibold">
+          <span>ProtoSem</span>
         </a>
-        <a href="#impact" class="hover:text-brand-300 transition-colors">Social Impact</a>
-        <a href="#skills" class="hover:text-brand-300 transition-colors">Skills</a>
-        <a href="resume.html" target="_blank" class="px-4 py-2 rounded-lg bg-brand-500/10 border border-brand-500/30 text-brand-300 hover:bg-brand-500 hover:text-white transition-all flex items-center gap-2">
-          <i class="fa-solid fa-file-lines text-xs"></i> ATS Resume
+        <a href="#impact" class="hover:text-terracotta transition-colors py-1">Social Impact</a>
+        <a href="#skills" class="hover:text-terracotta transition-colors py-1">Skills</a>
+        <a href="#education" class="hover:text-terracotta transition-colors py-1">Education</a>
+        <a href="resume.html" target="_blank" class="px-4 py-2 border border-terracotta text-terracotta hover:bg-terracotta hover:text-white transition-all text-[11px] tracking-widest font-semibold rounded-sm">
+          ATS Resume
         </a>
       </nav>
 
-      <!-- Mobile Menu Toggle -->
-      <div class="flex items-center gap-3 md:hidden">
-        <a href="resume.html" target="_blank" class="px-3 py-1.5 rounded-lg bg-brand-500 text-white text-xs font-medium">
+      <!-- Mobile Menu Button -->
+      <div class="flex items-center gap-4 md:hidden">
+        <a href="resume.html" target="_blank" class="text-xs px-3 py-1.5 border border-terracotta text-terracotta font-medium">
           Resume
         </a>
-        <button id="menu-btn" class="text-slate-400 hover:text-white p-2 text-lg">
-          <i class="fa-solid fa-bars"></i>
+        <button id="menu-btn" class="text-charcoal-800 hover:text-terracotta p-1 text-xl" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars-staggered"></i>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Nav Dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden px-6 py-4 bg-[#14141d] border-b border-slate-800 space-y-3">
-      <a href="#about" class="block text-slate-300 hover:text-brand-400 py-1">About</a>
-      <a href="#ventures" class="block text-slate-300 hover:text-brand-400 py-1">Memorea</a>
-      <a href="#leadership" class="block text-slate-300 hover:text-brand-400 py-1">Leadership</a>
-      <a href="#protosem" class="block text-brand-300 font-semibold hover:text-brand-400 py-1">ProtoSem (20-Week Journey)</a>
-      <a href="#impact" class="block text-slate-300 hover:text-brand-400 py-1">Social Impact</a>
-      <a href="#skills" class="block text-slate-300 hover:text-brand-400 py-1">Skills</a>
-      <a href="#contact" class="block text-slate-300 hover:text-brand-400 py-1">Contact</a>
+    <!-- Mobile Nav Menu Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 py-5 bg-[#FAF8F5] border-b border-[#E6DFD5] space-y-3 text-xs uppercase tracking-widest text-charcoal-700">
+      <a href="#about" class="block py-1 hover:text-terracotta">About</a>
+      <a href="#ventures" class="block py-1 hover:text-terracotta">Memorea</a>
+      <a href="#leadership" class="block py-1 hover:text-terracotta">Leadership</a>
+      <a href="#protosem" class="block py-1 text-terracotta font-semibold">PRICE ProtoSem (20 Weeks)</a>
+      <a href="#impact" class="block py-1 hover:text-terracotta">Social Impact</a>
+      <a href="#skills" class="block py-1 hover:text-terracotta">Skills</a>
+      <a href="#education" class="block py-1 hover:text-terracotta">Education</a>
+      <a href="#contact" class="block py-1 hover:text-terracotta">Contact</a>
     </div>
   </header>
 
-  <!-- Hero Section: Storyteller Terminal -->
-  <section id="hero" class="pt-32 pb-20 px-6 max-w-6xl mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+  <!-- Main Content Container -->
+  <main class="max-w-6xl mx-auto px-6 sm:px-8">
+
+    <!-- ========================================== -->
+    <!-- HERO SECTION (Editorial Spread)           -->
+    <!-- ========================================== -->
+    <section id="hero" class="pt-16 pb-20 border-b border-[#E6DFD5]">
       
-      <!-- Left: Bio & Highlights -->
-      <div class="lg:col-span-7 space-y-6" data-aos="fade-up" data-aos-duration="900">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold tracking-wide uppercase">
-          <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
-          Psychology • Social Impact • Entrepreneurship
-        </div>
-
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight text-white leading-tight">
-          Bridging <span class="gradient-text">Human Mind</span>, Leadership & Creative Ventures.
-        </h1>
-
-        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
-          Hi, I'm <strong class="text-white">Shree Varsha V K</strong> — a psychology undergraduate at Kumaraguru College, Innovation Engineer Trainee at <strong class="text-brand-300">PRICE ProtoSem</strong>, student leader (VP Social Vertical), and founder of <em class="text-brand-300 not-italic font-semibold">Memorea</em>. Passionate about understanding human behaviour, consumer psychology, and building community-driven initiatives.
-        </p>
-
-        <!-- CTA Buttons -->
-        <div class="flex flex-wrap items-center gap-4 pt-2">
-          <a href="#contact" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-terracotta text-white font-medium shadow-lg hover:shadow-brand-500/25 hover:scale-[1.02] transition-all flex items-center gap-2">
-            <span>Let's Connect</span>
-            <i class="fa-solid fa-arrow-right text-xs"></i>
-          </a>
-          <a href="#protosem" class="px-6 py-3.5 rounded-xl bg-slate-800/90 hover:bg-slate-800 border border-brand-500/30 text-brand-300 font-medium hover:border-brand-400 transition-all flex items-center gap-2">
-            <i class="fa-solid fa-compass text-xs text-brand-400"></i>
-            <span>Explore ProtoSem Journey</span>
-          </a>
-          <a href="resume.html" target="_blank" class="px-5 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 font-medium transition-all flex items-center gap-2">
-            <i class="fa-solid fa-download text-xs text-slate-400"></i>
-            <span>ATS Resume</span>
-          </a>
-        </div>
-
-        <!-- Social Badges -->
-        <div class="flex items-center gap-4 pt-3 text-slate-400 text-sm">
-          <span class="text-xs uppercase tracking-wider text-slate-500 font-semibold">Connect:</span>
-          <a href="https://www.linkedin.com/in/shree-varsha-vk-458909373" target="_blank" class="hover:text-brand-300 transition-colors p-2 rounded-lg bg-white/5 border border-white/5 hover:border-brand-400/30" title="LinkedIn Profile">
-            <i class="fa-brands fa-linkedin text-lg"></i>
-          </a>
-          <a href="mailto:shreevarsha80@gmail.com" class="hover:text-brand-300 transition-colors p-2 rounded-lg bg-white/5 border border-white/5 hover:border-brand-400/30" title="Email Shree Varsha">
-            <i class="fa-solid fa-envelope text-lg"></i>
-          </a>
-          <a href="tel:8610082382" class="hover:text-brand-300 transition-colors p-2 rounded-lg bg-white/5 border border-white/5 hover:border-brand-400/30" title="Phone">
-            <i class="fa-solid fa-phone text-lg"></i>
-          </a>
-          <a href="https://github.com/shreevarsha80-prog" target="_blank" class="hover:text-brand-300 transition-colors p-2 rounded-lg bg-white/5 border border-white/5 hover:border-brand-400/30" title="GitHub">
-            <i class="fa-brands fa-github text-lg"></i>
-          </a>
-        </div>
+      <!-- Issue / Volume Header Bar -->
+      <div class="flex flex-wrap items-center justify-between pb-6 mb-12 border-b border-[#E6DFD5] text-[11px] uppercase tracking-widest text-charcoal-500 font-mono" data-aos="fade-in">
+        <span>Coimbatore, Tamil Nadu, India</span>
+        <span class="hidden sm:inline">B.Sc. Psychology • Kumaraguru College</span>
+        <span class="text-terracotta font-semibold">2026 — 2027</span>
       </div>
 
-      <!-- Right: Storyteller Interactive Terminal -->
-      <div class="lg:col-span-5" data-aos="zoom-in" data-aos-duration="1000">
-        <div class="terminal-bg rounded-2xl shadow-2xl overflow-hidden glow-rose">
-          <!-- Terminal Header -->
-          <div class="bg-[#1e1e2d] px-4 py-3 flex items-center justify-between border-b border-slate-700/60">
-            <div class="flex items-center gap-2">
-              <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
-              <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
-              <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        
+        <!-- Left Column: Title, Subtitle, Ethos & Introduction -->
+        <div class="lg:col-span-7 space-y-8" data-aos="fade-up" data-aos-duration="800">
+          
+          <div class="space-y-4">
+            <div class="inline-block text-terracotta font-handwriting text-2xl">
+              People, purpose &amp; the stories between.
             </div>
-            <span class="text-xs font-mono text-slate-400 flex items-center gap-1">
-              <i class="fa-solid fa-terminal text-[10px] text-brand-400"></i> shreevarsha-terminal ~ zsh
-            </span>
-            <span class="text-[10px] px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 font-mono">v2.026</span>
+            
+            <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-charcoal-900 leading-[1.05] tracking-tight">
+              Shree Varsha <span class="italic font-normal font-serif text-terracotta">V K</span>
+            </h1>
+
+            <p class="font-serif text-xl sm:text-2xl text-charcoal-700 italic leading-snug pt-1">
+              B.Sc. Psychology | Social Impact | Entrepreneurship | Marketing &amp; Communication
+            </p>
           </div>
 
-          <!-- Terminal Body with Avatar & Live Code -->
-          <div class="p-6 font-mono text-xs sm:text-sm space-y-4 text-slate-300 bg-[#0f0f18]/90">
+          <div class="w-16 h-[2px] bg-terracotta"></div>
+
+          <!-- Editorial Lead Paragraph -->
+          <p class="text-charcoal-700 text-base sm:text-lg leading-relaxed font-normal max-w-xl">
+            Psychology undergraduate with experience in social-impact initiatives, student leadership, entrepreneurship, marketing, public speaking and community engagement. Currently serving as <strong class="text-charcoal-900 font-semibold">Vice President – Social Vertical (2026–27)</strong>, with prior experience as Joint Secretary – Social Vertical (2025–26).
+          </p>
+
+          <!-- Contact / Quick Action Bar -->
+          <div class="pt-2 flex flex-wrap items-center gap-4 text-xs font-medium">
+            <a href="#contact" class="px-6 py-3.5 bg-charcoal-900 hover:bg-terracotta text-ivory-50 transition-all uppercase tracking-widest rounded-sm font-semibold flex items-center gap-2">
+              <span>Get in Touch</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+            <a href="resume.html" target="_blank" class="px-6 py-3.5 border border-charcoal-900 hover:border-terracotta hover:text-terracotta text-charcoal-900 transition-all uppercase tracking-widest rounded-sm font-semibold flex items-center gap-2 bg-transparent">
+              <i class="fa-regular fa-file-lines text-xs"></i>
+              <span>View ATS Resume</span>
+            </a>
+          </div>
+
+          <!-- Social / Direct Contact Links -->
+          <div class="pt-4 flex flex-wrap items-center gap-6 text-xs text-charcoal-600 border-t border-[#E6DFD5] max-w-lg">
+            <a href="mailto:shreevarsha80@gmail.com" class="hover:text-terracotta transition-colors flex items-center gap-2">
+              <i class="fa-regular fa-envelope text-terracotta"></i>
+              <span>shreevarsha80@gmail.com</span>
+            </a>
+            <a href="tel:8610082382" class="hover:text-terracotta transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-phone text-terracotta"></i>
+              <span>+91 86100 82382</span>
+            </a>
+            <a href="https://www.linkedin.com/in/shree-varsha-vk-458909373" target="_blank" class="hover:text-terracotta transition-colors flex items-center gap-1.5">
+              <i class="fa-brands fa-linkedin text-terracotta"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/shreevarsha80-prog" target="_blank" class="hover:text-terracotta transition-colors flex items-center gap-1.5">
+              <i class="fa-brands fa-github text-terracotta"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Editorial Portrait & Candid Frame -->
+        <div class="lg:col-span-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+          <div class="relative bg-white p-4 border border-[#E6DFD5] shadow-sm">
             
-            <div class="flex items-center gap-4 pb-3 border-b border-slate-800">
-              <!-- Avatar with failsafe & fallback -->
+            <div class="overflow-hidden bg-[#F4EFEB] aspect-[4/5] relative">
               <img 
                 src="profile.jpg" 
-                onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Shree+Varsha+V+K&background=e11d48&color=ffffff&size=256&bold=true';" 
+                onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Shree+Varsha+V+K&background=C85A32&color=FAF8F5&size=512&bold=true';" 
                 alt="Shree Varsha V K" 
-                class="w-16 h-16 rounded-xl object-cover ring-2 ring-brand-500/40 shadow-md"
+                class="w-full h-full object-cover grayscale-[10%] hover:grayscale-0 transition-all duration-700"
               >
-              <div>
-                <p class="text-white font-heading font-bold text-base">Shree Varsha V K</p>
-                <p class="text-slate-400 text-xs font-sans">Coimbatore, Tamil Nadu, India</p>
-                <span class="inline-block mt-1 text-[11px] font-mono text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/40">
-                  ● Status: Active & Building
-                </span>
-              </div>
             </div>
 
-            <!-- Terminal Commands -->
-            <div class="space-y-3">
-              <div>
-                <p class="text-slate-500 text-xs">$ shreevarsha.getRoles()</p>
-                <p class="text-brand-300 font-medium pl-3">
-                  ➜ <span id="typed-roles"></span>
-                </p>
-              </div>
-
-              <div>
-                <p class="text-slate-500 text-xs">$ shreevarsha.protoSemFocus</p>
-                <p class="text-emerald-300/90 pl-3">
-                  ➜ "Innovation Engineer Trainee (20-Week)"
-                </p>
-              </div>
-
-              <div>
-                <p class="text-slate-500 text-xs">$ shreevarsha.venturePhilosophy</p>
-                <p class="text-amber-200/90 pl-3 italic">
-                  “Memories, made to wear.” — Memorea
-                </p>
-              </div>
-
-              <div class="pt-2 border-t border-slate-800 flex justify-between items-center text-[11px] text-slate-400">
-                <span>B.Sc. Psychology ('28)</span>
-                <span class="text-brand-400 font-semibold">Kumaraguru College</span>
-              </div>
+            <div class="pt-4 flex items-center justify-between text-xs text-charcoal-600 font-mono">
+              <span class="uppercase tracking-widest text-[10px]">Figure 01 / Portrait</span>
+              <span class="text-terracotta font-serif italic text-sm">“Memories, made to wear.”</span>
             </div>
 
+            <!-- Subtle Tag Overlay -->
+            <div class="mt-3 pt-3 border-t border-[#E6DFD5] text-[11px] text-charcoal-500 leading-relaxed font-sans">
+              Founder of <em>Memorea</em> • Student Leader • Innovation Engineer Trainee (PRICE ProtoSem)
+            </div>
           </div>
         </div>
+
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- Bento Grid Showcase Section -->
-  <section id="about" class="py-16 px-6 max-w-6xl mx-auto">
-    <div class="text-center max-w-2xl mx-auto mb-14" data-aos="fade-up">
-      <h2 class="text-xs font-mono font-bold tracking-widest text-brand-400 uppercase mb-2">Modular Overview</h2>
-      <h3 class="text-3xl sm:text-4xl font-heading font-bold text-white">The Bento Grid</h3>
-      <p class="text-slate-400 text-sm sm:text-base mt-2">A holistic look at my entrepreneurial venture, leadership track record, and psychological focus.</p>
-    </div>
-
-    <!-- Bento Grid Container -->
-    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-12 gap-6">
-
-      <!-- Bento 1: Memorea (Large Span: 7 cols) -->
-      <div id="ventures" class="lg:col-span-7 bento-card rounded-2xl p-7 flex flex-col justify-between relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-        <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-brand-500/10 rounded-full blur-2xl"></div>
+    <!-- ========================================== -->
+    <!-- SECTION 01: PROFESSIONAL PROFILE & ABOUT   -->
+    <!-- ========================================== -->
+    <section id="about" class="py-20 border-b border-[#E6DFD5]">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-rose-500/15 text-rose-300 border border-rose-500/20">
-              <i class="fa-solid fa-gem mr-1"></i> Venture & Brand
-            </span>
-            <span class="text-xs text-slate-400 font-mono">Founder & Creator</span>
-          </div>
-
-          <h4 class="text-2xl font-heading font-bold text-white mb-1">Memorea</h4>
-          <p class="text-brand-300 text-sm font-medium italic mb-4">“Memories, made to wear.”</p>
-          <p class="text-slate-300 text-sm leading-relaxed mb-6">
-            A personalized accessories and keepsakes venture dedicated to capturing meaningful moments and personal stories in wearable art. Managing end-to-end product development, customer communication, pricing strategies, branding, and sales.
-          </p>
-
-          <!-- Product Tags -->
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs border border-slate-700/60">Phone Charms</span>
-            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs border border-slate-700/60">Customized Bracelets</span>
-            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs border border-slate-700/60">Plushie Charms</span>
-            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs border border-slate-700/60">Keepsakes</span>
-            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs border border-slate-700/60">Hair Accessories</span>
-          </div>
-        </div>
-
-        <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
-          <span><i class="fa-solid fa-cubes text-brand-400 mr-1.5"></i>Product Lifecycle & Pricing</span>
-          <span><i class="fa-solid fa-bullhorn text-brand-400 mr-1.5"></i>Storytelling Marketing</span>
-        </div>
-      </div>
-
-      <!-- Bento 2: Leadership Impact (Span: 5 cols) -->
-      <div id="leadership" class="lg:col-span-5 bento-card rounded-2xl p-7 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/20">
-              <i class="fa-solid fa-users mr-1"></i> Student Leadership
-            </span>
-            <span class="text-xs text-slate-400 font-mono">2025–2027</span>
-          </div>
-
-          <h4 class="text-xl font-heading font-bold text-white mb-2">Social Vertical Leadership</h4>
-          
-          <div class="space-y-4 my-4">
-            <div class="border-l-2 border-brand-500 pl-3">
-              <p class="text-white font-semibold text-sm">Vice President – Social Vertical</p>
-              <p class="text-slate-400 text-xs">2026 – 2027</p>
-              <p class="text-slate-300 text-xs mt-1">Leading campus-wide social impact initiatives, stakeholder coordination, and community campaigns.</p>
-            </div>
-
-            <div class="border-l-2 border-slate-700 pl-3">
-              <p class="text-white font-semibold text-sm">Joint Secretary – Social Vertical</p>
-              <p class="text-slate-400 text-xs">2025 – 2026</p>
-              <p class="text-slate-300 text-xs mt-1">Spearheaded food waste reduction, e-waste awareness, and community outreach.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="pt-3 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
-          <span><i class="fa-solid fa-award text-amber-400 mr-1"></i> ASPL Gedee Public School</span>
-          <span>Community Outreach</span>
-        </div>
-      </div>
-
-      <!-- Bento 3: PRICE ProtoSem Highlight (Span: 4 cols) -->
-      <div class="lg:col-span-4 bento-card rounded-2xl p-6 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
-        <div>
-          <div class="flex items-center justify-between mb-3">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/20">
-              <i class="fa-solid fa-seedling mr-1"></i> Innovation & Fellowship
-            </span>
-            <span class="text-[11px] font-mono text-emerald-400">100% Scholarship</span>
-          </div>
-
-          <h4 class="text-lg font-heading font-bold text-white mb-2">PRICE ProtoSem — Forge</h4>
-          <p class="text-slate-300 text-xs leading-relaxed mb-4">
-            Selected for the prestigious 20-week innovation programme exploring retail & commerce challenges, AI, intelligent systems, prototyping, and venture design.
+        <!-- Left Section Label -->
+        <div class="lg:col-span-4 space-y-2" data-aos="fade-up">
+          <span class="font-mono text-xs text-terracotta uppercase tracking-widest font-semibold">01 / Overview</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal-900">
+            Professional Profile
+          </h2>
+          <p class="font-serif italic text-charcoal-600 text-lg">
+            Human behavior, marketing &amp; social innovation.
           </p>
         </div>
 
-        <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
-          <a href="#protosem" class="text-brand-300 hover:text-brand-200 font-medium flex items-center gap-1">
-            <span>Explore 20-Week Archive</span>
-            <i class="fa-solid fa-arrow-down text-[10px]"></i>
-          </a>
-          <span class="text-slate-400 text-[11px]">20 Weeks</span>
-        </div>
-      </div>
-
-      <!-- Bento 4: Social Impact Projects (Span: 4 cols) -->
-      <div id="impact" class="lg:col-span-4 bento-card rounded-2xl p-6 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="400">
-        <div>
-          <div class="flex items-center justify-between mb-3">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/15 text-blue-300 border border-blue-500/20">
-              <i class="fa-solid fa-earth-americas mr-1"></i> Social Action
-            </span>
-            <span class="text-xs text-slate-400 font-mono">Campaigns</span>
-          </div>
-
-          <h4 class="text-lg font-heading font-bold text-white mb-2">Community Initiatives</h4>
-          
-          <ul class="text-xs text-slate-300 space-y-2.5">
-            <li class="flex items-start gap-2">
-              <i class="fa-solid fa-check text-brand-400 mt-0.5"></i>
-              <span><strong>Food Waste Awareness:</strong> In collaboration with Microcosm & K-GEO.</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <i class="fa-solid fa-check text-brand-400 mt-0.5"></i>
-              <span><strong>The Green Shift:</strong> Campus e-waste awareness and responsible collection drive.</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <i class="fa-solid fa-check text-brand-400 mt-0.5"></i>
-              <span>Outreach for neurodivergent individuals, elder homes, and sanitary workers.</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="pt-3 border-t border-slate-800 text-xs text-slate-400">
-          <i class="fa-solid fa-hands-holding-circle text-brand-400 mr-1.5"></i> Empowering grassroots change
-        </div>
-      </div>
-
-      <!-- Bento 5: Psychology & Neuromarketing Intersection (Span: 4 cols) -->
-      <div class="lg:col-span-4 bento-card rounded-2xl p-6 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="500">
-        <div>
-          <div class="flex items-center justify-between mb-3">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/15 text-purple-300 border border-purple-500/20">
-              <i class="fa-solid fa-brain mr-1"></i> Core Domain
-            </span>
-            <span class="text-xs text-slate-400 font-mono">B.Sc. Psychology</span>
-          </div>
-
-          <h4 class="text-lg font-heading font-bold text-white mb-2">Human Mind & Decision Making</h4>
-          <p class="text-slate-300 text-xs leading-relaxed mb-3">
-            Synthesizing academic psychology with practical marketing: exploring consumer psychology, observation, human empathy, and neuromarketing frameworks.
+        <!-- Right Content Block -->
+        <div class="lg:col-span-8 space-y-6 text-charcoal-700 text-base sm:text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+          <p>
+            Psychology undergraduate with experience in social-impact initiatives, student leadership, entrepreneurship, marketing, public speaking and community engagement. Currently serving as <strong>Vice President – Social Vertical (2026–27)</strong>, with prior experience as <strong>Joint Secretary – Social Vertical (2025–26)</strong>.
           </p>
+
+          <p>
+            Founder of <strong>Memorea</strong>, a personalized accessories and keepsakes venture, with practical experience in product development, pricing, customer interaction, marketing, packaging and sales.
+          </p>
+
+          <!-- Pull Quote Block -->
+          <div class="my-8 p-6 bg-ivory-200 border-l-2 border-terracotta">
+            <p class="font-serif text-xl sm:text-2xl text-charcoal-900 italic leading-snug">
+              “Interested in opportunities combining psychology, human behaviour, communication, marketing, entrepreneurship and social impact.”
+            </p>
+          </div>
         </div>
 
-        <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-purple-300">
-          <span>Kumaraguru College ('28)</span>
-          <i class="fa-solid fa-arrow-trend-up"></i>
-        </div>
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- ========================================== -->
-  <!-- DEDICATED NEW SECTION: PROTOSEM (20 WEEKS) -->
-  <!-- ========================================== -->
-  <section id="protosem" class="py-20 px-6 max-w-6xl mx-auto scroll-mt-20">
-    
-    <!-- Section Container Card with Glassmorphism Border -->
-    <div class="bento-card rounded-3xl p-8 sm:p-10 lg:p-12 relative overflow-hidden" data-aos="fade-up">
+    <!-- ========================================== -->
+    <!-- SECTION 02: ENTREPRENEURIAL VENTURE        -->
+    <!-- ========================================== -->
+    <section id="ventures" class="py-20 border-b border-[#E6DFD5]">
       
-      <!-- Subtle Decorative Glows -->
-      <div class="absolute -top-24 -right-24 w-80 h-80 bg-brand-600/15 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none"></div>
+      <!-- Section Header -->
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 pb-8 border-b border-[#E6DFD5]" data-aos="fade-up">
+        <div>
+          <span class="font-mono text-xs text-terracotta uppercase tracking-widest font-semibold">02 / Venture</span>
+          <h2 class="font-serif text-4xl sm:text-5xl font-bold text-charcoal-900 mt-1">
+            Memorea
+          </h2>
+        </div>
+        <div class="text-right">
+          <span class="text-xs uppercase tracking-widest text-charcoal-500 font-mono">Founder / Entrepreneur</span>
+          <p class="font-serif text-xl italic text-terracotta">“Memories, made to wear.”</p>
+        </div>
+      </div>
 
-      <!-- 1. Section Header & Metadata -->
-      <div class="relative z-10 space-y-6">
+      <!-- Venture Details Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10">
+        
+        <!-- Left: Venture Narrative & Responsibilities -->
+        <div class="lg:col-span-7 space-y-8" data-aos="fade-up">
+          <div>
+            <h3 class="font-serif text-2xl font-bold text-charcoal-900 mb-3">About the Venture</h3>
+            <p class="text-charcoal-700 leading-relaxed text-base sm:text-lg">
+              A personalized accessories and keepsakes venture built around creating products connected to personal memories and meaningful moments.
+            </p>
+          </div>
+
+          <!-- Responsibilities -->
+          <div class="space-y-4">
+            <h4 class="font-mono text-xs uppercase tracking-widest text-charcoal-900 font-semibold border-b border-[#E6DFD5] pb-2">
+              Key Responsibilities
+            </h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-charcoal-700">
+              <div class="flex items-start gap-2.5">
+                <span class="text-terracotta font-serif text-base">•</span>
+                <span>Product selection and customization</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-terracotta font-serif text-base">•</span>
+                <span>Pricing and offer creation</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-terracotta font-serif text-base">•</span>
+                <span>Customer communication</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-terracotta font-serif text-base">•</span>
+                <span>Sales and order management</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-terracotta font-serif text-base">•</span>
+                <span>Packaging and delivery coordination</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-terracotta font-serif text-base">•</span>
+                <span>Instagram &amp; product marketing</span>
+              </div>
+              <div class="flex items-start gap-2.5 sm:col-span-2">
+                <span class="text-terracotta font-serif text-base">•</span>
+                <span>Brand positioning and storytelling</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Products & Offerings Editorial Card -->
+        <div class="lg:col-span-5" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-white p-8 border border-[#E6DFD5] space-y-6">
+            
+            <div class="flex items-center justify-between border-b border-[#E6DFD5] pb-3">
+              <span class="font-mono text-xs uppercase tracking-widest text-charcoal-500 font-semibold">Product Range</span>
+              <span class="text-xs text-terracotta font-mono font-medium">Curated Keepsakes</span>
+            </div>
+
+            <ul class="space-y-3.5 text-sm text-charcoal-800 font-medium">
+              <li class="flex items-center justify-between pb-2 border-b border-ivory-300">
+                <span>Personalized phone charms</span>
+                <span class="text-xs font-mono text-charcoal-400">01</span>
+              </li>
+              <li class="flex items-center justify-between pb-2 border-b border-ivory-300">
+                <span>Bracelets</span>
+                <span class="text-xs font-mono text-charcoal-400">02</span>
+              </li>
+              <li class="flex items-center justify-between pb-2 border-b border-ivory-300">
+                <span>Customized charms</span>
+                <span class="text-xs font-mono text-charcoal-400">03</span>
+              </li>
+              <li class="flex items-center justify-between pb-2 border-b border-ivory-300">
+                <span>Plushie bag charms</span>
+                <span class="text-xs font-mono text-charcoal-400">04</span>
+              </li>
+              <li class="flex items-center justify-between pb-2 border-b border-ivory-300">
+                <span>Hair accessories</span>
+                <span class="text-xs font-mono text-charcoal-400">05</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span>Small keepsakes</span>
+                <span class="text-xs font-mono text-charcoal-400">06</span>
+              </li>
+            </ul>
+
+            <div class="pt-3 bg-ivory-100 p-4 border border-[#E6DFD5] text-xs text-charcoal-600">
+              <span class="font-semibold text-charcoal-900 block mb-1">Brand Positioning:</span>
+              <p class="font-serif italic text-sm text-terracotta">“Memories, made to wear.”</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 03: LEADERSHIP EXPERIENCE         -->
+    <!-- ========================================== -->
+    <section id="leadership" class="py-20 border-b border-[#E6DFD5]">
+      
+      <!-- Section Header -->
+      <div class="pb-10 border-b border-[#E6DFD5]" data-aos="fade-up">
+        <span class="font-mono text-xs text-terracotta uppercase tracking-widest font-semibold">03 / Governance</span>
+        <h2 class="font-serif text-4xl sm:text-5xl font-bold text-charcoal-900 mt-1">
+          Leadership Experience
+        </h2>
+        <p class="font-serif text-lg text-charcoal-600 italic mt-1">
+          Coordinating social initiatives, student representation, and community engagement.
+        </p>
+      </div>
+
+      <!-- Chronological Editorial Timeline -->
+      <div class="divide-y divide-[#E6DFD5]">
+        
+        <!-- Role 1: Vice President – Social Vertical -->
+        <div class="py-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start" data-aos="fade-up">
+          <div class="lg:col-span-4 space-y-1">
+            <span class="font-mono text-xs text-terracotta uppercase tracking-widest font-semibold">2026 – 2027</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-charcoal-900">
+              Vice President
+            </h3>
+            <p class="text-sm font-medium text-charcoal-600">Social Vertical</p>
+          </div>
+          <div class="lg:col-span-8">
+            <ul class="space-y-3 text-charcoal-700 text-sm sm:text-base leading-relaxed">
+              <li class="flex items-start gap-3">
+                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
+                <span>Leading and coordinating social-impact initiatives and community engagement activities.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
+                <span>Supporting the planning and execution of awareness campaigns and community-focused programs.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
+                <span>Working with student teams to develop and execute initiatives addressing social and environmental concerns.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
+                <span>Collaborating with different stakeholders and student teams to create meaningful community impact.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 2: Joint Secretary – Social Vertical -->
+        <div class="py-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start" data-aos="fade-up">
+          <div class="lg:col-span-4 space-y-1">
+            <span class="font-mono text-xs text-charcoal-500 uppercase tracking-widest font-semibold">2025 – 2026</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-charcoal-900">
+              Joint Secretary
+            </h3>
+            <p class="text-sm font-medium text-charcoal-600">Social Vertical</p>
+          </div>
+          <div class="lg:col-span-8">
+            <ul class="space-y-3 text-charcoal-700 text-sm sm:text-base leading-relaxed">
+              <li class="flex items-start gap-3">
+                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
+                <span>Coordinated and contributed to community-oriented initiatives under the Social Vertical.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
+                <span>Supported awareness campaigns and outreach activities addressing social and environmental concerns.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
+                <span>Worked with student teams to plan and execute community-focused events.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
+                <span>Contributed to initiatives involving food-waste awareness, e-waste management and community engagement.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
+                <span>Participated in activities supporting children, elderly communities, neurodivergent individuals, sanitary workers and tribal communities.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 3: Assistant School Pupil Leader (ASPL) -->
+        <div class="py-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start" data-aos="fade-up">
+          <div class="lg:col-span-4 space-y-1">
+            <span class="font-mono text-xs text-charcoal-500 uppercase tracking-widest font-semibold">Leadership Foundation</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-charcoal-900">
+              Assistant School Pupil Leader (ASPL)
+            </h3>
+            <p class="text-sm font-medium text-charcoal-600">Gedee Public School</p>
+          </div>
+          <div class="lg:col-span-8">
+            <ul class="space-y-3 text-charcoal-700 text-sm sm:text-base leading-relaxed">
+              <li class="flex items-start gap-3">
+                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
+                <span>Served in a student leadership position, supporting school-level coordination, student representation and organizational activities.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
+                <span>Worked with fellow student leaders to support school initiatives and maintain effective communication among students.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================================================== -->
+    <!-- SECTION 04: PRICE PROTOSEM (20-WEEK ARCHIVE)       -->
+    <!-- =================================================== -->
+    <section id="protosem" class="py-20 border-b border-[#E6DFD5]">
+      
+      <!-- Section Intro Header -->
+      <div class="space-y-6 pb-10 border-b border-[#E6DFD5]" data-aos="fade-up">
         
         <div class="flex flex-wrap items-center justify-between gap-4">
-          <!-- Section Label -->
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/25 text-brand-300 text-xs font-mono font-semibold tracking-wider uppercase">
-            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping"></span>
-            PROTOSEM
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-ivory-200 border border-[#DDD5C8] text-xs font-mono font-semibold text-terracotta uppercase tracking-widest">
+            <span>04 / PROTOSEM</span>
           </div>
-
-          <!-- Programme Badge / Role -->
           <div class="flex items-center gap-3">
-            <span class="text-xs font-mono text-emerald-400 bg-emerald-950/70 border border-emerald-800/40 px-3 py-1 rounded-lg">
-              <i class="fa-solid fa-microchip mr-1.5"></i> Innovation Engineer Trainee
+            <span class="text-xs font-mono text-charcoal-700 bg-white border border-[#E6DFD5] px-3 py-1">
+              Role: Innovation Engineer Trainee
             </span>
-            <span class="text-xs font-mono text-slate-400 bg-slate-800/80 px-3 py-1 rounded-lg hidden sm:inline-block">
-              20-Week Programme Archive
+            <span class="text-xs font-mono text-terracotta bg-terracotta/10 border border-terracotta/20 px-3 py-1 font-semibold">
+              100% Scholarship • 2026
             </span>
           </div>
         </div>
 
-        <!-- Main Heading & Descriptor -->
-        <div class="space-y-2 max-w-3xl">
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight">
-            PRICE <span class="gradient-text">ProtoSem</span>
+        <div class="space-y-2">
+          <h2 class="font-serif text-4xl sm:text-5xl font-bold text-charcoal-900 tracking-tight">
+            PRICE ProtoSem
           </h2>
-          <p class="text-brand-300 font-heading font-semibold text-base sm:text-lg">
+          <p class="font-serif text-xl sm:text-2xl text-terracotta italic">
             20-Week Industry-Integrated Innovation Programme
           </p>
         </div>
 
-        <!-- Description (Exact content specification) -->
-        <div class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-4xl space-y-3 pt-1">
-          <p>
-            Selected for a 20-week industry-integrated innovation programme focused on solving real-world retail and commerce challenges through AI, analytics, intelligent systems, IoT, prototyping, and entrepreneurship.
-          </p>
-          <p class="text-slate-400">
-            Working with industry problem statements to explore, develop, and validate practical technology solutions beyond conventional classroom learning.
-          </p>
+        <!-- Description (Exact content from document) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-2 text-charcoal-700 text-base sm:text-lg leading-relaxed">
+          <div class="lg:col-span-6">
+            <p>
+              Selected for a 20-week industry-integrated innovation programme focused on solving real-world retail and commerce challenges through AI, analytics, intelligent systems, IoT, prototyping, and entrepreneurship.
+            </p>
+          </div>
+          <div class="lg:col-span-6">
+            <p class="text-charcoal-600">
+              Working with industry problem statements to explore, develop, and validate practical technology solutions beyond conventional classroom learning.
+            </p>
+          </div>
         </div>
 
-        <!-- Domain / Programme Focus Disciplines (Carefully styled as disciplines) -->
-        <div class="pt-2">
-          <p class="text-xs font-mono uppercase tracking-widest text-slate-400 mb-3 font-semibold">
-            Programme Disciplines & Focus Areas
+        <!-- Domain / Focus Areas -->
+        <div class="pt-4">
+          <p class="text-xs font-mono uppercase tracking-widest text-charcoal-500 font-semibold mb-3">
+            Programme Focus Areas &amp; Disciplines
           </p>
           <div class="flex flex-wrap gap-2.5">
-            <div class="px-3.5 py-1.5 rounded-xl bg-slate-900/90 border border-slate-700/70 text-slate-200 text-xs sm:text-sm font-medium flex items-center gap-2 hover:border-brand-400/50 transition-colors">
-              <span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
-              Phygital Retail & Intelligent Commerce
-            </div>
-            <div class="px-3.5 py-1.5 rounded-xl bg-slate-900/90 border border-slate-700/70 text-slate-200 text-xs sm:text-sm font-medium flex items-center gap-2 hover:border-emerald-400/50 transition-colors">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-              AI & Analytics
-            </div>
-            <div class="px-3.5 py-1.5 rounded-xl bg-slate-900/90 border border-slate-700/70 text-slate-200 text-xs sm:text-sm font-medium flex items-center gap-2 hover:border-blue-400/50 transition-colors">
-              <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-              Intelligent Systems & IoT
-            </div>
-            <div class="px-3.5 py-1.5 rounded-xl bg-slate-900/90 border border-slate-700/70 text-slate-200 text-xs sm:text-sm font-medium flex items-center gap-2 hover:border-amber-400/50 transition-colors">
-              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+            <span class="px-3.5 py-1.5 bg-white border border-[#E6DFD5] text-charcoal-800 text-xs sm:text-sm font-medium">
+              Phygital Retail &amp; Intelligent Commerce
+            </span>
+            <span class="px-3.5 py-1.5 bg-white border border-[#E6DFD5] text-charcoal-800 text-xs sm:text-sm font-medium">
+              AI &amp; Analytics
+            </span>
+            <span class="px-3.5 py-1.5 bg-white border border-[#E6DFD5] text-charcoal-800 text-xs sm:text-sm font-medium">
+              Intelligent Systems &amp; IoT
+            </span>
+            <span class="px-3.5 py-1.5 bg-white border border-[#E6DFD5] text-charcoal-800 text-xs sm:text-sm font-medium">
               Prototyping
-            </div>
-            <div class="px-3.5 py-1.5 rounded-xl bg-slate-900/90 border border-slate-700/70 text-slate-200 text-xs sm:text-sm font-medium flex items-center gap-2 hover:border-purple-400/50 transition-colors">
-              <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+            </span>
+            <span class="px-3.5 py-1.5 bg-white border border-[#E6DFD5] text-charcoal-800 text-xs sm:text-sm font-medium">
               Entrepreneurship
-            </div>
+            </span>
           </div>
         </div>
 
-        <!-- Programme Progress Indicator Milestone Rail -->
-        <div class="py-6 border-t border-b border-slate-800/80 my-6">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-3">
-            <div class="flex items-center gap-2 text-xs font-mono text-slate-400">
-              <i class="fa-solid fa-timeline text-brand-400"></i>
-              <span>20-Week Progression Road</span>
-            </div>
-            <span class="text-[11px] font-mono text-slate-500">4 Phases • 20 Progressive Milestones</span>
+        <!-- Subtle Programme Progress Indicator -->
+        <div class="pt-6">
+          <div class="flex items-center justify-between text-xs font-mono text-charcoal-500 pb-2">
+            <span>01 ━━━━ 05 ━━━━ 10 ━━━━ 15 ━━━━ 20</span>
+            <span class="uppercase tracking-widest">20-Week Continuous Journey</span>
           </div>
-
-          <!-- Visual Progress Rail -->
-          <div class="w-full bg-slate-800/60 h-2 rounded-full overflow-hidden relative">
-            <div class="bg-gradient-to-r from-brand-600 via-brand-terracotta to-amber-400 h-full w-full opacity-70"></div>
+          <div class="w-full bg-[#E6DFD5] h-[2px] relative">
+            <div class="bg-terracotta h-full w-full"></div>
           </div>
-          <div class="flex justify-between items-center text-[10px] font-mono text-slate-500 mt-2 px-1">
-            <span>WEEK 01</span>
-            <span>WEEK 05 (Phase 1)</span>
-            <span>WEEK 10 (Phase 2)</span>
-            <span>WEEK 15 (Phase 3)</span>
-            <span>WEEK 20 (Phase 4)</span>
-          </div>
-        </div>
-
-        <!-- 4-Phase Navigation Filter Tabs -->
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pt-2">
-          <div>
-            <h3 class="text-lg font-heading font-bold text-white flex items-center gap-2">
-              <i class="fa-solid fa-layer-group text-brand-400 text-sm"></i>
-              <span>The 20-Week Journey</span>
-            </h3>
-            <p class="text-xs text-slate-400 mt-0.5">Explore the four progressive phases of the innovation programme archive.</p>
-          </div>
-
-          <!-- Phase Tabs -->
-          <div class="flex flex-wrap items-center gap-1.5 p-1.5 rounded-xl bg-[#12121c] border border-slate-800 text-xs font-medium" role="tablist">
-            <button class="phase-tab active px-3 py-1.5 rounded-lg border border-transparent transition-all" data-phase="all" onclick="filterPhase('all', this)">
-              All Weeks (20)
-            </button>
-            <button class="phase-tab px-3 py-1.5 rounded-lg border border-transparent text-slate-400 hover:text-white transition-all" data-phase="1" onclick="filterPhase(1, this)">
-              Phase 01 <span class="text-[10px] opacity-70">(01–05)</span>
-            </button>
-            <button class="phase-tab px-3 py-1.5 rounded-lg border border-transparent text-slate-400 hover:text-white transition-all" data-phase="2" onclick="filterPhase(2, this)">
-              Phase 02 <span class="text-[10px] opacity-70">(06–10)</span>
-            </button>
-            <button class="phase-tab px-3 py-1.5 rounded-lg border border-transparent text-slate-400 hover:text-white transition-all" data-phase="3" onclick="filterPhase(3, this)">
-              Phase 03 <span class="text-[10px] opacity-70">(11–15)</span>
-            </button>
-            <button class="phase-tab px-3 py-1.5 rounded-lg border border-transparent text-slate-400 hover:text-white transition-all" data-phase="4" onclick="filterPhase(4, this)">
-              Phase 04 <span class="text-[10px] opacity-70">(16–20)</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- 20-Week Cards Container (Rendered via Data-Driven JavaScript Architecture) -->
-        <div id="weeks-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
-          <!-- Week cards are dynamically populated via Javascript for future blog readiness -->
-        </div>
-
-        <!-- Clean Editorial Note -->
-        <div class="pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-3">
-          <div class="flex items-center gap-2">
-            <i class="fa-solid fa-book-open text-brand-400"></i>
-            <span>Each week represents a future deep-dive case study and learning blog.</span>
-          </div>
-          <span class="font-mono text-[11px] text-slate-500">Architecture: Data-Driven Modular Cards</span>
         </div>
 
       </div>
-    </div>
-  </section>
 
-  <!-- Skills Matrix Section -->
-  <section id="skills" class="py-16 px-6 max-w-6xl mx-auto">
-    <div class="text-center max-w-2xl mx-auto mb-14" data-aos="fade-up">
-      <h2 class="text-xs font-mono font-bold tracking-widest text-brand-400 uppercase mb-2">Core Competencies</h2>
-      <h3 class="text-3xl sm:text-4xl font-heading font-bold text-white">Skills & Toolkit</h3>
-      <p class="text-slate-400 text-sm sm:text-base mt-2">Versatile skillsets connecting psychology, marketing strategy, and student leadership.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      
-      <!-- Skill Block 1: Leadership & Communication -->
-      <div class="bento-card rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="w-10 h-10 rounded-xl bg-brand-500/20 text-brand-300 flex items-center justify-center text-lg mb-4">
-          <i class="fa-solid fa-comments"></i>
-        </div>
-        <h4 class="font-heading font-bold text-white text-base mb-3">Leadership & Speaking</h4>
-        <ul class="text-xs text-slate-300 space-y-2">
-          <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-400 text-[10px]"></i> Public Speaking & Debates</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-400 text-[10px]"></i> Team & Event Coordination</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-400 text-[10px]"></i> Community Engagement</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-400 text-[10px]"></i> Stakeholder Networking</li>
-        </ul>
-      </div>
-
-      <!-- Skill Block 2: Business & Marketing -->
-      <div class="bento-card rounded-2xl p-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center text-lg mb-4">
-          <i class="fa-solid fa-chart-line"></i>
-        </div>
-        <h4 class="font-heading font-bold text-white text-base mb-3">Business & Growth</h4>
-        <ul class="text-xs text-slate-300 space-y-2">
-          <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-[10px]"></i> Brand Storytelling & Voice</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-[10px]"></i> Product Pricing & Offers</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-[10px]"></i> Customer Relations & Sales</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-[10px]"></i> Entrepreneurial Thinking</li>
-        </ul>
-      </div>
-
-      <!-- Skill Block 3: Psychology & Research -->
-      <div class="bento-card rounded-2xl p-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="w-10 h-10 rounded-xl bg-rose-500/20 text-rose-300 flex items-center justify-center text-lg mb-4">
-          <i class="fa-solid fa-brain"></i>
-        </div>
-        <h4 class="font-heading font-bold text-white text-base mb-3">Psychology & Mind</h4>
-        <ul class="text-xs text-slate-300 space-y-2">
-          <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-rose-400 text-[10px]"></i> Human Behaviour Insights</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-rose-400 text-[10px]"></i> Neuromarketing Principles</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-rose-400 text-[10px]"></i> Consumer Decision Making</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-rose-400 text-[10px]"></i> Qualitative Observation</li>
-        </ul>
-      </div>
-
-      <!-- Skill Block 4: Digital Tools -->
-      <div class="bento-card rounded-2xl p-6" data-aos="fade-up" data-aos-delay="400">
-        <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-300 flex items-center justify-center text-lg mb-4">
-          <i class="fa-solid fa-wand-magic-sparkles"></i>
-        </div>
-        <h4 class="font-heading font-bold text-white text-base mb-3">Digital & Creative</h4>
-        <ul class="text-xs text-slate-300 space-y-2">
-          <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Canva Design & Branding</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Microsoft PowerPoint</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> Instagram Growth & Content</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i> AI Productivity Workflows</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Education & Milestones Section -->
-  <section class="py-16 px-6 max-w-6xl mx-auto">
-    <div class="bento-card rounded-3xl p-8 lg:p-12 relative overflow-hidden" data-aos="fade-up">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <!-- 4-Phase Navigation Filter & Interactive Week Grid -->
+      <div class="pt-10 space-y-8">
         
-        <div class="lg:col-span-5 space-y-3">
-          <span class="text-xs font-mono uppercase tracking-widest text-brand-400 font-bold">Academic Journey</span>
-          <h3 class="text-2xl sm:text-3xl font-heading font-bold text-white">Education & Foundation</h3>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            Building strong analytical foundations in psychology alongside experiential learning in student governance, social work, and venture creation.
-          </p>
-        </div>
-
-        <div class="lg:col-span-7 space-y-4">
-          <div class="p-4 rounded-xl bg-white/5 border border-white/5 flex items-start gap-4">
-            <div class="w-10 h-10 rounded-lg bg-brand-500/20 text-brand-400 flex items-center justify-center flex-shrink-0 mt-1">
-              <i class="fa-solid fa-graduation-cap"></i>
-            </div>
-            <div>
-              <div class="flex flex-wrap items-center justify-between gap-2">
-                <h4 class="text-white font-semibold text-sm sm:text-base">Kumaraguru College of Liberal Arts and Science</h4>
-                <span class="text-xs font-mono text-brand-300">2024 – 2028 (Expected)</span>
-              </div>
-              <p class="text-slate-300 text-xs">B.Sc. Psychology • Coimbatore, Tamil Nadu</p>
-            </div>
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h3 class="font-serif text-2xl font-bold text-charcoal-900">
+              The 20-Week Journey
+            </h3>
+            <p class="text-xs text-charcoal-600 mt-0.5 font-sans">
+              Organised across four programme phases. Click any week to preview the story outline.
+            </p>
           </div>
 
-          <div class="p-4 rounded-xl bg-white/5 border border-white/5 flex items-start gap-4">
-            <div class="w-10 h-10 rounded-lg bg-slate-700/40 text-slate-300 flex items-center justify-center flex-shrink-0 mt-1">
-              <i class="fa-solid fa-school"></i>
-            </div>
-            <div>
-              <div class="flex flex-wrap items-center justify-between gap-2">
-                <h4 class="text-white font-semibold text-sm sm:text-base">Gedee Public School</h4>
-                <span class="text-xs font-mono text-slate-400">Class X & Class XII (CBSE)</span>
-              </div>
-              <p class="text-slate-300 text-xs">Assistant School Pupil Leader (ASPL) • Student Representation</p>
-            </div>
+          <!-- Phase Navigation Tabs -->
+          <div class="flex flex-wrap items-center gap-1.5 p-1 bg-ivory-200 border border-[#E6DFD5] text-xs font-medium" role="tablist">
+            <button class="phase-tab active px-3 py-1.5 border border-transparent transition-all" data-phase="all" onclick="filterEditorialPhase('all', this)">
+              ALL WEEKS
+            </button>
+            <button class="phase-tab px-3 py-1.5 border border-transparent text-charcoal-700 hover:text-charcoal-900 transition-all" data-phase="1" onclick="filterEditorialPhase(1, this)">
+              PHASE 01 <span class="text-[10px] opacity-70">(01–05)</span>
+            </button>
+            <button class="phase-tab px-3 py-1.5 border border-transparent text-charcoal-700 hover:text-charcoal-900 transition-all" data-phase="2" onclick="filterEditorialPhase(2, this)">
+              PHASE 02 <span class="text-[10px] opacity-70">(06–10)</span>
+            </button>
+            <button class="phase-tab px-3 py-1.5 border border-transparent text-charcoal-700 hover:text-charcoal-900 transition-all" data-phase="3" onclick="filterEditorialPhase(3, this)">
+              PHASE 03 <span class="text-[10px] opacity-70">(11–15)</span>
+            </button>
+            <button class="phase-tab px-3 py-1.5 border border-transparent text-charcoal-700 hover:text-charcoal-900 transition-all" data-phase="4" onclick="filterEditorialPhase(4, this)">
+              PHASE 04 <span class="text-[10px] opacity-70">(16–20)</span>
+            </button>
           </div>
         </div>
 
+        <!-- 20 Week Cards Container (Rendered dynamically via Data Architecture) -->
+        <div id="editorial-weeks-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Dynamic Week Cards injected via JavaScript -->
+        </div>
+
+        <div class="text-center pt-2">
+          <span class="text-[11px] font-mono text-charcoal-500 tracking-wider uppercase">
+            Build the structure now. Leave the stories for later.
+          </span>
+        </div>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact & Footer CTA -->
-  <section id="contact" class="py-20 px-6 max-w-6xl mx-auto text-center" data-aos="fade-up">
-    <div class="max-w-2xl mx-auto space-y-6">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 text-brand-300 text-xs font-medium">
-        <i class="fa-solid fa-paper-plane"></i> Get in Touch
+    <!-- ========================================== -->
+    <!-- SECTION 05: SOCIAL IMPACT PROJECTS         -->
+    <!-- ========================================== -->
+    <section id="impact" class="py-20 border-b border-[#E6DFD5]">
+      
+      <div class="pb-10 border-b border-[#E6DFD5]" data-aos="fade-up">
+        <span class="font-mono text-xs text-terracotta uppercase tracking-widest font-semibold">05 / Social Action</span>
+        <h2 class="font-serif text-4xl sm:text-5xl font-bold text-charcoal-900 mt-1">
+          Social Impact Projects
+        </h2>
+        <p class="font-serif text-lg text-charcoal-600 italic mt-1">
+          Campaigns focused on waste awareness, sustainability, and community action.
+        </p>
       </div>
 
-      <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">
-        Let’s Create Something <span class="gradient-text">Meaningful Together.</span>
-      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-10">
+        
+        <!-- Project 1: Food Waste Awareness Campaign -->
+        <div class="bg-white p-8 border border-[#E6DFD5] space-y-4" data-aos="fade-up">
+          <div class="flex items-center justify-between text-xs font-mono text-charcoal-500 border-b border-[#E6DFD5] pb-2">
+            <span>Collaborative Campaign</span>
+            <span class="text-terracotta font-semibold">Microcosm &amp; K-GEO</span>
+          </div>
 
-      <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-        Whether you are interested in collaborating on social-impact campaigns, exploring consumer psychology insights, discussing innovation at ProtoSem, or exploring personalized keepsakes with Memorea, my inbox is always open!
-      </p>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">
+            Food Waste Awareness Campaign
+          </h3>
 
-      <div class="flex flex-wrap justify-center items-center gap-4 pt-4">
-        <a href="mailto:shreevarsha80@gmail.com" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-medium shadow-lg hover:shadow-brand-500/30 transition-all flex items-center gap-2">
-          <i class="fa-solid fa-envelope"></i>
-          <span>shreevarsha80@gmail.com</span>
-        </a>
-        <a href="https://www.linkedin.com/in/shree-varsha-vk-458909373" target="_blank" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-medium border border-slate-700 hover:border-brand-400/40 transition-all flex items-center gap-2">
-          <i class="fa-brands fa-linkedin text-brand-400"></i>
-          <span>LinkedIn</span>
-        </a>
-        <a href="resume.html" target="_blank" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-medium border border-slate-700 hover:border-brand-400/40 transition-all flex items-center gap-2">
-          <i class="fa-solid fa-file-pdf text-brand-400"></i>
-          <span>ATS Resume</span>
-        </a>
+          <ul class="space-y-2.5 text-sm text-charcoal-700 leading-relaxed">
+            <li class="flex items-start gap-2.5">
+              <span class="text-terracotta font-serif text-base">•</span>
+              <span>Contributed to a food-waste awareness campaign in collaboration with Microcosm &amp; K-GEO.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-terracotta font-serif text-base">•</span>
+              <span>Conducted awareness activities focused on reducing food waste.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-terracotta font-serif text-base">•</span>
+              <span>Worked with a student coordination team to execute the campaign.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Project 2: The Green Shift — E-Waste Drive -->
+        <div class="bg-white p-8 border border-[#E6DFD5] space-y-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center justify-between text-xs font-mono text-charcoal-500 border-b border-[#E6DFD5] pb-2">
+            <span>Environmental Initiative</span>
+            <span class="text-terracotta font-semibold">Student-Led Drive</span>
+          </div>
+
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">
+            The Green Shift — E-Waste Drive
+          </h3>
+
+          <ul class="space-y-2.5 text-sm text-charcoal-700 leading-relaxed">
+            <li class="flex items-start gap-2.5">
+              <span class="text-terracotta font-serif text-base">•</span>
+              <span>Contributed to an e-waste awareness and collection initiative.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-terracotta font-serif text-base">•</span>
+              <span>Supported responsible e-waste disposal and environmental awareness.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-terracotta font-serif text-base">•</span>
+              <span>Participated in planning and execution of the student-led initiative.</span>
+            </li>
+          </ul>
+        </div>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Placeholder Modal for Future Week Story -->
-  <div id="week-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
-    <div class="bg-[#181826] border border-slate-700/80 rounded-2xl max-w-md w-full p-6 space-y-4 shadow-2xl relative">
-      <button onclick="closeWeekModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">
+    <!-- ========================================== -->
+    <!-- SECTION 06: CORE SKILLS & INTERESTS        -->
+    <!-- ========================================== -->
+    <section id="skills" class="py-20 border-b border-[#E6DFD5]">
+      
+      <div class="pb-10 border-b border-[#E6DFD5]" data-aos="fade-up">
+        <span class="font-mono text-xs text-terracotta uppercase tracking-widest font-semibold">06 / Competencies</span>
+        <h2 class="font-serif text-4xl sm:text-5xl font-bold text-charcoal-900 mt-1">
+          Core Skills &amp; Areas of Interest
+        </h2>
+        <p class="font-serif text-lg text-charcoal-600 italic mt-1">
+          Clean typographic categories spanning psychology, leadership, business, and digital tools.
+        </p>
+      </div>
+
+      <!-- Skills Categories Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-10">
+        
+        <!-- Category 1: Leadership & Communication -->
+        <div class="space-y-4" data-aos="fade-up">
+          <div class="border-b-2 border-charcoal-900 pb-2">
+            <h3 class="font-serif text-xl font-bold text-charcoal-900">
+              Leadership &amp; Communication
+            </h3>
+          </div>
+          <ul class="space-y-2 text-sm text-charcoal-700">
+            <li>Public Speaking</li>
+            <li>Team Coordination</li>
+            <li>Event Management</li>
+            <li>Leadership</li>
+            <li>Presentation</li>
+            <li>Debate</li>
+            <li>Networking</li>
+            <li>Community Engagement</li>
+          </ul>
+        </div>
+
+        <!-- Category 2: Business & Marketing -->
+        <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="border-b-2 border-charcoal-900 pb-2">
+            <h3 class="font-serif text-xl font-bold text-charcoal-900">
+              Business &amp; Marketing
+            </h3>
+          </div>
+          <ul class="space-y-2 text-sm text-charcoal-700">
+            <li>Sales</li>
+            <li>Customer Communication</li>
+            <li>Product Positioning</li>
+            <li>Marketing</li>
+            <li>Brand Building</li>
+            <li>Pricing</li>
+            <li>Entrepreneurship</li>
+            <li>Storytelling</li>
+          </ul>
+        </div>
+
+        <!-- Category 3: Psychology -->
+        <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="border-b-2 border-charcoal-900 pb-2">
+            <h3 class="font-serif text-xl font-bold text-charcoal-900">
+              Psychology
+            </h3>
+          </div>
+          <ul class="space-y-2 text-sm text-charcoal-700">
+            <li>Human Behaviour</li>
+            <li>Psychology</li>
+            <li>Research &amp; Learning</li>
+            <li>Observation</li>
+            <li>Neuromarketing</li>
+            <li>Consumer Behaviour</li>
+          </ul>
+        </div>
+
+        <!-- Category 4: Digital Tools -->
+        <div class="space-y-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="border-b-2 border-charcoal-900 pb-2">
+            <h3 class="font-serif text-xl font-bold text-charcoal-900">
+              Digital Tools
+            </h3>
+          </div>
+          <ul class="space-y-2 text-sm text-charcoal-700">
+            <li>Microsoft PowerPoint</li>
+            <li>Canva</li>
+            <li>Instagram &amp; Social Media</li>
+            <li>AI-assisted Productivity Tools</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Areas of Interest Banner -->
+      <div class="mt-14 p-8 bg-white border border-[#E6DFD5]" data-aos="fade-up">
+        <h4 class="font-mono text-xs uppercase tracking-widest text-charcoal-500 font-semibold mb-3">
+          Areas of Interest
+        </h4>
+        <p class="font-serif text-lg sm:text-xl text-charcoal-900 leading-relaxed italic">
+          Psychology • Human Behaviour • Neuromarketing • Consumer Behaviour • Marketing • Entrepreneurship • Social Impact • Communication • Innovation • Community Development
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 07: EDUCATION & CERTIFICATIONS     -->
+    <!-- ========================================== -->
+    <section id="education" class="py-20 border-b border-[#E6DFD5]">
+      
+      <div class="pb-10 border-b border-[#E6DFD5]" data-aos="fade-up">
+        <span class="font-mono text-xs text-terracotta uppercase tracking-widest font-semibold">07 / Academic Background</span>
+        <h2 class="font-serif text-4xl sm:text-5xl font-bold text-charcoal-900 mt-1">
+          Education &amp; Programs
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10">
+        
+        <!-- Education Chronology -->
+        <div class="lg:col-span-7 space-y-8" data-aos="fade-up">
+          
+          <div class="space-y-6">
+            <div class="pb-6 border-b border-[#E6DFD5]">
+              <div class="flex items-baseline justify-between gap-4">
+                <h3 class="font-serif text-2xl font-bold text-charcoal-900">
+                  Kumaraguru College of Liberal Arts and Science
+                </h3>
+                <span class="text-xs font-mono text-terracotta font-semibold whitespace-nowrap">Exp. 2028</span>
+              </div>
+              <p class="text-charcoal-700 text-sm mt-1 font-medium">B.Sc. Psychology</p>
+              <p class="text-xs font-mono text-charcoal-500 mt-0.5">Coimbatore, Tamil Nadu</p>
+            </div>
+
+            <div class="pb-6 border-b border-[#E6DFD5]">
+              <div class="flex items-baseline justify-between gap-4">
+                <h3 class="font-serif text-2xl font-bold text-charcoal-900">
+                  Gedee Public School
+                </h3>
+                <span class="text-xs font-mono text-charcoal-500 whitespace-nowrap">Class XII</span>
+              </div>
+              <p class="text-charcoal-700 text-sm mt-1 font-medium">Class XII — CBSE</p>
+            </div>
+
+            <div>
+              <div class="flex items-baseline justify-between gap-4">
+                <h3 class="font-serif text-2xl font-bold text-charcoal-900">
+                  Gedee Public School
+                </h3>
+                <span class="text-xs font-mono text-charcoal-500 whitespace-nowrap">Class X</span>
+              </div>
+              <p class="text-charcoal-700 text-sm mt-1 font-medium">Class X — CBSE</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Certifications & Programs -->
+        <div class="lg:col-span-5" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-white p-8 border border-[#E6DFD5] space-y-4">
+            <span class="font-mono text-xs uppercase tracking-widest text-charcoal-500 font-semibold">Certifications &amp; Programs</span>
+            
+            <div class="pt-2">
+              <h4 class="font-serif text-xl font-bold text-charcoal-900">PRICE ProtoSem — Forge</h4>
+              <p class="text-xs font-mono text-terracotta font-semibold mt-1">100% Scholarship | 2026</p>
+              <p class="text-xs text-charcoal-600 mt-3 leading-relaxed">
+                Selected for the PRICE ProtoSem Cohort with a 100% scholarship. Participated in an innovation and entrepreneurship-oriented program exploring problem identification, ideation, and entrepreneurial thinking.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 08: CONTACT & FOOTER               -->
+    <!-- ========================================== -->
+    <section id="contact" class="py-24" data-aos="fade-up">
+      <div class="max-w-2xl mx-auto text-center space-y-8">
+        
+        <span class="font-mono text-xs text-terracotta uppercase tracking-widest font-semibold">08 / Correspondence</span>
+        
+        <h2 class="font-serif text-4xl sm:text-5xl font-bold text-charcoal-900 leading-tight">
+          Let’s talk about psychology, ideas, or meaningful projects.
+        </h2>
+
+        <p class="text-charcoal-600 text-base leading-relaxed">
+          Open for collaborations in social initiatives, consumer behavior research, venture conversations, or student leadership opportunities.
+        </p>
+
+        <!-- Contact Buttons -->
+        <div class="pt-4 flex flex-wrap justify-center items-center gap-4">
+          <a href="mailto:shreevarsha80@gmail.com" class="px-8 py-4 bg-charcoal-900 hover:bg-terracotta text-ivory-50 transition-all uppercase tracking-widest text-xs font-semibold rounded-sm flex items-center gap-2">
+            <i class="fa-regular fa-envelope"></i>
+            <span>shreevarsha80@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/shree-varsha-vk-458909373" target="_blank" class="px-6 py-4 border border-charcoal-900 hover:border-terracotta hover:text-terracotta text-charcoal-900 transition-all uppercase tracking-widest text-xs font-semibold rounded-sm flex items-center gap-2">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="resume.html" target="_blank" class="px-6 py-4 border border-charcoal-900 hover:border-terracotta hover:text-terracotta text-charcoal-900 transition-all uppercase tracking-widest text-xs font-semibold rounded-sm flex items-center gap-2">
+            <i class="fa-regular fa-file-pdf"></i>
+            <span>ATS Resume</span>
+          </a>
+        </div>
+
+        <div class="pt-4 text-xs font-mono text-charcoal-500">
+          Phone: +91 86100 82382 • Coimbatore, Tamil Nadu, India
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Editorial Week Modal / Future Blog Preview -->
+  <div id="editorial-week-modal" class="fixed inset-0 z-50 bg-charcoal-900/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-[#FAF8F5] border border-[#E6DFD5] max-w-lg w-full p-8 space-y-6 shadow-2xl relative">
+      <button onclick="closeEditorialWeekModal()" class="absolute top-5 right-5 text-charcoal-500 hover:text-charcoal-900 text-lg" aria-label="Close modal">
         <i class="fa-solid fa-xmark"></i>
       </button>
       
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center font-mono font-bold">
-          <i class="fa-solid fa-book-bookmark"></i>
-        </div>
-        <div>
-          <span id="modal-phase" class="text-[11px] font-mono text-brand-400 uppercase">PHASE 01</span>
-          <h3 id="modal-title" class="text-xl font-heading font-bold text-white">WEEK 01</h3>
-        </div>
+      <div>
+        <span id="modal-editorial-phase" class="text-xs font-mono text-terracotta uppercase tracking-widest font-semibold">PHASE 01 • PROTOSEM ARCHIVE</span>
+        <h3 id="modal-editorial-title" class="font-serif text-3xl font-bold text-charcoal-900 mt-1">WEEK 01</h3>
       </div>
 
-      <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-300 space-y-2">
-        <p class="text-brand-300 font-semibold flex items-center gap-1.5">
-          <i class="fa-solid fa-clock"></i> Field Notes & Blog in Progress
+      <div class="p-6 bg-white border border-[#E6DFD5] space-y-3">
+        <p class="text-xs font-mono text-terracotta font-semibold uppercase tracking-wider flex items-center gap-1.5">
+          <i class="fa-regular fa-compass"></i> Field Notes In Progress
         </p>
-        <p class="text-slate-400 leading-relaxed">
-          The case study, technical reflections, and problem validation artifacts for this week of PRICE ProtoSem will be published here shortly.
+        <p class="text-charcoal-700 text-sm leading-relaxed">
+          The project breakdown, problem-solving reflections, and prototyping field notes for this milestone of the 20-week PRICE ProtoSem innovation journey will be documented here.
         </p>
       </div>
 
-      <div class="flex justify-between items-center pt-2">
-        <span class="text-[11px] font-mono text-slate-500">Destination: <span id="modal-slug" class="text-slate-400">/protosem/week-01</span></span>
-        <button onclick="closeWeekModal()" class="px-4 py-1.5 rounded-lg bg-brand-600 text-white text-xs font-medium hover:bg-brand-500">
-          Got it
+      <div class="flex items-center justify-between pt-2 border-t border-[#E6DFD5]">
+        <span class="text-xs font-mono text-charcoal-500">Route: <span id="modal-editorial-slug" class="text-charcoal-800">/protosem/week-01</span></span>
+        <button onclick="closeEditorialWeekModal()" class="px-5 py-2 bg-charcoal-900 text-ivory-50 text-xs uppercase tracking-widest font-semibold hover:bg-terracotta transition-colors">
+          Close
         </button>
       </div>
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="border-t border-slate-800/80 py-8 px-6 text-center text-xs text-slate-500">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p>© 2026 Shree Varsha V K. Built with Passion, Psychology & Design.</p>
-      <p class="flex items-center gap-1">
-        <span>Hosted via GitHub Pages</span> • 
-        <a href="#hero" class="text-slate-400 hover:text-brand-300">Back to Top ↑</a>
+  <!-- Editorial Footer -->
+  <footer class="border-t border-[#E6DFD5] py-10 bg-ivory-100 text-xs text-charcoal-500">
+    <div class="max-w-6xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="font-serif italic text-sm text-charcoal-700">
+        «People, purpose &amp; the stories between.»
       </p>
+      <div class="flex items-center gap-4 text-xs font-mono uppercase tracking-widest">
+        <span>© 2026 Shree Varsha V K</span>
+        <span>•</span>
+        <a href="#hero" class="text-charcoal-700 hover:text-terracotta transition-colors">Back to Top ↑</a>
+      </div>
     </div>
   </footer>
 
-  <!-- AOS & Typed.js Scripts -->
+  <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-  <!-- Future-Ready 20-Week Architecture Data Script -->
+  <!-- Editorial Data-Driven 20-Week Architecture Script -->
   <script>
     // Initialize AOS animations
     AOS.init({
       once: true,
-      duration: 800,
-      offset: 50
-    });
-
-    // Initialize Typed.js for Storyteller Terminal
-    new Typed('#typed-roles', {
-      strings: [
-        'B.Sc. Psychology Undergraduate',
-        'Innovation Engineer Trainee (ProtoSem)',
-        'Founder of Memorea (Keepsakes)',
-        'VP – Social Vertical (2026–27)',
-        'Social Impact & Campaign Leader'
-      ],
-      typeSpeed: 45,
-      backSpeed: 25,
-      backDelay: 1800,
-      loop: true
+      duration: 700,
+      offset: 40
     });
 
     // Mobile Menu Toggle
@@ -868,138 +1025,126 @@
     }
 
     // ===============================================
-    // 20-WEEK PROTOSEM DATA ARCHITECTURE (DATA-DRIVEN)
+    // 20-WEEK PROTOSEM DATA ARCHITECTURE
     // ===============================================
-    const protoSemWeeks = [
+    const editorialProtoSemWeeks = [
       // Phase 01: Weeks 01-05
-      { week: 1, phase: 1, label: "WEEK 01", status: "FIELD NOTES IN PROGRESS", slug: "week-01", phaseName: "Phase 01 (Weeks 01–05)" },
-      { week: 2, phase: 1, label: "WEEK 02", status: "FIELD NOTES IN PROGRESS", slug: "week-02", phaseName: "Phase 01 (Weeks 01–05)" },
-      { week: 3, phase: 1, label: "WEEK 03", status: "FIELD NOTES IN PROGRESS", slug: "week-03", phaseName: "Phase 01 (Weeks 01–05)" },
-      { week: 4, phase: 1, label: "WEEK 04", status: "FIELD NOTES IN PROGRESS", slug: "week-04", phaseName: "Phase 01 (Weeks 01–05)" },
-      { week: 5, phase: 1, label: "WEEK 05", status: "FIELD NOTES IN PROGRESS", slug: "week-05", phaseName: "Phase 01 (Weeks 01–05)" },
+      { week: 1, phase: 1, label: "WEEK 01", status: "FIELD NOTES IN PROGRESS", slug: "week-01" },
+      { week: 2, phase: 1, label: "WEEK 02", status: "FIELD NOTES IN PROGRESS", slug: "week-02" },
+      { week: 3, phase: 1, label: "WEEK 03", status: "FIELD NOTES IN PROGRESS", slug: "week-03" },
+      { week: 4, phase: 1, label: "WEEK 04", status: "FIELD NOTES IN PROGRESS", slug: "week-04" },
+      { week: 5, phase: 1, label: "WEEK 05", status: "FIELD NOTES IN PROGRESS", slug: "week-05" },
 
       // Phase 02: Weeks 06-10
-      { week: 6, phase: 2, label: "WEEK 06", status: "FIELD NOTES IN PROGRESS", slug: "week-06", phaseName: "Phase 02 (Weeks 06–10)" },
-      { week: 7, phase: 2, label: "WEEK 07", status: "FIELD NOTES IN PROGRESS", slug: "week-07", phaseName: "Phase 02 (Weeks 06–10)" },
-      { week: 8, phase: 2, label: "WEEK 08", status: "FIELD NOTES IN PROGRESS", slug: "week-08", phaseName: "Phase 02 (Weeks 06–10)" },
-      { week: 9, phase: 2, label: "WEEK 09", status: "FIELD NOTES IN PROGRESS", slug: "week-09", phaseName: "Phase 02 (Weeks 06–10)" },
-      { week: 10, phase: 2, label: "WEEK 10", status: "FIELD NOTES IN PROGRESS", slug: "week-10", phaseName: "Phase 02 (Weeks 06–10)" },
+      { week: 6, phase: 2, label: "WEEK 06", status: "FIELD NOTES IN PROGRESS", slug: "week-06" },
+      { week: 7, phase: 2, label: "WEEK 07", status: "FIELD NOTES IN PROGRESS", slug: "week-07" },
+      { week: 8, phase: 2, label: "WEEK 08", status: "FIELD NOTES IN PROGRESS", slug: "week-08" },
+      { week: 9, phase: 2, label: "WEEK 09", status: "FIELD NOTES IN PROGRESS", slug: "week-09" },
+      { week: 10, phase: 2, label: "WEEK 10", status: "FIELD NOTES IN PROGRESS", slug: "week-10" },
 
       // Phase 03: Weeks 11-15
-      { week: 11, phase: 3, label: "WEEK 11", status: "FIELD NOTES IN PROGRESS", slug: "week-11", phaseName: "Phase 03 (Weeks 11–15)" },
-      { week: 12, phase: 3, label: "WEEK 12", status: "FIELD NOTES IN PROGRESS", slug: "week-12", phaseName: "Phase 03 (Weeks 11–15)" },
-      { week: 13, phase: 3, label: "WEEK 13", status: "FIELD NOTES IN PROGRESS", slug: "week-13", phaseName: "Phase 03 (Weeks 11–15)" },
-      { week: 14, phase: 3, label: "WEEK 14", status: "FIELD NOTES IN PROGRESS", slug: "week-14", phaseName: "Phase 03 (Weeks 11–15)" },
-      { week: 15, phase: 3, label: "WEEK 15", status: "FIELD NOTES IN PROGRESS", slug: "week-15", phaseName: "Phase 03 (Weeks 11–15)" },
+      { week: 11, phase: 3, label: "WEEK 11", status: "FIELD NOTES IN PROGRESS", slug: "week-11" },
+      { week: 12, phase: 3, label: "WEEK 12", status: "FIELD NOTES IN PROGRESS", slug: "week-12" },
+      { week: 13, phase: 3, label: "WEEK 13", status: "FIELD NOTES IN PROGRESS", slug: "week-13" },
+      { week: 14, phase: 3, label: "WEEK 14", status: "FIELD NOTES IN PROGRESS", slug: "week-14" },
+      { week: 15, phase: 3, label: "WEEK 15", status: "FIELD NOTES IN PROGRESS", slug: "week-15" },
 
       // Phase 04: Weeks 16-20
-      { week: 16, phase: 4, label: "WEEK 16", status: "FIELD NOTES IN PROGRESS", slug: "week-16", phaseName: "Phase 04 (Weeks 16–20)" },
-      { week: 17, phase: 4, label: "WEEK 17", status: "FIELD NOTES IN PROGRESS", slug: "week-17", phaseName: "Phase 04 (Weeks 16–20)" },
-      { week: 18, phase: 4, label: "WEEK 18", status: "FIELD NOTES IN PROGRESS", slug: "week-18", phaseName: "Phase 04 (Weeks 16–20)" },
-      { week: 19, phase: 4, label: "WEEK 19", status: "FIELD NOTES IN PROGRESS", slug: "week-19", phaseName: "Phase 04 (Weeks 16–20)" },
-      { week: 20, phase: 4, label: "WEEK 20", status: "FIELD NOTES IN PROGRESS", slug: "week-20", phaseName: "Phase 04 (Weeks 16–20)" },
+      { week: 16, phase: 4, label: "WEEK 16", status: "FIELD NOTES IN PROGRESS", slug: "week-16" },
+      { week: 17, phase: 4, label: "WEEK 17", status: "FIELD NOTES IN PROGRESS", slug: "week-17" },
+      { week: 18, phase: 4, label: "WEEK 18", status: "FIELD NOTES IN PROGRESS", slug: "week-18" },
+      { week: 19, phase: 4, label: "WEEK 19", status: "FIELD NOTES IN PROGRESS", slug: "week-19" },
+      { week: 20, phase: 4, label: "WEEK 20", status: "FIELD NOTES IN PROGRESS", slug: "week-20" },
     ];
 
-    // Function to render week cards dynamically
-    function renderWeekCards(phaseFilter = 'all') {
-      const container = document.getElementById('weeks-container');
+    function renderEditorialWeekCards(phaseFilter = 'all') {
+      const container = document.getElementById('editorial-weeks-container');
       if (!container) return;
 
       const filtered = phaseFilter === 'all' 
-        ? protoSemWeeks 
-        : protoSemWeeks.filter(item => item.phase === parseInt(phaseFilter));
+        ? editorialProtoSemWeeks 
+        : editorialProtoSemWeeks.filter(item => item.phase === parseInt(phaseFilter));
 
       container.innerHTML = filtered.map(item => {
         const weekPad = item.week < 10 ? `0${item.week}` : `${item.week}`;
         return `
           <div 
-            onclick="openWeekModal(${item.week})"
-            class="week-card rounded-2xl p-5 cursor-pointer flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-brand-500"
+            onclick="openEditorialWeekModal(${item.week})"
+            class="week-entry p-5 cursor-pointer flex flex-col justify-between group focus:outline-none focus:ring-1 focus:ring-terracotta"
             role="button"
             tabindex="0"
             aria-label="${item.label} Placeholder Story"
-            onkeydown="if(event.key==='Enter'||event.key===' ') openWeekModal(${item.week})"
+            onkeydown="if(event.key==='Enter'||event.key===' ') openEditorialWeekModal(${item.week})"
           >
             <!-- Top Metadata -->
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-white/5 text-slate-400 border border-white/5">
+            <div class="flex items-center justify-between border-b border-[#E6DFD5] pb-2 mb-3">
+              <span class="text-[10px] font-mono font-semibold text-charcoal-500 uppercase">
                 PHASE 0${item.phase}
               </span>
-              <span class="text-[10px] font-mono text-slate-500 flex items-center gap-1">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-400/80"></span>
+              <span class="text-[10px] font-mono text-terracotta font-semibold">
                 #${weekPad}
               </span>
             </div>
 
-            <!-- Primary Content -->
+            <!-- Primary Week Title -->
             <div class="my-2">
               <div class="flex items-baseline justify-between">
-                <h4 class="week-number text-xl font-heading font-bold text-white transition-colors">
+                <h4 class="font-serif text-2xl font-bold text-charcoal-900 group-hover:text-terracotta transition-colors">
                   ${item.label}
                 </h4>
-                <i class="fa-solid fa-arrow-right text-xs text-slate-500 week-arrow transition-transform"></i>
+                <span class="text-xs text-charcoal-400 group-hover:text-terracotta transition-colors font-serif">→</span>
               </div>
-              <p class="text-[11px] font-mono text-brand-300/80 uppercase tracking-wider mt-1.5 flex items-center gap-1.5">
-                <i class="fa-regular fa-compass text-[10px]"></i>
-                <span>${item.status}</span>
+              <p class="text-[10px] font-mono text-charcoal-500 uppercase tracking-widest mt-1">
+                ${item.status}
               </p>
             </div>
 
-            <!-- Bottom Progress Rail Indicator -->
-            <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-500">
+            <!-- Footer Marker -->
+            <div class="pt-3 border-t border-[#E6DFD5] flex items-center justify-between text-[10px] font-mono text-charcoal-500">
               <span>Chapter ${weekPad}/20</span>
-              <span class="text-brand-400 group-hover:text-brand-300 font-medium transition-colors">Future Story →</span>
+              <span class="text-terracotta group-hover:underline">Story Outline</span>
             </div>
           </div>
         `;
       }).join('');
     }
 
-    // Phase Tab Filter Handler
-    function filterPhase(phase, buttonElement) {
-      // Update active tab button
+    function filterEditorialPhase(phase, buttonElement) {
       document.querySelectorAll('.phase-tab').forEach(btn => {
         btn.classList.remove('active');
-        btn.classList.add('text-slate-400');
       });
       buttonElement.classList.add('active');
-      buttonElement.classList.remove('text-slate-400');
-
-      // Re-render cards
-      renderWeekCards(phase);
+      renderEditorialWeekCards(phase);
     }
 
-    // Modal Handlers for Interactive Experience
-    function openWeekModal(weekNumber) {
-      const item = protoSemWeeks.find(w => w.week === weekNumber);
+    function openEditorialWeekModal(weekNumber) {
+      const item = editorialProtoSemWeeks.find(w => w.week === weekNumber);
       if (!item) return;
 
-      document.getElementById('modal-phase').innerText = `PHASE 0${item.phase} • PROTOSEM ARCHIVE`;
-      document.getElementById('modal-title').innerText = `${item.label}`;
-      document.getElementById('modal-slug').innerText = `/protosem/${item.slug}`;
+      document.getElementById('modal-editorial-phase').innerText = `PHASE 0${item.phase} • PROTOSEM ARCHIVE`;
+      document.getElementById('modal-editorial-title').innerText = `${item.label}`;
+      document.getElementById('modal-editorial-slug').innerText = `/protosem/${item.slug}`;
       
-      const modal = document.getElementById('week-modal');
+      const modal = document.getElementById('editorial-week-modal');
       modal.classList.remove('hidden');
       modal.classList.add('flex');
     }
 
-    function closeWeekModal() {
-      const modal = document.getElementById('week-modal');
+    function closeEditorialWeekModal() {
+      const modal = document.getElementById('editorial-week-modal');
       modal.classList.add('hidden');
       modal.classList.remove('flex');
     }
 
-    // Initial render
     document.addEventListener('DOMContentLoaded', () => {
-      renderWeekCards('all');
+      renderEditorialWeekCards('all');
     });
 
-    // Close modal on Escape key or background click
     window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeWeekModal();
+      if (e.key === 'Escape') closeEditorialWeekModal();
     });
-    document.getElementById('week-modal')?.addEventListener('click', (e) => {
-      if (e.target.id === 'week-modal') closeWeekModal();
+    document.getElementById('editorial-week-modal')?.addEventListener('click', (e) => {
+      if (e.target.id === 'editorial-week-modal') closeEditorialWeekModal();
     });
   </script>
 </body>
