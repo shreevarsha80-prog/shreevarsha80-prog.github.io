@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shree Varsha V K — 3D Interactive Psychology Brain Portfolio</title>
-  <meta name="description" content="Personal interactive 3D brain portfolio of Shree Varsha V K — B.Sc. Psychology student, Innovation Engineer Trainee at PRICE ProtoSem, Founder of Memorea, and Social Impact Leader.">
+  <title>Shree Varsha V K — Psychology, Social Impact & PRICE ProtoSem</title>
+  <meta name="description" content="Personal editorial portfolio of Shree Varsha V K — B.Sc. Psychology student, Innovation Engineer Trainee at PRICE ProtoSem, Founder of Memorea, and Social Impact Leader.">
 
   <!-- Google Fonts: Cormorant Garamond (Editorial Serif), Plus Jakarta Sans, Caveat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -45,7 +45,7 @@
   </div>
 
   <!-- ========================================================================
-       2. PERMANENT TOP-LEFT PROFILE ANCHOR & NAVIGATION HEADER
+       2. PERMANENT TOP-LEFT PROFILE ANCHOR & REFINED EDITORIAL HEADER
        ======================================================================== -->
   <header id="site-header">
     <!-- Top-Left Clickable Profile Anchor -->
@@ -59,16 +59,16 @@
       </div>
     </button>
 
-    <!-- Center Breadcrumb Tracker -->
+    <!-- Center Minimal Breadcrumbs Tracker -->
     <div class="nav-breadcrumbs">
       <span>YOU ARE HERE</span>
-      <span class="text-terracotta">→</span>
+      <span class="breadcrumb-separator">→</span>
       <span id="breadcrumb-current-section" class="breadcrumb-segment active">CENTRAL BRAIN</span>
     </div>
 
-    <!-- Right Header Actions -->
+    <!-- Right Header Actions (Minimal Editorial Buttons) -->
     <div class="header-actions">
-      <button id="header-brain-home-btn" class="brain-home-btn" title="Return to 3D Central Brain">
+      <button id="header-brain-home-btn" class="brain-home-btn" title="Return to Brain Navigation">
         <i class="fa-solid fa-brain"></i>
         <span>The Brain</span>
       </button>
@@ -80,7 +80,7 @@
   </header>
 
   <!-- ========================================================================
-       3. FLOATING PSYCHOLOGICAL TERMS NEBULA (Ambient Editorial Background)
+       3. FLOATING PSYCHOLOGICAL TERMS (Very Low Contrast Ambient Background)
        ======================================================================== -->
   <div id="psych-background-layer">
     <div class="psych-term t1">NEUROPLASTICITY</div>
@@ -93,44 +93,369 @@
     <div class="psych-term t8">MEMORY</div>
     <div class="psych-term t9">EMOTION</div>
     <div class="psych-term t10">CONSCIOUSNESS</div>
+    <div class="psych-term t11">MOTIVATION</div>
+    <div class="psych-term t12">DEVELOPMENT</div>
   </div>
   <div class="paper-texture-overlay"></div>
 
   <!-- ========================================================================
-       4. CENTRAL 3D BRAIN NAVIGATION STAGE
+       4. CENTRAL INLINE SVG BRAIN NAVIGATION STAGE (Direct Lobe Hotspots)
        ======================================================================== -->
   <main id="brain-stage-view">
-    <!-- WebGL Canvas for Tactile Clay 3D Human Brain -->
-    <div id="brain-canvas-container"></div>
+    <div class="brain-svg-wrapper">
+      
+      <!-- INLINE ANATOMICAL SVG BRAIN -->
+      <svg id="anatomical-brain-svg" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive 3D-Style Psychology Brain Navigation System">
+        
+        <!-- Filter Definitions for Tactile Clay Depth & Gyri Folds -->
+        <defs>
+          <!-- Soft Matte Clay Drop Shadows -->
+          <filter id="clay-shadow" x="-15%" y="-15%" width="135%" height="135%">
+            <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#1c1917" flood-opacity="0.08" />
+            <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#c85a32" flood-opacity="0.04" />
+          </filter>
 
-    <!-- Dynamic SVG Layer for Animated Curved Neural Arrows -->
-    <svg id="neural-svg-canvas"></svg>
+          <filter id="lobe-lift-shadow" x="-20%" y="-20%" width="145%" height="145%">
+            <feDropShadow dx="0" dy="24" stdDeviation="26" flood-color="#1c1917" flood-opacity="0.14" />
+            <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#c85a32" flood-opacity="0.08" />
+          </filter>
 
-    <!-- Container for Interactive Plain-Language Floating Badges -->
-    <div id="neural-badges-container"></div>
+          <!-- Organic Cortical Wrinkle Displacement -->
+          <filter id="gyri-texture" x="-10%" y="-10%" width="120%" height="120%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.035 0.045" numOctaves="3" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="4.5" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
 
-    <!-- Bottom Instruction Guide & Quick Jump Pills -->
-    <div class="brain-stage-footer">
-      <div class="brain-instruction-pill">
-        <i class="fa-solid fa-sparkles"></i>
-        <span>Hover to reveal neural pathways • Click any region to explore</span>
+          <!-- Base Matte Clay Gradients -->
+          <radialGradient id="base-clay-grad" cx="45%" cy="38%" r="65%">
+            <stop offset="0%" stop-color="#FAF7F2" />
+            <stop offset="45%" stop-color="#F2EDE4" />
+            <stop offset="80%" stop-color="#E5DDD0" />
+            <stop offset="100%" stop-color="#D6CBB9" />
+          </radialGradient>
+
+          <!-- Region Tint Gradients (Applied as Low-Opacity Tint Overlays) -->
+          <!-- 1. Frontal / Lavender (THINKING) -->
+          <radialGradient id="tint-frontal" cx="35%" cy="35%" r="70%">
+            <stop offset="0%" stop-color="#B8AECF" stop-opacity="0.32" />
+            <stop offset="60%" stop-color="#8E82A6" stop-opacity="0.24" />
+            <stop offset="100%" stop-color="#6F6488" stop-opacity="0.38" />
+          </radialGradient>
+
+          <!-- 2. Hippocampus / Deep Cognition / Teal (LEARNING & MEMORY) -->
+          <radialGradient id="tint-hippocampus" cx="50%" cy="45%" r="65%">
+            <stop offset="0%" stop-color="#8BB5C2" stop-opacity="0.35" />
+            <stop offset="65%" stop-color="#5B8C9B" stop-opacity="0.26" />
+            <stop offset="100%" stop-color="#3A6A78" stop-opacity="0.40" />
+          </radialGradient>
+
+          <!-- 3. Temporal / Coral (PEOPLE & CONNECTIONS) -->
+          <radialGradient id="tint-temporal" cx="40%" cy="45%" r="65%">
+            <stop offset="0%" stop-color="#F2A486" stop-opacity="0.36" />
+            <stop offset="60%" stop-color="#D47A58" stop-opacity="0.26" />
+            <stop offset="100%" stop-color="#B05634" stop-opacity="0.40" />
+          </radialGradient>
+
+          <!-- 4. Parietal / Terracotta (EXPERIENCES) -->
+          <radialGradient id="tint-parietal" cx="50%" cy="35%" r="65%">
+            <stop offset="0%" stop-color="#E27650" stop-opacity="0.34" />
+            <stop offset="60%" stop-color="#C85A32" stop-opacity="0.25" />
+            <stop offset="100%" stop-color="#9C3A16" stop-opacity="0.38" />
+          </radialGradient>
+
+          <!-- 5. Occipital / Mustard (SEEING & CREATIVITY) -->
+          <radialGradient id="tint-occipital" cx="55%" cy="45%" r="65%">
+            <stop offset="0%" stop-color="#E5BF6E" stop-opacity="0.35" />
+            <stop offset="60%" stop-color="#CCA046" stop-opacity="0.25" />
+            <stop offset="100%" stop-color="#A17924" stop-opacity="0.40" />
+          </radialGradient>
+
+          <!-- 6. Cerebellum / Sage (SKILLS & MOVEMENT) -->
+          <radialGradient id="tint-cerebellum" cx="50%" cy="45%" r="65%">
+            <stop offset="0%" stop-color="#A5BEAD" stop-opacity="0.36" />
+            <stop offset="60%" stop-color="#7E9A86" stop-opacity="0.26" />
+            <stop offset="100%" stop-color="#55725D" stop-opacity="0.42" />
+          </radialGradient>
+
+          <!-- 7. Satellite Curiosity / Dusty Rose -->
+          <radialGradient id="tint-research" cx="40%" cy="40%" r="65%">
+            <stop offset="0%" stop-color="#D6A5AF" stop-opacity="0.38" />
+            <stop offset="70%" stop-color="#B87D8A" stop-opacity="0.28" />
+            <stop offset="100%" stop-color="#8F5461" stop-opacity="0.44" />
+          </radialGradient>
+
+          <!-- 8. Satellite Memorea / Warm Cream Amber -->
+          <radialGradient id="tint-memorea" cx="40%" cy="40%" r="65%">
+            <stop offset="0%" stop-color="#E8CBB0" stop-opacity="0.38" />
+            <stop offset="70%" stop-color="#D8A878" stop-opacity="0.28" />
+            <stop offset="100%" stop-color="#AB7C4C" stop-opacity="0.44" />
+          </radialGradient>
+        </defs>
+
+        <!-- Ambient Neural Synaptic Connecting Filaments (Background) -->
+        <g class="neural-filaments" opacity="0.35" stroke="#DDD5C8" stroke-width="1.2" stroke-dasharray="3 3" fill="none">
+          <path d="M 280 220 Q 220 180, 160 160" />
+          <path d="M 680 430 Q 760 480, 840 510" />
+          <path d="M 460 300 Q 520 220, 580 180" />
+          <path d="M 330 380 Q 240 440, 180 500" />
+        </g>
+
+        <!-- MAIN BRAIN ANATOMICAL GROUP (With Ambient Idle Floating Bob & Tilt) -->
+        <g id="interactive-brain-group" class="brain-idle-float" filter="url(#clay-shadow)">
+          
+          <!-- ANATOMICAL BRAIN BASE SILHOUETTE (Tactile Warm Clay) -->
+          <path class="brain-base-silhouette" filter="url(#gyri-texture)" fill="url(#base-clay-grad)" stroke="#D6CBB9" stroke-width="2.5" d="
+            M 270 330
+            C 255 270, 260 210, 290 165
+            C 335 110, 420 90, 520 95
+            C 610 100, 695 135, 740 195
+            C 780 250, 790 315, 775 375
+            C 760 430, 715 470, 665 490
+            C 650 540, 610 580, 550 585
+            C 500 590, 465 560, 455 520
+            C 440 550, 420 600, 400 620
+            C 380 640, 360 635, 355 605
+            C 350 565, 365 520, 380 475
+            C 340 470, 295 440, 275 395
+            C 265 375, 270 345, 270 330 Z
+          " />
+
+          <!-- ==============================================================
+               INTERACTIVE LOBE HOTSPOTS (Separate Clickable & Hoverable Paths)
+               ============================================================== -->
+
+          <!-- 1. FRONTAL LOBE (THINKING -> About Me) -->
+          <g id="region-frontal" class="brain-lobe-hotspot" data-label="THINKING" data-subtitle="Decisions, self-reflection & personal philosophy" data-target="about" data-color="#8E82A6" tabindex="0" role="button" aria-label="Thinking Region: About Me">
+            <!-- Clay Base Layer with Convolutions -->
+            <path class="lobe-base" fill="url(#base-clay-grad)" d="
+              M 270 330
+              C 255 265, 265 205, 295 165
+              C 335 110, 425 90, 500 95
+              C 485 160, 470 230, 440 290
+              C 415 340, 360 365, 310 365
+              C 285 365, 275 350, 270 330 Z
+            " />
+            <!-- Tint Overlay Layer -->
+            <path class="lobe-tint" fill="url(#tint-frontal)" d="
+              M 270 330
+              C 255 265, 265 205, 295 165
+              C 335 110, 425 90, 500 95
+              C 485 160, 470 230, 440 290
+              C 415 340, 360 365, 310 365
+              C 285 365, 275 350, 270 330 Z
+            " />
+            <!-- Frontal Gyri / Sulci Folds & Convolutions -->
+            <g class="gyri-strokes" stroke="#C5B8A5" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.85">
+              <path d="M 290 220 C 320 200, 365 210, 395 185 C 420 165, 455 160, 480 140" />
+              <path d="M 275 270 C 305 255, 340 270, 375 250 C 405 235, 440 240, 465 215" />
+              <path d="M 300 315 C 330 300, 365 315, 400 295 C 420 280, 445 285, 450 270" />
+              <path d="M 345 145 C 375 165, 400 135, 435 130 C 455 125, 475 115, 490 110" />
+              <path d="M 330 250 C 350 220, 380 230, 400 210" />
+            </g>
+          </g>
+
+          <!-- 2. PARIETAL LOBE (EXPERIENCES -> Leadership & Milestones) -->
+          <g id="region-parietal" class="brain-lobe-hotspot" data-label="EXPERIENCES" data-subtitle="Leadership, student governance & campus journey" data-target="journey" data-color="#C85A32" tabindex="0" role="button" aria-label="Experiences Region: Leadership">
+            <path class="lobe-base" fill="url(#base-clay-grad)" d="
+              M 500 95
+              C 585 100, 665 125, 715 175
+              C 745 210, 755 255, 750 295
+              C 705 290, 655 270, 610 275
+              C 555 280, 515 255, 485 220
+              C 475 175, 485 130, 500 95 Z
+            " />
+            <path class="lobe-tint" fill="url(#tint-parietal)" d="
+              M 500 95
+              C 585 100, 665 125, 715 175
+              C 745 210, 755 255, 750 295
+              C 705 290, 655 270, 610 275
+              C 555 280, 515 255, 485 220
+              C 475 175, 485 130, 500 95 Z
+            " />
+            <g class="gyri-strokes" stroke="#C5B8A5" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.85">
+              <path d="M 525 120 C 560 145, 600 130, 640 155 C 670 175, 700 160, 725 190" />
+              <path d="M 505 170 C 545 190, 585 175, 625 200 C 665 220, 705 205, 735 235" />
+              <path d="M 500 220 C 540 240, 580 225, 620 245 C 660 260, 700 250, 740 275" />
+              <path d="M 570 110 C 600 135, 630 115, 665 130" />
+            </g>
+          </g>
+
+          <!-- 3. OCCIPITAL LOBE (SEEING & CREATIVITY -> Creative Work & Arts) -->
+          <g id="region-occipital" class="brain-lobe-hotspot" data-label="SEEING & CREATIVITY" data-subtitle="Visual perception, dance, guitar & creative expression" data-target="skills" data-color="#CCA046" tabindex="0" role="button" aria-label="Seeing and Creativity Region">
+            <path class="lobe-base" fill="url(#base-clay-grad)" d="
+              M 750 295
+              C 780 325, 790 370, 775 415
+              C 755 460, 715 485, 665 490
+              C 655 440, 660 390, 675 345
+              C 690 315, 720 300, 750 295 Z
+            " />
+            <path class="lobe-tint" fill="url(#tint-occipital)" d="
+              M 750 295
+              C 780 325, 790 370, 775 415
+              C 755 460, 715 485, 665 490
+              C 655 440, 660 390, 675 345
+              C 690 315, 720 300, 750 295 Z
+            " />
+            <g class="gyri-strokes" stroke="#C5B8A5" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.85">
+              <path d="M 740 320 C 765 345, 745 375, 765 400" />
+              <path d="M 710 335 C 730 365, 715 395, 735 425 C 745 440, 730 460, 710 470" />
+              <path d="M 680 360 C 700 390, 685 420, 700 450" />
+              <path d="M 755 365 C 775 385, 760 410, 770 430" />
+            </g>
+          </g>
+
+          <!-- 4. TEMPORAL LOBE (PEOPLE & CONNECTIONS -> Social Vertical & Leadership) -->
+          <g id="region-temporal" class="brain-lobe-hotspot" data-label="PEOPLE & CONNECTIONS" data-subtitle="Where psychology meets people, leadership & community" data-target="social" data-color="#D47A58" tabindex="0" role="button" aria-label="People and Connections Region: Social Vertical">
+            <path class="lobe-base" fill="url(#base-clay-grad)" d="
+              M 310 365
+              C 365 365, 415 340, 440 290
+              C 480 315, 525 335, 570 345
+              C 580 390, 565 440, 520 465
+              C 465 490, 395 485, 345 465
+              C 305 450, 285 415, 275 395
+              C 285 375, 295 365, 310 365 Z
+            " />
+            <path class="lobe-tint" fill="url(#tint-temporal)" d="
+              M 310 365
+              C 365 365, 415 340, 440 290
+              C 480 315, 525 335, 570 345
+              C 580 390, 565 440, 520 465
+              C 465 490, 395 485, 345 465
+              C 305 450, 285 415, 275 395
+              C 285 375, 295 365, 310 365 Z
+            " />
+            <g class="gyri-strokes" stroke="#C5B8A5" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.85">
+              <path d="M 310 390 C 355 385, 400 405, 445 395 C 490 385, 530 400, 560 380" />
+              <path d="M 320 425 C 365 420, 410 440, 455 430 C 495 420, 530 435, 550 415" />
+              <path d="M 345 455 C 385 450, 425 465, 465 455 C 495 450, 515 455, 530 440" />
+              <path d="M 360 380 C 390 365, 420 375, 450 360" />
+            </g>
+          </g>
+
+          <!-- 5. HIPPOCAMPUS / COGNITION (LEARNING & MEMORY -> Academics & ProtoSem) -->
+          <g id="region-hippocampus" class="brain-lobe-hotspot" data-label="LEARNING & MEMORY" data-subtitle="What I learn, question and build upon (Academics & ProtoSem)" data-target="academics" data-color="#5B8C9B" tabindex="0" role="button" aria-label="Learning and Memory Region: Academics and ProtoSem">
+            <path class="lobe-base" fill="url(#base-clay-grad)" d="
+              M 440 290
+              C 470 230, 485 160, 500 95
+              C 515 130, 525 175, 485 220
+              C 515 255, 555 280, 610 275
+              C 655 270, 705 290, 750 295
+              C 720 300, 690 315, 675 345
+              C 645 340, 610 340, 570 345
+              C 525 335, 480 315, 440 290 Z
+            " />
+            <path class="lobe-tint" fill="url(#tint-hippocampus)" d="
+              M 440 290
+              C 470 230, 485 160, 500 95
+              C 515 130, 525 175, 485 220
+              C 515 255, 555 280, 610 275
+              C 655 270, 705 290, 750 295
+              C 720 300, 690 315, 675 345
+              C 645 340, 610 340, 570 345
+              C 525 335, 480 315, 440 290 Z
+            " />
+            <g class="gyri-strokes" stroke="#C5B8A5" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.85">
+              <path d="M 470 260 C 510 280, 550 265, 590 290 C 630 310, 660 300, 690 325" />
+              <path d="M 480 200 C 520 220, 560 205, 600 230 C 635 245, 660 240, 680 265" />
+              <path d="M 520 305 C 555 295, 590 315, 625 305 C 650 300, 670 315, 685 310" />
+            </g>
+          </g>
+
+          <!-- 6. CEREBELLUM & BRAINSTEM (SKILLS & MOVEMENT -> Creative Skills & Competencies) -->
+          <g id="region-cerebellum" class="brain-lobe-hotspot" data-label="SKILLS & MOVEMENT" data-subtitle="Dance choreography, guitar, public speaking & cognitive craft" data-target="skills" data-color="#7E9A86" tabindex="0" role="button" aria-label="Skills and Movement Region: Cerebellum">
+            <!-- Cerebellum Body -->
+            <path class="lobe-base" fill="url(#base-clay-grad)" d="
+              M 665 490
+              C 650 540, 610 580, 550 585
+              C 500 590, 465 560, 455 520
+              C 490 500, 530 485, 570 480
+              C 610 475, 640 480, 665 490 Z
+            " />
+            <path class="lobe-tint" fill="url(#tint-cerebellum)" d="
+              M 665 490
+              C 650 540, 610 580, 550 585
+              C 500 590, 465 560, 455 520
+              C 490 500, 530 485, 570 480
+              C 610 475, 640 480, 665 490 Z
+            " />
+            <!-- Delicate Cerebellar Folia Horizontal Striations -->
+            <g class="folia-strokes" stroke="#B8AC98" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.8">
+              <path d="M 480 525 C 520 515, 570 510, 625 520" />
+              <path d="M 490 540 C 530 530, 570 528, 610 538" />
+              <path d="M 505 555 C 540 548, 575 545, 595 555" />
+              <path d="M 520 570 C 545 565, 565 562, 580 570" />
+            </g>
+
+            <!-- Anatomical Brainstem (Pons & Medulla) -->
+            <path class="brainstem-path" fill="#E8DEC8" stroke="#D6CBB9" stroke-width="2" d="
+              M 455 520
+              C 440 550, 420 600, 400 620
+              C 380 640, 360 635, 355 605
+              C 350 565, 365 520, 380 475
+              C 405 485, 430 505, 455 520 Z
+            " />
+          </g>
+
+        </g> <!-- End interactive-brain-group -->
+
+        <!-- ==============================================================
+             7 & 8. SATELLITE NODES (Curiosity & Research, Memorea Venture)
+             ============================================================== -->
+        <!-- Satellite 1: CURIOSITY & RESEARCH (Prefrontal Superior Filament Node) -->
+        <g id="satellite-research" class="brain-satellite-node" data-label="CURIOSITY & RESEARCH" data-subtitle="Psychology research methods, cognitive inquiries & behavioral nudges" data-target="research" data-color="#B87D8A" tabindex="0" role="button" aria-label="Curiosity and Research Node">
+          <!-- Connection Neural Tendril -->
+          <path d="M 330 120 Q 220 110, 160 140" stroke="#B87D8A" stroke-width="1.8" stroke-dasharray="4 3" fill="none" opacity="0.6" />
+          <!-- Node Clay Core & Halo -->
+          <circle cx="160" cy="140" r="32" fill="url(#base-clay-grad)" stroke="#D6CBB9" stroke-width="2" filter="url(#clay-shadow)" />
+          <circle cx="160" cy="140" r="32" fill="url(#tint-research)" />
+          <circle cx="160" cy="140" r="22" stroke="#B87D8A" stroke-width="1.5" stroke-dasharray="3 2" fill="none" opacity="0.75" />
+          <text x="160" y="144" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#44403C" letter-spacing="1">RESEARCH</text>
+        </g>
+
+        <!-- Satellite 2: MEMOREA VENTURE (Entrepreneurial Association Node) -->
+        <g id="satellite-memorea" class="brain-satellite-node" data-label="MEMOREA VENTURE" data-subtitle="Founder / Entrepreneurship — 'Memories, made to wear'" data-target="ventures" data-color="#D8A878" tabindex="0" role="button" aria-label="Memorea Venture Node">
+          <!-- Connection Neural Tendril -->
+          <path d="M 680 480 Q 770 510, 830 490" stroke="#D8A878" stroke-width="1.8" stroke-dasharray="4 3" fill="none" opacity="0.6" />
+          <!-- Node Clay Core & Halo -->
+          <circle cx="830" cy="490" r="34" fill="url(#base-clay-grad)" stroke="#D6CBB9" stroke-width="2" filter="url(#clay-shadow)" />
+          <circle cx="830" cy="490" r="34" fill="url(#tint-memorea)" />
+          <circle cx="830" cy="490" r="24" stroke="#D8A878" stroke-width="1.5" stroke-dasharray="3 2" fill="none" opacity="0.75" />
+          <text x="830" y="494" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#44403C" letter-spacing="1">MEMOREA</text>
+        </g>
+
+        <!-- DYNAMIC SVG CONNECTING CALLOUT ARROW (Rendered on Hover) -->
+        <g id="dynamic-callout-arrow-group" pointer-events="none"></g>
+
+      </svg>
+
+      <!-- DYNAMIC FLOATING EDITORIAL CALLOUT BADGE (Positioned near active hotspot) -->
+      <div id="brain-hover-callout" class="brain-floating-callout" style="display: none;">
+        <div class="callout-card">
+          <div class="callout-header">
+            <span class="callout-dot"></span>
+            <span id="callout-category" class="callout-category-tag">REGION</span>
+          </div>
+          <h3 id="callout-title" class="callout-title font-serif">THINKING</h3>
+          <p id="callout-subtitle" class="callout-subtitle">Decisions, self-reflection & personal philosophy</p>
+          <div class="callout-prompt">
+            <span class="prompt-text font-serif italic">Enter Section</span>
+            <span class="prompt-arrow">→</span>
+          </div>
+        </div>
       </div>
 
-      <div class="brain-quick-regions">
-        <button class="quick-region-chip" data-region="thinking">THINKING (About Me)</button>
-        <button class="quick-region-chip" data-region="learning">LEARNING & MEMORY (Academics & ProtoSem)</button>
-        <button class="quick-region-chip" data-region="people">PEOPLE & CONNECTIONS (Social Vertical)</button>
-        <button class="quick-region-chip" data-region="creativity">SEEING & CREATIVITY (Creative Work)</button>
-        <button class="quick-region-chip" data-region="experiences">EXPERIENCES (Leadership)</button>
-        <button class="quick-region-chip" data-region="skills">SKILLS & MOVEMENT</button>
-        <button class="quick-region-chip" data-region="research">CURIOSITY & RESEARCH</button>
-        <button class="quick-region-chip" data-region="ventures">MEMOREA VENTURE</button>
-      </div>
+    </div> <!-- End brain-svg-wrapper -->
+
+    <!-- Subtle Guide Text Below Brain -->
+    <div class="brain-stage-subtext">
+      <p class="font-serif italic text-charcoal-500">
+        Hover over the brain regions or satellite nodes to navigate • Click any region to explore
+      </p>
     </div>
   </main>
 
   <!-- ========================================================================
-       5. PORTFOLIO CONTENT VIEWS (100% Authentic Content)
+       5. PORTFOLIO CONTENT VIEWS (100% Authentic Content Preserved)
        ======================================================================== -->
   <div id="portfolio-content-view">
     
@@ -157,7 +482,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div class="lg:col-span-4">
             <div class="editorial-card text-center">
-              <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-border shadow-md mb-6">
+              <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-2 border-border shadow-sm mb-6">
                 <img src="assets/profile.jpg" alt="Shree Varsha V K" class="w-full h-full object-cover">
               </div>
               <h3 class="font-serif text-2xl font-bold text-charcoal-900">Shree Varsha V K</h3>
@@ -171,7 +496,7 @@
               </div>
 
               <div class="mt-6">
-                <img src="assets/signature.jpg" alt="Signature" class="h-12 mx-auto opacity-75">
+                <img src="assets/signature.jpg" alt="Signature" class="h-10 mx-auto opacity-75">
               </div>
             </div>
           </div>
@@ -667,7 +992,7 @@
         </div>
 
         <div class="text-center mt-12">
-          <a href="resume.html" class="inline-flex items-center gap-3 px-8 py-4 bg-terracotta text-white font-bold text-sm uppercase tracking-widest hover:bg-terracotta-dark transition-colors shadow-lg">
+          <a href="resume.html" class="inline-flex items-center gap-3 px-8 py-4 bg-terracotta text-white font-bold text-sm uppercase tracking-widest hover:bg-terracotta-dark transition-colors shadow-sm">
             <i class="fa-regular fa-file-lines text-lg"></i>
             <span>View Full ATS Printable Resume</span>
           </a>
@@ -687,7 +1012,7 @@
       </button>
 
       <div class="flex flex-col sm:flex-row items-center sm:items-start gap-8 pb-8 border-b border-border">
-        <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-terracotta flex-shrink-0 shadow-md">
+        <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-terracotta flex-shrink-0 shadow-sm">
           <img src="assets/profile.jpg" alt="Shree Varsha V K" class="w-full h-full object-cover">
         </div>
         <div>
@@ -761,15 +1086,9 @@
   </div>
 
   <!-- ========================================================================
-       SCRIPTS: THREE.JS, PROTOSEM DATA & NEURAL ENGINES
+       SCRIPTS: PROTOSEM DATA & SVG BRAIN NEURO-APP
        ======================================================================== -->
-  <!-- Three.js (r128) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-  <!-- Application Modules -->
   <script src="js/protosem-data.js"></script>
-  <script src="js/brain-engine.js"></script>
-  <script src="js/neural-arrows.js"></script>
   <script src="js/app.js"></script>
 
 </body>

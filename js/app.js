@@ -1,43 +1,10 @@
 /**
- * APPLICATION COORDINATOR - Shree Varsha V K Portfolio
- * Manages Opening Cinematic, 3D Brain Navigation, Modals & Section Views
+ * APPLICATION COORDINATOR — Shree Varsha V K Portfolio
+ * Manages Inline SVG Brain Hotspots, Curved Arrows, Modals & Section Views
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initialize 3D Brain Engine & Neural Arrows
-  const brainContainer = document.getElementById('brain-canvas-container');
-  let brainEngine = null;
-  let neuralArrows = null;
-
-  if (brainContainer && window.BrainEngine) {
-    brainEngine = new window.BrainEngine('brain-canvas-container');
-    window.brainEngineInstance = brainEngine;
-
-    if (window.NeuralArrowsManager) {
-      neuralArrows = new window.NeuralArrowsManager('neural-svg-canvas', 'neural-badges-container');
-      
-      // Wire hover events from 3D brain to SVG neural arrows
-      brainEngine.onRegionHover = (regionId, def, screenCoords) => {
-        neuralArrows.showArrowAndBadge(regionId, def, screenCoords);
-      };
-
-      brainEngine.onAnchorUpdate = (regionId, screenCoords) => {
-        neuralArrows.updateAnchorPosition(regionId, screenCoords);
-      };
-
-      brainEngine.onRegionLeave = () => {
-        neuralArrows.hideArrowAndBadge();
-      };
-    }
-
-    // Wire region click event to open portfolio section
-    brainEngine.onRegionSelect = (regionId, def) => {
-      if (neuralArrows) neuralArrows.hideArrowAndBadge();
-      openSectionView(def.sectionId, def.name);
-    };
-  }
-
-  // 2. Cinematic Opening Sequence
+  // 1. Cinematic Opening Sequence
   const openingScreen = document.getElementById('opening-screen');
   const skipBtn = document.getElementById('opening-skip-btn');
 
@@ -46,19 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
     openingScreen.classList.add('fade-out');
     setTimeout(() => {
       openingScreen.style.display = 'none';
-    }, 1000);
+    }, 800);
   }
 
   if (skipBtn) {
     skipBtn.addEventListener('click', endOpeningSequence);
   }
 
-  // Auto-transition opening sequence after 3.2 seconds
   setTimeout(() => {
     endOpeningSequence();
-  }, 3200);
+  }, 2800);
 
-  // 3. Navigation Breadcrumb Coordinator
+  // 2. Navigation Breadcrumb Coordinator
   const breadcrumbCurrent = document.getElementById('breadcrumb-current-section');
 
   function updateBreadcrumbs(sectionName) {
@@ -67,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 4. Section View Controller
+  // 3. Section View Controller
   const brainStageView = document.getElementById('brain-stage-view');
   const portfolioContentView = document.getElementById('portfolio-content-view');
   const stickyBackBar = document.getElementById('sticky-back-bar');
@@ -77,17 +43,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateBreadcrumbs(sectionDisplayName || sectionId);
 
-    // Hide 3D brain stage & reveal content
+    // Hide brain stage & reveal content
     brainStageView.classList.add('stage-hidden');
     portfolioContentView.classList.add('view-active');
     if (stickyBackBar) stickyBackBar.style.display = 'flex';
 
-    // Scroll to specific section anchor
+    // Scroll to specific section
     const targetSection = document.getElementById(sectionId);
     if (targetSection) {
       setTimeout(() => {
         targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
+      }, 50);
     } else {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -97,18 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!portfolioContentView || !brainStageView) return;
 
     updateBreadcrumbs('CENTRAL BRAIN');
-
-    // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    // Hide content & bring 3D brain back
     portfolioContentView.classList.remove('view-active');
     brainStageView.classList.remove('stage-hidden');
     if (stickyBackBar) stickyBackBar.style.display = 'none';
-
-    if (brainEngine) {
-      brainEngine.resetToBrainHome();
-    }
   }
 
   // Bind Back to Brain Buttons
@@ -118,15 +77,148 @@ document.addEventListener('DOMContentLoaded', () => {
   if (backToBrainBtn) backToBrainBtn.addEventListener('click', returnToBrainHome);
   if (headerBrainBtn) headerBrainBtn.addEventListener('click', returnToBrainHome);
 
-  // Bind Quick Region Chips at bottom of Brain stage
-  document.querySelectorAll('.quick-region-chip').forEach(chip => {
-    chip.addEventListener('click', (e) => {
-      const regionId = e.currentTarget.getAttribute('data-region');
-      if (brainEngine && regionId) {
-        brainEngine.selectRegion(regionId);
+  // =========================================================================
+  // 4. INLINE SVG BRAIN HOTSPOT INTERACTION & DYNAMIC CURVED ARROWS
+  // =========================================================================
+  const svg = document.getElementById('anatomical-brain-svg');
+  const brainGroup = document.getElementById('interactive-brain-group');
+  const arrowGroup = document.getElementById('dynamic-callout-arrow-group');
+  const calloutBadge = document.getElementById('brain-hover-callout');
+  const calloutCategory = document.getElementById('callout-category');
+  const calloutTitle = document.getElementById('callout-title');
+  const calloutSubtitle = document.getElementById('callout-subtitle');
+  const calloutDot = document.querySelector('.callout-dot');
+  const calloutCard = document.querySelector('.callout-card');
+
+  // Lobe Anchor Points on SVG Coordinate Plane (1000x700 viewBox)
+  const lobeAnchors = {
+    'region-frontal': { x: 380, y: 220, calloutOffset: { x: -300, y: -90 } },
+    'region-parietal': { x: 620, y: 190, calloutOffset: { x: 260, y: -110 } },
+    'region-occipital': { x: 740, y: 380, calloutOffset: { x: 280, y: 40 } },
+    'region-temporal': { x: 420, y: 410, calloutOffset: { x: -310, y: 80 } },
+    'region-hippocampus': { x: 570, y: 260, calloutOffset: { x: 260, y: -20 } },
+    'region-cerebellum': { x: 570, y: 530, calloutOffset: { x: -280, y: 160 } },
+    'satellite-research': { x: 160, y: 140, calloutOffset: { x: -20, y: -120 } },
+    'satellite-memorea': { x: 830, y: 490, calloutOffset: { x: 40, y: 80 } }
+  };
+
+  const hotspotElements = document.querySelectorAll('.brain-lobe-hotspot, .brain-satellite-node');
+
+  hotspotElements.forEach(elem => {
+    // 1. Hover & Focus Event
+    function activateHotspot(e) {
+      const id = elem.id;
+      const label = elem.getAttribute('data-label');
+      const subtitle = elem.getAttribute('data-subtitle');
+      const target = elem.getAttribute('data-target');
+      const color = elem.getAttribute('data-color') || '#C85A32';
+
+      // Mark brain group as focused to subtly dim other lobes
+      if (brainGroup) brainGroup.classList.add('has-focus');
+      elem.classList.add('is-active');
+
+      // Update Callout Content
+      if (calloutTitle) calloutTitle.innerText = label;
+      if (calloutSubtitle) calloutSubtitle.innerText = subtitle;
+      if (calloutCategory) calloutCategory.innerText = id.includes('satellite') ? 'EXPLORE' : 'HOTSPOT';
+      if (calloutDot) calloutDot.style.backgroundColor = color;
+      if (calloutCard) calloutCard.style.borderLeftColor = color;
+
+      // Position Callout & Render Curved Bezier Arrow
+      positionCalloutAndArrow(id, color);
+
+      // Bind Callout click to same section
+      if (calloutBadge) {
+        calloutBadge.onclick = () => {
+          openSectionView(target, label);
+        };
+      }
+    }
+
+    // 2. Mouse Leave Event
+    function deactivateHotspot() {
+      if (brainGroup) brainGroup.classList.remove('has-focus');
+      elem.classList.remove('is-active');
+      if (calloutBadge) calloutBadge.style.display = 'none';
+      if (arrowGroup) arrowGroup.innerHTML = '';
+    }
+
+    // 3. Click Event
+    function clickHotspot() {
+      const label = elem.getAttribute('data-label');
+      const target = elem.getAttribute('data-target');
+      deactivateHotspot();
+      openSectionView(target, label);
+    }
+
+    elem.addEventListener('mouseenter', activateHotspot);
+    elem.addEventListener('mouseleave', deactivateHotspot);
+    elem.addEventListener('focus', activateHotspot);
+    elem.addEventListener('blur', deactivateHotspot);
+    elem.addEventListener('click', clickHotspot);
+    elem.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        clickHotspot();
       }
     });
   });
+
+  function positionCalloutAndArrow(lobeId, color) {
+    if (!svg || !calloutBadge || !arrowGroup) return;
+
+    const anchor = lobeAnchors[lobeId] || { x: 500, y: 350, calloutOffset: { x: 250, y: -50 } };
+    const svgRect = svg.getBoundingClientRect();
+
+    // Scale factors from SVG 1000x700 coordinate plane to screen pixels
+    const scaleX = svgRect.width / 1000;
+    const scaleY = svgRect.height / 700;
+
+    const screenX = svgRect.left + anchor.x * scaleX;
+    const screenY = svgRect.top + anchor.y * scaleY;
+
+    // Callout Target Coordinate in screen pixels
+    const isMobile = window.innerWidth < 768;
+    let targetLeft, targetTop;
+
+    if (isMobile) {
+      targetLeft = window.innerWidth / 2;
+      targetTop = window.innerHeight - 150;
+      calloutBadge.style.left = `${targetLeft}px`;
+      calloutBadge.style.top = `${targetTop}px`;
+      calloutBadge.style.transform = 'translateX(-50%)';
+    } else {
+      targetLeft = Math.max(20, Math.min(window.innerWidth - 300, screenX + anchor.calloutOffset.x * scaleX));
+      targetTop = Math.max(80, Math.min(window.innerHeight - 180, screenY + anchor.calloutOffset.y * scaleY));
+      calloutBadge.style.left = `${targetLeft}px`;
+      calloutBadge.style.top = `${targetTop}px`;
+      calloutBadge.style.transform = 'none';
+    }
+
+    calloutBadge.style.display = 'block';
+
+    // Calculate Arrow End Point on SVG canvas
+    const endSvgX = (targetLeft + 120 - svgRect.left) / scaleX;
+    const endSvgY = (targetTop + 40 - svgRect.top) / scaleY;
+
+    // Quadratic Bezier Control Point for Hand-Drawn Arc
+    const midX = (anchor.x + endSvgX) / 2;
+    const midY = Math.min(anchor.y, endSvgY) - 35;
+
+    arrowGroup.innerHTML = `
+      <path 
+        d="M ${anchor.x} ${anchor.y} Q ${midX} ${midY}, ${endSvgX} ${endSvgY}" 
+        fill="none" 
+        stroke="${color}" 
+        stroke-width="1.8" 
+        stroke-dasharray="5 3" 
+        stroke-linecap="round"
+        opacity="0.85"
+      />
+      <circle cx="${anchor.x}" cy="${anchor.y}" r="4" fill="${color}" />
+      <circle cx="${endSvgX}" cy="${endSvgY}" r="3" fill="${color}" />
+    `;
+  }
 
   // 5. Top-Left Profile Anchor & About Me Modal
   const profileAnchorBtn = document.getElementById('profile-anchor-btn');
