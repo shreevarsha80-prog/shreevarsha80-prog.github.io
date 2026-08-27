@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shree Varsha V K | Psychology • Social Impact • Entrepreneurship</title>
-  <meta name="description" content="Portfolio of Shree Varsha V K - Psychology undergraduate, Founder of Memorea, Vice President of Social Vertical, and Social Impact Leader.">
+  <title>Shree Varsha V K | Psychology • Social Impact • Entrepreneurship • ProtoSem</title>
+  <meta name="description" content="Portfolio of Shree Varsha V K - Psychology undergraduate, Innovation Engineer Trainee at PRICE ProtoSem, Founder of Memorea, and Social Impact Leader.">
 
-  <!-- Google Fonts: Inter & Outfit -->
+  <!-- Google Fonts: Inter, Outfit, Fira Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -57,7 +57,7 @@
   <!-- AOS (Animate on Scroll) CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Custom CSS for Glows & Terminal Styling -->
+  <!-- Custom CSS for Glows, Bento Cards, and Timeline Styling -->
   <style>
     body {
       background-color: #0d0d12;
@@ -92,10 +92,40 @@
       box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5), 0 0 25px -5px rgba(244, 63, 94, 0.15);
     }
 
+    .week-card {
+      background: linear-gradient(135deg, rgba(28, 28, 42, 0.7) 0%, rgba(18, 18, 28, 0.9) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+
+    .week-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(251, 113, 133, 0.5);
+      background: linear-gradient(135deg, rgba(38, 38, 56, 0.85) 0%, rgba(24, 24, 38, 0.95) 100%);
+      box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.4), 0 0 20px -3px rgba(244, 63, 94, 0.2);
+    }
+
+    .week-card:hover .week-arrow {
+      transform: translateX(4px);
+      color: #fb7185;
+    }
+
+    .week-card:hover .week-number {
+      color: #fda4af;
+    }
+
     .gradient-text {
       background: linear-gradient(135deg, #fda4af 0%, #fb7185 40%, #E07A5F 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+
+    .phase-tab.active {
+      background: linear-gradient(135deg, #e11d48 0%, #E07A5F 100%);
+      color: #ffffff;
+      border-color: transparent;
+      box-shadow: 0 4px 15px -3px rgba(225, 29, 72, 0.4);
     }
 
     .custom-scrollbar::-webkit-scrollbar {
@@ -120,7 +150,7 @@
   <div class="fixed bottom-1/3 right-10 w-96 h-96 bg-brand-terracotta/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
   <!-- Navigation Bar -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0d0d12]/80 backdrop-blur-md border-b border-white/5">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0d0d12]/85 backdrop-blur-md border-b border-white/5">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="#hero" class="flex items-center gap-3 group">
         <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-brand-terracotta flex items-center justify-center text-white font-heading font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
@@ -132,10 +162,13 @@
       </a>
 
       <!-- Desktop Nav Links -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
         <a href="#about" class="hover:text-brand-300 transition-colors">About</a>
         <a href="#ventures" class="hover:text-brand-300 transition-colors">Memorea</a>
         <a href="#leadership" class="hover:text-brand-300 transition-colors">Leadership</a>
+        <a href="#protosem" class="hover:text-brand-300 transition-colors flex items-center gap-1.5 text-brand-300 font-semibold">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span> ProtoSem
+        </a>
         <a href="#impact" class="hover:text-brand-300 transition-colors">Social Impact</a>
         <a href="#skills" class="hover:text-brand-300 transition-colors">Skills</a>
         <a href="resume.html" target="_blank" class="px-4 py-2 rounded-lg bg-brand-500/10 border border-brand-500/30 text-brand-300 hover:bg-brand-500 hover:text-white transition-all flex items-center gap-2">
@@ -159,6 +192,7 @@
       <a href="#about" class="block text-slate-300 hover:text-brand-400 py-1">About</a>
       <a href="#ventures" class="block text-slate-300 hover:text-brand-400 py-1">Memorea</a>
       <a href="#leadership" class="block text-slate-300 hover:text-brand-400 py-1">Leadership</a>
+      <a href="#protosem" class="block text-brand-300 font-semibold hover:text-brand-400 py-1">ProtoSem (20-Week Journey)</a>
       <a href="#impact" class="block text-slate-300 hover:text-brand-400 py-1">Social Impact</a>
       <a href="#skills" class="block text-slate-300 hover:text-brand-400 py-1">Skills</a>
       <a href="#contact" class="block text-slate-300 hover:text-brand-400 py-1">Contact</a>
@@ -181,7 +215,7 @@
         </h1>
 
         <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
-          Hi, I'm <strong class="text-white">Shree Varsha V K</strong> — a psychology undergraduate at Kumaraguru College, student leader (VP Social Vertical), and founder of <em class="text-brand-300 not-italic font-semibold">Memorea</em>. Passionate about understanding human behaviour, consumer psychology, and building community-driven initiatives.
+          Hi, I'm <strong class="text-white">Shree Varsha V K</strong> — a psychology undergraduate at Kumaraguru College, Innovation Engineer Trainee at <strong class="text-brand-300">PRICE ProtoSem</strong>, student leader (VP Social Vertical), and founder of <em class="text-brand-300 not-italic font-semibold">Memorea</em>. Passionate about understanding human behaviour, consumer psychology, and building community-driven initiatives.
         </p>
 
         <!-- CTA Buttons -->
@@ -190,9 +224,13 @@
             <span>Let's Connect</span>
             <i class="fa-solid fa-arrow-right text-xs"></i>
           </a>
-          <a href="resume.html" target="_blank" class="px-6 py-3.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700 text-slate-200 font-medium hover:border-brand-400/40 transition-all flex items-center gap-2">
-            <i class="fa-solid fa-download text-xs text-brand-400"></i>
-            <span>View ATS Resume</span>
+          <a href="#protosem" class="px-6 py-3.5 rounded-xl bg-slate-800/90 hover:bg-slate-800 border border-brand-500/30 text-brand-300 font-medium hover:border-brand-400 transition-all flex items-center gap-2">
+            <i class="fa-solid fa-compass text-xs text-brand-400"></i>
+            <span>Explore ProtoSem Journey</span>
+          </a>
+          <a href="resume.html" target="_blank" class="px-5 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 font-medium transition-all flex items-center gap-2">
+            <i class="fa-solid fa-download text-xs text-slate-400"></i>
+            <span>ATS Resume</span>
           </a>
         </div>
 
@@ -260,21 +298,21 @@
               </div>
 
               <div>
+                <p class="text-slate-500 text-xs">$ shreevarsha.protoSemFocus</p>
+                <p class="text-emerald-300/90 pl-3">
+                  ➜ "Innovation Engineer Trainee (20-Week)"
+                </p>
+              </div>
+
+              <div>
                 <p class="text-slate-500 text-xs">$ shreevarsha.venturePhilosophy</p>
                 <p class="text-amber-200/90 pl-3 italic">
                   “Memories, made to wear.” — Memorea
                 </p>
               </div>
 
-              <div>
-                <p class="text-slate-500 text-xs">$ shreevarsha.currentFocus</p>
-                <p class="text-slate-300 pl-3">
-                  [ "Neuromarketing", "Social Impact", "Consumer Psychology", "Leadership" ]
-                </p>
-              </div>
-
               <div class="pt-2 border-t border-slate-800 flex justify-between items-center text-[11px] text-slate-400">
-                <span>Education: B.Sc. Psychology ('28)</span>
+                <span>B.Sc. Psychology ('28)</span>
                 <span class="text-brand-400 font-semibold">Kumaraguru College</span>
               </div>
             </div>
@@ -364,7 +402,7 @@
         </div>
       </div>
 
-      <!-- Bento 3: PRICE ProtoSem — Forge (Span: 4 cols) -->
+      <!-- Bento 3: PRICE ProtoSem Highlight (Span: 4 cols) -->
       <div class="lg:col-span-4 bento-card rounded-2xl p-6 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
         <div>
           <div class="flex items-center justify-between mb-3">
@@ -376,13 +414,16 @@
 
           <h4 class="text-lg font-heading font-bold text-white mb-2">PRICE ProtoSem — Forge</h4>
           <p class="text-slate-300 text-xs leading-relaxed mb-4">
-            Selected for the prestigious innovation cohort to explore multidisciplinary problem identification, ideation, design thinking, and entrepreneurial execution.
+            Selected for the prestigious 20-week innovation programme exploring retail & commerce challenges, AI, intelligent systems, prototyping, and venture design.
           </p>
         </div>
 
-        <div class="pt-3 border-t border-slate-800 text-xs text-slate-400 flex items-center gap-2">
-          <i class="fa-solid fa-lightbulb text-amber-400"></i>
-          <span>Entrepreneurial Thinking & Prototyping</span>
+        <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
+          <a href="#protosem" class="text-brand-300 hover:text-brand-200 font-medium flex items-center gap-1">
+            <span>Explore 20-Week Archive</span>
+            <i class="fa-solid fa-arrow-down text-[10px]"></i>
+          </a>
+          <span class="text-slate-400 text-[11px]">20 Weeks</span>
         </div>
       </div>
 
@@ -441,6 +482,159 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- DEDICATED NEW SECTION: PROTOSEM (20 WEEKS) -->
+  <!-- ========================================== -->
+  <section id="protosem" class="py-20 px-6 max-w-6xl mx-auto scroll-mt-20">
+    
+    <!-- Section Container Card with Glassmorphism Border -->
+    <div class="bento-card rounded-3xl p-8 sm:p-10 lg:p-12 relative overflow-hidden" data-aos="fade-up">
+      
+      <!-- Subtle Decorative Glows -->
+      <div class="absolute -top-24 -right-24 w-80 h-80 bg-brand-600/15 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- 1. Section Header & Metadata -->
+      <div class="relative z-10 space-y-6">
+        
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <!-- Section Label -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/25 text-brand-300 text-xs font-mono font-semibold tracking-wider uppercase">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping"></span>
+            PROTOSEM
+          </div>
+
+          <!-- Programme Badge / Role -->
+          <div class="flex items-center gap-3">
+            <span class="text-xs font-mono text-emerald-400 bg-emerald-950/70 border border-emerald-800/40 px-3 py-1 rounded-lg">
+              <i class="fa-solid fa-microchip mr-1.5"></i> Innovation Engineer Trainee
+            </span>
+            <span class="text-xs font-mono text-slate-400 bg-slate-800/80 px-3 py-1 rounded-lg hidden sm:inline-block">
+              20-Week Programme Archive
+            </span>
+          </div>
+        </div>
+
+        <!-- Main Heading & Descriptor -->
+        <div class="space-y-2 max-w-3xl">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight">
+            PRICE <span class="gradient-text">ProtoSem</span>
+          </h2>
+          <p class="text-brand-300 font-heading font-semibold text-base sm:text-lg">
+            20-Week Industry-Integrated Innovation Programme
+          </p>
+        </div>
+
+        <!-- Description (Exact content specification) -->
+        <div class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-4xl space-y-3 pt-1">
+          <p>
+            Selected for a 20-week industry-integrated innovation programme focused on solving real-world retail and commerce challenges through AI, analytics, intelligent systems, IoT, prototyping, and entrepreneurship.
+          </p>
+          <p class="text-slate-400">
+            Working with industry problem statements to explore, develop, and validate practical technology solutions beyond conventional classroom learning.
+          </p>
+        </div>
+
+        <!-- Domain / Programme Focus Disciplines (Carefully styled as disciplines) -->
+        <div class="pt-2">
+          <p class="text-xs font-mono uppercase tracking-widest text-slate-400 mb-3 font-semibold">
+            Programme Disciplines & Focus Areas
+          </p>
+          <div class="flex flex-wrap gap-2.5">
+            <div class="px-3.5 py-1.5 rounded-xl bg-slate-900/90 border border-slate-700/70 text-slate-200 text-xs sm:text-sm font-medium flex items-center gap-2 hover:border-brand-400/50 transition-colors">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+              Phygital Retail & Intelligent Commerce
+            </div>
+            <div class="px-3.5 py-1.5 rounded-xl bg-slate-900/90 border border-slate-700/70 text-slate-200 text-xs sm:text-sm font-medium flex items-center gap-2 hover:border-emerald-400/50 transition-colors">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              AI & Analytics
+            </div>
+            <div class="px-3.5 py-1.5 rounded-xl bg-slate-900/90 border border-slate-700/70 text-slate-200 text-xs sm:text-sm font-medium flex items-center gap-2 hover:border-blue-400/50 transition-colors">
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+              Intelligent Systems & IoT
+            </div>
+            <div class="px-3.5 py-1.5 rounded-xl bg-slate-900/90 border border-slate-700/70 text-slate-200 text-xs sm:text-sm font-medium flex items-center gap-2 hover:border-amber-400/50 transition-colors">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+              Prototyping
+            </div>
+            <div class="px-3.5 py-1.5 rounded-xl bg-slate-900/90 border border-slate-700/70 text-slate-200 text-xs sm:text-sm font-medium flex items-center gap-2 hover:border-purple-400/50 transition-colors">
+              <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+              Entrepreneurship
+            </div>
+          </div>
+        </div>
+
+        <!-- Programme Progress Indicator Milestone Rail -->
+        <div class="py-6 border-t border-b border-slate-800/80 my-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-3">
+            <div class="flex items-center gap-2 text-xs font-mono text-slate-400">
+              <i class="fa-solid fa-timeline text-brand-400"></i>
+              <span>20-Week Progression Road</span>
+            </div>
+            <span class="text-[11px] font-mono text-slate-500">4 Phases • 20 Progressive Milestones</span>
+          </div>
+
+          <!-- Visual Progress Rail -->
+          <div class="w-full bg-slate-800/60 h-2 rounded-full overflow-hidden relative">
+            <div class="bg-gradient-to-r from-brand-600 via-brand-terracotta to-amber-400 h-full w-full opacity-70"></div>
+          </div>
+          <div class="flex justify-between items-center text-[10px] font-mono text-slate-500 mt-2 px-1">
+            <span>WEEK 01</span>
+            <span>WEEK 05 (Phase 1)</span>
+            <span>WEEK 10 (Phase 2)</span>
+            <span>WEEK 15 (Phase 3)</span>
+            <span>WEEK 20 (Phase 4)</span>
+          </div>
+        </div>
+
+        <!-- 4-Phase Navigation Filter Tabs -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pt-2">
+          <div>
+            <h3 class="text-lg font-heading font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-layer-group text-brand-400 text-sm"></i>
+              <span>The 20-Week Journey</span>
+            </h3>
+            <p class="text-xs text-slate-400 mt-0.5">Explore the four progressive phases of the innovation programme archive.</p>
+          </div>
+
+          <!-- Phase Tabs -->
+          <div class="flex flex-wrap items-center gap-1.5 p-1.5 rounded-xl bg-[#12121c] border border-slate-800 text-xs font-medium" role="tablist">
+            <button class="phase-tab active px-3 py-1.5 rounded-lg border border-transparent transition-all" data-phase="all" onclick="filterPhase('all', this)">
+              All Weeks (20)
+            </button>
+            <button class="phase-tab px-3 py-1.5 rounded-lg border border-transparent text-slate-400 hover:text-white transition-all" data-phase="1" onclick="filterPhase(1, this)">
+              Phase 01 <span class="text-[10px] opacity-70">(01–05)</span>
+            </button>
+            <button class="phase-tab px-3 py-1.5 rounded-lg border border-transparent text-slate-400 hover:text-white transition-all" data-phase="2" onclick="filterPhase(2, this)">
+              Phase 02 <span class="text-[10px] opacity-70">(06–10)</span>
+            </button>
+            <button class="phase-tab px-3 py-1.5 rounded-lg border border-transparent text-slate-400 hover:text-white transition-all" data-phase="3" onclick="filterPhase(3, this)">
+              Phase 03 <span class="text-[10px] opacity-70">(11–15)</span>
+            </button>
+            <button class="phase-tab px-3 py-1.5 rounded-lg border border-transparent text-slate-400 hover:text-white transition-all" data-phase="4" onclick="filterPhase(4, this)">
+              Phase 04 <span class="text-[10px] opacity-70">(16–20)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 20-Week Cards Container (Rendered via Data-Driven JavaScript Architecture) -->
+        <div id="weeks-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
+          <!-- Week cards are dynamically populated via Javascript for future blog readiness -->
+        </div>
+
+        <!-- Clean Editorial Note -->
+        <div class="pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-3">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-book-open text-brand-400"></i>
+            <span>Each week represents a future deep-dive case study and learning blog.</span>
+          </div>
+          <span class="font-mono text-[11px] text-slate-500">Architecture: Data-Driven Modular Cards</span>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -570,7 +764,7 @@
       </h2>
 
       <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-        Whether you are interested in collaborating on social-impact campaigns, exploring consumer psychology insights, or discussing personalized keepsakes with Memorea, my inbox is always open!
+        Whether you are interested in collaborating on social-impact campaigns, exploring consumer psychology insights, discussing innovation at ProtoSem, or exploring personalized keepsakes with Memorea, my inbox is always open!
       </p>
 
       <div class="flex flex-wrap justify-center items-center gap-4 pt-4">
@@ -590,6 +784,41 @@
     </div>
   </section>
 
+  <!-- Placeholder Modal for Future Week Story -->
+  <div id="week-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-[#181826] border border-slate-700/80 rounded-2xl max-w-md w-full p-6 space-y-4 shadow-2xl relative">
+      <button onclick="closeWeekModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center font-mono font-bold">
+          <i class="fa-solid fa-book-bookmark"></i>
+        </div>
+        <div>
+          <span id="modal-phase" class="text-[11px] font-mono text-brand-400 uppercase">PHASE 01</span>
+          <h3 id="modal-title" class="text-xl font-heading font-bold text-white">WEEK 01</h3>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-300 space-y-2">
+        <p class="text-brand-300 font-semibold flex items-center gap-1.5">
+          <i class="fa-solid fa-clock"></i> Field Notes & Blog in Progress
+        </p>
+        <p class="text-slate-400 leading-relaxed">
+          The case study, technical reflections, and problem validation artifacts for this week of PRICE ProtoSem will be published here shortly.
+        </p>
+      </div>
+
+      <div class="flex justify-between items-center pt-2">
+        <span class="text-[11px] font-mono text-slate-500">Destination: <span id="modal-slug" class="text-slate-400">/protosem/week-01</span></span>
+        <button onclick="closeWeekModal()" class="px-4 py-1.5 rounded-lg bg-brand-600 text-white text-xs font-medium hover:bg-brand-500">
+          Got it
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer class="border-t border-slate-800/80 py-8 px-6 text-center text-xs text-slate-500">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -605,6 +834,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
+  <!-- Future-Ready 20-Week Architecture Data Script -->
   <script>
     // Initialize AOS animations
     AOS.init({
@@ -617,10 +847,10 @@
     new Typed('#typed-roles', {
       strings: [
         'B.Sc. Psychology Undergraduate',
+        'Innovation Engineer Trainee (ProtoSem)',
         'Founder of Memorea (Keepsakes)',
         'VP – Social Vertical (2026–27)',
-        'Social Impact & Campaign Leader',
-        'PRICE ProtoSem Cohort Member'
+        'Social Impact & Campaign Leader'
       ],
       typeSpeed: 45,
       backSpeed: 25,
@@ -636,6 +866,141 @@
         mobileMenu.classList.toggle('hidden');
       });
     }
+
+    // ===============================================
+    // 20-WEEK PROTOSEM DATA ARCHITECTURE (DATA-DRIVEN)
+    // ===============================================
+    const protoSemWeeks = [
+      // Phase 01: Weeks 01-05
+      { week: 1, phase: 1, label: "WEEK 01", status: "FIELD NOTES IN PROGRESS", slug: "week-01", phaseName: "Phase 01 (Weeks 01–05)" },
+      { week: 2, phase: 1, label: "WEEK 02", status: "FIELD NOTES IN PROGRESS", slug: "week-02", phaseName: "Phase 01 (Weeks 01–05)" },
+      { week: 3, phase: 1, label: "WEEK 03", status: "FIELD NOTES IN PROGRESS", slug: "week-03", phaseName: "Phase 01 (Weeks 01–05)" },
+      { week: 4, phase: 1, label: "WEEK 04", status: "FIELD NOTES IN PROGRESS", slug: "week-04", phaseName: "Phase 01 (Weeks 01–05)" },
+      { week: 5, phase: 1, label: "WEEK 05", status: "FIELD NOTES IN PROGRESS", slug: "week-05", phaseName: "Phase 01 (Weeks 01–05)" },
+
+      // Phase 02: Weeks 06-10
+      { week: 6, phase: 2, label: "WEEK 06", status: "FIELD NOTES IN PROGRESS", slug: "week-06", phaseName: "Phase 02 (Weeks 06–10)" },
+      { week: 7, phase: 2, label: "WEEK 07", status: "FIELD NOTES IN PROGRESS", slug: "week-07", phaseName: "Phase 02 (Weeks 06–10)" },
+      { week: 8, phase: 2, label: "WEEK 08", status: "FIELD NOTES IN PROGRESS", slug: "week-08", phaseName: "Phase 02 (Weeks 06–10)" },
+      { week: 9, phase: 2, label: "WEEK 09", status: "FIELD NOTES IN PROGRESS", slug: "week-09", phaseName: "Phase 02 (Weeks 06–10)" },
+      { week: 10, phase: 2, label: "WEEK 10", status: "FIELD NOTES IN PROGRESS", slug: "week-10", phaseName: "Phase 02 (Weeks 06–10)" },
+
+      // Phase 03: Weeks 11-15
+      { week: 11, phase: 3, label: "WEEK 11", status: "FIELD NOTES IN PROGRESS", slug: "week-11", phaseName: "Phase 03 (Weeks 11–15)" },
+      { week: 12, phase: 3, label: "WEEK 12", status: "FIELD NOTES IN PROGRESS", slug: "week-12", phaseName: "Phase 03 (Weeks 11–15)" },
+      { week: 13, phase: 3, label: "WEEK 13", status: "FIELD NOTES IN PROGRESS", slug: "week-13", phaseName: "Phase 03 (Weeks 11–15)" },
+      { week: 14, phase: 3, label: "WEEK 14", status: "FIELD NOTES IN PROGRESS", slug: "week-14", phaseName: "Phase 03 (Weeks 11–15)" },
+      { week: 15, phase: 3, label: "WEEK 15", status: "FIELD NOTES IN PROGRESS", slug: "week-15", phaseName: "Phase 03 (Weeks 11–15)" },
+
+      // Phase 04: Weeks 16-20
+      { week: 16, phase: 4, label: "WEEK 16", status: "FIELD NOTES IN PROGRESS", slug: "week-16", phaseName: "Phase 04 (Weeks 16–20)" },
+      { week: 17, phase: 4, label: "WEEK 17", status: "FIELD NOTES IN PROGRESS", slug: "week-17", phaseName: "Phase 04 (Weeks 16–20)" },
+      { week: 18, phase: 4, label: "WEEK 18", status: "FIELD NOTES IN PROGRESS", slug: "week-18", phaseName: "Phase 04 (Weeks 16–20)" },
+      { week: 19, phase: 4, label: "WEEK 19", status: "FIELD NOTES IN PROGRESS", slug: "week-19", phaseName: "Phase 04 (Weeks 16–20)" },
+      { week: 20, phase: 4, label: "WEEK 20", status: "FIELD NOTES IN PROGRESS", slug: "week-20", phaseName: "Phase 04 (Weeks 16–20)" },
+    ];
+
+    // Function to render week cards dynamically
+    function renderWeekCards(phaseFilter = 'all') {
+      const container = document.getElementById('weeks-container');
+      if (!container) return;
+
+      const filtered = phaseFilter === 'all' 
+        ? protoSemWeeks 
+        : protoSemWeeks.filter(item => item.phase === parseInt(phaseFilter));
+
+      container.innerHTML = filtered.map(item => {
+        const weekPad = item.week < 10 ? `0${item.week}` : `${item.week}`;
+        return `
+          <div 
+            onclick="openWeekModal(${item.week})"
+            class="week-card rounded-2xl p-5 cursor-pointer flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-brand-500"
+            role="button"
+            tabindex="0"
+            aria-label="${item.label} Placeholder Story"
+            onkeydown="if(event.key==='Enter'||event.key===' ') openWeekModal(${item.week})"
+          >
+            <!-- Top Metadata -->
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-white/5 text-slate-400 border border-white/5">
+                PHASE 0${item.phase}
+              </span>
+              <span class="text-[10px] font-mono text-slate-500 flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-400/80"></span>
+                #${weekPad}
+              </span>
+            </div>
+
+            <!-- Primary Content -->
+            <div class="my-2">
+              <div class="flex items-baseline justify-between">
+                <h4 class="week-number text-xl font-heading font-bold text-white transition-colors">
+                  ${item.label}
+                </h4>
+                <i class="fa-solid fa-arrow-right text-xs text-slate-500 week-arrow transition-transform"></i>
+              </div>
+              <p class="text-[11px] font-mono text-brand-300/80 uppercase tracking-wider mt-1.5 flex items-center gap-1.5">
+                <i class="fa-regular fa-compass text-[10px]"></i>
+                <span>${item.status}</span>
+              </p>
+            </div>
+
+            <!-- Bottom Progress Rail Indicator -->
+            <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-500">
+              <span>Chapter ${weekPad}/20</span>
+              <span class="text-brand-400 group-hover:text-brand-300 font-medium transition-colors">Future Story →</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Phase Tab Filter Handler
+    function filterPhase(phase, buttonElement) {
+      // Update active tab button
+      document.querySelectorAll('.phase-tab').forEach(btn => {
+        btn.classList.remove('active');
+        btn.classList.add('text-slate-400');
+      });
+      buttonElement.classList.add('active');
+      buttonElement.classList.remove('text-slate-400');
+
+      // Re-render cards
+      renderWeekCards(phase);
+    }
+
+    // Modal Handlers for Interactive Experience
+    function openWeekModal(weekNumber) {
+      const item = protoSemWeeks.find(w => w.week === weekNumber);
+      if (!item) return;
+
+      document.getElementById('modal-phase').innerText = `PHASE 0${item.phase} • PROTOSEM ARCHIVE`;
+      document.getElementById('modal-title').innerText = `${item.label}`;
+      document.getElementById('modal-slug').innerText = `/protosem/${item.slug}`;
+      
+      const modal = document.getElementById('week-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeWeekModal() {
+      const modal = document.getElementById('week-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Initial render
+    document.addEventListener('DOMContentLoaded', () => {
+      renderWeekCards('all');
+    });
+
+    // Close modal on Escape key or background click
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeWeekModal();
+    });
+    document.getElementById('week-modal')?.addEventListener('click', (e) => {
+      if (e.target.id === 'week-modal') closeWeekModal();
+    });
   </script>
 </body>
 </html>
