@@ -3,1149 +3,774 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shree Varsha V K — Psychology, Social Impact & Entrepreneurship</title>
-  <meta name="description" content="Personal editorial portfolio of Shree Varsha V K - B.Sc. Psychology student, Innovation Engineer Trainee at PRICE ProtoSem, Founder of Memorea, and Social Impact Leader.">
+  <title>Shree Varsha V K — 3D Interactive Psychology Brain Portfolio</title>
+  <meta name="description" content="Personal interactive 3D brain portfolio of Shree Varsha V K — B.Sc. Psychology student, Innovation Engineer Trainee at PRICE ProtoSem, Founder of Memorea, and Social Impact Leader.">
 
-  <!-- Google Fonts: Cormorant Garamond, Playfair Display, Plus Jakarta Sans, Caveat -->
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif), Plus Jakarta Sans, Caveat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-            sans: ['"Plus Jakarta Sans"', '-apple-system', 'sans-serif'],
-            handwriting: ['"Caveat"', 'cursive'],
-          },
-          colors: {
-            ivory: {
-              50: '#FDFCF9',
-              100: '#FAF8F5',
-              200: '#F4EFEB',
-              300: '#EBE4DC',
-              400: '#DDD5C8',
-            },
-            charcoal: {
-              900: '#1C1917',
-              800: '#292524',
-              700: '#44403C',
-              600: '#57534E',
-              500: '#78716C',
-            },
-            terracotta: {
-              DEFAULT: '#C85A32',
-              light: '#E27650',
-              dark: '#A64320',
-              muted: '#D47A58',
-              soft: 'rgba(200, 90, 50, 0.08)',
-            }
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Font Awesome Icons CDN -->
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
-  <!-- AOS (Animate on Scroll) CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Editorial Magazine Styling -->
-  <style>
-    body {
-      background-color: #FAF8F5;
-      color: #1C1917;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    ::selection {
-      background-color: #C85A32;
-      color: #FAF8F5;
-    }
-
-    /* Editorial lines and borders */
-    .editorial-border {
-      border-color: #E6DFD5;
-    }
-
-    .editorial-card {
-      background-color: #FFFFFF;
-      border: 1px solid #EBE4DC;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .editorial-card:hover {
-      border-color: #C85A32;
-      transform: translateY(-2px);
-    }
-
-    .week-entry {
-      background-color: #FFFFFF;
-      border: 1px solid #EBE4DC;
-      transition: all 0.25s ease;
-    }
-    .week-entry:hover {
-      border-color: #C85A32;
-      background-color: #FDFCF9;
-      transform: translateY(-2px);
-    }
-
-    .phase-tab.active {
-      background-color: #C85A32;
-      color: #FAF8F5;
-      border-color: #C85A32;
-    }
-
-    .custom-scrollbar::-webkit-scrollbar {
-      width: 5px;
-    }
-    .custom-scrollbar::-webkit-scrollbar-track {
-      background: #FAF8F5;
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background: #DDD5C8;
-      border-radius: 2px;
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-      background: #C85A32;
-    }
-  </style>
+  <!-- Custom Design System & Neuro-Navigation Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="custom-scrollbar bg-[#FAF8F5] text-charcoal-900 selection:bg-terracotta selection:text-ivory-50">
+<body>
 
-  <!-- Top Editorial Header & Navigation -->
-  <header class="sticky top-0 z-50 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-[#E6DFD5] transition-all duration-300">
-    <div class="max-w-6xl mx-auto px-6 sm:px-8 h-20 flex items-center justify-between">
-      
-      <!-- Brand & Name -->
-      <a href="#hero" class="group flex flex-col">
-        <span class="font-serif text-2xl font-bold tracking-tight text-charcoal-900 group-hover:text-terracotta transition-colors">
-          Shree Varsha V K
-        </span>
-        <span class="text-[10px] tracking-widest uppercase font-mono text-charcoal-500">
-          Portfolio & Archive
-        </span>
-      </a>
-
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center space-x-8 text-xs font-medium uppercase tracking-widest text-charcoal-700">
-        <a href="#about" class="hover:text-terracotta transition-colors py-1">About</a>
-        <a href="#ventures" class="hover:text-terracotta transition-colors py-1">Memorea</a>
-        <a href="#leadership" class="hover:text-terracotta transition-colors py-1">Leadership</a>
-        <a href="#protosem" class="hover:text-terracotta transition-colors py-1 flex items-center gap-1.5 text-terracotta font-semibold">
-          <span>ProtoSem</span>
-        </a>
-        <a href="#impact" class="hover:text-terracotta transition-colors py-1">Social Impact</a>
-        <a href="#skills" class="hover:text-terracotta transition-colors py-1">Skills</a>
-        <a href="#education" class="hover:text-terracotta transition-colors py-1">Education</a>
-        <a href="resume.html" target="_blank" class="px-4 py-2 border border-terracotta text-terracotta hover:bg-terracotta hover:text-white transition-all text-[11px] tracking-widest font-semibold rounded-sm">
-          ATS Resume
-        </a>
-      </nav>
-
-      <!-- Mobile Menu Button -->
-      <div class="flex items-center gap-4 md:hidden">
-        <a href="resume.html" target="_blank" class="text-xs px-3 py-1.5 border border-terracotta text-terracotta font-medium">
-          Resume
-        </a>
-        <button id="menu-btn" class="text-charcoal-800 hover:text-terracotta p-1 text-xl" aria-label="Toggle navigation">
-          <i class="fa-solid fa-bars-staggered"></i>
-        </button>
+  <!-- ========================================================================
+       1. CINEMATIC OPENING EXPERIENCE ("Person -> Mind -> Portfolio")
+       ======================================================================== -->
+  <div id="opening-screen">
+    <div class="opening-stage">
+      <div class="opening-photo-frame">
+        <img src="assets/profile.jpg" alt="Shree Varsha V K" onerror="this.src='profile.jpg'">
       </div>
+      <div class="opening-meta">
+        <h1 class="opening-name">Shree Varsha V K</h1>
+        <p class="opening-tagline">"People, purpose & the stories between."</p>
+        <div class="opening-formula">
+          <span>Person</span>
+          <span class="arrow">→</span>
+          <span>Mind</span>
+          <span class="arrow">→</span>
+          <span>Portfolio</span>
+        </div>
+      </div>
+      <button id="opening-skip-btn" class="opening-skip-btn">
+        Enter The Mind <i class="fa-solid fa-arrow-right ml-1"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       2. PERMANENT TOP-LEFT PROFILE ANCHOR & NAVIGATION HEADER
+       ======================================================================== -->
+  <header id="site-header">
+    <!-- Top-Left Clickable Profile Anchor -->
+    <button id="profile-anchor-btn" class="profile-anchor-wrap" title="View Shree Varsha's Profile">
+      <div class="profile-thumb">
+        <img src="assets/profile.jpg" alt="Shree Varsha V K" onerror="this.src='profile.jpg'">
+      </div>
+      <div class="profile-text-block">
+        <div class="profile-name">Shree Varsha V K</div>
+        <div class="profile-role">Psychology • ProtoSem • Memorea</div>
+      </div>
+    </button>
+
+    <!-- Center Breadcrumb Tracker -->
+    <div class="nav-breadcrumbs">
+      <span>YOU ARE HERE</span>
+      <span class="text-terracotta">→</span>
+      <span id="breadcrumb-current-section" class="breadcrumb-segment active">CENTRAL BRAIN</span>
     </div>
 
-    <!-- Mobile Nav Menu Dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden px-6 py-5 bg-[#FAF8F5] border-b border-[#E6DFD5] space-y-3 text-xs uppercase tracking-widest text-charcoal-700">
-      <a href="#about" class="block py-1 hover:text-terracotta">About</a>
-      <a href="#ventures" class="block py-1 hover:text-terracotta">Memorea</a>
-      <a href="#leadership" class="block py-1 hover:text-terracotta">Leadership</a>
-      <a href="#protosem" class="block py-1 text-terracotta font-semibold">PRICE ProtoSem (20 Weeks)</a>
-      <a href="#impact" class="block py-1 hover:text-terracotta">Social Impact</a>
-      <a href="#skills" class="block py-1 hover:text-terracotta">Skills</a>
-      <a href="#education" class="block py-1 hover:text-terracotta">Education</a>
-      <a href="#contact" class="block py-1 hover:text-terracotta">Contact</a>
+    <!-- Right Header Actions -->
+    <div class="header-actions">
+      <button id="header-brain-home-btn" class="brain-home-btn" title="Return to 3D Central Brain">
+        <i class="fa-solid fa-brain"></i>
+        <span>The Brain</span>
+      </button>
+      <a href="resume.html" class="resume-link-btn" title="ATS Printable Resume">
+        <i class="fa-regular fa-file-lines"></i>
+        <span>ATS Resume</span>
+      </a>
     </div>
   </header>
 
-  <!-- Main Content Container -->
-  <main class="max-w-6xl mx-auto px-6 sm:px-8">
+  <!-- ========================================================================
+       3. FLOATING PSYCHOLOGICAL TERMS NEBULA (Ambient Editorial Background)
+       ======================================================================== -->
+  <div id="psych-background-layer">
+    <div class="psych-term t1">NEUROPLASTICITY</div>
+    <div class="psych-term t2">COGNITION</div>
+    <div class="psych-term t3">PERCEPTION</div>
+    <div class="psych-term t4">SOCIAL BEHAVIOUR</div>
+    <div class="psych-term t5">LEARNING</div>
+    <div class="psych-term t6">ATTACHMENT</div>
+    <div class="psych-term t7">DECISION MAKING</div>
+    <div class="psych-term t8">MEMORY</div>
+    <div class="psych-term t9">EMOTION</div>
+    <div class="psych-term t10">CONSCIOUSNESS</div>
+  </div>
+  <div class="paper-texture-overlay"></div>
 
-    <!-- ========================================== -->
-    <!-- HERO SECTION (Editorial Spread)           -->
-    <!-- ========================================== -->
-    <section id="hero" class="pt-16 pb-20 border-b border-[#E6DFD5]">
-      
-      <!-- Issue / Volume Header Bar -->
-      <div class="flex flex-wrap items-center justify-between pb-6 mb-12 border-b border-[#E6DFD5] text-[11px] uppercase tracking-widest text-charcoal-500 font-mono" data-aos="fade-in">
-        <span>Coimbatore, Tamil Nadu, India</span>
-        <span class="hidden sm:inline">B.Sc. Psychology • Kumaraguru College</span>
-        <span class="text-terracotta font-semibold">2026 — 2027</span>
+  <!-- ========================================================================
+       4. CENTRAL 3D BRAIN NAVIGATION STAGE
+       ======================================================================== -->
+  <main id="brain-stage-view">
+    <!-- WebGL Canvas for Tactile Clay 3D Human Brain -->
+    <div id="brain-canvas-container"></div>
+
+    <!-- Dynamic SVG Layer for Animated Curved Neural Arrows -->
+    <svg id="neural-svg-canvas"></svg>
+
+    <!-- Container for Interactive Plain-Language Floating Badges -->
+    <div id="neural-badges-container"></div>
+
+    <!-- Bottom Instruction Guide & Quick Jump Pills -->
+    <div class="brain-stage-footer">
+      <div class="brain-instruction-pill">
+        <i class="fa-solid fa-sparkles"></i>
+        <span>Hover to reveal neural pathways • Click any region to explore</span>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-        
-        <!-- Left Column: Title, Subtitle, Ethos & Introduction -->
-        <div class="lg:col-span-7 space-y-8" data-aos="fade-up" data-aos-duration="800">
-          
-          <div class="space-y-4">
-            <div class="inline-block text-terracotta font-handwriting text-2xl">
-              People, purpose &amp; the stories between.
-            </div>
-            
-            <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-charcoal-900 leading-[1.05] tracking-tight">
-              Shree Varsha <span class="italic font-normal font-serif text-terracotta">V K</span>
-            </h1>
+      <div class="brain-quick-regions">
+        <button class="quick-region-chip" data-region="thinking">THINKING (About Me)</button>
+        <button class="quick-region-chip" data-region="learning">LEARNING & MEMORY (Academics & ProtoSem)</button>
+        <button class="quick-region-chip" data-region="people">PEOPLE & CONNECTIONS (Social Vertical)</button>
+        <button class="quick-region-chip" data-region="creativity">SEEING & CREATIVITY (Creative Work)</button>
+        <button class="quick-region-chip" data-region="experiences">EXPERIENCES (Leadership)</button>
+        <button class="quick-region-chip" data-region="skills">SKILLS & MOVEMENT</button>
+        <button class="quick-region-chip" data-region="research">CURIOSITY & RESEARCH</button>
+        <button class="quick-region-chip" data-region="ventures">MEMOREA VENTURE</button>
+      </div>
+    </div>
+  </main>
 
-            <p class="font-serif text-xl sm:text-2xl text-charcoal-700 italic leading-snug pt-1">
-              B.Sc. Psychology | Social Impact | Entrepreneurship | Marketing &amp; Communication
+  <!-- ========================================================================
+       5. PORTFOLIO CONTENT VIEWS (100% Authentic Content)
+       ======================================================================== -->
+  <div id="portfolio-content-view">
+    
+    <!-- Sticky Floating "Back to Brain" Button -->
+    <div id="sticky-back-bar" class="sticky-back-bar" style="display: none;">
+      <button id="back-to-brain-btn" class="back-to-brain-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back to Brain</span>
+      </button>
+    </div>
+
+    <div class="content-container">
+
+      <!-- ------------------------------------------------------------------
+           SECTION: ABOUT ME / PHILOSOPHY (Mapped from THINKING)
+           ------------------------------------------------------------------ -->
+      <section id="about" class="mb-24">
+        <div class="section-banner">
+          <div class="section-pretitle">01 / Overview & Personal Identity</div>
+          <h2 class="section-title editorial-heading">Thinking, Decisions & Philosophy</h2>
+          <p class="section-tagline editorial-subheading">"Human behavior, marketing & social innovation."</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-4">
+            <div class="editorial-card text-center">
+              <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-border shadow-md mb-6">
+                <img src="assets/profile.jpg" alt="Shree Varsha V K" class="w-full h-full object-cover">
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-charcoal-900">Shree Varsha V K</h3>
+              <p class="text-xs font-mono text-terracotta uppercase tracking-wider mt-1">B.Sc. Psychology Undergraduate</p>
+              <p class="text-xs text-charcoal-600 mt-2">Kumaraguru College of Liberal Arts and Science, Coimbatore</p>
+              
+              <div class="mt-6 pt-6 border-t border-border flex justify-center gap-4 text-charcoal-700">
+                <a href="mailto:shreevarsha80@gmail.com" class="hover:text-terracotta" title="Email"><i class="fa-regular fa-envelope text-lg"></i></a>
+                <a href="https://linkedin.com/in/shreevarshavk" target="_blank" class="hover:text-terracotta" title="LinkedIn"><i class="fa-brands fa-linkedin-in text-lg"></i></a>
+                <a href="resume.html" class="hover:text-terracotta" title="Resume"><i class="fa-regular fa-file-lines text-lg"></i></a>
+              </div>
+
+              <div class="mt-6">
+                <img src="assets/signature.jpg" alt="Signature" class="h-12 mx-auto opacity-75">
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-8 space-y-6">
+            <div class="editorial-card">
+              <h4 class="font-serif text-xl font-bold text-charcoal-900 mb-3">Professional Profile</h4>
+              <p class="text-charcoal-700 text-lg leading-relaxed mb-4">
+                Psychology undergraduate with deep experience in social-impact initiatives, student leadership, entrepreneurship, marketing, public speaking, and community engagement.
+              </p>
+              <p class="text-charcoal-600 leading-relaxed">
+                Currently pursuing a 20-week industry-integrated innovation fellowship at <strong>PRICE ProtoSem</strong> on a 100% scholarship, focusing on applying cognitive science and behavioral insights to solve real-world retail and commerce challenges through intelligent systems, AI, and human-centered prototyping.
+              </p>
+              <div class="editorial-quote">
+                "The mind is not a vessel to be filled, but a fire to be kindled — exploring where empathy meets rigorous engineering."
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="editorial-card">
+                <div class="text-xs font-mono text-terracotta uppercase tracking-widest font-semibold mb-2">Core Philosophy</div>
+                <h5 class="font-serif text-lg font-bold text-charcoal-900">Empathy-Driven Strategy</h5>
+                <p class="text-xs text-charcoal-600 mt-1">Applying psychological principles to leadership, consumer behavior, and community mobilization.</p>
+              </div>
+
+              <div class="editorial-card">
+                <div class="text-xs font-mono text-terracotta uppercase tracking-widest font-semibold mb-2">Academic Excellence</div>
+                <h5 class="font-serif text-lg font-bold text-charcoal-900">PRICE ProtoSem Fellow</h5>
+                <p class="text-xs text-charcoal-600 mt-1">100% Scholarship recipient for multidisciplinary technology & innovation fellowship.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------------------
+           SECTION: SOCIAL VERTICAL & LEADERSHIP (Mapped from PEOPLE & CONNECTIONS)
+           ------------------------------------------------------------------ -->
+      <section id="social" class="mb-24">
+        <div class="section-banner">
+          <div class="section-pretitle">02 / People & Connections</div>
+          <h2 class="section-title editorial-heading">Social Vertical & Community Impact</h2>
+          <p class="section-tagline editorial-subheading">"Where psychology meets people, leadership & collective change."</p>
+        </div>
+
+        <div class="space-y-8">
+          <!-- Role Overview Card -->
+          <div class="editorial-card">
+            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-border pb-4 mb-4">
+              <div>
+                <span class="text-xs font-mono text-terracotta uppercase tracking-widest font-semibold">Student Governance</span>
+                <h3 class="font-serif text-2xl font-bold text-charcoal-900">Vice President — Social Vertical</h3>
+              </div>
+              <div class="text-right">
+                <span class="text-xs font-mono bg-ivory-200 border border-border px-3 py-1 text-charcoal-800">2026 – 2027</span>
+                <div class="text-[11px] text-charcoal-500 mt-1">Kumaraguru College of Liberal Arts and Science</div>
+              </div>
+            </div>
+
+            <p class="text-charcoal-700 leading-relaxed mb-4">
+              Leading and coordinating social-impact initiatives, student representation, and community engagement activities across the student body. Spearheading institutional campaigns on sustainability, food-waste mitigation, mental health advocacy, and peer mentoring.
             </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 border-t border-border text-xs">
+              <div>
+                <span class="font-bold text-charcoal-900 block mb-1">Key Focus</span>
+                <span class="text-charcoal-600">Community Outreach, Awareness Drives, Multi-Department Collaboration</span>
+              </div>
+              <div>
+                <span class="font-bold text-charcoal-900 block mb-1">Prior Governance</span>
+                <span class="text-charcoal-600">Joint Secretary — Social (2025–2026)</span>
+              </div>
+              <div>
+                <span class="font-bold text-charcoal-900 block mb-1">Impact Reach</span>
+                <span class="text-charcoal-600">3000+ Students engaged across campus and community chapters</span>
+              </div>
+            </div>
           </div>
 
-          <div class="w-16 h-[2px] bg-terracotta"></div>
-
-          <!-- Editorial Lead Paragraph -->
-          <p class="text-charcoal-700 text-base sm:text-lg leading-relaxed font-normal max-w-xl">
-            Psychology undergraduate with experience in social-impact initiatives, student leadership, entrepreneurship, marketing, public speaking and community engagement. Currently serving as <strong class="text-charcoal-900 font-semibold">Vice President – Social Vertical (2026–27)</strong>, with prior experience as Joint Secretary – Social Vertical (2025–26).
-          </p>
-
-          <!-- Contact / Quick Action Bar -->
-          <div class="pt-2 flex flex-wrap items-center gap-4 text-xs font-medium">
-            <a href="#contact" class="px-6 py-3.5 bg-charcoal-900 hover:bg-terracotta text-ivory-50 transition-all uppercase tracking-widest rounded-sm font-semibold flex items-center gap-2">
-              <span>Get in Touch</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </a>
-            <a href="resume.html" target="_blank" class="px-6 py-3.5 border border-charcoal-900 hover:border-terracotta hover:text-terracotta text-charcoal-900 transition-all uppercase tracking-widest rounded-sm font-semibold flex items-center gap-2 bg-transparent">
-              <i class="fa-regular fa-file-lines text-xs"></i>
-              <span>View ATS Resume</span>
-            </a>
-          </div>
-
-          <!-- Social / Direct Contact Links -->
-          <div class="pt-4 flex flex-wrap items-center gap-6 text-xs text-charcoal-600 border-t border-[#E6DFD5] max-w-lg">
-            <a href="mailto:shreevarsha80@gmail.com" class="hover:text-terracotta transition-colors flex items-center gap-2">
-              <i class="fa-regular fa-envelope text-terracotta"></i>
-              <span>shreevarsha80@gmail.com</span>
-            </a>
-            <a href="tel:8610082382" class="hover:text-terracotta transition-colors flex items-center gap-2">
-              <i class="fa-solid fa-phone text-terracotta"></i>
-              <span>+91 86100 82382</span>
-            </a>
-            <a href="https://www.linkedin.com/in/shree-varsha-vk-458909373" target="_blank" class="hover:text-terracotta transition-colors flex items-center gap-1.5">
-              <i class="fa-brands fa-linkedin text-terracotta"></i>
-              <span>LinkedIn</span>
-            </a>
-            <a href="https://github.com/shreevarsha80-prog" target="_blank" class="hover:text-terracotta transition-colors flex items-center gap-1.5">
-              <i class="fa-brands fa-github text-terracotta"></i>
-              <span>GitHub</span>
-            </a>
-          </div>
-
-        </div>
-
-        <!-- Right Column: Editorial Portrait & Candid Frame -->
-        <div class="lg:col-span-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
-          <div class="relative bg-white p-4 border border-[#E6DFD5] shadow-sm">
+          <!-- Major Social Projects & Campaigns -->
+          <div class="editorial-card">
+            <h4 class="font-serif text-xl font-bold text-charcoal-900 mb-4">Major Campaigns & Collaborative Initiatives</h4>
             
-            <div class="overflow-hidden bg-[#F4EFEB] aspect-[4/5] relative">
-              <img 
-                src="profile.jpg" 
-                onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Shree+Varsha+V+K&background=C85A32&color=FAF8F5&size=512&bold=true';" 
-                alt="Shree Varsha V K" 
-                class="w-full h-full object-cover grayscale-[10%] hover:grayscale-0 transition-all duration-700"
-              >
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="p-4 bg-ivory-200 border border-border">
+                <div class="text-xs font-mono text-terracotta font-semibold uppercase mb-1">Collaborative Campaign</div>
+                <h5 class="font-serif text-lg font-bold text-charcoal-900">Microcosm & K-GEO Food Waste Awareness</h5>
+                <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
+                  Contributed to a food-waste awareness campaign in collaboration with Microcosm and K-GEO. Designed behavioral nudge posters, tracked cafeteria waste metrics, and organized interactive student engagement booths.
+                </p>
+                <div class="mt-4 flex items-center gap-3">
+                  <img src="assets/qrcode_foodwaste.png" alt="Food Waste QR Campaign" class="w-14 h-14 border border-border p-1 bg-white cursor-pointer" onclick="openLightbox('assets/qrcode_foodwaste.png', 'International Food Waste Awareness Day Campaign QR Code')">
+                  <span class="text-[11px] text-charcoal-500 font-mono">Interactive Campaign QR Asset</span>
+                </div>
+              </div>
 
-            <div class="pt-4 flex items-center justify-between text-xs text-charcoal-600 font-mono">
-              <span class="uppercase tracking-widest text-[10px]">Figure 01 / Portrait</span>
-              <span class="text-terracotta font-serif italic text-sm">“Memories, made to wear.”</span>
-            </div>
-
-            <!-- Subtle Tag Overlay -->
-            <div class="mt-3 pt-3 border-t border-[#E6DFD5] text-[11px] text-charcoal-500 leading-relaxed font-sans">
-              Founder of <em>Memorea</em> • Student Leader • Innovation Engineer Trainee (PRICE ProtoSem)
+              <div class="p-4 bg-ivory-200 border border-border">
+                <div class="text-xs font-mono text-terracotta font-semibold uppercase mb-1">Community Action</div>
+                <h5 class="font-serif text-lg font-bold text-charcoal-900">Youth Leadership & Mentorship Circles</h5>
+                <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
+                  Organized structured peer-support forums, debate circles, and interactive storytelling workshops to foster open dialogue on psychological well-being, empathy, and social responsibility.
+                </p>
+                <div class="mt-4">
+                  <span class="inline-block px-2.5 py-1 bg-white border border-border text-[11px] font-mono text-charcoal-700">Empathy In Action</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-      </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- SECTION 01: PROFESSIONAL PROFILE & ABOUT   -->
-    <!-- ========================================== -->
-    <section id="about" class="py-20 border-b border-[#E6DFD5]">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-        
-        <!-- Left Section Label -->
-        <div class="lg:col-span-4 space-y-2" data-aos="fade-up">
-          <span class="font-mono text-xs text-terracotta uppercase tracking-widest font-semibold">01 / Overview</span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal-900">
-            Professional Profile
-          </h2>
-          <p class="font-serif italic text-charcoal-600 text-lg">
-            Human behavior, marketing &amp; social innovation.
-          </p>
-        </div>
-
-        <!-- Right Content Block -->
-        <div class="lg:col-span-8 space-y-6 text-charcoal-700 text-base sm:text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-          <p>
-            Psychology undergraduate with experience in social-impact initiatives, student leadership, entrepreneurship, marketing, public speaking and community engagement. Currently serving as <strong>Vice President – Social Vertical (2026–27)</strong>, with prior experience as <strong>Joint Secretary – Social Vertical (2025–26)</strong>.
-          </p>
-
-          <p>
-            Founder of <strong>Memorea</strong>, a personalized accessories and keepsakes venture, with practical experience in product development, pricing, customer interaction, marketing, packaging and sales.
-          </p>
-
-          <!-- Pull Quote Block -->
-          <div class="my-8 p-6 bg-ivory-200 border-l-2 border-terracotta">
-            <p class="font-serif text-xl sm:text-2xl text-charcoal-900 italic leading-snug">
-              “Interested in opportunities combining psychology, human behaviour, communication, marketing, entrepreneurship and social impact.”
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- SECTION 02: ENTREPRENEURIAL VENTURE        -->
-    <!-- ========================================== -->
-    <section id="ventures" class="py-20 border-b border-[#E6DFD5]">
-      
-      <!-- Section Header -->
-      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 pb-8 border-b border-[#E6DFD5]" data-aos="fade-up">
-        <div>
-          <span class="font-mono text-xs text-terracotta uppercase tracking-widest font-semibold">02 / Venture</span>
-          <h2 class="font-serif text-4xl sm:text-5xl font-bold text-charcoal-900 mt-1">
-            Memorea
-          </h2>
-        </div>
-        <div class="text-right">
-          <span class="text-xs uppercase tracking-widest text-charcoal-500 font-mono">Founder / Entrepreneur</span>
-          <p class="font-serif text-xl italic text-terracotta">“Memories, made to wear.”</p>
-        </div>
-      </div>
-
-      <!-- Venture Details Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10">
-        
-        <!-- Left: Venture Narrative & Responsibilities -->
-        <div class="lg:col-span-7 space-y-8" data-aos="fade-up">
+          <!-- Authentic Event Photo Gallery -->
           <div>
-            <h3 class="font-serif text-2xl font-bold text-charcoal-900 mb-3">About the Venture</h3>
-            <p class="text-charcoal-700 leading-relaxed text-base sm:text-lg">
-              A personalized accessories and keepsakes venture built around creating products connected to personal memories and meaningful moments.
-            </p>
-          </div>
-
-          <!-- Responsibilities -->
-          <div class="space-y-4">
-            <h4 class="font-mono text-xs uppercase tracking-widest text-charcoal-900 font-semibold border-b border-[#E6DFD5] pb-2">
-              Key Responsibilities
-            </h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-charcoal-700">
-              <div class="flex items-start gap-2.5">
-                <span class="text-terracotta font-serif text-base">•</span>
-                <span>Product selection and customization</span>
-              </div>
-              <div class="flex items-start gap-2.5">
-                <span class="text-terracotta font-serif text-base">•</span>
-                <span>Pricing and offer creation</span>
-              </div>
-              <div class="flex items-start gap-2.5">
-                <span class="text-terracotta font-serif text-base">•</span>
-                <span>Customer communication</span>
-              </div>
-              <div class="flex items-start gap-2.5">
-                <span class="text-terracotta font-serif text-base">•</span>
-                <span>Sales and order management</span>
-              </div>
-              <div class="flex items-start gap-2.5">
-                <span class="text-terracotta font-serif text-base">•</span>
-                <span>Packaging and delivery coordination</span>
-              </div>
-              <div class="flex items-start gap-2.5">
-                <span class="text-terracotta font-serif text-base">•</span>
-                <span>Instagram &amp; product marketing</span>
-              </div>
-              <div class="flex items-start gap-2.5 sm:col-span-2">
-                <span class="text-terracotta font-serif text-base">•</span>
-                <span>Brand positioning and storytelling</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: Products & Offerings Editorial Card -->
-        <div class="lg:col-span-5" data-aos="fade-up" data-aos-delay="100">
-          <div class="bg-white p-8 border border-[#E6DFD5] space-y-6">
+            <h4 class="font-serif text-xl font-bold text-charcoal-900 mb-2">Social Vertical Gallery</h4>
+            <p class="text-xs text-charcoal-600 mb-4">Moments from campus governance, community drives, and team collaborations.</p>
             
-            <div class="flex items-center justify-between border-b border-[#E6DFD5] pb-3">
-              <span class="font-mono text-xs uppercase tracking-widest text-charcoal-500 font-semibold">Product Range</span>
-              <span class="text-xs text-terracotta font-mono font-medium">Curated Keepsakes</span>
-            </div>
-
-            <ul class="space-y-3.5 text-sm text-charcoal-800 font-medium">
-              <li class="flex items-center justify-between pb-2 border-b border-ivory-300">
-                <span>Personalized phone charms</span>
-                <span class="text-xs font-mono text-charcoal-400">01</span>
-              </li>
-              <li class="flex items-center justify-between pb-2 border-b border-ivory-300">
-                <span>Bracelets</span>
-                <span class="text-xs font-mono text-charcoal-400">02</span>
-              </li>
-              <li class="flex items-center justify-between pb-2 border-b border-ivory-300">
-                <span>Customized charms</span>
-                <span class="text-xs font-mono text-charcoal-400">03</span>
-              </li>
-              <li class="flex items-center justify-between pb-2 border-b border-ivory-300">
-                <span>Plushie bag charms</span>
-                <span class="text-xs font-mono text-charcoal-400">04</span>
-              </li>
-              <li class="flex items-center justify-between pb-2 border-b border-ivory-300">
-                <span>Hair accessories</span>
-                <span class="text-xs font-mono text-charcoal-400">05</span>
-              </li>
-              <li class="flex items-center justify-between">
-                <span>Small keepsakes</span>
-                <span class="text-xs font-mono text-charcoal-400">06</span>
-              </li>
-            </ul>
-
-            <div class="pt-3 bg-ivory-100 p-4 border border-[#E6DFD5] text-xs text-charcoal-600">
-              <span class="font-semibold text-charcoal-900 block mb-1">Brand Positioning:</span>
-              <p class="font-serif italic text-sm text-terracotta">“Memories, made to wear.”</p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- SECTION 03: LEADERSHIP EXPERIENCE         -->
-    <!-- ========================================== -->
-    <section id="leadership" class="py-20 border-b border-[#E6DFD5]">
-      
-      <!-- Section Header -->
-      <div class="pb-10 border-b border-[#E6DFD5]" data-aos="fade-up">
-        <span class="font-mono text-xs text-terracotta uppercase tracking-widest font-semibold">03 / Governance</span>
-        <h2 class="font-serif text-4xl sm:text-5xl font-bold text-charcoal-900 mt-1">
-          Leadership Experience
-        </h2>
-        <p class="font-serif text-lg text-charcoal-600 italic mt-1">
-          Coordinating social initiatives, student representation, and community engagement.
-        </p>
-      </div>
-
-      <!-- Chronological Editorial Timeline -->
-      <div class="divide-y divide-[#E6DFD5]">
-        
-        <!-- Role 1: Vice President – Social Vertical -->
-        <div class="py-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start" data-aos="fade-up">
-          <div class="lg:col-span-4 space-y-1">
-            <span class="font-mono text-xs text-terracotta uppercase tracking-widest font-semibold">2026 – 2027</span>
-            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-charcoal-900">
-              Vice President
-            </h3>
-            <p class="text-sm font-medium text-charcoal-600">Social Vertical</p>
-          </div>
-          <div class="lg:col-span-8">
-            <ul class="space-y-3 text-charcoal-700 text-sm sm:text-base leading-relaxed">
-              <li class="flex items-start gap-3">
-                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
-                <span>Leading and coordinating social-impact initiatives and community engagement activities.</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
-                <span>Supporting the planning and execution of awareness campaigns and community-focused programs.</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
-                <span>Working with student teams to develop and execute initiatives addressing social and environmental concerns.</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
-                <span>Collaborating with different stakeholders and student teams to create meaningful community impact.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Role 2: Joint Secretary – Social Vertical -->
-        <div class="py-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start" data-aos="fade-up">
-          <div class="lg:col-span-4 space-y-1">
-            <span class="font-mono text-xs text-charcoal-500 uppercase tracking-widest font-semibold">2025 – 2026</span>
-            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-charcoal-900">
-              Joint Secretary
-            </h3>
-            <p class="text-sm font-medium text-charcoal-600">Social Vertical</p>
-          </div>
-          <div class="lg:col-span-8">
-            <ul class="space-y-3 text-charcoal-700 text-sm sm:text-base leading-relaxed">
-              <li class="flex items-start gap-3">
-                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
-                <span>Coordinated and contributed to community-oriented initiatives under the Social Vertical.</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
-                <span>Supported awareness campaigns and outreach activities addressing social and environmental concerns.</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
-                <span>Worked with student teams to plan and execute community-focused events.</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
-                <span>Contributed to initiatives involving food-waste awareness, e-waste management and community engagement.</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
-                <span>Participated in activities supporting children, elderly communities, neurodivergent individuals, sanitary workers and tribal communities.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Role 3: Assistant School Pupil Leader (ASPL) -->
-        <div class="py-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start" data-aos="fade-up">
-          <div class="lg:col-span-4 space-y-1">
-            <span class="font-mono text-xs text-charcoal-500 uppercase tracking-widest font-semibold">Leadership Foundation</span>
-            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-charcoal-900">
-              Assistant School Pupil Leader (ASPL)
-            </h3>
-            <p class="text-sm font-medium text-charcoal-600">Gedee Public School</p>
-          </div>
-          <div class="lg:col-span-8">
-            <ul class="space-y-3 text-charcoal-700 text-sm sm:text-base leading-relaxed">
-              <li class="flex items-start gap-3">
-                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
-                <span>Served in a student leadership position, supporting school-level coordination, student representation and organizational activities.</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-terracotta font-serif text-lg leading-none mt-0.5">•</span>
-                <span>Worked with fellow student leaders to support school initiatives and maintain effective communication among students.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- =================================================== -->
-    <!-- SECTION 04: PRICE PROTOSEM (20-WEEK ARCHIVE)       -->
-    <!-- =================================================== -->
-    <section id="protosem" class="py-20 border-b border-[#E6DFD5]">
-      
-      <!-- Section Intro Header -->
-      <div class="space-y-6 pb-10 border-b border-[#E6DFD5]" data-aos="fade-up">
-        
-        <div class="flex flex-wrap items-center justify-between gap-4">
-          <div class="inline-flex items-center gap-2 px-3 py-1 bg-ivory-200 border border-[#DDD5C8] text-xs font-mono font-semibold text-terracotta uppercase tracking-widest">
-            <span>04 / PROTOSEM</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="text-xs font-mono text-charcoal-700 bg-white border border-[#E6DFD5] px-3 py-1">
-              Role: Innovation Engineer Trainee
-            </span>
-            <span class="text-xs font-mono text-terracotta bg-terracotta/10 border border-terracotta/20 px-3 py-1 font-semibold">
-              100% Scholarship • 2026
-            </span>
-          </div>
-        </div>
-
-        <div class="space-y-2">
-          <h2 class="font-serif text-4xl sm:text-5xl font-bold text-charcoal-900 tracking-tight">
-            PRICE ProtoSem
-          </h2>
-          <p class="font-serif text-xl sm:text-2xl text-terracotta italic">
-            20-Week Industry-Integrated Innovation Programme
-          </p>
-        </div>
-
-        <!-- Description (Exact content from document) -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-2 text-charcoal-700 text-base sm:text-lg leading-relaxed">
-          <div class="lg:col-span-6">
-            <p>
-              Selected for a 20-week industry-integrated innovation programme focused on solving real-world retail and commerce challenges through AI, analytics, intelligent systems, IoT, prototyping, and entrepreneurship.
-            </p>
-          </div>
-          <div class="lg:col-span-6">
-            <p class="text-charcoal-600">
-              Working with industry problem statements to explore, develop, and validate practical technology solutions beyond conventional classroom learning.
-            </p>
-          </div>
-        </div>
-
-        <!-- Domain / Focus Areas -->
-        <div class="pt-4">
-          <p class="text-xs font-mono uppercase tracking-widest text-charcoal-500 font-semibold mb-3">
-            Programme Focus Areas &amp; Disciplines
-          </p>
-          <div class="flex flex-wrap gap-2.5">
-            <span class="px-3.5 py-1.5 bg-white border border-[#E6DFD5] text-charcoal-800 text-xs sm:text-sm font-medium">
-              Phygital Retail &amp; Intelligent Commerce
-            </span>
-            <span class="px-3.5 py-1.5 bg-white border border-[#E6DFD5] text-charcoal-800 text-xs sm:text-sm font-medium">
-              AI &amp; Analytics
-            </span>
-            <span class="px-3.5 py-1.5 bg-white border border-[#E6DFD5] text-charcoal-800 text-xs sm:text-sm font-medium">
-              Intelligent Systems &amp; IoT
-            </span>
-            <span class="px-3.5 py-1.5 bg-white border border-[#E6DFD5] text-charcoal-800 text-xs sm:text-sm font-medium">
-              Prototyping
-            </span>
-            <span class="px-3.5 py-1.5 bg-white border border-[#E6DFD5] text-charcoal-800 text-xs sm:text-sm font-medium">
-              Entrepreneurship
-            </span>
-          </div>
-        </div>
-
-        <!-- Subtle Programme Progress Indicator -->
-        <div class="pt-6">
-          <div class="flex items-center justify-between text-xs font-mono text-charcoal-500 pb-2">
-            <span>01 ━━━━ 05 ━━━━ 10 ━━━━ 15 ━━━━ 20</span>
-            <span class="uppercase tracking-widest">20-Week Continuous Journey</span>
-          </div>
-          <div class="w-full bg-[#E6DFD5] h-[2px] relative">
-            <div class="bg-terracotta h-full w-full"></div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- 4-Phase Navigation Filter & Interactive Week Grid -->
-      <div class="pt-10 space-y-8">
-        
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div>
-            <h3 class="font-serif text-2xl font-bold text-charcoal-900">
-              The 20-Week Journey
-            </h3>
-            <p class="text-xs text-charcoal-600 mt-0.5 font-sans">
-              Organised across four programme phases. Click any week to preview the story outline.
-            </p>
-          </div>
-
-          <!-- Phase Navigation Tabs -->
-          <div class="flex flex-wrap items-center gap-1.5 p-1 bg-ivory-200 border border-[#E6DFD5] text-xs font-medium" role="tablist">
-            <button class="phase-tab active px-3 py-1.5 border border-transparent transition-all" data-phase="all" onclick="filterEditorialPhase('all', this)">
-              ALL WEEKS
-            </button>
-            <button class="phase-tab px-3 py-1.5 border border-transparent text-charcoal-700 hover:text-charcoal-900 transition-all" data-phase="1" onclick="filterEditorialPhase(1, this)">
-              PHASE 01 <span class="text-[10px] opacity-70">(01–05)</span>
-            </button>
-            <button class="phase-tab px-3 py-1.5 border border-transparent text-charcoal-700 hover:text-charcoal-900 transition-all" data-phase="2" onclick="filterEditorialPhase(2, this)">
-              PHASE 02 <span class="text-[10px] opacity-70">(06–10)</span>
-            </button>
-            <button class="phase-tab px-3 py-1.5 border border-transparent text-charcoal-700 hover:text-charcoal-900 transition-all" data-phase="3" onclick="filterEditorialPhase(3, this)">
-              PHASE 03 <span class="text-[10px] opacity-70">(11–15)</span>
-            </button>
-            <button class="phase-tab px-3 py-1.5 border border-transparent text-charcoal-700 hover:text-charcoal-900 transition-all" data-phase="4" onclick="filterEditorialPhase(4, this)">
-              PHASE 04 <span class="text-[10px] opacity-70">(16–20)</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- 20 Week Cards Container (Rendered dynamically via Data Architecture) -->
-        <div id="editorial-weeks-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <!-- Dynamic Week Cards injected via JavaScript -->
-        </div>
-
-        <div class="text-center pt-2">
-          <span class="text-[11px] font-mono text-charcoal-500 tracking-wider uppercase">
-            Build the structure now. Leave the stories for later.
-          </span>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- SECTION 05: SOCIAL IMPACT PROJECTS         -->
-    <!-- ========================================== -->
-    <section id="impact" class="py-20 border-b border-[#E6DFD5]">
-      
-      <div class="pb-10 border-b border-[#E6DFD5]" data-aos="fade-up">
-        <span class="font-mono text-xs text-terracotta uppercase tracking-widest font-semibold">05 / Social Action</span>
-        <h2 class="font-serif text-4xl sm:text-5xl font-bold text-charcoal-900 mt-1">
-          Social Impact Projects
-        </h2>
-        <p class="font-serif text-lg text-charcoal-600 italic mt-1">
-          Campaigns focused on waste awareness, sustainability, and community action.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-10">
-        
-        <!-- Project 1: Food Waste Awareness Campaign -->
-        <div class="bg-white p-8 border border-[#E6DFD5] space-y-4" data-aos="fade-up">
-          <div class="flex items-center justify-between text-xs font-mono text-charcoal-500 border-b border-[#E6DFD5] pb-2">
-            <span>Collaborative Campaign</span>
-            <span class="text-terracotta font-semibold">Microcosm &amp; K-GEO</span>
-          </div>
-
-          <h3 class="font-serif text-2xl font-bold text-charcoal-900">
-            Food Waste Awareness Campaign
-          </h3>
-
-          <ul class="space-y-2.5 text-sm text-charcoal-700 leading-relaxed">
-            <li class="flex items-start gap-2.5">
-              <span class="text-terracotta font-serif text-base">•</span>
-              <span>Contributed to a food-waste awareness campaign in collaboration with Microcosm &amp; K-GEO.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-terracotta font-serif text-base">•</span>
-              <span>Conducted awareness activities focused on reducing food waste.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-terracotta font-serif text-base">•</span>
-              <span>Worked with a student coordination team to execute the campaign.</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Project 2: The Green Shift — E-Waste Drive -->
-        <div class="bg-white p-8 border border-[#E6DFD5] space-y-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="flex items-center justify-between text-xs font-mono text-charcoal-500 border-b border-[#E6DFD5] pb-2">
-            <span>Environmental Initiative</span>
-            <span class="text-terracotta font-semibold">Student-Led Drive</span>
-          </div>
-
-          <h3 class="font-serif text-2xl font-bold text-charcoal-900">
-            The Green Shift — E-Waste Drive
-          </h3>
-
-          <ul class="space-y-2.5 text-sm text-charcoal-700 leading-relaxed">
-            <li class="flex items-start gap-2.5">
-              <span class="text-terracotta font-serif text-base">•</span>
-              <span>Contributed to an e-waste awareness and collection initiative.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-terracotta font-serif text-base">•</span>
-              <span>Supported responsible e-waste disposal and environmental awareness.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-terracotta font-serif text-base">•</span>
-              <span>Participated in planning and execution of the student-led initiative.</span>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- SECTION 06: CORE SKILLS & INTERESTS        -->
-    <!-- ========================================== -->
-    <section id="skills" class="py-20 border-b border-[#E6DFD5]">
-      
-      <div class="pb-10 border-b border-[#E6DFD5]" data-aos="fade-up">
-        <span class="font-mono text-xs text-terracotta uppercase tracking-widest font-semibold">06 / Competencies</span>
-        <h2 class="font-serif text-4xl sm:text-5xl font-bold text-charcoal-900 mt-1">
-          Core Skills &amp; Areas of Interest
-        </h2>
-        <p class="font-serif text-lg text-charcoal-600 italic mt-1">
-          Clean typographic categories spanning psychology, leadership, business, and digital tools.
-        </p>
-      </div>
-
-      <!-- Skills Categories Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-10">
-        
-        <!-- Category 1: Leadership & Communication -->
-        <div class="space-y-4" data-aos="fade-up">
-          <div class="border-b-2 border-charcoal-900 pb-2">
-            <h3 class="font-serif text-xl font-bold text-charcoal-900">
-              Leadership &amp; Communication
-            </h3>
-          </div>
-          <ul class="space-y-2 text-sm text-charcoal-700">
-            <li>Public Speaking</li>
-            <li>Team Coordination</li>
-            <li>Event Management</li>
-            <li>Leadership</li>
-            <li>Presentation</li>
-            <li>Debate</li>
-            <li>Networking</li>
-            <li>Community Engagement</li>
-          </ul>
-        </div>
-
-        <!-- Category 2: Business & Marketing -->
-        <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="border-b-2 border-charcoal-900 pb-2">
-            <h3 class="font-serif text-xl font-bold text-charcoal-900">
-              Business &amp; Marketing
-            </h3>
-          </div>
-          <ul class="space-y-2 text-sm text-charcoal-700">
-            <li>Sales</li>
-            <li>Customer Communication</li>
-            <li>Product Positioning</li>
-            <li>Marketing</li>
-            <li>Brand Building</li>
-            <li>Pricing</li>
-            <li>Entrepreneurship</li>
-            <li>Storytelling</li>
-          </ul>
-        </div>
-
-        <!-- Category 3: Psychology -->
-        <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="border-b-2 border-charcoal-900 pb-2">
-            <h3 class="font-serif text-xl font-bold text-charcoal-900">
-              Psychology
-            </h3>
-          </div>
-          <ul class="space-y-2 text-sm text-charcoal-700">
-            <li>Human Behaviour</li>
-            <li>Psychology</li>
-            <li>Research &amp; Learning</li>
-            <li>Observation</li>
-            <li>Neuromarketing</li>
-            <li>Consumer Behaviour</li>
-          </ul>
-        </div>
-
-        <!-- Category 4: Digital Tools -->
-        <div class="space-y-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="border-b-2 border-charcoal-900 pb-2">
-            <h3 class="font-serif text-xl font-bold text-charcoal-900">
-              Digital Tools
-            </h3>
-          </div>
-          <ul class="space-y-2 text-sm text-charcoal-700">
-            <li>Microsoft PowerPoint</li>
-            <li>Canva</li>
-            <li>Instagram &amp; Social Media</li>
-            <li>AI-assisted Productivity Tools</li>
-          </ul>
-        </div>
-
-      </div>
-
-      <!-- Areas of Interest Banner -->
-      <div class="mt-14 p-8 bg-white border border-[#E6DFD5]" data-aos="fade-up">
-        <h4 class="font-mono text-xs uppercase tracking-widest text-charcoal-500 font-semibold mb-3">
-          Areas of Interest
-        </h4>
-        <p class="font-serif text-lg sm:text-xl text-charcoal-900 leading-relaxed italic">
-          Psychology • Human Behaviour • Neuromarketing • Consumer Behaviour • Marketing • Entrepreneurship • Social Impact • Communication • Innovation • Community Development
-        </p>
-      </div>
-
-    </section>
-
-    <!-- ========================================== -->
-    <!-- SECTION 07: EDUCATION & CERTIFICATIONS     -->
-    <!-- ========================================== -->
-    <section id="education" class="py-20 border-b border-[#E6DFD5]">
-      
-      <div class="pb-10 border-b border-[#E6DFD5]" data-aos="fade-up">
-        <span class="font-mono text-xs text-terracotta uppercase tracking-widest font-semibold">07 / Academic Background</span>
-        <h2 class="font-serif text-4xl sm:text-5xl font-bold text-charcoal-900 mt-1">
-          Education &amp; Programs
-        </h2>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-10">
-        
-        <!-- Education Chronology -->
-        <div class="lg:col-span-7 space-y-8" data-aos="fade-up">
-          
-          <div class="space-y-6">
-            <div class="pb-6 border-b border-[#E6DFD5]">
-              <div class="flex items-baseline justify-between gap-4">
-                <h3 class="font-serif text-2xl font-bold text-charcoal-900">
-                  Kumaraguru College of Liberal Arts and Science
-                </h3>
-                <span class="text-xs font-mono text-terracotta font-semibold whitespace-nowrap">Exp. 2028</span>
+            <div class="photo-gallery-grid">
+              <div class="gallery-item" onclick="openLightbox('assets/social_event_1.jpg', 'Social Vertical Leadership & Student Assembly')">
+                <img src="assets/social_event_1.jpg" alt="Social Vertical Event">
+                <div class="gallery-caption font-serif">Campus Assembly & Leadership Briefing</div>
               </div>
-              <p class="text-charcoal-700 text-sm mt-1 font-medium">B.Sc. Psychology</p>
-              <p class="text-xs font-mono text-charcoal-500 mt-0.5">Coimbatore, Tamil Nadu</p>
-            </div>
-
-            <div class="pb-6 border-b border-[#E6DFD5]">
-              <div class="flex items-baseline justify-between gap-4">
-                <h3 class="font-serif text-2xl font-bold text-charcoal-900">
-                  Gedee Public School
-                </h3>
-                <span class="text-xs font-mono text-charcoal-500 whitespace-nowrap">Class XII</span>
+              <div class="gallery-item" onclick="openLightbox('assets/social_event_2.jpg', 'Community Engagement & Outreach Session')">
+                <img src="assets/social_event_2.jpg" alt="Community Engagement">
+                <div class="gallery-caption font-serif">Community Outreach & Interactive Forum</div>
               </div>
-              <p class="text-charcoal-700 text-sm mt-1 font-medium">Class XII — CBSE</p>
-            </div>
-
-            <div>
-              <div class="flex items-baseline justify-between gap-4">
-                <h3 class="font-serif text-2xl font-bold text-charcoal-900">
-                  Gedee Public School
-                </h3>
-                <span class="text-xs font-mono text-charcoal-500 whitespace-nowrap">Class X</span>
+              <div class="gallery-item" onclick="openLightbox('assets/social_event_3.jpg', 'Student Council Coordination & Planning')">
+                <img src="assets/social_event_3.jpg" alt="Student Council">
+                <div class="gallery-caption font-serif">Student Council Strategy Session</div>
               </div>
-              <p class="text-charcoal-700 text-sm mt-1 font-medium">Class X — CBSE</p>
+              <div class="gallery-item" onclick="openLightbox('assets/social_event_4.jpg', 'Social Impact Campaign Gathering')">
+                <img src="assets/social_event_4.jpg" alt="Social Impact">
+                <div class="gallery-caption font-serif">Youth Impact Campaign Milestone</div>
+              </div>
+              <div class="gallery-item" onclick="openLightbox('assets/social_event_5.jpg', 'Department Presentation & Workshop')">
+                <img src="assets/social_event_5.jpg" alt="Workshop">
+                <div class="gallery-caption font-serif">Psychology & Behavior Workshop</div>
+              </div>
+              <div class="gallery-item" onclick="openLightbox('assets/social_event_6.jpg', 'Collaborative Team Meet')">
+                <img src="assets/social_event_6.jpg" alt="Team Meet">
+                <div class="gallery-caption font-serif">Vertical Planning & Team Synchronization</div>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
+      <!-- ------------------------------------------------------------------
+           SECTION: ACADEMICS & PROTOSEM (Mapped from LEARNING & MEMORY)
+           ------------------------------------------------------------------ -->
+      <section id="academics" class="mb-24">
+        <div class="section-banner">
+          <div class="section-pretitle">03 / Learning & Memory</div>
+          <h2 class="section-title editorial-heading">Academics & PRICE ProtoSem</h2>
+          <p class="section-tagline editorial-subheading">"What I learn, question, prototype and build upon."</p>
         </div>
 
-        <!-- Certifications & Programs -->
-        <div class="lg:col-span-5" data-aos="fade-up" data-aos-delay="100">
-          <div class="bg-white p-8 border border-[#E6DFD5] space-y-4">
-            <span class="font-mono text-xs uppercase tracking-widest text-charcoal-500 font-semibold">Certifications &amp; Programs</span>
-            
-            <div class="pt-2">
-              <h4 class="font-serif text-xl font-bold text-charcoal-900">PRICE ProtoSem — Forge</h4>
-              <p class="text-xs font-mono text-terracotta font-semibold mt-1">100% Scholarship | 2026</p>
-              <p class="text-xs text-charcoal-600 mt-3 leading-relaxed">
-                Selected for the PRICE ProtoSem Cohort with a 100% scholarship. Participated in an innovation and entrepreneurship-oriented program exploring problem identification, ideation, and entrepreneurial thinking.
+        <div class="space-y-8">
+          <!-- Academic Degrees -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="editorial-card">
+              <div class="text-xs font-mono text-terracotta font-semibold uppercase mb-1">Undergraduate Studies</div>
+              <h3 class="font-serif text-2xl font-bold text-charcoal-900">B.Sc. Psychology</h3>
+              <p class="text-xs text-charcoal-600 mt-1 font-mono">Kumaraguru College of Liberal Arts and Science • Exp. 2028</p>
+              <p class="text-sm text-charcoal-700 mt-3 leading-relaxed">
+                Comprehensive training in cognitive psychology, research methodology, biopsychology, developmental psychology, organizational behavior, and psychometrics.
+              </p>
+            </div>
+
+            <div class="editorial-card">
+              <div class="text-xs font-mono text-terracotta font-semibold uppercase mb-1">Secondary Education</div>
+              <h3 class="font-serif text-2xl font-bold text-charcoal-900">Gedee Public School</h3>
+              <p class="text-xs text-charcoal-600 mt-1 font-mono">Class XII (CBSE) & Class X (CBSE)</p>
+              <p class="text-sm text-charcoal-700 mt-3 leading-relaxed">
+                Strong foundational background in sciences, communication, inter-school cultural leadership, and debate championships.
               </p>
             </div>
           </div>
+
+          <!-- PRICE ProtoSem Feature Block -->
+          <div class="editorial-card border-terracotta/40 bg-gradient-to-br from-white to-ivory-200">
+            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-border pb-4 mb-4">
+              <div>
+                <span class="text-xs font-mono text-terracotta bg-terracotta/10 border border-terracotta/20 px-3 py-1 font-semibold uppercase">
+                  100% Scholarship Recipient
+                </span>
+                <h3 class="font-serif text-3xl font-bold text-charcoal-900 mt-2">PRICE ProtoSem</h3>
+                <p class="font-serif text-lg text-terracotta italic">20-Week Industry-Integrated Innovation Programme</p>
+              </div>
+              <div class="text-right">
+                <span class="text-xs font-mono bg-white border border-border px-3 py-1 text-charcoal-800">Innovation Engineer Trainee</span>
+                <div class="text-[11px] text-charcoal-500 mt-1">Cohort 2026</div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 text-charcoal-700 text-base leading-relaxed">
+              <div class="lg:col-span-6">
+                <p>
+                  Selected for a prestigious 20-week industry-integrated innovation fellowship focused on solving real-world retail and commerce challenges through AI, analytics, intelligent systems, IoT, rapid prototyping, and entrepreneurship.
+                </p>
+              </div>
+              <div class="lg:col-span-6">
+                <p class="text-charcoal-600">
+                  Bridging behavioral psychology with advanced engineering: transforming consumer cognitive heuristics into interactive physical-digital (phygital) retail solutions.
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-border flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-white border border-border text-xs font-mono">Phygital Retail</span>
+              <span class="px-3 py-1 bg-white border border-border text-xs font-mono">AI & Analytics</span>
+              <span class="px-3 py-1 bg-white border border-border text-xs font-mono">Intelligent Systems</span>
+              <span class="px-3 py-1 bg-white border border-border text-xs font-mono">IoT & Sensors</span>
+              <span class="px-3 py-1 bg-white border border-border text-xs font-mono">Rapid Prototyping</span>
+              <span class="px-3 py-1 bg-white border border-border text-xs font-mono">Consumer Behavior</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------------------
+           SECTION: PROTOSEM 20-WEEK JOURNAL TIMELINE (Dedicated Section)
+           ------------------------------------------------------------------ -->
+      <section id="protosem" class="mb-24">
+        <div class="section-banner">
+          <div class="section-pretitle">04 / Dedicated Archive</div>
+          <h2 class="section-title editorial-heading">PRICE ProtoSem Journal</h2>
+          <p class="section-tagline editorial-subheading">"The 20-Week Continuous Journey — Week 00 through Week 20."</p>
         </div>
 
-      </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- SECTION 08: CONTACT & FOOTER               -->
-    <!-- ========================================== -->
-    <section id="contact" class="py-24" data-aos="fade-up">
-      <div class="max-w-2xl mx-auto text-center space-y-8">
-        
-        <span class="font-mono text-xs text-terracotta uppercase tracking-widest font-semibold">08 / Correspondence</span>
-        
-        <h2 class="font-serif text-4xl sm:text-5xl font-bold text-charcoal-900 leading-tight">
-          Let’s talk about psychology, ideas, or meaningful projects.
-        </h2>
-
-        <p class="text-charcoal-600 text-base leading-relaxed">
-          Open for collaborations in social initiatives, consumer behavior research, venture conversations, or student leadership opportunities.
-        </p>
-
-        <!-- Contact Buttons -->
-        <div class="pt-4 flex flex-wrap justify-center items-center gap-4">
-          <a href="mailto:shreevarsha80@gmail.com" class="px-8 py-4 bg-charcoal-900 hover:bg-terracotta text-ivory-50 transition-all uppercase tracking-widest text-xs font-semibold rounded-sm flex items-center gap-2">
-            <i class="fa-regular fa-envelope"></i>
-            <span>shreevarsha80@gmail.com</span>
-          </a>
-          <a href="https://www.linkedin.com/in/shree-varsha-vk-458909373" target="_blank" class="px-6 py-4 border border-charcoal-900 hover:border-terracotta hover:text-terracotta text-charcoal-900 transition-all uppercase tracking-widest text-xs font-semibold rounded-sm flex items-center gap-2">
-            <i class="fa-brands fa-linkedin"></i>
-            <span>LinkedIn</span>
-          </a>
-          <a href="resume.html" target="_blank" class="px-6 py-4 border border-charcoal-900 hover:border-terracotta hover:text-terracotta text-charcoal-900 transition-all uppercase tracking-widest text-xs font-semibold rounded-sm flex items-center gap-2">
-            <i class="fa-regular fa-file-pdf"></i>
-            <span>ATS Resume</span>
-          </a>
+        <!-- 4-Phase Navigation Filter -->
+        <div class="protosem-phase-nav">
+          <button class="phase-btn active" onclick="filterProtoPhase('all', this)">ALL WEEKS (00–20)</button>
+          <button class="phase-btn" onclick="filterProtoPhase(1, this)">PHASE 01 (W00–W05) • Discovery</button>
+          <button class="phase-btn" onclick="filterProtoPhase(2, this)">PHASE 02 (W06–W10) • Prototyping</button>
+          <button class="phase-btn" onclick="filterProtoPhase(3, this)">PHASE 03 (W11–W15) • Pilot Testing</button>
+          <button class="phase-btn" onclick="filterProtoPhase(4, this)">PHASE 04 (W16–W20) • Scale & Capstone</button>
         </div>
 
-        <div class="pt-4 text-xs font-mono text-charcoal-500">
-          Phone: +91 86100 82382 • Coimbatore, Tamil Nadu, India
+        <!-- Dynamic Weeks Grid Container -->
+        <div id="protosem-weeks-grid" class="weeks-grid">
+          <!-- Injected dynamically by js/app.js -->
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------------------
+           SECTION: MEMOREA VENTURE (Mapped from VENTURES)
+           ------------------------------------------------------------------ -->
+      <section id="ventures" class="mb-24">
+        <div class="section-banner">
+          <div class="section-pretitle">05 / Entrepreneurship & Venture</div>
+          <h2 class="section-title editorial-heading">Memorea — "Memories, made to wear."</h2>
+          <p class="section-tagline editorial-subheading">"A personalized accessories & keepsakes venture connecting memory to tangible form."</p>
         </div>
 
-      </div>
-    </section>
+        <div class="editorial-card mb-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-4 text-center">
+              <div class="p-6 bg-ivory-200 border border-border inline-block">
+                <img src="assets/memorea_logo.png" alt="Memorea Logo" class="w-44 mx-auto cursor-pointer" onclick="openLightbox('assets/memorea_logo.png', 'Memorea Brand Logo')">
+              </div>
+              <p class="text-xs font-mono text-terracotta uppercase tracking-widest font-semibold mt-3">Founder & Creator</p>
+            </div>
 
-  </main>
+            <div class="lg:col-span-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-charcoal-900">About the Venture</h3>
+              <p class="text-charcoal-700 leading-relaxed">
+                Memorea is a personalized lifestyle accessories and keepsakes venture built around transforming personal memories, milestone dates, and emotional connections into wearable, artistic artifacts.
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <div class="p-3 bg-ivory-200 border border-border">
+                  <span class="text-xs font-bold text-charcoal-900 block mb-1">Product Crafting</span>
+                  <span class="text-xs text-charcoal-600">Handcrafted bespoke keychains, bracelets, photo pendants, and memory capsules.</span>
+                </div>
+                <div class="p-3 bg-ivory-200 border border-border">
+                  <span class="text-xs font-bold text-charcoal-900 block mb-1">Brand & Marketing</span>
+                  <span class="text-xs text-charcoal-600">Instagram community building, visual storytelling, and direct consumer fulfillment.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  <!-- Editorial Week Modal / Future Blog Preview -->
-  <div id="editorial-week-modal" class="fixed inset-0 z-50 bg-charcoal-900/60 backdrop-blur-sm hidden items-center justify-center p-4">
-    <div class="bg-[#FAF8F5] border border-[#E6DFD5] max-w-lg w-full p-8 space-y-6 shadow-2xl relative">
-      <button onclick="closeEditorialWeekModal()" class="absolute top-5 right-5 text-charcoal-500 hover:text-charcoal-900 text-lg" aria-label="Close modal">
+        <!-- Product Gallery Grid -->
+        <h4 class="font-serif text-xl font-bold text-charcoal-900 mb-4">Venture Showcase & Creations</h4>
+        <div class="photo-gallery-grid">
+          <div class="gallery-item" onclick="openLightbox('assets/memorea_product_1.png', 'Memorea Keepsake Collection 1')">
+            <img src="assets/memorea_product_1.png" alt="Memorea Keepsake">
+            <div class="gallery-caption font-serif">Custom Keepsake Piece 01</div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox('assets/memorea_product_2.png', 'Memorea Keepsake Collection 2')">
+            <img src="assets/memorea_product_2.png" alt="Memorea Keepsake">
+            <div class="gallery-caption font-serif">Custom Keepsake Piece 02</div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox('assets/memorea_product_3.png', 'Memorea Keepsake Collection 3')">
+            <img src="assets/memorea_product_3.png" alt="Memorea Keepsake">
+            <div class="gallery-caption font-serif">Custom Keepsake Piece 03</div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox('assets/memorea_product_4.png', 'Memorea Keepsake Collection 4')">
+            <img src="assets/memorea_product_4.png" alt="Memorea Keepsake">
+            <div class="gallery-caption font-serif">Custom Keepsake Piece 04</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------------------
+           SECTION: SKILLS & CREATIVITY (Mapped from SEEING & CREATIVITY)
+           ------------------------------------------------------------------ -->
+      <section id="skills" class="mb-24">
+        <div class="section-banner">
+          <div class="section-pretitle">06 / Creative Arts & Competencies</div>
+          <h2 class="section-title editorial-heading">Seeing, Creativity & Movement</h2>
+          <p class="section-tagline editorial-subheading">"Dance, guitar, storytelling, leadership & digital craft."</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Creative Expressions -->
+          <div class="editorial-card">
+            <div class="w-10 h-10 rounded-full bg-terracotta/10 text-terracotta flex items-center justify-center mb-4 text-lg">
+              <i class="fa-solid fa-masks-theater"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-charcoal-900 mb-2">Creative & Performing Arts</h3>
+            <ul class="text-xs text-charcoal-700 space-y-2 mt-3">
+              <li><i class="fa-solid fa-circle-dot text-terracotta mr-2"></i><strong>Dance:</strong> Classical, Semi-Classical & Contemporary Choreography</li>
+              <li><i class="fa-solid fa-circle-dot text-terracotta mr-2"></i><strong>Guitar:</strong> Acoustic Melodies & Rhythmic Chord Progressions</li>
+              <li><i class="fa-solid fa-circle-dot text-terracotta mr-2"></i><strong>Public Speaking:</strong> Keynotes, Moderating Panels & Storytelling</li>
+              <li><i class="fa-solid fa-circle-dot text-terracotta mr-2"></i><strong>Creative Writing:</strong> Reflective essays and thematic narratives</li>
+            </ul>
+          </div>
+
+          <!-- Psychological & Behavioral -->
+          <div class="editorial-card">
+            <div class="w-10 h-10 rounded-full bg-teal/10 text-teal flex items-center justify-center mb-4 text-lg">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-charcoal-900 mb-2">Psychology & Research</h3>
+            <ul class="text-xs text-charcoal-700 space-y-2 mt-3">
+              <li><i class="fa-solid fa-circle-dot text-teal mr-2"></i>Cognitive Psychology & Memory Models</li>
+              <li><i class="fa-solid fa-circle-dot text-teal mr-2"></i>Experimental Research & Statistical Analysis</li>
+              <li><i class="fa-solid fa-circle-dot text-teal mr-2"></i>Consumer Behavior & Behavioral Nudging</li>
+              <li><i class="fa-solid fa-circle-dot text-teal mr-2"></i>Empathy Mapping & User Interviewing</li>
+            </ul>
+          </div>
+
+          <!-- Leadership & Technical Tools -->
+          <div class="editorial-card">
+            <div class="w-10 h-10 rounded-full bg-lavender/10 text-lavender flex items-center justify-center mb-4 text-lg">
+              <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-charcoal-900 mb-2">Leadership & Tools</h3>
+            <ul class="text-xs text-charcoal-700 space-y-2 mt-3">
+              <li><i class="fa-solid fa-circle-dot text-lavender mr-2"></i>Team Governance & Event Management</li>
+              <li><i class="fa-solid fa-circle-dot text-lavender mr-2"></i>UI/UX Wireframing (Figma, Canva)</li>
+              <li><i class="fa-solid fa-circle-dot text-lavender mr-2"></i>IoT & Prototyping Basics (PRICE ProtoSem)</li>
+              <li><i class="fa-solid fa-circle-dot text-lavender mr-2"></i>Brand Marketing & Community Building</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------------------
+           SECTION: RESEARCH & REFLECTIONS (Mapped from CURIOSITY & RESEARCH)
+           ------------------------------------------------------------------ -->
+      <section id="research" class="mb-24">
+        <div class="section-banner">
+          <div class="section-pretitle">07 / Inquiries & Mindset</div>
+          <h2 class="section-title editorial-heading">Curiosity, Research & Reflections</h2>
+          <p class="section-tagline editorial-subheading">"Investigating psychological concepts, experimental posters & personal growth."</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-8">
+          <!-- Research Poster Feature -->
+          <div class="lg:col-span-6">
+            <div class="editorial-card">
+              <span class="text-xs font-mono text-terracotta uppercase font-semibold">Academic Poster Presentation</span>
+              <h3 class="font-serif text-xl font-bold text-charcoal-900 mt-1 mb-3">Experimental Research Methods</h3>
+              <p class="text-xs text-charcoal-600 mb-4">Poster presentation investigating psychological research designs, variable controls, and hypothesis validation.</p>
+              
+              <div class="overflow-hidden border border-border cursor-pointer" onclick="openLightbox('assets/research_poster.jpg', 'Experimental Research Methods Poster Presentation')">
+                <img src="assets/research_poster.jpg" alt="Research Methods Poster" class="w-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <p class="text-[11px] text-charcoal-500 font-mono mt-2 text-center">Click to expand research poster in high resolution</p>
+            </div>
+          </div>
+
+          <!-- Memory Studies Feature -->
+          <div class="lg:col-span-6">
+            <div class="editorial-card">
+              <span class="text-xs font-mono text-teal uppercase font-semibold">Cognitive Psychology Investigation</span>
+              <h3 class="font-serif text-xl font-bold text-charcoal-900 mt-1 mb-3">Memory Models & Semantic Architecture</h3>
+              <p class="text-xs text-charcoal-600 mb-4">Investigating short-term recall, sensory registers, and semantic retention pathways in learning environments.</p>
+              
+              <div class="overflow-hidden border border-border cursor-pointer" onclick="openLightbox('assets/memory_sem2.png', 'Cognitive Psychology Memory Studies')">
+                <img src="assets/memory_sem2.png" alt="Memory Model" class="w-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <p class="text-[11px] text-charcoal-500 font-mono mt-2 text-center">Click to expand cognitive memory schema</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personal Reflective Note -->
+        <div class="editorial-card bg-ivory-200">
+          <h4 class="font-serif text-2xl font-bold text-charcoal-900 mb-2">My Reflective Lens</h4>
+          <p class="text-charcoal-700 leading-relaxed">
+            "My journey through psychology and innovation has taught me that problems are rarely purely technical or purely emotional. They live in the nuanced friction between how people feel, how systems respond, and how meaning is communicated. Every leadership role, every design sprint at ProtoSem, and every piece created at Memorea is an experiment in understanding what makes us human."
+          </p>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------------------
+           SECTION: MY JOURNEY & MILESTONES (Mapped from EXPERIENCES)
+           ------------------------------------------------------------------ -->
+      <section id="journey" class="mb-24">
+        <div class="section-banner">
+          <div class="section-pretitle">08 / Trajectory & Milestones</div>
+          <h2 class="section-title editorial-heading">My Journey & Growth</h2>
+          <p class="section-tagline editorial-subheading">"Milestones, leadership chapters & where I'm going."</p>
+        </div>
+
+        <div class="space-y-6">
+          <div class="editorial-card flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <span class="text-xs font-mono text-terracotta uppercase font-semibold">2026 – 2027 • Current</span>
+              <h3 class="font-serif text-xl font-bold text-charcoal-900">Vice President — Social Vertical</h3>
+              <p class="text-xs text-charcoal-600">Elected to head student governance for social initiatives and campus campaigns.</p>
+            </div>
+            <span class="px-3 py-1 bg-ivory-200 border border-border text-xs font-mono text-charcoal-800">Governance</span>
+          </div>
+
+          <div class="editorial-card flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <span class="text-xs font-mono text-teal uppercase font-semibold">2026 • 20-Week Fellowship</span>
+              <h3 class="font-serif text-xl font-bold text-charcoal-900">PRICE ProtoSem Innovation Fellow (100% Scholarship)</h3>
+              <p class="text-xs text-charcoal-600">Selected for the intensive retail technology and smart systems engineering program.</p>
+            </div>
+            <span class="px-3 py-1 bg-ivory-200 border border-border text-xs font-mono text-charcoal-800">Innovation</span>
+          </div>
+
+          <div class="editorial-card flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <span class="text-xs font-mono text-coral uppercase font-semibold">2025 • Entrepreneurship</span>
+              <h3 class="font-serif text-xl font-bold text-charcoal-900">Founded Memorea</h3>
+              <p class="text-xs text-charcoal-600">Launched personalized memory accessories venture with active customer orders.</p>
+            </div>
+            <span class="px-3 py-1 bg-ivory-200 border border-border text-xs font-mono text-charcoal-800">Venture</span>
+          </div>
+
+          <div class="editorial-card flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <span class="text-xs font-mono text-lavender uppercase font-semibold">2025 – 2026 • Governance</span>
+              <h3 class="font-serif text-xl font-bold text-charcoal-900">Joint Secretary — Social Vertical</h3>
+              <p class="text-xs text-charcoal-600">Coordinated food waste reduction initiatives and student community events.</p>
+            </div>
+            <span class="px-3 py-1 bg-ivory-200 border border-border text-xs font-mono text-charcoal-800">Leadership</span>
+          </div>
+
+          <div class="editorial-card flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <span class="text-xs font-mono text-sage uppercase font-semibold">2024 • Academic Milestone</span>
+              <h3 class="font-serif text-xl font-bold text-charcoal-900">Commenced B.Sc. Psychology</h3>
+              <p class="text-xs text-charcoal-600">Kumaraguru College of Liberal Arts and Science, Coimbatore.</p>
+            </div>
+            <span class="px-3 py-1 bg-ivory-200 border border-border text-xs font-mono text-charcoal-800">Academia</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------------------
+           SECTION: CONTACT & CORRESPONDENCE
+           ------------------------------------------------------------------ -->
+      <section id="contact" class="mb-16">
+        <div class="section-banner">
+          <div class="section-pretitle">09 / Correspondence</div>
+          <h2 class="section-title editorial-heading">Let's Connect & Collaborate</h2>
+          <p class="section-tagline editorial-subheading">"Open for discussions on psychology, innovation, social impact & ventures."</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <a href="mailto:shreevarsha80@gmail.com" class="editorial-card text-center block hover:border-terracotta">
+            <i class="fa-regular fa-envelope text-3xl text-terracotta mb-3"></i>
+            <h3 class="font-serif text-lg font-bold text-charcoal-900">Email</h3>
+            <p class="text-xs font-mono text-charcoal-600 mt-1">shreevarsha80@gmail.com</p>
+          </a>
+
+          <a href="https://linkedin.com/in/shreevarshavk" target="_blank" class="editorial-card text-center block hover:border-terracotta">
+            <i class="fa-brands fa-linkedin-in text-3xl text-terracotta mb-3"></i>
+            <h3 class="font-serif text-lg font-bold text-charcoal-900">LinkedIn</h3>
+            <p class="text-xs font-mono text-charcoal-600 mt-1">linkedin.com/in/shreevarshavk</p>
+          </a>
+
+          <div class="editorial-card text-center">
+            <i class="fa-solid fa-location-dot text-3xl text-terracotta mb-3"></i>
+            <h3 class="font-serif text-lg font-bold text-charcoal-900">Location</h3>
+            <p class="text-xs font-mono text-charcoal-600 mt-1">Coimbatore, Tamil Nadu, India</p>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="resume.html" class="inline-flex items-center gap-3 px-8 py-4 bg-terracotta text-white font-bold text-sm uppercase tracking-widest hover:bg-terracotta-dark transition-colors shadow-lg">
+            <i class="fa-regular fa-file-lines text-lg"></i>
+            <span>View Full ATS Printable Resume</span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       6. ABOUT ME QUICK MODAL (Opened from Top-Left Permanent Photo Anchor)
+       ======================================================================== -->
+  <div id="about-me-modal" class="editorial-modal-backdrop">
+    <div class="editorial-modal-window p-8 sm:p-12">
+      <button id="close-about-modal-btn" class="modal-close-btn" title="Close Modal">
         <i class="fa-solid fa-xmark"></i>
       </button>
-      
-      <div>
-        <span id="modal-editorial-phase" class="text-xs font-mono text-terracotta uppercase tracking-widest font-semibold">PHASE 01 • PROTOSEM ARCHIVE</span>
-        <h3 id="modal-editorial-title" class="font-serif text-3xl font-bold text-charcoal-900 mt-1">WEEK 01</h3>
+
+      <div class="flex flex-col sm:flex-row items-center sm:items-start gap-8 pb-8 border-b border-border">
+        <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-terracotta flex-shrink-0 shadow-md">
+          <img src="assets/profile.jpg" alt="Shree Varsha V K" class="w-full h-full object-cover">
+        </div>
+        <div>
+          <span class="text-xs font-mono text-terracotta uppercase font-bold tracking-wider">Profile Overview</span>
+          <h2 class="font-serif text-3xl font-bold text-charcoal-900 mt-1">Shree Varsha V K</h2>
+          <p class="font-serif text-lg text-terracotta italic">B.Sc. Psychology • ProtoSem Innovation Fellow • Founder</p>
+          <p class="text-xs text-charcoal-600 mt-1">Kumaraguru College of Liberal Arts and Science, Coimbatore</p>
+        </div>
       </div>
 
-      <div class="p-6 bg-white border border-[#E6DFD5] space-y-3">
-        <p class="text-xs font-mono text-terracotta font-semibold uppercase tracking-wider flex items-center gap-1.5">
-          <i class="fa-regular fa-compass"></i> Field Notes In Progress
+      <div class="py-6 space-y-4 text-charcoal-700 leading-relaxed text-sm sm:text-base">
+        <p>
+          I am a psychology undergraduate driven by the curiosity of how human minds perceive, decide, connect, and thrive. My work bridges the gap between empirical behavioral science and applied innovation.
         </p>
-        <p class="text-charcoal-700 text-sm leading-relaxed">
-          The project breakdown, problem-solving reflections, and prototyping field notes for this milestone of the 20-week PRICE ProtoSem innovation journey will be documented here.
+        <p>
+          As the <strong>Vice President of the Social Vertical</strong>, I lead community-driven initiatives on sustainability and mental wellness. As an <strong>Innovation Engineer Trainee at PRICE ProtoSem</strong> (100% Scholarship), I engineer intelligent phygital systems solving retail friction points. And as the founder of <strong>Memorea</strong>, I craft memory-connected accessories.
         </p>
       </div>
 
-      <div class="flex items-center justify-between pt-2 border-t border-[#E6DFD5]">
-        <span class="text-xs font-mono text-charcoal-500">Route: <span id="modal-editorial-slug" class="text-charcoal-800">/protosem/week-01</span></span>
-        <button onclick="closeEditorialWeekModal()" class="px-5 py-2 bg-charcoal-900 text-ivory-50 text-xs uppercase tracking-widest font-semibold hover:bg-terracotta transition-colors">
-          Close
-        </button>
+      <div class="pt-6 border-t border-border flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <img src="assets/signature.jpg" alt="Signature" class="h-10 opacity-75">
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="mailto:shreevarsha80@gmail.com" class="px-4 py-2 border border-border text-xs font-mono text-charcoal-800 hover:border-terracotta">Email Me</a>
+          <a href="resume.html" class="px-4 py-2 bg-terracotta text-white text-xs font-mono hover:bg-terracotta-dark">ATS Resume</a>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Editorial Footer -->
-  <footer class="border-t border-[#E6DFD5] py-10 bg-ivory-100 text-xs text-charcoal-500">
-    <div class="max-w-6xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="font-serif italic text-sm text-charcoal-700">
-        «People, purpose &amp; the stories between.»
-      </p>
-      <div class="flex items-center gap-4 text-xs font-mono uppercase tracking-widest">
-        <span>© 2026 Shree Varsha V K</span>
-        <span>•</span>
-        <a href="#hero" class="text-charcoal-700 hover:text-terracotta transition-colors">Back to Top ↑</a>
+  <!-- ========================================================================
+       7. PROTOSEM WEEK DETAIL MODAL
+       ======================================================================== -->
+  <div id="protosem-week-modal" class="editorial-modal-backdrop">
+    <div class="editorial-modal-window p-8 sm:p-12">
+      <button id="close-protosem-modal-btn" class="modal-close-btn" title="Close Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="pb-6 border-b border-border">
+        <span id="modal-proto-phase" class="text-xs font-mono text-terracotta font-bold uppercase tracking-wider">PHASE 01 • PROTOSEM ARCHIVE</span>
+        <h2 id="modal-proto-title" class="font-serif text-3xl font-bold text-charcoal-900 mt-1">WEEK 00</h2>
+        <p id="modal-proto-subtitle" class="font-serif text-lg text-charcoal-600 italic mt-0.5">Subtitle</p>
+      </div>
+
+      <div id="modal-proto-body" class="py-6 text-charcoal-700 leading-relaxed text-sm sm:text-base space-y-4">
+        <!-- Injected dynamically -->
+      </div>
+
+      <div class="pt-4 border-t border-border">
+        <h4 class="text-xs font-mono text-charcoal-500 uppercase tracking-wider font-bold mb-3">Key Takeaways & Learning Gates</h4>
+        <ul id="modal-proto-takeaways" class="text-xs text-charcoal-700 space-y-2">
+          <!-- Injected dynamically -->
+        </ul>
       </div>
     </div>
-  </footer>
+  </div>
 
-  <!-- AOS Script -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- ========================================================================
+       8. IMAGE LIGHTBOX MODAL
+       ======================================================================== -->
+  <div id="lightbox-modal" class="editorial-modal-backdrop">
+    <div class="relative max-w-4xl w-full p-4 flex flex-col items-center">
+      <button id="close-lightbox-btn" class="modal-close-btn" style="top: 0; right: 0;">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <img id="lightbox-image" src="" alt="Expanded View" class="max-h-[80vh] w-auto border-2 border-border shadow-2xl bg-white">
+      <p id="lightbox-caption" class="font-serif text-center text-ivory-100 text-lg mt-4"></p>
+    </div>
+  </div>
 
-  <!-- Editorial Data-Driven 20-Week Architecture Script -->
-  <script>
-    // Initialize AOS animations
-    AOS.init({
-      once: true,
-      duration: 700,
-      offset: 40
-    });
+  <!-- ========================================================================
+       SCRIPTS: THREE.JS, PROTOSEM DATA & NEURAL ENGINES
+       ======================================================================== -->
+  <!-- Three.js (r128) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-    // Mobile Menu Toggle
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (menuBtn && mobileMenu) {
-      menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-    }
+  <!-- Application Modules -->
+  <script src="js/protosem-data.js"></script>
+  <script src="js/brain-engine.js"></script>
+  <script src="js/neural-arrows.js"></script>
+  <script src="js/app.js"></script>
 
-    // ===============================================
-    // 20-WEEK PROTOSEM DATA ARCHITECTURE
-    // ===============================================
-    const editorialProtoSemWeeks = [
-      // Phase 01: Weeks 01-05
-      { week: 1, phase: 1, label: "WEEK 01", status: "FIELD NOTES IN PROGRESS", slug: "week-01" },
-      { week: 2, phase: 1, label: "WEEK 02", status: "FIELD NOTES IN PROGRESS", slug: "week-02" },
-      { week: 3, phase: 1, label: "WEEK 03", status: "FIELD NOTES IN PROGRESS", slug: "week-03" },
-      { week: 4, phase: 1, label: "WEEK 04", status: "FIELD NOTES IN PROGRESS", slug: "week-04" },
-      { week: 5, phase: 1, label: "WEEK 05", status: "FIELD NOTES IN PROGRESS", slug: "week-05" },
-
-      // Phase 02: Weeks 06-10
-      { week: 6, phase: 2, label: "WEEK 06", status: "FIELD NOTES IN PROGRESS", slug: "week-06" },
-      { week: 7, phase: 2, label: "WEEK 07", status: "FIELD NOTES IN PROGRESS", slug: "week-07" },
-      { week: 8, phase: 2, label: "WEEK 08", status: "FIELD NOTES IN PROGRESS", slug: "week-08" },
-      { week: 9, phase: 2, label: "WEEK 09", status: "FIELD NOTES IN PROGRESS", slug: "week-09" },
-      { week: 10, phase: 2, label: "WEEK 10", status: "FIELD NOTES IN PROGRESS", slug: "week-10" },
-
-      // Phase 03: Weeks 11-15
-      { week: 11, phase: 3, label: "WEEK 11", status: "FIELD NOTES IN PROGRESS", slug: "week-11" },
-      { week: 12, phase: 3, label: "WEEK 12", status: "FIELD NOTES IN PROGRESS", slug: "week-12" },
-      { week: 13, phase: 3, label: "WEEK 13", status: "FIELD NOTES IN PROGRESS", slug: "week-13" },
-      { week: 14, phase: 3, label: "WEEK 14", status: "FIELD NOTES IN PROGRESS", slug: "week-14" },
-      { week: 15, phase: 3, label: "WEEK 15", status: "FIELD NOTES IN PROGRESS", slug: "week-15" },
-
-      // Phase 04: Weeks 16-20
-      { week: 16, phase: 4, label: "WEEK 16", status: "FIELD NOTES IN PROGRESS", slug: "week-16" },
-      { week: 17, phase: 4, label: "WEEK 17", status: "FIELD NOTES IN PROGRESS", slug: "week-17" },
-      { week: 18, phase: 4, label: "WEEK 18", status: "FIELD NOTES IN PROGRESS", slug: "week-18" },
-      { week: 19, phase: 4, label: "WEEK 19", status: "FIELD NOTES IN PROGRESS", slug: "week-19" },
-      { week: 20, phase: 4, label: "WEEK 20", status: "FIELD NOTES IN PROGRESS", slug: "week-20" },
-    ];
-
-    function renderEditorialWeekCards(phaseFilter = 'all') {
-      const container = document.getElementById('editorial-weeks-container');
-      if (!container) return;
-
-      const filtered = phaseFilter === 'all' 
-        ? editorialProtoSemWeeks 
-        : editorialProtoSemWeeks.filter(item => item.phase === parseInt(phaseFilter));
-
-      container.innerHTML = filtered.map(item => {
-        const weekPad = item.week < 10 ? `0${item.week}` : `${item.week}`;
-        return `
-          <div 
-            onclick="openEditorialWeekModal(${item.week})"
-            class="week-entry p-5 cursor-pointer flex flex-col justify-between group focus:outline-none focus:ring-1 focus:ring-terracotta"
-            role="button"
-            tabindex="0"
-            aria-label="${item.label} Placeholder Story"
-            onkeydown="if(event.key==='Enter'||event.key===' ') openEditorialWeekModal(${item.week})"
-          >
-            <!-- Top Metadata -->
-            <div class="flex items-center justify-between border-b border-[#E6DFD5] pb-2 mb-3">
-              <span class="text-[10px] font-mono font-semibold text-charcoal-500 uppercase">
-                PHASE 0${item.phase}
-              </span>
-              <span class="text-[10px] font-mono text-terracotta font-semibold">
-                #${weekPad}
-              </span>
-            </div>
-
-            <!-- Primary Week Title -->
-            <div class="my-2">
-              <div class="flex items-baseline justify-between">
-                <h4 class="font-serif text-2xl font-bold text-charcoal-900 group-hover:text-terracotta transition-colors">
-                  ${item.label}
-                </h4>
-                <span class="text-xs text-charcoal-400 group-hover:text-terracotta transition-colors font-serif">→</span>
-              </div>
-              <p class="text-[10px] font-mono text-charcoal-500 uppercase tracking-widest mt-1">
-                ${item.status}
-              </p>
-            </div>
-
-            <!-- Footer Marker -->
-            <div class="pt-3 border-t border-[#E6DFD5] flex items-center justify-between text-[10px] font-mono text-charcoal-500">
-              <span>Chapter ${weekPad}/20</span>
-              <span class="text-terracotta group-hover:underline">Story Outline</span>
-            </div>
-          </div>
-        `;
-      }).join('');
-    }
-
-    function filterEditorialPhase(phase, buttonElement) {
-      document.querySelectorAll('.phase-tab').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      buttonElement.classList.add('active');
-      renderEditorialWeekCards(phase);
-    }
-
-    function openEditorialWeekModal(weekNumber) {
-      const item = editorialProtoSemWeeks.find(w => w.week === weekNumber);
-      if (!item) return;
-
-      document.getElementById('modal-editorial-phase').innerText = `PHASE 0${item.phase} • PROTOSEM ARCHIVE`;
-      document.getElementById('modal-editorial-title').innerText = `${item.label}`;
-      document.getElementById('modal-editorial-slug').innerText = `/protosem/${item.slug}`;
-      
-      const modal = document.getElementById('editorial-week-modal');
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-    }
-
-    function closeEditorialWeekModal() {
-      const modal = document.getElementById('editorial-week-modal');
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      renderEditorialWeekCards('all');
-    });
-
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeEditorialWeekModal();
-    });
-    document.getElementById('editorial-week-modal')?.addEventListener('click', (e) => {
-      if (e.target.id === 'editorial-week-modal') closeEditorialWeekModal();
-    });
-  </script>
 </body>
 </html>
