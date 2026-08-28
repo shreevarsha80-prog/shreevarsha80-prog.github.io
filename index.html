@@ -29,7 +29,7 @@
       </div>
       <div class="opening-meta">
         <h1 class="opening-name">Shree Varsha V K</h1>
-        <p class="opening-tagline">"People, purpose & the stories between."</p>
+        <p class="opening-tagline">"People, purpose &amp; the stories between."</p>
         <div class="opening-formula">
           <span>Person</span>
           <span class="arrow">→</span>
@@ -49,7 +49,7 @@
        ======================================================================== -->
   <header id="site-header">
     <!-- Top-Left Clickable Profile Anchor -->
-    <button id="profile-anchor-btn" class="profile-anchor-wrap" title="View Shree Varsha's Profile">
+    <button id="profile-anchor-btn" class="profile-anchor-wrap" title="View Shree Varsha's Profile" aria-label="Open About Me profile modal">
       <div class="profile-monogram-thumb font-serif">
         SV
       </div>
@@ -60,7 +60,7 @@
     </button>
 
     <!-- Center Minimal Breadcrumbs Tracker -->
-    <div class="nav-breadcrumbs">
+    <div class="nav-breadcrumbs" aria-live="polite">
       <span>YOU ARE HERE</span>
       <span class="breadcrumb-separator">→</span>
       <span id="breadcrumb-current-section" class="breadcrumb-segment active">CENTRAL BRAIN</span>
@@ -82,7 +82,7 @@
   <!-- ========================================================================
        3. FLOATING PSYCHOLOGICAL TERMS (Very Low Contrast Ambient Background)
        ======================================================================== -->
-  <div id="psych-background-layer">
+  <div id="psych-background-layer" aria-hidden="true">
     <div class="psych-term t1">NEUROPLASTICITY</div>
     <div class="psych-term t2">COGNITION</div>
     <div class="psych-term t3">PERCEPTION</div>
@@ -96,7 +96,7 @@
     <div class="psych-term t11">MOTIVATION</div>
     <div class="psych-term t12">DEVELOPMENT</div>
   </div>
-  <div class="paper-texture-overlay"></div>
+  <div class="paper-texture-overlay" aria-hidden="true"></div>
 
   <!-- ========================================================================
        4. CENTRAL INLINE SVG BRAIN NAVIGATION STAGE (Direct Lobe Hotspots)
@@ -107,104 +107,108 @@
       <!-- INLINE ANATOMICAL SVG BRAIN -->
       <svg id="anatomical-brain-svg" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive 3D-Style Psychology Brain Navigation System">
         
-        <!-- Filter Definitions for Tactile Clay Depth & Gyri Folds -->
+        <!-- Filter & Gradient Definitions for Tactile Clay Depth & Gyri Folds -->
         <defs>
           <!-- Soft Matte Clay Drop Shadows -->
-          <filter id="clay-shadow" x="-15%" y="-15%" width="135%" height="135%">
-            <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#1c1917" flood-opacity="0.08" />
-            <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#c85a32" flood-opacity="0.04" />
+          <filter id="clay-shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#1c1917" flood-opacity="0.10" />
+            <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#c85a32" flood-opacity="0.05" />
           </filter>
 
-          <filter id="lobe-lift-shadow" x="-20%" y="-20%" width="145%" height="145%">
-            <feDropShadow dx="0" dy="24" stdDeviation="26" flood-color="#1c1917" flood-opacity="0.14" />
-            <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#c85a32" flood-opacity="0.08" />
+          <filter id="lobe-lift-shadow" x="-25%" y="-25%" width="150%" height="150%">
+            <feDropShadow dx="0" dy="26" stdDeviation="28" flood-color="#1c1917" flood-opacity="0.18" />
+            <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#c85a32" flood-opacity="0.12" />
           </filter>
 
-          <!-- Organic Cortical Wrinkle Displacement -->
-          <filter id="gyri-texture" x="-10%" y="-10%" width="120%" height="120%">
-            <feTurbulence type="fractalNoise" baseFrequency="0.035 0.045" numOctaves="3" result="noise" />
-            <feDisplacementMap in="SourceGraphic" in2="noise" scale="4.5" xChannelSelector="R" yChannelSelector="G" />
+          <!-- Organic Gyri Convolution Bevel Shading Filter -->
+          <filter id="gyri-bevel" x="-10%" y="-10%" width="120%" height="120%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="blur" />
+            <feSpecularLighting in="blur" surfaceScale="3" specularConstant="0.6" specularExponent="16" lighting-color="#ffffff" result="specular">
+              <fePointLight x="350" y="150" z="220" />
+            </feSpecularLighting>
+            <feComposite in="specular" in2="SourceAlpha" operator="in" result="specular-cut" />
+            <feComposite in="SourceGraphic" in2="specular-cut" operator="arithmetic" k1="0" k2="1" k3="0.8" k4="0" />
           </filter>
 
           <!-- Base Matte Clay Gradients -->
-          <radialGradient id="base-clay-grad" cx="45%" cy="38%" r="65%">
-            <stop offset="0%" stop-color="#FAF7F2" />
-            <stop offset="45%" stop-color="#F2EDE4" />
-            <stop offset="80%" stop-color="#E5DDD0" />
-            <stop offset="100%" stop-color="#D6CBB9" />
+          <radialGradient id="base-clay-grad" cx="42%" cy="36%" r="68%">
+            <stop offset="0%" stop-color="#FCFAF6" />
+            <stop offset="40%" stop-color="#F4EFEB" />
+            <stop offset="75%" stop-color="#E5DDD0" />
+            <stop offset="100%" stop-color="#D2C5B1" />
           </radialGradient>
 
-          <!-- Region Tint Gradients (Applied as Low-Opacity Tint Overlays) -->
+          <!-- Region Tint Gradients -->
           <!-- 1. Frontal / Lavender (THINKING) -->
           <radialGradient id="tint-frontal" cx="35%" cy="35%" r="70%">
-            <stop offset="0%" stop-color="#B8AECF" stop-opacity="0.32" />
-            <stop offset="60%" stop-color="#8E82A6" stop-opacity="0.24" />
-            <stop offset="100%" stop-color="#6F6488" stop-opacity="0.38" />
+            <stop offset="0%" stop-color="#C5BCD8" stop-opacity="0.45" />
+            <stop offset="60%" stop-color="#8E82A6" stop-opacity="0.32" />
+            <stop offset="100%" stop-color="#675C7E" stop-opacity="0.48" />
           </radialGradient>
 
           <!-- 2. Hippocampus / Deep Cognition / Teal (LEARNING & MEMORY) -->
           <radialGradient id="tint-hippocampus" cx="50%" cy="45%" r="65%">
-            <stop offset="0%" stop-color="#8BB5C2" stop-opacity="0.35" />
-            <stop offset="65%" stop-color="#5B8C9B" stop-opacity="0.26" />
-            <stop offset="100%" stop-color="#3A6A78" stop-opacity="0.40" />
+            <stop offset="0%" stop-color="#9BC4D0" stop-opacity="0.48" />
+            <stop offset="65%" stop-color="#5B8C9B" stop-opacity="0.35" />
+            <stop offset="100%" stop-color="#345F6B" stop-opacity="0.52" />
           </radialGradient>
 
           <!-- 3. Temporal / Coral (PEOPLE & CONNECTIONS) -->
           <radialGradient id="tint-temporal" cx="40%" cy="45%" r="65%">
-            <stop offset="0%" stop-color="#F2A486" stop-opacity="0.36" />
-            <stop offset="60%" stop-color="#D47A58" stop-opacity="0.26" />
-            <stop offset="100%" stop-color="#B05634" stop-opacity="0.40" />
+            <stop offset="0%" stop-color="#F4AF94" stop-opacity="0.48" />
+            <stop offset="60%" stop-color="#D47A58" stop-opacity="0.36" />
+            <stop offset="100%" stop-color="#AA5332" stop-opacity="0.52" />
           </radialGradient>
 
           <!-- 4. Parietal / Terracotta (EXPERIENCES) -->
           <radialGradient id="tint-parietal" cx="50%" cy="35%" r="65%">
-            <stop offset="0%" stop-color="#E27650" stop-opacity="0.34" />
-            <stop offset="60%" stop-color="#C85A32" stop-opacity="0.25" />
-            <stop offset="100%" stop-color="#9C3A16" stop-opacity="0.38" />
+            <stop offset="0%" stop-color="#E88663" stop-opacity="0.45" />
+            <stop offset="60%" stop-color="#C85A32" stop-opacity="0.34" />
+            <stop offset="100%" stop-color="#963614" stop-opacity="0.50" />
           </radialGradient>
 
           <!-- 5. Occipital / Mustard (SEEING & CREATIVITY) -->
           <radialGradient id="tint-occipital" cx="55%" cy="45%" r="65%">
-            <stop offset="0%" stop-color="#E5BF6E" stop-opacity="0.35" />
-            <stop offset="60%" stop-color="#CCA046" stop-opacity="0.25" />
-            <stop offset="100%" stop-color="#A17924" stop-opacity="0.40" />
+            <stop offset="0%" stop-color="#ECCB7F" stop-opacity="0.46" />
+            <stop offset="60%" stop-color="#CCA046" stop-opacity="0.34" />
+            <stop offset="100%" stop-color="#966F1E" stop-opacity="0.52" />
           </radialGradient>
 
           <!-- 6. Cerebellum / Sage (SKILLS & MOVEMENT) -->
           <radialGradient id="tint-cerebellum" cx="50%" cy="45%" r="65%">
-            <stop offset="0%" stop-color="#A5BEAD" stop-opacity="0.36" />
-            <stop offset="60%" stop-color="#7E9A86" stop-opacity="0.26" />
-            <stop offset="100%" stop-color="#55725D" stop-opacity="0.42" />
+            <stop offset="0%" stop-color="#B2CBB9" stop-opacity="0.48" />
+            <stop offset="60%" stop-color="#7E9A86" stop-opacity="0.35" />
+            <stop offset="100%" stop-color="#4E6B56" stop-opacity="0.52" />
           </radialGradient>
 
           <!-- 7. Satellite Curiosity / Dusty Rose -->
           <radialGradient id="tint-research" cx="40%" cy="40%" r="65%">
-            <stop offset="0%" stop-color="#D6A5AF" stop-opacity="0.38" />
-            <stop offset="70%" stop-color="#B87D8A" stop-opacity="0.28" />
-            <stop offset="100%" stop-color="#8F5461" stop-opacity="0.44" />
+            <stop offset="0%" stop-color="#DEB0BA" stop-opacity="0.50" />
+            <stop offset="70%" stop-color="#B87D8A" stop-opacity="0.38" />
+            <stop offset="100%" stop-color="#844B57" stop-opacity="0.56" />
           </radialGradient>
 
           <!-- 8. Satellite Memorea / Warm Cream Amber -->
           <radialGradient id="tint-memorea" cx="40%" cy="40%" r="65%">
-            <stop offset="0%" stop-color="#E8CBB0" stop-opacity="0.38" />
-            <stop offset="70%" stop-color="#D8A878" stop-opacity="0.28" />
-            <stop offset="100%" stop-color="#AB7C4C" stop-opacity="0.44" />
+            <stop offset="0%" stop-color="#EED5BD" stop-opacity="0.50" />
+            <stop offset="70%" stop-color="#D8A878" stop-opacity="0.38" />
+            <stop offset="100%" stop-color="#A1713F" stop-opacity="0.56" />
           </radialGradient>
         </defs>
 
         <!-- Ambient Neural Synaptic Connecting Filaments (Background) -->
-        <g class="neural-filaments" opacity="0.35" stroke="#DDD5C8" stroke-width="1.2" stroke-dasharray="3 3" fill="none">
-          <path d="M 280 220 Q 220 180, 160 140" />
-          <path d="M 680 430 Q 760 480, 840 510" />
+        <g class="neural-filaments" opacity="0.4" stroke="#D2C8B8" stroke-width="1.2" stroke-dasharray="3 3" fill="none">
+          <path d="M 280 220 Q 210 170, 160 140" />
+          <path d="M 680 430 Q 760 480, 830 490" />
           <path d="M 460 300 Q 520 220, 580 180" />
           <path d="M 330 380 Q 240 440, 180 500" />
         </g>
 
-        <!-- MAIN BRAIN ANATOMICAL GROUP (With Ambient Idle Floating Bob & Tilt) -->
+        <!-- MAIN BRAIN ANATOMICAL GROUP (With Ambient Idle Floating Bob & Dynamic Tilt) -->
         <g id="interactive-brain-group" class="brain-idle-float" filter="url(#clay-shadow)">
           
-          <!-- ANATOMICAL BRAIN BASE SILHOUETTE (Tactile Warm Clay) -->
-          <path class="brain-base-silhouette" filter="url(#gyri-texture)" fill="url(#base-clay-grad)" stroke="#D6CBB9" stroke-width="2.5" d="
+          <!-- ANATOMICAL BRAIN BASE SILHOUETTE (Tactile Warm Clay Core) -->
+          <path class="brain-base-silhouette" fill="url(#base-clay-grad)" stroke="#D2C5B1" stroke-width="2.5" d="
             M 270 330
             C 255 270, 260 210, 290 165
             C 335 110, 420 90, 520 95
@@ -224,8 +228,8 @@
                INTERACTIVE LOBE HOTSPOTS (Separate Clickable & Hoverable Paths)
                ============================================================== -->
 
-          <!-- 1. FRONTAL LOBE (THINKING -> About Me) -->
-          <g id="region-frontal" class="brain-lobe-hotspot" data-label="THINKING" data-subtitle="Decisions, self-reflection & personal philosophy" data-target="about" data-color="#8E82A6" tabindex="0" role="button" aria-label="Thinking Region: About Me">
+          <!-- 1. FRONTAL LOBE (THINKING -> Overview & Philosophy) -->
+          <g id="region-frontal" class="brain-lobe-hotspot" data-label="THINKING" data-subtitle="What I question, understand and build upon" data-target="about" data-color="#8E82A6" tabindex="0" role="button" aria-label="Thinking Region: Overview and Philosophy">
             <path class="lobe-base" fill="url(#base-clay-grad)" d="
               M 270 330
               C 255 265, 265 205, 295 165
@@ -242,17 +246,24 @@
               C 415 340, 360 365, 310 365
               C 285 365, 275 350, 270 330 Z
             " />
-            <g class="gyri-strokes" stroke="#C5B8A5" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.85">
+            <!-- Sulci Groove Shadows (Tactile Deep Fold Fissures) -->
+            <g class="gyri-grooves" stroke="#9E9283" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.65">
               <path d="M 290 220 C 320 200, 365 210, 395 185 C 420 165, 455 160, 480 140" />
               <path d="M 275 270 C 305 255, 340 270, 375 250 C 405 235, 440 240, 465 215" />
               <path d="M 300 315 C 330 300, 365 315, 400 295 C 420 280, 445 285, 450 270" />
               <path d="M 345 145 C 375 165, 400 135, 435 130 C 455 125, 475 115, 490 110" />
               <path d="M 330 250 C 350 220, 380 230, 400 210" />
             </g>
+            <!-- Gyri Ridge Highlights (Sunlight Bevel Edge) -->
+            <g class="gyri-highlights" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.7">
+              <path d="M 290 218 C 320 198, 365 208, 395 183 C 420 163, 455 158, 480 138" />
+              <path d="M 275 268 C 305 253, 340 268, 375 248 C 405 233, 440 238, 465 213" />
+              <path d="M 300 313 C 330 298, 365 313, 400 293 C 420 278, 445 283, 450 268" />
+            </g>
           </g>
 
           <!-- 2. PARIETAL LOBE (EXPERIENCES -> Leadership & Milestones) -->
-          <g id="region-parietal" class="brain-lobe-hotspot" data-label="EXPERIENCES" data-subtitle="Leadership, student governance & campus journey" data-target="journey" data-color="#C85A32" tabindex="0" role="button" aria-label="Experiences Region: Leadership">
+          <g id="region-parietal" class="brain-lobe-hotspot" data-label="EXPERIENCES" data-subtitle="The moments that shaped my journey" data-target="journey" data-color="#C85A32" tabindex="0" role="button" aria-label="Experiences Region: Leadership & Milestones">
             <path class="lobe-base" fill="url(#base-clay-grad)" d="
               M 500 95
               C 585 100, 665 125, 715 175
@@ -269,16 +280,22 @@
               C 555 280, 515 255, 485 220
               C 475 175, 485 130, 500 95 Z
             " />
-            <g class="gyri-strokes" stroke="#C5B8A5" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.85">
+            <!-- Sulci Groove Shadows -->
+            <g class="gyri-grooves" stroke="#9E9283" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.65">
               <path d="M 525 120 C 560 145, 600 130, 640 155 C 670 175, 700 160, 725 190" />
               <path d="M 505 170 C 545 190, 585 175, 625 200 C 665 220, 705 205, 735 235" />
               <path d="M 500 220 C 540 240, 580 225, 620 245 C 660 260, 700 250, 740 275" />
               <path d="M 570 110 C 600 135, 630 115, 665 130" />
             </g>
+            <!-- Gyri Ridge Highlights -->
+            <g class="gyri-highlights" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.7">
+              <path d="M 525 118 C 560 143, 600 128, 640 153 C 670 173, 700 158, 725 188" />
+              <path d="M 505 168 C 545 188, 585 173, 625 198 C 665 218, 705 203, 735 233" />
+            </g>
           </g>
 
           <!-- 3. OCCIPITAL LOBE (SEEING & CREATIVITY -> Creative Work & Arts) -->
-          <g id="region-occipital" class="brain-lobe-hotspot" data-label="SEEING & CREATIVITY" data-subtitle="Visual perception, dance, guitar & creative expression" data-target="skills" data-color="#CCA046" tabindex="0" role="button" aria-label="Seeing and Creativity Region">
+          <g id="region-occipital" class="brain-lobe-hotspot" data-label="SEEING &amp; CREATIVITY" data-subtitle="How I observe, express and create" data-target="skills" data-color="#CCA046" tabindex="0" role="button" aria-label="Seeing and Creativity Region: Creative Arts">
             <path class="lobe-base" fill="url(#base-clay-grad)" d="
               M 750 295
               C 780 325, 790 370, 775 415
@@ -293,16 +310,22 @@
               C 655 440, 660 390, 675 345
               C 690 315, 720 300, 750 295 Z
             " />
-            <g class="gyri-strokes" stroke="#C5B8A5" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.85">
+            <!-- Sulci Groove Shadows -->
+            <g class="gyri-grooves" stroke="#9E9283" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.65">
               <path d="M 740 320 C 765 345, 745 375, 765 400" />
               <path d="M 710 335 C 730 365, 715 395, 735 425 C 745 440, 730 460, 710 470" />
               <path d="M 680 360 C 700 390, 685 420, 700 450" />
               <path d="M 755 365 C 775 385, 760 410, 770 430" />
             </g>
+            <!-- Gyri Ridge Highlights -->
+            <g class="gyri-highlights" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.7">
+              <path d="M 740 318 C 765 343, 745 373, 765 398" />
+              <path d="M 710 333 C 730 363, 715 393, 735 423" />
+            </g>
           </g>
 
-          <!-- 4. TEMPORAL LOBE (PEOPLE & CONNECTIONS -> Social Vertical & Leadership) -->
-          <g id="region-temporal" class="brain-lobe-hotspot" data-label="PEOPLE & CONNECTIONS" data-subtitle="Where psychology meets people, leadership & community" data-target="social" data-color="#D47A58" tabindex="0" role="button" aria-label="People and Connections Region: Social Vertical">
+          <!-- 4. TEMPORAL LOBE (PEOPLE & CONNECTIONS -> Social Vertical & Community) -->
+          <g id="region-temporal" class="brain-lobe-hotspot" data-label="PEOPLE &amp; CONNECTIONS" data-subtitle="Where psychology meets people &amp; community" data-target="social" data-color="#D47A58" tabindex="0" role="button" aria-label="People and Connections Region: Social Vertical">
             <path class="lobe-base" fill="url(#base-clay-grad)" d="
               M 310 365
               C 365 365, 415 340, 440 290
@@ -321,16 +344,22 @@
               C 305 450, 285 415, 275 395
               C 285 375, 295 365, 310 365 Z
             " />
-            <g class="gyri-strokes" stroke="#C5B8A5" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.85">
+            <!-- Sulci Groove Shadows -->
+            <g class="gyri-grooves" stroke="#9E9283" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.65">
               <path d="M 310 390 C 355 385, 400 405, 445 395 C 490 385, 530 400, 560 380" />
               <path d="M 320 425 C 365 420, 410 440, 455 430 C 495 420, 530 435, 550 415" />
               <path d="M 345 455 C 385 450, 425 465, 465 455 C 495 450, 515 455, 530 440" />
               <path d="M 360 380 C 390 365, 420 375, 450 360" />
             </g>
+            <!-- Gyri Ridge Highlights -->
+            <g class="gyri-highlights" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.7">
+              <path d="M 310 388 C 355 383, 400 403, 445 393 C 490 383, 530 398, 560 378" />
+              <path d="M 320 423 C 365 418, 410 438, 455 428 C 495 418, 530 433, 550 413" />
+            </g>
           </g>
 
           <!-- 5. HIPPOCAMPUS / COGNITION (LEARNING & MEMORY -> Academics & ProtoSem) -->
-          <g id="region-hippocampus" class="brain-lobe-hotspot" data-label="LEARNING & MEMORY" data-subtitle="What I learn, question and build upon (Academics & ProtoSem)" data-target="academics" data-color="#5B8C9B" tabindex="0" role="button" aria-label="Learning and Memory Region: Academics and ProtoSem">
+          <g id="region-hippocampus" class="brain-lobe-hotspot" data-label="LEARNING &amp; MEMORY" data-subtitle="Learning, academics &amp; PRICE ProtoSem" data-target="academics" data-color="#5B8C9B" tabindex="0" role="button" aria-label="Learning and Memory Region: Academics and ProtoSem">
             <path class="lobe-base" fill="url(#base-clay-grad)" d="
               M 440 290
               C 470 230, 485 160, 500 95
@@ -351,15 +380,20 @@
               C 645 340, 610 340, 570 345
               C 525 335, 480 315, 440 290 Z
             " />
-            <g class="gyri-strokes" stroke="#C5B8A5" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.85">
+            <!-- Sulci Groove Shadows -->
+            <g class="gyri-grooves" stroke="#9E9283" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.65">
               <path d="M 470 260 C 510 280, 550 265, 590 290 C 630 310, 660 300, 690 325" />
               <path d="M 480 200 C 520 220, 560 205, 600 230 C 635 245, 660 240, 680 265" />
               <path d="M 520 305 C 555 295, 590 315, 625 305 C 650 300, 670 315, 685 310" />
             </g>
+            <!-- Gyri Ridge Highlights -->
+            <g class="gyri-highlights" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.7">
+              <path d="M 470 258 C 510 278, 550 263, 590 288 C 630 308, 660 298, 690 323" />
+            </g>
           </g>
 
-          <!-- 6. CEREBELLUM & BRAINSTEM (SKILLS & MOVEMENT -> Creative Skills & Competencies) -->
-          <g id="region-cerebellum" class="brain-lobe-hotspot" data-label="SKILLS & MOVEMENT" data-subtitle="Dance choreography, guitar, public speaking & cognitive craft" data-target="skills" data-color="#7E9A86" tabindex="0" role="button" aria-label="Skills and Movement Region: Cerebellum">
+          <!-- 6. CEREBELLUM & BRAINSTEM (SKILLS & MOVEMENT -> Creative Skills & Movement) -->
+          <g id="region-cerebellum" class="brain-lobe-hotspot" data-label="SKILLS &amp; MOVEMENT" data-subtitle="Dance, guitar, coordination &amp; practical abilities" data-target="skills" data-color="#7E9A86" tabindex="0" role="button" aria-label="Skills and Movement Region: Cerebellum">
             <!-- Cerebellum Body -->
             <path class="lobe-base" fill="url(#base-clay-grad)" d="
               M 665 490
@@ -376,15 +410,19 @@
               C 610 475, 640 480, 665 490 Z
             " />
             <!-- Delicate Cerebellar Folia Horizontal Striations -->
-            <g class="folia-strokes" stroke="#B8AC98" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.8">
+            <g class="folia-strokes" stroke="#9E9283" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.75">
               <path d="M 480 525 C 520 515, 570 510, 625 520" />
               <path d="M 490 540 C 530 530, 570 528, 610 538" />
               <path d="M 505 555 C 540 548, 575 545, 595 555" />
               <path d="M 520 570 C 545 565, 565 562, 580 570" />
             </g>
+            <g class="folia-highlights" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.65">
+              <path d="M 480 523 C 520 513, 570 508, 625 518" />
+              <path d="M 490 538 C 530 528, 570 526, 610 536" />
+            </g>
 
             <!-- Anatomical Brainstem (Pons & Medulla) -->
-            <path class="brainstem-path" fill="#E8DEC8" stroke="#D6CBB9" stroke-width="2" d="
+            <path class="brainstem-path" fill="#E8DEC8" stroke="#D2C5B1" stroke-width="2" d="
               M 455 520
               C 440 550, 420 600, 400 620
               C 380 640, 360 635, 355 605
@@ -399,18 +437,18 @@
              7 & 8. SATELLITE NODES (Curiosity & Research, Memorea Venture)
              ============================================================== -->
         <!-- Satellite 1: CURIOSITY & RESEARCH -->
-        <g id="satellite-research" class="brain-satellite-node" data-label="CURIOSITY & RESEARCH" data-subtitle="Psychology research methods, cognitive inquiries & behavioral nudges" data-target="research" data-color="#B87D8A" tabindex="0" role="button" aria-label="Curiosity and Research Node">
+        <g id="satellite-research" class="brain-satellite-node" data-label="CURIOSITY" data-subtitle="Questions I keep coming back to" data-target="research" data-color="#B87D8A" tabindex="0" role="button" aria-label="Curiosity and Research Node">
           <path d="M 330 120 Q 220 110, 160 140" stroke="#B87D8A" stroke-width="1.8" stroke-dasharray="4 3" fill="none" opacity="0.6" />
-          <circle cx="160" cy="140" r="32" fill="url(#base-clay-grad)" stroke="#D6CBB9" stroke-width="2" filter="url(#clay-shadow)" />
+          <circle cx="160" cy="140" r="32" fill="url(#base-clay-grad)" stroke="#D2C5B1" stroke-width="2" filter="url(#clay-shadow)" />
           <circle cx="160" cy="140" r="32" fill="url(#tint-research)" />
           <circle cx="160" cy="140" r="22" stroke="#B87D8A" stroke-width="1.5" stroke-dasharray="3 2" fill="none" opacity="0.75" />
-          <text x="160" y="144" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#44403C" letter-spacing="1">RESEARCH</text>
+          <text x="160" y="144" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#44403C" letter-spacing="1">CURIOSITY</text>
         </g>
 
         <!-- Satellite 2: MEMOREA VENTURE -->
-        <g id="satellite-memorea" class="brain-satellite-node" data-label="MEMOREA VENTURE" data-subtitle="Founder / Entrepreneurship — 'Memories, made to wear'" data-target="ventures" data-color="#D8A878" tabindex="0" role="button" aria-label="Memorea Venture Node">
+        <g id="satellite-memorea" class="brain-satellite-node" data-label="MEMOREA" data-subtitle="Founder / 'Memories, made to wear'" data-target="ventures" data-color="#D8A878" tabindex="0" role="button" aria-label="Memorea Venture Node">
           <path d="M 680 480 Q 770 510, 830 490" stroke="#D8A878" stroke-width="1.8" stroke-dasharray="4 3" fill="none" opacity="0.6" />
-          <circle cx="830" cy="490" r="34" fill="url(#base-clay-grad)" stroke="#D6CBB9" stroke-width="2" filter="url(#clay-shadow)" />
+          <circle cx="830" cy="490" r="34" fill="url(#base-clay-grad)" stroke="#D2C5B1" stroke-width="2" filter="url(#clay-shadow)" />
           <circle cx="830" cy="490" r="34" fill="url(#tint-memorea)" />
           <circle cx="830" cy="490" r="24" stroke="#D8A878" stroke-width="1.5" stroke-dasharray="3 2" fill="none" opacity="0.75" />
           <text x="830" y="494" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#44403C" letter-spacing="1">MEMOREA</text>
@@ -429,9 +467,9 @@
             <span id="callout-category" class="callout-category-tag">HOTSPOT</span>
           </div>
           <h3 id="callout-title" class="callout-title font-serif">THINKING</h3>
-          <p id="callout-subtitle" class="callout-subtitle">Decisions, self-reflection & personal philosophy</p>
+          <p id="callout-subtitle" class="callout-subtitle">What I question, understand and build upon</p>
           <div class="callout-prompt">
-            <span class="prompt-text font-serif italic">Enter Section</span>
+            <span class="prompt-text font-serif italic">Explore Section</span>
             <span class="prompt-arrow">→</span>
           </div>
         </div>
@@ -467,9 +505,9 @@
            ------------------------------------------------------------------ -->
       <section id="about" class="mb-24">
         <div class="section-banner">
-          <div class="section-pretitle">01 / Overview & Personal Identity</div>
-          <h2 class="section-title editorial-heading">Thinking, Decisions & Philosophy</h2>
-          <p class="section-tagline editorial-subheading">"Human behavior, marketing & social innovation."</p>
+          <div class="section-pretitle">01 / Overview &amp; Personal Identity</div>
+          <h2 class="section-title editorial-heading">Thinking, Decisions &amp; Philosophy</h2>
+          <p class="section-tagline editorial-subheading">"Human behavior, marketing &amp; social innovation."</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -484,7 +522,7 @@
               
               <div class="mt-6 pt-6 border-t border-border flex justify-center gap-4 text-charcoal-700">
                 <a href="mailto:shreevarsha80@gmail.com" class="hover:text-terracotta" title="Email"><i class="fa-regular fa-envelope text-lg"></i></a>
-                <a href="https://linkedin.com/in/shreevarshavk" target="_blank" class="hover:text-terracotta" title="LinkedIn"><i class="fa-brands fa-linkedin-in text-lg"></i></a>
+                <a href="https://www.linkedin.com/in/shree-varsha-vk-458909373" target="_blank" class="hover:text-terracotta" title="LinkedIn"><i class="fa-brands fa-linkedin-in text-lg"></i></a>
                 <a href="resume.html" class="hover:text-terracotta" title="Resume"><i class="fa-regular fa-file-lines text-lg"></i></a>
               </div>
 
@@ -498,13 +536,13 @@
             <div class="editorial-card">
               <h4 class="font-serif text-xl font-bold text-charcoal-900 mb-3">Professional Profile</h4>
               <p class="text-charcoal-700 text-lg leading-relaxed mb-4">
-                Psychology undergraduate with deep experience in social-impact initiatives, student leadership, entrepreneurship, marketing, public speaking, and community engagement.
+                Psychology undergraduate with experience in social-impact initiatives, student leadership, entrepreneurship, marketing, public speaking and community engagement. Currently serving as <strong>Vice President – Social Vertical (2026–27)</strong>, with prior experience as <strong>Joint Secretary – Social Vertical (2025–26)</strong>.
               </p>
               <p class="text-charcoal-600 leading-relaxed">
                 Currently pursuing a 20-week industry-integrated innovation fellowship at <strong>PRICE ProtoSem</strong> on a 100% scholarship, focusing on applying cognitive science and behavioral insights to solve real-world retail and commerce challenges through intelligent systems, AI, and human-centered prototyping.
               </p>
               <div class="editorial-quote">
-                "The mind is not a vessel to be filled, but a fire to be kindled — exploring where empathy meets rigorous engineering."
+                "Interested in opportunities combining psychology, human behaviour, communication, marketing, entrepreneurship and social impact."
               </div>
             </div>
 
@@ -518,7 +556,7 @@
               <div class="editorial-card">
                 <div class="text-xs font-mono text-terracotta uppercase tracking-widest font-semibold mb-2">Academic Excellence</div>
                 <h5 class="font-serif text-lg font-bold text-charcoal-900">PRICE ProtoSem Fellow</h5>
-                <p class="text-xs text-charcoal-600 mt-1">100% Scholarship recipient for multidisciplinary technology & innovation fellowship.</p>
+                <p class="text-xs text-charcoal-600 mt-1">100% Scholarship recipient for multidisciplinary technology &amp; innovation fellowship.</p>
               </div>
             </div>
           </div>
@@ -530,9 +568,9 @@
            ------------------------------------------------------------------ -->
       <section id="social" class="mb-24">
         <div class="section-banner">
-          <div class="section-pretitle">02 / People & Connections</div>
-          <h2 class="section-title editorial-heading">Social Vertical & Community Impact</h2>
-          <p class="section-tagline editorial-subheading">"Where psychology meets people, leadership & collective change."</p>
+          <div class="section-pretitle">02 / People &amp; Connections</div>
+          <h2 class="section-title editorial-heading">Social Vertical &amp; Community Impact</h2>
+          <p class="section-tagline editorial-subheading">"Where psychology meets people, leadership &amp; collective change."</p>
         </div>
 
         <div class="space-y-8">
@@ -571,34 +609,34 @@
 
           <!-- Major Social Projects & Key Initiatives -->
           <div class="editorial-card">
-            <h4 class="font-serif text-xl font-bold text-charcoal-900 mb-4">Major Campaigns & Collaborative Initiatives</h4>
+            <h4 class="font-serif text-xl font-bold text-charcoal-900 mb-4">Major Campaigns &amp; Collaborative Initiatives</h4>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div class="p-5 bg-ivory-200 border border-border flex flex-col justify-between">
                 <div>
                   <div class="text-xs font-mono text-terracotta font-semibold uppercase mb-1">Collaborative Campaign</div>
-                  <h5 class="font-serif text-xl font-bold text-charcoal-900">Microcosm & K-GEO Food Waste Awareness</h5>
+                  <h5 class="font-serif text-xl font-bold text-charcoal-900">Food Waste Awareness Campaign</h5>
                   <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
-                    Contributed to a food-waste awareness campaign in collaboration with Microcosm and K-GEO. Designed behavioral nudge posters, tracked cafeteria waste metrics, and organized interactive student engagement booths across dining halls.
+                    Contributed to a food-waste awareness campaign in collaboration with Microcosm &amp; K-GEO. Conducted awareness activities focused on reducing food waste and worked with a student coordination team to execute the campaign.
                   </p>
                 </div>
                 <div class="mt-4 pt-3 border-t border-border flex items-center justify-between text-xs text-charcoal-500 font-mono">
                   <span>Target: Zero Cafeteria Waste</span>
-                  <span class="text-terracotta font-semibold">Campus Nudge Initiative</span>
+                  <span class="text-terracotta font-semibold">Microcosm &amp; K-GEO</span>
                 </div>
               </div>
 
               <div class="p-5 bg-ivory-200 border border-border flex flex-col justify-between">
                 <div>
-                  <div class="text-xs font-mono text-terracotta font-semibold uppercase mb-1">Community Action</div>
-                  <h5 class="font-serif text-xl font-bold text-charcoal-900">Youth Leadership & Mentorship Circles</h5>
+                  <div class="text-xs font-mono text-terracotta font-semibold uppercase mb-1">Environmental Action</div>
+                  <h5 class="font-serif text-xl font-bold text-charcoal-900">The Green Shift — E-Waste Drive</h5>
                   <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
-                    Organized structured peer-support forums, debate circles, and interactive storytelling workshops to foster open dialogue on psychological well-being, empathy, and social responsibility among incoming cohorts.
+                    Contributed to an e-waste awareness and collection initiative. Supported responsible e-waste disposal and environmental awareness, participating in planning and execution of the student-led drive.
                   </p>
                 </div>
                 <div class="mt-4 pt-3 border-t border-border flex items-center justify-between text-xs text-charcoal-500 font-mono">
-                  <span>Focus: Mental Well-being</span>
-                  <span class="text-terracotta font-semibold">Peer Support</span>
+                  <span>Focus: Circular Lifecycle</span>
+                  <span class="text-terracotta font-semibold">Student-Led Drive</span>
                 </div>
               </div>
             </div>
@@ -608,25 +646,25 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="editorial-card">
               <span class="text-xs font-mono text-terracotta uppercase font-bold">Initiative 01</span>
-              <h5 class="font-serif text-lg font-bold text-charcoal-900 mt-1 mb-2">The Green Shift E-Waste Drive</h5>
+              <h5 class="font-serif text-lg font-bold text-charcoal-900 mt-1 mb-2">Food Waste Mitigation</h5>
               <p class="text-xs text-charcoal-600 leading-relaxed">
-                Spearheaded responsible campus-wide electronic waste collection points and educational awareness on circular electronics life-cycles.
+                Spearheaded campus-wide behavioral nudges and awareness initiatives to minimize dining hall food waste.
               </p>
             </div>
 
             <div class="editorial-card">
               <span class="text-xs font-mono text-teal uppercase font-bold">Initiative 02</span>
-              <h5 class="font-serif text-lg font-bold text-charcoal-900 mt-1 mb-2">Community Chapter Drives</h5>
+              <h5 class="font-serif text-lg font-bold text-charcoal-900 mt-1 mb-2">Community Outreach</h5>
               <p class="text-xs text-charcoal-600 leading-relaxed">
-                Coordinated outreach drives supporting children, elderly residential care communities, and sanitary support teams across Coimbatore.
+                Participated in activities supporting children, elderly communities, neurodivergent individuals, sanitary workers and tribal communities.
               </p>
             </div>
 
             <div class="editorial-card">
               <span class="text-xs font-mono text-lavender uppercase font-bold">Initiative 03</span>
-              <h5 class="font-serif text-lg font-bold text-charcoal-900 mt-1 mb-2">Social Policy & Representation</h5>
+              <h5 class="font-serif text-lg font-bold text-charcoal-900 mt-1 mb-2">Social Representation</h5>
               <p class="text-xs text-charcoal-600 leading-relaxed">
-                Represented undergraduate students in student council forums, translating feedback into structured social wellness programs.
+                Worked with student teams and administration to plan, coordinate, and execute community-focused programs.
               </p>
             </div>
           </div>
@@ -638,8 +676,8 @@
            ------------------------------------------------------------------ -->
       <section id="academics" class="mb-24">
         <div class="section-banner">
-          <div class="section-pretitle">03 / Learning & Memory</div>
-          <h2 class="section-title editorial-heading">Academics & PRICE ProtoSem</h2>
+          <div class="section-pretitle">03 / Learning &amp; Memory</div>
+          <h2 class="section-title editorial-heading">Academics &amp; PRICE ProtoSem</h2>
           <p class="section-tagline editorial-subheading">"What I learn, question, prototype and build upon."</p>
         </div>
 
@@ -658,9 +696,9 @@
             <div class="editorial-card">
               <div class="text-xs font-mono text-terracotta font-semibold uppercase mb-1">Secondary Education</div>
               <h3 class="font-serif text-2xl font-bold text-charcoal-900">Gedee Public School</h3>
-              <p class="text-xs text-charcoal-600 mt-1 font-mono">Class XII (CBSE) & Class X (CBSE)</p>
+              <p class="text-xs text-charcoal-600 mt-1 font-mono">Class XII (CBSE) &amp; Class X (CBSE)</p>
               <p class="text-sm text-charcoal-700 mt-3 leading-relaxed">
-                Strong foundational background in sciences, communication, inter-school cultural leadership, and debate championships.
+                Served as Assistant School Pupil Leader (ASPL), supporting school-level coordination, student representation, and communication.
               </p>
             </div>
           </div>
@@ -684,23 +722,22 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 text-charcoal-700 text-base leading-relaxed">
               <div class="lg:col-span-6">
                 <p>
-                  Selected for a prestigious 20-week industry-integrated innovation fellowship focused on solving real-world retail and commerce challenges through AI, analytics, intelligent systems, IoT, rapid prototyping, and entrepreneurship.
+                  Selected for a 20-week industry-integrated innovation programme focused on solving real-world retail and commerce challenges through AI, analytics, intelligent systems, IoT, prototyping, and entrepreneurship.
                 </p>
               </div>
               <div class="lg:col-span-6">
                 <p class="text-charcoal-600">
-                  Bridging behavioral psychology with advanced engineering: transforming consumer cognitive heuristics into interactive physical-digital (phygital) retail solutions.
+                  Working with industry problem statements to explore, develop, and validate practical technology solutions beyond conventional classroom learning.
                 </p>
               </div>
             </div>
 
             <div class="mt-6 pt-4 border-t border-border flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-white border border-border text-xs font-mono">Phygital Retail</span>
-              <span class="px-3 py-1 bg-white border border-border text-xs font-mono">AI & Analytics</span>
-              <span class="px-3 py-1 bg-white border border-border text-xs font-mono">Intelligent Systems</span>
-              <span class="px-3 py-1 bg-white border border-border text-xs font-mono">IoT & Sensors</span>
-              <span class="px-3 py-1 bg-white border border-border text-xs font-mono">Rapid Prototyping</span>
-              <span class="px-3 py-1 bg-white border border-border text-xs font-mono">Consumer Behavior</span>
+              <span class="px-3 py-1 bg-white border border-border text-xs font-mono">Phygital Retail &amp; Intelligent Commerce</span>
+              <span class="px-3 py-1 bg-white border border-border text-xs font-mono">AI &amp; Analytics</span>
+              <span class="px-3 py-1 bg-white border border-border text-xs font-mono">Intelligent Systems &amp; IoT</span>
+              <span class="px-3 py-1 bg-white border border-border text-xs font-mono">Prototyping</span>
+              <span class="px-3 py-1 bg-white border border-border text-xs font-mono">Entrepreneurship</span>
             </div>
           </div>
         </div>
@@ -717,12 +754,12 @@
         </div>
 
         <!-- 4-Phase Navigation Filter -->
-        <div class="protosem-phase-nav">
+        <div class="protosem-phase-nav" role="tablist">
           <button class="phase-btn active" onclick="filterProtoPhase('all', this)">ALL WEEKS (00–20)</button>
           <button class="phase-btn" onclick="filterProtoPhase(1, this)">PHASE 01 (W00–W05) • Discovery</button>
           <button class="phase-btn" onclick="filterProtoPhase(2, this)">PHASE 02 (W06–W10) • Prototyping</button>
           <button class="phase-btn" onclick="filterProtoPhase(3, this)">PHASE 03 (W11–W15) • Pilot Testing</button>
-          <button class="phase-btn" onclick="filterProtoPhase(4, this)">PHASE 04 (W16–W20) • Scale & Capstone</button>
+          <button class="phase-btn" onclick="filterProtoPhase(4, this)">PHASE 04 (W16–W20) • Scale &amp; Capstone</button>
         </div>
 
         <!-- Dynamic Weeks Grid Container -->
@@ -736,9 +773,9 @@
            ------------------------------------------------------------------ -->
       <section id="ventures" class="mb-24">
         <div class="section-banner">
-          <div class="section-pretitle">05 / Entrepreneurship & Venture</div>
+          <div class="section-pretitle">05 / Entrepreneurship &amp; Venture</div>
           <h2 class="section-title editorial-heading">Memorea — "Memories, made to wear."</h2>
-          <p class="section-tagline editorial-subheading">"A personalized accessories & keepsakes venture connecting memory to tangible form."</p>
+          <p class="section-tagline editorial-subheading">"A personalized accessories &amp; keepsakes venture connecting memory to tangible form."</p>
         </div>
 
         <div class="editorial-card mb-8">
@@ -746,24 +783,24 @@
             <div class="lg:col-span-4 text-center">
               <div class="p-6 bg-ivory-200 border border-border inline-block text-center">
                 <span class="font-serif text-3xl font-bold tracking-widest text-charcoal-900 block">MEMOREA</span>
-                <span class="text-[10px] font-mono text-terracotta uppercase tracking-widest mt-1 block">Est. 2025</span>
+                <span class="text-[10px] font-mono text-terracotta uppercase tracking-widest mt-1 block">Founder / Entrepreneur</span>
               </div>
-              <p class="text-xs font-mono text-terracotta uppercase tracking-widest font-semibold mt-3">Founder & Creator</p>
+              <p class="text-xs font-mono text-terracotta uppercase tracking-widest font-semibold mt-3">“Memories, made to wear.”</p>
             </div>
 
             <div class="lg:col-span-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-charcoal-900">About the Venture</h3>
               <p class="text-charcoal-700 leading-relaxed">
-                Memorea is a personalized lifestyle accessories and keepsakes venture built around transforming personal memories, milestone dates, and emotional connections into wearable, artistic artifacts.
+                A personalized accessories and keepsakes venture built around creating products connected to personal memories and meaningful moments.
               </p>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div class="p-4 bg-ivory-200 border border-border">
-                  <span class="text-xs font-bold text-charcoal-900 block mb-1">Product Crafting</span>
-                  <span class="text-xs text-charcoal-600">Handcrafted bespoke keychains, bracelets, personalized charms, and memory capsules.</span>
+                  <span class="text-xs font-bold text-charcoal-900 block mb-1">Key Responsibilities</span>
+                  <span class="text-xs text-charcoal-600">Product selection, customization, pricing, customer communication, and sales management.</span>
                 </div>
                 <div class="p-4 bg-ivory-200 border border-border">
-                  <span class="text-xs font-bold text-charcoal-900 block mb-1">Brand & Marketing</span>
-                  <span class="text-xs text-charcoal-600">Instagram community building, emotional storytelling, pricing strategy, and direct customer fulfillment.</span>
+                  <span class="text-xs font-bold text-charcoal-900 block mb-1">Marketing &amp; Branding</span>
+                  <span class="text-xs text-charcoal-600">Instagram marketing, brand positioning, storytelling, packaging, and delivery coordination.</span>
                 </div>
               </div>
             </div>
@@ -771,18 +808,18 @@
         </div>
 
         <!-- Product Line & Offerings Cards -->
-        <h4 class="font-serif text-xl font-bold text-charcoal-900 mb-4">Curated Product Line & Offerings</h4>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <h4 class="font-serif text-xl font-bold text-charcoal-900 mb-4">Curated Product Range &amp; Offerings</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="editorial-card">
             <div class="w-10 h-10 rounded bg-terracotta/10 text-terracotta flex items-center justify-center mb-3 font-mono font-bold text-xs">
               01
             </div>
-            <h5 class="font-serif text-lg font-bold text-charcoal-900">Personalized Charms</h5>
+            <h5 class="font-serif text-lg font-bold text-charcoal-900">Personalized Phone Charms</h5>
             <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
-              Custom engraved date tags and alphanumeric charms designed to immortalize personal milestones.
+              Custom phone charms designed with meaningful color palettes and personalized accents.
             </p>
             <div class="mt-4 pt-3 border-t border-border text-[11px] font-mono text-terracotta font-semibold">
-              Handcrafted Detail
+              Curated Keepsake
             </div>
           </div>
 
@@ -790,9 +827,9 @@
             <div class="w-10 h-10 rounded bg-teal/10 text-teal flex items-center justify-center mb-3 font-mono font-bold text-xs">
               02
             </div>
-            <h5 class="font-serif text-lg font-bold text-charcoal-900">Bespoke Bracelets</h5>
+            <h5 class="font-serif text-lg font-bold text-charcoal-900">Bracelets &amp; Charms</h5>
             <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
-              Minimalist braided cords and semi-precious stone bands tailored to sentimental color palettes.
+              Handcrafted customized bracelets and charm accessories celebrating personal milestones.
             </p>
             <div class="mt-4 pt-3 border-t border-border text-[11px] font-mono text-teal font-semibold">
               Everyday Wear
@@ -803,25 +840,12 @@
             <div class="w-10 h-10 rounded bg-lavender/10 text-lavender flex items-center justify-center mb-3 font-mono font-bold text-xs">
               03
             </div>
-            <h5 class="font-serif text-lg font-bold text-charcoal-900">Memory Keepsakes</h5>
+            <h5 class="font-serif text-lg font-bold text-charcoal-900">Plushie Charms &amp; Hair Accessories</h5>
             <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
-              Resin capsules and micro-photo lockets preserving tangible tokens and shared memories.
+              Whimsical plushie bag charms, hair accessories, and small keepsakes made to preserve moments.
             </p>
             <div class="mt-4 pt-3 border-t border-border text-[11px] font-mono text-lavender font-semibold">
               Sentimental Design
-            </div>
-          </div>
-
-          <div class="editorial-card">
-            <div class="w-10 h-10 rounded bg-ochre/10 text-ochre flex items-center justify-center mb-3 font-mono font-bold text-xs">
-              04
-            </div>
-            <h5 class="font-serif text-lg font-bold text-charcoal-900">Plushie & Bag Charms</h5>
-            <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
-              Whimsical tactile companions and phone charms combining soft textures with custom hardware.
-            </p>
-            <div class="mt-4 pt-3 border-t border-border text-[11px] font-mono text-ochre font-semibold">
-              Playful Craft
             </div>
           </div>
         </div>
@@ -832,53 +856,85 @@
            ------------------------------------------------------------------ -->
       <section id="skills" class="mb-24">
         <div class="section-banner">
-          <div class="section-pretitle">06 / Creative Arts & Competencies</div>
-          <h2 class="section-title editorial-heading">Seeing, Creativity & Movement</h2>
-          <p class="section-tagline editorial-subheading">"Dance, guitar, storytelling, leadership & digital craft."</p>
+          <div class="section-pretitle">06 / Creative Arts &amp; Competencies</div>
+          <h2 class="section-title editorial-heading">Seeing, Creativity &amp; Movement</h2>
+          <p class="section-tagline editorial-subheading">"Dance, guitar, storytelling, leadership &amp; digital craft."</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- Creative Expressions -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Leadership & Communication -->
           <div class="editorial-card">
-            <div class="w-10 h-10 rounded-full bg-terracotta/10 text-terracotta flex items-center justify-center mb-4 text-lg">
-              <i class="fa-solid fa-masks-theater"></i>
+            <div class="border-b-2 border-charcoal-900 pb-2 mb-3">
+              <h3 class="font-serif text-lg font-bold text-charcoal-900">Leadership &amp; Communication</h3>
             </div>
-            <h3 class="font-serif text-xl font-bold text-charcoal-900 mb-2">Creative & Performing Arts</h3>
-            <ul class="text-xs text-charcoal-700 space-y-2 mt-3">
-              <li><i class="fa-solid fa-circle-dot text-terracotta mr-2"></i><strong>Dance:</strong> Classical, Semi-Classical & Contemporary Choreography</li>
-              <li><i class="fa-solid fa-circle-dot text-terracotta mr-2"></i><strong>Guitar:</strong> Acoustic Melodies & Rhythmic Chord Progressions</li>
-              <li><i class="fa-solid fa-circle-dot text-terracotta mr-2"></i><strong>Public Speaking:</strong> Keynotes, Moderating Panels & Storytelling</li>
-              <li><i class="fa-solid fa-circle-dot text-terracotta mr-2"></i><strong>Creative Writing:</strong> Reflective essays and thematic narratives</li>
+            <ul class="text-xs text-charcoal-700 space-y-2">
+              <li>Public Speaking</li>
+              <li>Team Coordination</li>
+              <li>Event Management</li>
+              <li>Leadership</li>
+              <li>Presentation</li>
+              <li>Debate</li>
+              <li>Networking</li>
+              <li>Community Engagement</li>
             </ul>
           </div>
 
-          <!-- Psychological & Behavioral -->
+          <!-- Business & Marketing -->
           <div class="editorial-card">
-            <div class="w-10 h-10 rounded-full bg-teal/10 text-teal flex items-center justify-center mb-4 text-lg">
-              <i class="fa-solid fa-brain"></i>
+            <div class="border-b-2 border-charcoal-900 pb-2 mb-3">
+              <h3 class="font-serif text-lg font-bold text-charcoal-900">Business &amp; Marketing</h3>
             </div>
-            <h3 class="font-serif text-xl font-bold text-charcoal-900 mb-2">Psychology & Research</h3>
-            <ul class="text-xs text-charcoal-700 space-y-2 mt-3">
-              <li><i class="fa-solid fa-circle-dot text-teal mr-2"></i>Cognitive Psychology & Memory Models</li>
-              <li><i class="fa-solid fa-circle-dot text-teal mr-2"></i>Experimental Research & Statistical Analysis</li>
-              <li><i class="fa-solid fa-circle-dot text-teal mr-2"></i>Consumer Behavior & Behavioral Nudging</li>
-              <li><i class="fa-solid fa-circle-dot text-teal mr-2"></i>Empathy Mapping & User Interviewing</li>
+            <ul class="text-xs text-charcoal-700 space-y-2">
+              <li>Sales</li>
+              <li>Customer Communication</li>
+              <li>Product Positioning</li>
+              <li>Marketing</li>
+              <li>Brand Building</li>
+              <li>Pricing</li>
+              <li>Entrepreneurship</li>
+              <li>Storytelling</li>
             </ul>
           </div>
 
-          <!-- Leadership & Technical Tools -->
+          <!-- Psychology -->
           <div class="editorial-card">
-            <div class="w-10 h-10 rounded-full bg-lavender/10 text-lavender flex items-center justify-center mb-4 text-lg">
-              <i class="fa-solid fa-compass-drafting"></i>
+            <div class="border-b-2 border-charcoal-900 pb-2 mb-3">
+              <h3 class="font-serif text-lg font-bold text-charcoal-900">Psychology &amp; Behavioral</h3>
             </div>
-            <h3 class="font-serif text-xl font-bold text-charcoal-900 mb-2">Leadership & Tools</h3>
-            <ul class="text-xs text-charcoal-700 space-y-2 mt-3">
-              <li><i class="fa-solid fa-circle-dot text-lavender mr-2"></i>Team Governance & Event Management</li>
-              <li><i class="fa-solid fa-circle-dot text-lavender mr-2"></i>UI/UX Wireframing (Figma, Canva)</li>
-              <li><i class="fa-solid fa-circle-dot text-lavender mr-2"></i>IoT & Prototyping Basics (PRICE ProtoSem)</li>
-              <li><i class="fa-solid fa-circle-dot text-lavender mr-2"></i>Brand Marketing & Community Building</li>
+            <ul class="text-xs text-charcoal-700 space-y-2">
+              <li>Human Behaviour</li>
+              <li>Psychology</li>
+              <li>Research &amp; Learning</li>
+              <li>Observation</li>
+              <li>Neuromarketing</li>
+              <li>Consumer Behaviour</li>
             </ul>
           </div>
+
+          <!-- Creative Arts & Tools -->
+          <div class="editorial-card">
+            <div class="border-b-2 border-charcoal-900 pb-2 mb-3">
+              <h3 class="font-serif text-lg font-bold text-charcoal-900">Creative Arts &amp; Tools</h3>
+            </div>
+            <ul class="text-xs text-charcoal-700 space-y-2">
+              <li><strong>Dance:</strong> Choreography &amp; Performance</li>
+              <li><strong>Guitar:</strong> Melodies &amp; Chords</li>
+              <li>Microsoft PowerPoint</li>
+              <li>Canva</li>
+              <li>Instagram &amp; Social Media</li>
+              <li>AI-assisted Productivity Tools</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Areas of Interest Banner -->
+        <div class="mt-8 p-6 bg-white border border-border">
+          <h4 class="font-mono text-xs uppercase tracking-widest text-charcoal-500 font-semibold mb-2">
+            Areas of Interest
+          </h4>
+          <p class="font-serif text-base sm:text-lg text-charcoal-900 leading-relaxed italic">
+            Psychology • Human Behaviour • Neuromarketing • Consumer Behaviour • Marketing • Entrepreneurship • Social Impact • Communication • Innovation • Community Development
+          </p>
         </div>
       </section>
 
@@ -887,9 +943,9 @@
            ------------------------------------------------------------------ -->
       <section id="research" class="mb-24">
         <div class="section-banner">
-          <div class="section-pretitle">07 / Inquiries & Mindset</div>
-          <h2 class="section-title editorial-heading">Curiosity, Research & Reflections</h2>
-          <p class="section-tagline editorial-subheading">"Investigating psychological concepts, experimental studies & personal growth."</p>
+          <div class="section-pretitle">07 / Inquiries &amp; Mindset</div>
+          <h2 class="section-title editorial-heading">Curiosity, Research &amp; Reflections</h2>
+          <p class="section-tagline editorial-subheading">"Questions I keep coming back to — where psychology meets inquiry."</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-8">
@@ -919,13 +975,13 @@
             <div class="editorial-card h-full flex flex-col justify-between">
               <div>
                 <span class="text-xs font-mono text-teal uppercase font-semibold">Cognitive Psychology Investigation</span>
-                <h3 class="font-serif text-2xl font-bold text-charcoal-900 mt-1 mb-3">Memory Systems & Cognitive Architecture</h3>
+                <h3 class="font-serif text-2xl font-bold text-charcoal-900 mt-1 mb-3">Memory Systems &amp; Cognitive Architecture</h3>
                 <p class="text-xs text-charcoal-600 mb-4 leading-relaxed">
                   Analyzing multi-store memory models, sensory registers, working memory capacity limitations, and semantic retention pathways in digital and physical environments.
                 </p>
                 <div class="space-y-2 text-xs text-charcoal-700 pt-2 border-t border-border">
                   <div><strong>Key Areas:</strong> Atkinson-Shiffrin Model, Chunking Strategies, Cognitive Load Theory.</div>
-                  <div><strong>Application:</strong> Designing clutter-free interfaces that minimize customer decision fatigue.</div>
+                  <div><strong>Application:</strong> Designing clutter-free experiences that minimize decision fatigue.</div>
                 </div>
               </div>
               <div class="mt-6 pt-4 border-t border-border flex justify-between items-center text-xs font-mono text-charcoal-500">
@@ -940,7 +996,7 @@
         <div class="editorial-card bg-ivory-200">
           <h4 class="font-serif text-2xl font-bold text-charcoal-900 mb-2">My Reflective Lens</h4>
           <p class="text-charcoal-700 leading-relaxed">
-            "My journey through psychology and innovation has taught me that problems are rarely purely technical or purely emotional. They live in the nuanced friction between how people feel, how systems respond, and how meaning is communicated. Every leadership role, every design sprint at ProtoSem, and every piece created at Memorea is an experiment in understanding what makes us human."
+            "My journey through psychology and innovation has taught me that problems are rarely purely technical or purely emotional. They live in the nuanced friction between how people feel, how systems respond, and how meaning is communicated. Every leadership role, every sprint at ProtoSem, and every piece created at Memorea is an experiment in understanding what makes us human."
           </p>
         </div>
       </section>
@@ -950,26 +1006,26 @@
            ------------------------------------------------------------------ -->
       <section id="journey" class="mb-24">
         <div class="section-banner">
-          <div class="section-pretitle">08 / Trajectory & Milestones</div>
-          <h2 class="section-title editorial-heading">My Journey & Growth</h2>
-          <p class="section-tagline editorial-subheading">"Milestones, leadership chapters & where I'm going."</p>
+          <div class="section-pretitle">08 / Trajectory &amp; Milestones</div>
+          <h2 class="section-title editorial-heading">My Journey &amp; Growth</h2>
+          <p class="section-tagline editorial-subheading">"The moments that shaped my journey."</p>
         </div>
 
         <div class="space-y-6">
           <div class="editorial-card flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
-              <span class="text-xs font-mono text-terracotta uppercase font-semibold">2026 – 2027 • Current</span>
+              <span class="text-xs font-mono text-terracotta uppercase font-semibold">2026 – 2027 • Current Leadership</span>
               <h3 class="font-serif text-xl font-bold text-charcoal-900">Vice President — Social Vertical</h3>
-              <p class="text-xs text-charcoal-600">Elected to head student governance for social initiatives and campus campaigns.</p>
+              <p class="text-xs text-charcoal-600">Leading and coordinating social-impact initiatives and student governance.</p>
             </div>
             <span class="px-3 py-1 bg-ivory-200 border border-border text-xs font-mono text-charcoal-800">Governance</span>
           </div>
 
           <div class="editorial-card flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
-              <span class="text-xs font-mono text-teal uppercase font-semibold">2026 • 20-Week Fellowship</span>
-              <h3 class="font-serif text-xl font-bold text-charcoal-900">PRICE ProtoSem Innovation Fellow (100% Scholarship)</h3>
-              <p class="text-xs text-charcoal-600">Selected for the intensive retail technology and smart systems engineering program.</p>
+              <span class="text-xs font-mono text-teal uppercase font-semibold">2026 • 20-Week Innovation Programme</span>
+              <h3 class="font-serif text-xl font-bold text-charcoal-900">PRICE ProtoSem Fellow (100% Scholarship)</h3>
+              <p class="text-xs text-charcoal-600">Innovation Engineer Trainee focusing on retail AI, IoT, and intelligent systems.</p>
             </div>
             <span class="px-3 py-1 bg-ivory-200 border border-border text-xs font-mono text-charcoal-800">Innovation</span>
           </div>
@@ -978,27 +1034,27 @@
             <div>
               <span class="text-xs font-mono text-coral uppercase font-semibold">2025 • Entrepreneurship</span>
               <h3 class="font-serif text-xl font-bold text-charcoal-900">Founded Memorea</h3>
-              <p class="text-xs text-charcoal-600">Launched personalized memory accessories venture with active customer orders.</p>
+              <p class="text-xs text-charcoal-600">Personalized keepsakes and memory accessories venture.</p>
             </div>
             <span class="px-3 py-1 bg-ivory-200 border border-border text-xs font-mono text-charcoal-800">Venture</span>
           </div>
 
           <div class="editorial-card flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
-              <span class="text-xs font-mono text-lavender uppercase font-semibold">2025 – 2026 • Governance</span>
+              <span class="text-xs font-mono text-lavender uppercase font-semibold">2025 – 2026 • Student Governance</span>
               <h3 class="font-serif text-xl font-bold text-charcoal-900">Joint Secretary — Social Vertical</h3>
-              <p class="text-xs text-charcoal-600">Coordinated food waste reduction initiatives and student community events.</p>
+              <p class="text-xs text-charcoal-600">Coordinated food waste awareness and community outreach programs.</p>
             </div>
             <span class="px-3 py-1 bg-ivory-200 border border-border text-xs font-mono text-charcoal-800">Leadership</span>
           </div>
 
           <div class="editorial-card flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
-              <span class="text-xs font-mono text-sage uppercase font-semibold">2024 • Academic Milestone</span>
-              <h3 class="font-serif text-xl font-bold text-charcoal-900">Commenced B.Sc. Psychology</h3>
-              <p class="text-xs text-charcoal-600">Kumaraguru College of Liberal Arts and Science, Coimbatore.</p>
+              <span class="text-xs font-mono text-sage uppercase font-semibold">Foundation • Student Leadership</span>
+              <h3 class="font-serif text-xl font-bold text-charcoal-900">Assistant School Pupil Leader (ASPL)</h3>
+              <p class="text-xs text-charcoal-600">Gedee Public School — student representation and school-level coordination.</p>
             </div>
-            <span class="px-3 py-1 bg-ivory-200 border border-border text-xs font-mono text-charcoal-800">Academia</span>
+            <span class="px-3 py-1 bg-ivory-200 border border-border text-xs font-mono text-charcoal-800">Foundation</span>
           </div>
         </div>
       </section>
@@ -1009,8 +1065,8 @@
       <section id="contact" class="mb-16">
         <div class="section-banner">
           <div class="section-pretitle">09 / Correspondence</div>
-          <h2 class="section-title editorial-heading">Let's Connect & Collaborate</h2>
-          <p class="section-tagline editorial-subheading">"Open for discussions on psychology, innovation, social impact & ventures."</p>
+          <h2 class="section-title editorial-heading">Let's Connect &amp; Collaborate</h2>
+          <p class="section-tagline editorial-subheading">"Open for discussions on psychology, innovation, social impact &amp; ventures."</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -1020,10 +1076,10 @@
             <p class="text-xs font-mono text-charcoal-600 mt-1">shreevarsha80@gmail.com</p>
           </a>
 
-          <a href="https://linkedin.com/in/shreevarshavk" target="_blank" class="editorial-card text-center block hover:border-terracotta">
+          <a href="https://www.linkedin.com/in/shree-varsha-vk-458909373" target="_blank" class="editorial-card text-center block hover:border-terracotta">
             <i class="fa-brands fa-linkedin-in text-3xl text-terracotta mb-3"></i>
             <h3 class="font-serif text-lg font-bold text-charcoal-900">LinkedIn</h3>
-            <p class="text-xs font-mono text-charcoal-600 mt-1">linkedin.com/in/shreevarshavk</p>
+            <p class="text-xs font-mono text-charcoal-600 mt-1">linkedin.com/in/shree-varsha-vk-458909373</p>
           </a>
 
           <div class="editorial-card text-center">
@@ -1047,9 +1103,9 @@
   <!-- ========================================================================
        6. ABOUT ME QUICK MODAL (Opened from Top-Left Permanent Profile Anchor)
        ======================================================================== -->
-  <div id="about-me-modal" class="editorial-modal-backdrop">
+  <div id="about-me-modal" class="editorial-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="about-modal-name">
     <div class="editorial-modal-window p-8 sm:p-12">
-      <button id="close-about-modal-btn" class="modal-close-btn" title="Close Modal">
+      <button id="close-about-modal-btn" class="modal-close-btn" title="Close Modal" aria-label="Close profile modal">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
@@ -1059,7 +1115,7 @@
         </div>
         <div>
           <span class="text-xs font-mono text-terracotta uppercase font-bold tracking-wider">Profile Overview</span>
-          <h2 class="font-serif text-3xl font-bold text-charcoal-900 mt-1">Shree Varsha V K</h2>
+          <h2 id="about-modal-name" class="font-serif text-3xl font-bold text-charcoal-900 mt-1">Shree Varsha V K</h2>
           <p class="font-serif text-lg text-terracotta italic">B.Sc. Psychology • ProtoSem Innovation Fellow • Founder</p>
           <p class="text-xs text-charcoal-600 mt-1">Kumaraguru College of Liberal Arts and Science, Coimbatore</p>
         </div>
@@ -1067,10 +1123,10 @@
 
       <div class="py-6 space-y-4 text-charcoal-700 leading-relaxed text-sm sm:text-base">
         <p>
-          I am a psychology undergraduate driven by the curiosity of how human minds perceive, decide, connect, and thrive. My work bridges the gap between empirical behavioral science and applied innovation.
+          Psychology undergraduate with experience in social-impact initiatives, student leadership, entrepreneurship, marketing, public speaking and community engagement.
         </p>
         <p>
-          As the <strong>Vice President of the Social Vertical</strong>, I lead community-driven initiatives on sustainability and mental wellness. As an <strong>Innovation Engineer Trainee at PRICE ProtoSem</strong> (100% Scholarship), I engineer intelligent phygital systems solving retail friction points. And as the founder of <strong>Memorea</strong>, I craft memory-connected accessories.
+          Currently serving as <strong>Vice President – Social Vertical (2026–27)</strong>, with prior experience as <strong>Joint Secretary – Social Vertical (2025–26)</strong>. Pursuing the 20-week PRICE ProtoSem innovation fellowship (100% Scholarship), and Founder of <strong>Memorea</strong>.
         </p>
       </div>
 
@@ -1089,9 +1145,9 @@
   <!-- ========================================================================
        7. PROTOSEM WEEK DETAIL MODAL
        ======================================================================== -->
-  <div id="protosem-week-modal" class="editorial-modal-backdrop">
+  <div id="protosem-week-modal" class="editorial-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-proto-title">
     <div class="editorial-modal-window p-8 sm:p-12">
-      <button id="close-protosem-modal-btn" class="modal-close-btn" title="Close Modal">
+      <button id="close-protosem-modal-btn" class="modal-close-btn" title="Close Modal" aria-label="Close ProtoSem week modal">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
@@ -1106,7 +1162,7 @@
       </div>
 
       <div class="pt-4 border-t border-border">
-        <h4 class="text-xs font-mono text-charcoal-500 uppercase tracking-wider font-bold mb-3">Key Takeaways & Learning Gates</h4>
+        <h4 class="text-xs font-mono text-charcoal-500 uppercase tracking-wider font-bold mb-3">Key Takeaways &amp; Learning Gates</h4>
         <ul id="modal-proto-takeaways" class="text-xs text-charcoal-700 space-y-2">
           <!-- Injected dynamically -->
         </ul>
