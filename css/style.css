@@ -1,6 +1,6 @@
 /* ==========================================================================
    SHREE VARSHA V K — INLINE SVG PSYCHOLOGY BRAIN PORTFOLIO
-   Editorial Magazine Design System & Pure Typographic Layouts (No Images)
+   Editorial Magazine Design System & Pure Typographic Layouts (No Fake Images)
    ========================================================================== */
 
 /* --- CSS Root Variables & Tokens --- */
@@ -383,7 +383,7 @@ button {
 }
 
 /* ==========================================================================
-   3. BACKGROUND PSYCHOLOGICAL TERMS (Low-Contrast Editorial Atmosphere)
+   3. BACKGROUND PSYCHOLOGICAL TERMS (Very Low Contrast Subtle Ambiance)
    ========================================================================== */
 #psych-background-layer {
   position: fixed;
@@ -400,24 +400,24 @@ button {
   font-weight: 300;
   user-select: none;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  opacity: 0.07;
+  letter-spacing: 0.22em;
+  opacity: 0.045;
   transition: transform 0.5s ease-out;
   white-space: nowrap;
 }
 
-.psych-term.t1 { top: 12%; left: 6%; font-size: 3.2rem; transform: rotate(-3deg); }
-.psych-term.t2 { top: 18%; right: 8%; font-size: 4.0rem; transform: rotate(2deg); opacity: 0.06; }
-.psych-term.t3 { top: 52%; left: 3%; font-size: 4.6rem; transform: rotate(-4deg); opacity: 0.05; }
-.psych-term.t4 { top: 68%; right: 4%; font-size: 3.4rem; transform: rotate(3deg); opacity: 0.07; }
-.psych-term.t5 { top: 86%; left: 12%; font-size: 2.8rem; transform: rotate(-2deg); }
-.psych-term.t6 { top: 9%; left: 42%; font-size: 2.4rem; transform: rotate(1deg); opacity: 0.05; }
-.psych-term.t7 { top: 82%; right: 22%; font-size: 4.2rem; transform: rotate(-3deg); opacity: 0.05; }
-.psych-term.t8 { top: 34%; right: 18%; font-size: 2.0rem; transform: rotate(4deg); opacity: 0.06; }
-.psych-term.t9 { top: 46%; left: 18%; font-size: 2.2rem; transform: rotate(-2deg); opacity: 0.05; }
-.psych-term.t10 { top: 90%; left: 55%; font-size: 3.0rem; transform: rotate(2deg); opacity: 0.06; }
-.psych-term.t11 { top: 28%; left: 8%; font-size: 2.6rem; transform: rotate(-1deg); opacity: 0.05; }
-.psych-term.t12 { top: 72%; left: 34%; font-size: 3.2rem; transform: rotate(2deg); opacity: 0.06; }
+.psych-term.t1 { top: 10%; left: 5%; font-size: 3.2rem; transform: rotate(-3deg); }
+.psych-term.t2 { top: 16%; right: 7%; font-size: 4.0rem; transform: rotate(2deg); opacity: 0.04; }
+.psych-term.t3 { top: 50%; left: 3%; font-size: 4.6rem; transform: rotate(-4deg); opacity: 0.035; }
+.psych-term.t4 { top: 68%; right: 4%; font-size: 3.4rem; transform: rotate(3deg); opacity: 0.045; }
+.psych-term.t5 { top: 86%; left: 10%; font-size: 2.8rem; transform: rotate(-2deg); }
+.psych-term.t6 { top: 8%; left: 40%; font-size: 2.4rem; transform: rotate(1deg); opacity: 0.035; }
+.psych-term.t7 { top: 82%; right: 20%; font-size: 4.2rem; transform: rotate(-3deg); opacity: 0.035; }
+.psych-term.t8 { top: 32%; right: 16%; font-size: 2.0rem; transform: rotate(4deg); opacity: 0.04; }
+.psych-term.t9 { top: 44%; left: 16%; font-size: 2.2rem; transform: rotate(-2deg); opacity: 0.035; }
+.psych-term.t10 { top: 90%; left: 55%; font-size: 3.0rem; transform: rotate(2deg); opacity: 0.04; }
+.psych-term.t11 { top: 26%; left: 7%; font-size: 2.6rem; transform: rotate(-1deg); opacity: 0.035; }
+.psych-term.t12 { top: 72%; left: 32%; font-size: 3.2rem; transform: rotate(2deg); opacity: 0.04; }
 
 /* Subtle paper texture overlay */
 .paper-texture-overlay {
@@ -453,7 +453,7 @@ button {
 .brain-svg-wrapper {
   position: relative;
   width: 92vw;
-  max-width: 960px;
+  max-width: 980px;
   height: 68vh;
   max-height: 620px;
   display: flex;
@@ -469,16 +469,17 @@ button {
 
 /* Idle Ambient Float & Tilt */
 .brain-idle-float {
-  animation: brainIdleBob 6s ease-in-out infinite alternate;
+  animation: brainIdleBob 7s ease-in-out infinite alternate;
   transform-origin: 50% 50%;
+  transition: transform 0.2s ease-out;
 }
 
 @keyframes brainIdleBob {
   0% {
-    transform: translateY(-4px) rotate(-0.5deg);
+    transform: translateY(-4px) rotate(-0.4deg);
   }
   100% {
-    transform: translateY(4px) rotate(0.5deg);
+    transform: translateY(4px) rotate(0.4deg);
   }
 }
 
@@ -498,7 +499,7 @@ button {
 .brain-lobe-hotspot:hover,
 .brain-lobe-hotspot:focus-visible,
 .brain-lobe-hotspot.is-active {
-  transform: scale(1.035);
+  transform: scale(1.035) translateY(-3px);
   filter: url(#lobe-lift-shadow);
 }
 
@@ -511,11 +512,13 @@ button {
 .brain-satellite-node:hover,
 .brain-satellite-node:focus-visible,
 .brain-satellite-node.is-active {
-  transform: scale(1.08);
+  transform: scale(1.10) translateY(-2px);
+  filter: url(#lobe-lift-shadow);
 }
 
 #interactive-brain-group.has-focus .brain-lobe-hotspot:not(.is-active):not(:hover) {
-  opacity: 0.75;
+  opacity: 0.50;
+  transition: opacity 0.3s ease;
 }
 
 /* Dynamic Floating Editorial Callout Badge */
@@ -528,23 +531,23 @@ button {
 }
 
 .callout-card {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--color-border);
-  border-left: 3px solid var(--color-terracotta);
-  padding: 0.85rem 1.15rem;
-  box-shadow: 0 10px 24px rgba(28, 25, 23, 0.06);
+  border-left: 3.5px solid var(--color-terracotta);
+  padding: 0.9rem 1.25rem;
+  box-shadow: 0 12px 28px rgba(28, 25, 23, 0.08);
   border-radius: 2px;
-  min-width: 220px;
-  max-width: 290px;
+  min-width: 230px;
+  max-width: 300px;
   transition: all 0.2s ease;
 }
 
 .callout-card:hover {
   transform: translateY(-2px);
   border-color: var(--color-terracotta);
-  box-shadow: 0 14px 30px rgba(200, 90, 50, 0.12);
+  box-shadow: 0 16px 36px rgba(200, 90, 50, 0.14);
 }
 
 .callout-header {
@@ -570,14 +573,14 @@ button {
 }
 
 .callout-title {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--color-charcoal-900);
   line-height: 1.15;
 }
 
 .callout-subtitle {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   color: var(--color-charcoal-600);
   margin-top: 0.25rem;
   line-height: 1.35;
