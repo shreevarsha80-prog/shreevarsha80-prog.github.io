@@ -6,7 +6,7 @@
   <title>Shree Varsha V K — Psychology, Social Impact & PRICE ProtoSem</title>
   <meta name="description" content="Personal editorial portfolio of Shree Varsha V K — B.Sc. Psychology student, Innovation Engineer Trainee at PRICE ProtoSem, Founder of Memorea, and Social Impact Leader.">
 
-  <!-- Google Fonts: Cormorant Garamond (Editorial Serif), Plus Jakarta Sans, Caveat -->
+  <!-- Google Fonts: Cormorant Garamond, Plus Jakarta Sans, Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -14,38 +14,13 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Custom Design System & Neuro-Navigation Stylesheet -->
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <!-- ========================================================================
-       1. CINEMATIC OPENING EXPERIENCE ("Person -> Mind -> Portfolio")
-       ======================================================================== -->
-  <div id="opening-screen">
-    <div class="opening-stage">
-      <div class="opening-monogram-frame">
-        <div class="opening-monogram font-serif">SV</div>
-      </div>
-      <div class="opening-meta">
-        <h1 class="opening-name">Shree Varsha V K</h1>
-        <p class="opening-tagline">"People, purpose &amp; the stories between."</p>
-        <div class="opening-formula">
-          <span>Person</span>
-          <span class="arrow">→</span>
-          <span>Mind</span>
-          <span class="arrow">→</span>
-          <span>Portfolio</span>
-        </div>
-      </div>
-      <button id="opening-skip-btn" class="opening-skip-btn">
-        Enter The Mind <i class="fa-solid fa-arrow-right ml-1"></i>
-      </button>
-    </div>
-  </div>
-
-  <!-- ========================================================================
-       2. PERMANENT TOP-LEFT PROFILE ANCHOR & REFINED EDITORIAL HEADER
+       1. TOP EDITORIAL HEADER & NAVIGATION BAR
        ======================================================================== -->
   <header id="site-header">
     <!-- Top-Left Clickable Profile Anchor -->
@@ -55,438 +30,406 @@
       </div>
       <div class="profile-text-block">
         <div class="profile-name">Shree Varsha V K</div>
-        <div class="profile-role">Psychology • ProtoSem • Memorea</div>
+        <div class="profile-role">PSYCHOLOGY • PROTOSEM • MEMOREA</div>
       </div>
     </button>
 
-    <!-- Center Minimal Breadcrumbs Tracker -->
+    <!-- Center Breadcrumb Tracker -->
     <div class="nav-breadcrumbs" aria-live="polite">
       <span>YOU ARE HERE</span>
-      <span class="breadcrumb-separator">→</span>
+      <span class="breadcrumb-dash">—</span>
       <span id="breadcrumb-current-section" class="breadcrumb-segment active">CENTRAL BRAIN</span>
     </div>
 
-    <!-- Right Header Actions (Minimal Editorial Buttons) -->
+    <!-- Right Header Action Buttons -->
     <div class="header-actions">
       <button id="header-brain-home-btn" class="brain-home-btn" title="Return to Brain Navigation">
         <i class="fa-solid fa-brain"></i>
-        <span>The Brain</span>
+        <span>THE BRAIN</span>
       </button>
-      <a href="resume.html" class="resume-link-btn" title="ATS Printable Resume">
+      <a href="resume.html" class="resume-pill-btn" title="ATS Printable Resume">
         <i class="fa-regular fa-file-lines"></i>
-        <span>ATS Resume</span>
+        <span>RESUME</span>
       </a>
     </div>
   </header>
 
   <!-- ========================================================================
-       3. FLOATING PSYCHOLOGICAL TERMS (Very Low Contrast Ambient Background)
+       2. MAIN HERO SECTION — INTERACTIVE 3D MIND & BRAIN NAVIGATION
        ======================================================================== -->
-  <div id="psych-background-layer" aria-hidden="true">
-    <div class="psych-term t1">NEUROPLASTICITY</div>
-    <div class="psych-term t2">COGNITION</div>
-    <div class="psych-term t3">PERCEPTION</div>
-    <div class="psych-term t4">SOCIAL BEHAVIOUR</div>
-    <div class="psych-term t5">LEARNING</div>
-    <div class="psych-term t6">ATTACHMENT</div>
-    <div class="psych-term t7">DECISION MAKING</div>
-    <div class="psych-term t8">MEMORY</div>
-    <div class="psych-term t9">EMOTION</div>
-    <div class="psych-term t10">CONSCIOUSNESS</div>
-    <div class="psych-term t11">MOTIVATION</div>
-    <div class="psych-term t12">DEVELOPMENT</div>
-  </div>
-  <div class="paper-texture-overlay" aria-hidden="true"></div>
+  <main id="brain-hero-section">
+    <div class="brain-dashboard-container">
 
-  <!-- ========================================================================
-       4. CENTRAL INLINE SVG BRAIN NAVIGATION STAGE (Direct Lobe Hotspots)
-       ======================================================================== -->
-  <main id="brain-stage-view">
-    <div class="brain-svg-wrapper">
-      
-      <!-- INLINE ANATOMICAL SVG BRAIN -->
-      <svg id="anatomical-brain-svg" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive 3D-Style Psychology Brain Navigation System">
-        
-        <!-- Filter & Gradient Definitions for Tactile Clay Depth & Gyri Folds -->
-        <defs>
-          <!-- Soft Matte Clay Drop Shadows -->
-          <filter id="clay-shadow" x="-20%" y="-20%" width="140%" height="140%">
-            <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#1c1917" flood-opacity="0.10" />
-            <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#c85a32" flood-opacity="0.05" />
-          </filter>
+      <!-- Top Intro Header & Instruction -->
+      <div class="hero-top-grid">
+        <!-- Top Left Intro Text -->
+        <div class="hero-intro-box">
+          <span class="hero-salutation">Hello, I'm</span>
+          <h1 class="hero-main-title font-serif">SHREE VARSHA V K</h1>
+          <div class="hero-accent-line"></div>
+          <p class="hero-statement">
+            A curious mind, a kind heart,<br>
+            and a drive to create meaningful impact.
+          </p>
+        </div>
 
-          <filter id="lobe-lift-shadow" x="-25%" y="-25%" width="150%" height="150%">
-            <feDropShadow dx="0" dy="26" stdDeviation="28" flood-color="#1c1917" flood-opacity="0.18" />
-            <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#c85a32" flood-opacity="0.12" />
-          </filter>
-
-          <!-- Organic Gyri Convolution Bevel Shading Filter -->
-          <filter id="gyri-bevel" x="-10%" y="-10%" width="120%" height="120%">
-            <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="blur" />
-            <feSpecularLighting in="blur" surfaceScale="3" specularConstant="0.6" specularExponent="16" lighting-color="#ffffff" result="specular">
-              <fePointLight x="350" y="150" z="220" />
-            </feSpecularLighting>
-            <feComposite in="specular" in2="SourceAlpha" operator="in" result="specular-cut" />
-            <feComposite in="SourceGraphic" in2="specular-cut" operator="arithmetic" k1="0" k2="1" k3="0.8" k4="0" />
-          </filter>
-
-          <!-- Base Matte Clay Gradients -->
-          <radialGradient id="base-clay-grad" cx="42%" cy="36%" r="68%">
-            <stop offset="0%" stop-color="#FCFAF6" />
-            <stop offset="40%" stop-color="#F4EFEB" />
-            <stop offset="75%" stop-color="#E5DDD0" />
-            <stop offset="100%" stop-color="#D2C5B1" />
-          </radialGradient>
-
-          <!-- Region Tint Gradients -->
-          <!-- 1. Frontal / Lavender (THINKING) -->
-          <radialGradient id="tint-frontal" cx="35%" cy="35%" r="70%">
-            <stop offset="0%" stop-color="#C5BCD8" stop-opacity="0.45" />
-            <stop offset="60%" stop-color="#8E82A6" stop-opacity="0.32" />
-            <stop offset="100%" stop-color="#675C7E" stop-opacity="0.48" />
-          </radialGradient>
-
-          <!-- 2. Hippocampus / Deep Cognition / Teal (LEARNING & MEMORY) -->
-          <radialGradient id="tint-hippocampus" cx="50%" cy="45%" r="65%">
-            <stop offset="0%" stop-color="#9BC4D0" stop-opacity="0.48" />
-            <stop offset="65%" stop-color="#5B8C9B" stop-opacity="0.35" />
-            <stop offset="100%" stop-color="#345F6B" stop-opacity="0.52" />
-          </radialGradient>
-
-          <!-- 3. Temporal / Coral (PEOPLE & CONNECTIONS) -->
-          <radialGradient id="tint-temporal" cx="40%" cy="45%" r="65%">
-            <stop offset="0%" stop-color="#F4AF94" stop-opacity="0.48" />
-            <stop offset="60%" stop-color="#D47A58" stop-opacity="0.36" />
-            <stop offset="100%" stop-color="#AA5332" stop-opacity="0.52" />
-          </radialGradient>
-
-          <!-- 4. Parietal / Terracotta (EXPERIENCES) -->
-          <radialGradient id="tint-parietal" cx="50%" cy="35%" r="65%">
-            <stop offset="0%" stop-color="#E88663" stop-opacity="0.45" />
-            <stop offset="60%" stop-color="#C85A32" stop-opacity="0.34" />
-            <stop offset="100%" stop-color="#963614" stop-opacity="0.50" />
-          </radialGradient>
-
-          <!-- 5. Occipital / Mustard (SEEING & CREATIVITY) -->
-          <radialGradient id="tint-occipital" cx="55%" cy="45%" r="65%">
-            <stop offset="0%" stop-color="#ECCB7F" stop-opacity="0.46" />
-            <stop offset="60%" stop-color="#CCA046" stop-opacity="0.34" />
-            <stop offset="100%" stop-color="#966F1E" stop-opacity="0.52" />
-          </radialGradient>
-
-          <!-- 6. Cerebellum / Sage (SKILLS & MOVEMENT) -->
-          <radialGradient id="tint-cerebellum" cx="50%" cy="45%" r="65%">
-            <stop offset="0%" stop-color="#B2CBB9" stop-opacity="0.48" />
-            <stop offset="60%" stop-color="#7E9A86" stop-opacity="0.35" />
-            <stop offset="100%" stop-color="#4E6B56" stop-opacity="0.52" />
-          </radialGradient>
-
-          <!-- 7. Satellite Curiosity / Dusty Rose -->
-          <radialGradient id="tint-research" cx="40%" cy="40%" r="65%">
-            <stop offset="0%" stop-color="#DEB0BA" stop-opacity="0.50" />
-            <stop offset="70%" stop-color="#B87D8A" stop-opacity="0.38" />
-            <stop offset="100%" stop-color="#844B57" stop-opacity="0.56" />
-          </radialGradient>
-
-          <!-- 8. Satellite Memorea / Warm Cream Amber -->
-          <radialGradient id="tint-memorea" cx="40%" cy="40%" r="65%">
-            <stop offset="0%" stop-color="#EED5BD" stop-opacity="0.50" />
-            <stop offset="70%" stop-color="#D8A878" stop-opacity="0.38" />
-            <stop offset="100%" stop-color="#A1713F" stop-opacity="0.56" />
-          </radialGradient>
-        </defs>
-
-        <!-- Ambient Neural Synaptic Connecting Filaments (Background) -->
-        <g class="neural-filaments" opacity="0.4" stroke="#D2C8B8" stroke-width="1.2" stroke-dasharray="3 3" fill="none">
-          <path d="M 280 220 Q 210 170, 160 140" />
-          <path d="M 680 430 Q 760 480, 830 490" />
-          <path d="M 460 300 Q 520 220, 580 180" />
-          <path d="M 330 380 Q 240 440, 180 500" />
-        </g>
-
-        <!-- MAIN BRAIN ANATOMICAL GROUP (With Ambient Idle Floating Bob & Dynamic Tilt) -->
-        <g id="interactive-brain-group" class="brain-idle-float" filter="url(#clay-shadow)">
-          
-          <!-- ANATOMICAL BRAIN BASE SILHOUETTE (Tactile Warm Clay Core) -->
-          <path class="brain-base-silhouette" fill="url(#base-clay-grad)" stroke="#D2C5B1" stroke-width="2.5" d="
-            M 270 330
-            C 255 270, 260 210, 290 165
-            C 335 110, 420 90, 520 95
-            C 610 100, 695 135, 740 195
-            C 780 250, 790 315, 775 375
-            C 760 430, 715 470, 665 490
-            C 650 540, 610 580, 550 585
-            C 500 590, 465 560, 455 520
-            C 440 550, 420 600, 400 620
-            C 380 640, 360 635, 355 605
-            C 350 565, 365 520, 380 475
-            C 340 470, 295 440, 275 395
-            C 265 375, 270 345, 270 330 Z
-          " />
-
-          <!-- ==============================================================
-               INTERACTIVE LOBE HOTSPOTS (Separate Clickable & Hoverable Paths)
-               ============================================================== -->
-
-          <!-- 1. FRONTAL LOBE (THINKING -> Overview & Philosophy) -->
-          <g id="region-frontal" class="brain-lobe-hotspot" data-label="THINKING" data-subtitle="What I question, understand and build upon" data-target="about" data-color="#8E82A6" tabindex="0" role="button" aria-label="Thinking Region: Overview and Philosophy">
-            <path class="lobe-base" fill="url(#base-clay-grad)" d="
-              M 270 330
-              C 255 265, 265 205, 295 165
-              C 335 110, 425 90, 500 95
-              C 485 160, 470 230, 440 290
-              C 415 340, 360 365, 310 365
-              C 285 365, 275 350, 270 330 Z
-            " />
-            <path class="lobe-tint" fill="url(#tint-frontal)" d="
-              M 270 330
-              C 255 265, 265 205, 295 165
-              C 335 110, 425 90, 500 95
-              C 485 160, 470 230, 440 290
-              C 415 340, 360 365, 310 365
-              C 285 365, 275 350, 270 330 Z
-            " />
-            <!-- Sulci Groove Shadows (Tactile Deep Fold Fissures) -->
-            <g class="gyri-grooves" stroke="#9E9283" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.65">
-              <path d="M 290 220 C 320 200, 365 210, 395 185 C 420 165, 455 160, 480 140" />
-              <path d="M 275 270 C 305 255, 340 270, 375 250 C 405 235, 440 240, 465 215" />
-              <path d="M 300 315 C 330 300, 365 315, 400 295 C 420 280, 445 285, 450 270" />
-              <path d="M 345 145 C 375 165, 400 135, 435 130 C 455 125, 475 115, 490 110" />
-              <path d="M 330 250 C 350 220, 380 230, 400 210" />
-            </g>
-            <!-- Gyri Ridge Highlights (Sunlight Bevel Edge) -->
-            <g class="gyri-highlights" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.7">
-              <path d="M 290 218 C 320 198, 365 208, 395 183 C 420 163, 455 158, 480 138" />
-              <path d="M 275 268 C 305 253, 340 268, 375 248 C 405 233, 440 238, 465 213" />
-              <path d="M 300 313 C 330 298, 365 313, 400 293 C 420 278, 445 283, 450 268" />
-            </g>
-          </g>
-
-          <!-- 2. PARIETAL LOBE (EXPERIENCES -> Leadership & Milestones) -->
-          <g id="region-parietal" class="brain-lobe-hotspot" data-label="EXPERIENCES" data-subtitle="The moments that shaped my journey" data-target="journey" data-color="#C85A32" tabindex="0" role="button" aria-label="Experiences Region: Leadership & Milestones">
-            <path class="lobe-base" fill="url(#base-clay-grad)" d="
-              M 500 95
-              C 585 100, 665 125, 715 175
-              C 745 210, 755 255, 750 295
-              C 705 290, 655 270, 610 275
-              C 555 280, 515 255, 485 220
-              C 475 175, 485 130, 500 95 Z
-            " />
-            <path class="lobe-tint" fill="url(#tint-parietal)" d="
-              M 500 95
-              C 585 100, 665 125, 715 175
-              C 745 210, 755 255, 750 295
-              C 705 290, 655 270, 610 275
-              C 555 280, 515 255, 485 220
-              C 475 175, 485 130, 500 95 Z
-            " />
-            <!-- Sulci Groove Shadows -->
-            <g class="gyri-grooves" stroke="#9E9283" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.65">
-              <path d="M 525 120 C 560 145, 600 130, 640 155 C 670 175, 700 160, 725 190" />
-              <path d="M 505 170 C 545 190, 585 175, 625 200 C 665 220, 705 205, 735 235" />
-              <path d="M 500 220 C 540 240, 580 225, 620 245 C 660 260, 700 250, 740 275" />
-              <path d="M 570 110 C 600 135, 630 115, 665 130" />
-            </g>
-            <!-- Gyri Ridge Highlights -->
-            <g class="gyri-highlights" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.7">
-              <path d="M 525 118 C 560 143, 600 128, 640 153 C 670 173, 700 158, 725 188" />
-              <path d="M 505 168 C 545 188, 585 173, 625 198 C 665 218, 705 203, 735 233" />
-            </g>
-          </g>
-
-          <!-- 3. OCCIPITAL LOBE (SEEING & CREATIVITY -> Creative Work & Arts) -->
-          <g id="region-occipital" class="brain-lobe-hotspot" data-label="SEEING &amp; CREATIVITY" data-subtitle="How I observe, express and create" data-target="skills" data-color="#CCA046" tabindex="0" role="button" aria-label="Seeing and Creativity Region: Creative Arts">
-            <path class="lobe-base" fill="url(#base-clay-grad)" d="
-              M 750 295
-              C 780 325, 790 370, 775 415
-              C 755 460, 715 485, 665 490
-              C 655 440, 660 390, 675 345
-              C 690 315, 720 300, 750 295 Z
-            " />
-            <path class="lobe-tint" fill="url(#tint-occipital)" d="
-              M 750 295
-              C 780 325, 790 370, 775 415
-              C 755 460, 715 485, 665 490
-              C 655 440, 660 390, 675 345
-              C 690 315, 720 300, 750 295 Z
-            " />
-            <!-- Sulci Groove Shadows -->
-            <g class="gyri-grooves" stroke="#9E9283" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.65">
-              <path d="M 740 320 C 765 345, 745 375, 765 400" />
-              <path d="M 710 335 C 730 365, 715 395, 735 425 C 745 440, 730 460, 710 470" />
-              <path d="M 680 360 C 700 390, 685 420, 700 450" />
-              <path d="M 755 365 C 775 385, 760 410, 770 430" />
-            </g>
-            <!-- Gyri Ridge Highlights -->
-            <g class="gyri-highlights" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.7">
-              <path d="M 740 318 C 765 343, 745 373, 765 398" />
-              <path d="M 710 333 C 730 363, 715 393, 735 423" />
-            </g>
-          </g>
-
-          <!-- 4. TEMPORAL LOBE (PEOPLE & CONNECTIONS -> Social Vertical & Community) -->
-          <g id="region-temporal" class="brain-lobe-hotspot" data-label="PEOPLE &amp; CONNECTIONS" data-subtitle="Where psychology meets people &amp; community" data-target="social" data-color="#D47A58" tabindex="0" role="button" aria-label="People and Connections Region: Social Vertical">
-            <path class="lobe-base" fill="url(#base-clay-grad)" d="
-              M 310 365
-              C 365 365, 415 340, 440 290
-              C 480 315, 525 335, 570 345
-              C 580 390, 565 440, 520 465
-              C 465 490, 395 485, 345 465
-              C 305 450, 285 415, 275 395
-              C 285 375, 295 365, 310 365 Z
-            " />
-            <path class="lobe-tint" fill="url(#tint-temporal)" d="
-              M 310 365
-              C 365 365, 415 340, 440 290
-              C 480 315, 525 335, 570 345
-              C 580 390, 565 440, 520 465
-              C 465 490, 395 485, 345 465
-              C 305 450, 285 415, 275 395
-              C 285 375, 295 365, 310 365 Z
-            " />
-            <!-- Sulci Groove Shadows -->
-            <g class="gyri-grooves" stroke="#9E9283" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.65">
-              <path d="M 310 390 C 355 385, 400 405, 445 395 C 490 385, 530 400, 560 380" />
-              <path d="M 320 425 C 365 420, 410 440, 455 430 C 495 420, 530 435, 550 415" />
-              <path d="M 345 455 C 385 450, 425 465, 465 455 C 495 450, 515 455, 530 440" />
-              <path d="M 360 380 C 390 365, 420 375, 450 360" />
-            </g>
-            <!-- Gyri Ridge Highlights -->
-            <g class="gyri-highlights" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.7">
-              <path d="M 310 388 C 355 383, 400 403, 445 393 C 490 383, 530 398, 560 378" />
-              <path d="M 320 423 C 365 418, 410 438, 455 428 C 495 418, 530 433, 550 413" />
-            </g>
-          </g>
-
-          <!-- 5. HIPPOCAMPUS / COGNITION (LEARNING & MEMORY -> Academics & ProtoSem) -->
-          <g id="region-hippocampus" class="brain-lobe-hotspot" data-label="LEARNING &amp; MEMORY" data-subtitle="Learning, academics &amp; PRICE ProtoSem" data-target="academics" data-color="#5B8C9B" tabindex="0" role="button" aria-label="Learning and Memory Region: Academics and ProtoSem">
-            <path class="lobe-base" fill="url(#base-clay-grad)" d="
-              M 440 290
-              C 470 230, 485 160, 500 95
-              C 515 130, 525 175, 485 220
-              C 515 255, 555 280, 610 275
-              C 655 270, 705 290, 750 295
-              C 720 300, 690 315, 675 345
-              C 645 340, 610 340, 570 345
-              C 525 335, 480 315, 440 290 Z
-            " />
-            <path class="lobe-tint" fill="url(#tint-hippocampus)" d="
-              M 440 290
-              C 470 230, 485 160, 500 95
-              C 515 130, 525 175, 485 220
-              C 515 255, 555 280, 610 275
-              C 655 270, 705 290, 750 295
-              C 720 300, 690 315, 675 345
-              C 645 340, 610 340, 570 345
-              C 525 335, 480 315, 440 290 Z
-            " />
-            <!-- Sulci Groove Shadows -->
-            <g class="gyri-grooves" stroke="#9E9283" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.65">
-              <path d="M 470 260 C 510 280, 550 265, 590 290 C 630 310, 660 300, 690 325" />
-              <path d="M 480 200 C 520 220, 560 205, 600 230 C 635 245, 660 240, 680 265" />
-              <path d="M 520 305 C 555 295, 590 315, 625 305 C 650 300, 670 315, 685 310" />
-            </g>
-            <!-- Gyri Ridge Highlights -->
-            <g class="gyri-highlights" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.7">
-              <path d="M 470 258 C 510 278, 550 263, 590 288 C 630 308, 660 298, 690 323" />
-            </g>
-          </g>
-
-          <!-- 6. CEREBELLUM & BRAINSTEM (SKILLS & MOVEMENT -> Creative Skills & Movement) -->
-          <g id="region-cerebellum" class="brain-lobe-hotspot" data-label="SKILLS &amp; MOVEMENT" data-subtitle="Dance, guitar, coordination &amp; practical abilities" data-target="skills" data-color="#7E9A86" tabindex="0" role="button" aria-label="Skills and Movement Region: Cerebellum">
-            <!-- Cerebellum Body -->
-            <path class="lobe-base" fill="url(#base-clay-grad)" d="
-              M 665 490
-              C 650 540, 610 580, 550 585
-              C 500 590, 465 560, 455 520
-              C 490 500, 530 485, 570 480
-              C 610 475, 640 480, 665 490 Z
-            " />
-            <path class="lobe-tint" fill="url(#tint-cerebellum)" d="
-              M 665 490
-              C 650 540, 610 580, 550 585
-              C 500 590, 465 560, 455 520
-              C 490 500, 530 485, 570 480
-              C 610 475, 640 480, 665 490 Z
-            " />
-            <!-- Delicate Cerebellar Folia Horizontal Striations -->
-            <g class="folia-strokes" stroke="#9E9283" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.75">
-              <path d="M 480 525 C 520 515, 570 510, 625 520" />
-              <path d="M 490 540 C 530 530, 570 528, 610 538" />
-              <path d="M 505 555 C 540 548, 575 545, 595 555" />
-              <path d="M 520 570 C 545 565, 565 562, 580 570" />
-            </g>
-            <g class="folia-highlights" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.65">
-              <path d="M 480 523 C 520 513, 570 508, 625 518" />
-              <path d="M 490 538 C 530 528, 570 526, 610 536" />
-            </g>
-
-            <!-- Anatomical Brainstem (Pons & Medulla) -->
-            <path class="brainstem-path" fill="#E8DEC8" stroke="#D2C5B1" stroke-width="2" d="
-              M 455 520
-              C 440 550, 420 600, 400 620
-              C 380 640, 360 635, 355 605
-              C 350 565, 365 520, 380 475
-              C 405 485, 430 505, 455 520 Z
-            " />
-          </g>
-
-        </g> <!-- End interactive-brain-group -->
-
-        <!-- ==============================================================
-             7 & 8. SATELLITE NODES (Curiosity & Research, Memorea Venture)
-             ============================================================== -->
-        <!-- Satellite 1: CURIOSITY & RESEARCH -->
-        <g id="satellite-research" class="brain-satellite-node" data-label="CURIOSITY" data-subtitle="Questions I keep coming back to" data-target="research" data-color="#B87D8A" tabindex="0" role="button" aria-label="Curiosity and Research Node">
-          <path d="M 330 120 Q 220 110, 160 140" stroke="#B87D8A" stroke-width="1.8" stroke-dasharray="4 3" fill="none" opacity="0.6" />
-          <circle cx="160" cy="140" r="32" fill="url(#base-clay-grad)" stroke="#D2C5B1" stroke-width="2" filter="url(#clay-shadow)" />
-          <circle cx="160" cy="140" r="32" fill="url(#tint-research)" />
-          <circle cx="160" cy="140" r="22" stroke="#B87D8A" stroke-width="1.5" stroke-dasharray="3 2" fill="none" opacity="0.75" />
-          <text x="160" y="144" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#44403C" letter-spacing="1">CURIOSITY</text>
-        </g>
-
-        <!-- Satellite 2: MEMOREA VENTURE -->
-        <g id="satellite-memorea" class="brain-satellite-node" data-label="MEMOREA" data-subtitle="Founder / 'Memories, made to wear'" data-target="ventures" data-color="#D8A878" tabindex="0" role="button" aria-label="Memorea Venture Node">
-          <path d="M 680 480 Q 770 510, 830 490" stroke="#D8A878" stroke-width="1.8" stroke-dasharray="4 3" fill="none" opacity="0.6" />
-          <circle cx="830" cy="490" r="34" fill="url(#base-clay-grad)" stroke="#D2C5B1" stroke-width="2" filter="url(#clay-shadow)" />
-          <circle cx="830" cy="490" r="34" fill="url(#tint-memorea)" />
-          <circle cx="830" cy="490" r="24" stroke="#D8A878" stroke-width="1.5" stroke-dasharray="3 2" fill="none" opacity="0.75" />
-          <text x="830" y="494" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#44403C" letter-spacing="1">MEMOREA</text>
-        </g>
-
-        <!-- DYNAMIC SVG CONNECTING CALLOUT ARROW (Rendered on Hover) -->
-        <g id="dynamic-callout-arrow-group" pointer-events="none"></g>
-
-      </svg>
-
-      <!-- DYNAMIC FLOATING EDITORIAL CALLOUT BADGE (Positioned near active hotspot) -->
-      <div id="brain-hover-callout" class="brain-floating-callout" style="display: none;">
-        <div class="callout-card">
-          <div class="callout-header">
-            <span class="callout-dot"></span>
-            <span id="callout-category" class="callout-category-tag">HOTSPOT</span>
-          </div>
-          <h3 id="callout-title" class="callout-title font-serif">THINKING</h3>
-          <p id="callout-subtitle" class="callout-subtitle">What I question, understand and build upon</p>
-          <div class="callout-prompt">
-            <span class="prompt-text font-serif italic">Explore Section</span>
-            <span class="prompt-arrow">→</span>
-          </div>
+        <!-- Top Center Explore Prompt -->
+        <div class="hero-explore-prompt">
+          <span class="explore-tag">EXPLORE MY WORLD</span>
+          <p class="explore-sub">Click on any region of the brain to explore</p>
         </div>
       </div>
 
-    </div> <!-- End brain-svg-wrapper -->
+      <!-- Center Mind Stage: 3D Brain Visual + Interactive Cards + Connector Lines -->
+      <div class="brain-interactive-stage">
 
-    <!-- Subtle Guide Text Below Brain -->
-    <div class="brain-stage-subtext">
-      <p class="font-serif italic text-charcoal-500">
-        Hover over the brain regions or satellite nodes to navigate • Click any region to explore
-      </p>
-    </div>
+        <!-- SVG Connector Lines Overlay Layer -->
+        <svg id="connector-lines-svg" class="connector-svg-layer" viewBox="0 0 1200 680" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="glow-filter" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          <!-- 1. Line to Card 1 (Social Mind) -->
+          <g id="connector-line-social" class="connector-group">
+            <path class="connector-line" d="M 450 280 L 390 280 L 350 210 L 290 210" />
+            <circle class="connector-dot" cx="450" cy="280" r="4.5" />
+          </g>
+
+          <!-- 2. Line to Card 2 (Thinking Lab) -->
+          <g id="connector-line-thinking" class="connector-group">
+            <path class="connector-line" d="M 425 355 L 375 355 L 340 375 L 290 375" />
+            <circle class="connector-dot" cx="425" cy="355" r="4.5" />
+          </g>
+
+          <!-- 3. Line to Card 3 (Growth Zone) -->
+          <g id="connector-line-growth" class="connector-group">
+            <path class="connector-line" d="M 480 440 L 410 440 L 360 520 L 290 520" />
+            <circle class="connector-dot" cx="480" cy="440" r="4.5" />
+          </g>
+
+          <!-- 4. Line to Card 4 (Learning Center) -->
+          <g id="connector-line-learning" class="connector-group">
+            <path class="connector-line" d="M 680 270 L 740 270 L 800 210 L 870 210" />
+            <circle class="connector-dot" cx="680" cy="270" r="4.5" />
+          </g>
+
+          <!-- 5. Line to Card 5 (Idea Studio) -->
+          <g id="connector-line-idea" class="connector-group">
+            <path class="connector-line" d="M 720 345 L 775 345 L 815 375 L 870 375" />
+            <circle class="connector-dot" cx="720" cy="345" r="4.5" />
+          </g>
+
+          <!-- 6. Line to Card 6 (Future Path) -->
+          <g id="connector-line-future" class="connector-group">
+            <path class="connector-line" d="M 660 445 L 730 445 L 790 520 L 870 520" />
+            <circle class="connector-dot" cx="660" cy="445" r="4.5" />
+          </g>
+        </svg>
+
+        <!-- LEFT COLUMN: 3 Navigation Cards -->
+        <div class="brain-cards-col col-left">
+          
+          <!-- Card 1: SOCIAL MIND -->
+          <div class="nav-feature-card" id="card-social" data-target="social" data-synapse="synapse-social" tabindex="0" role="button" aria-label="Social Mind: Social vertical, campaigns, initiatives and community impact">
+            <div class="card-icon-box icon-social">
+              <i class="fa-solid fa-hand-holding-heart"></i>
+            </div>
+            <div class="card-info-box">
+              <h3 class="card-title">SOCIAL MIND</h3>
+              <div class="card-keywords">Empathy. People. Community.</div>
+              <p class="card-desc">Social vertical, campaigns, initiatives &amp; community impact</p>
+            </div>
+            <span class="card-arrow">→</span>
+          </div>
+
+          <!-- Card 2: THINKING LAB -->
+          <div class="nav-feature-card" id="card-thinking" data-target="about" data-synapse="synapse-thinking" tabindex="0" role="button" aria-label="Thinking Lab: Cognitive projects, protosem, case studies and critical thinking">
+            <div class="card-icon-box icon-thinking">
+              <i class="fa-solid fa-puzzle-piece"></i>
+            </div>
+            <div class="card-info-box">
+              <h3 class="card-title">THINKING LAB</h3>
+              <div class="card-keywords">Logic. Analysis. Problem Solving.</div>
+              <p class="card-desc">Cognitive projects, protosem, case studies &amp; critical thinking</p>
+            </div>
+            <span class="card-arrow">→</span>
+          </div>
+
+          <!-- Card 3: GROWTH ZONE -->
+          <div class="nav-feature-card" id="card-growth" data-target="journey" data-synapse="synapse-growth" tabindex="0" role="button" aria-label="Growth Zone: Personal growth, reflections, goals and life lessons">
+            <div class="card-icon-box icon-growth">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <div class="card-info-box">
+              <h3 class="card-title">GROWTH ZONE</h3>
+              <div class="card-keywords">Self. Growth. Resilience.</div>
+              <p class="card-desc">Personal growth, reflections, goals &amp; life lessons</p>
+            </div>
+            <span class="card-arrow">→</span>
+          </div>
+
+        </div> <!-- End col-left -->
+
+        <!-- CENTER: 3D ANATOMICAL SCULPTURAL BRAIN WITH GLOWING SYNAPSES -->
+        <div class="brain-center-visual-wrap">
+          
+          <svg id="anatomical-3d-brain" class="brain-svg-sculpture" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <!-- Clay Sculpture Soft Ambient Drop Shadow -->
+              <filter id="brain-soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#8C5A56" flood-opacity="0.15" />
+                <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1C1917" flood-opacity="0.08" />
+              </filter>
+
+              <!-- Synapse Spark Glow Filter -->
+              <filter id="synapse-glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur1" />
+                <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur2" />
+                <feMerge>
+                  <feMergeNode in="blur2" />
+                  <feMergeNode in="blur1" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+
+              <!-- Realistic Blush Clay Radial Lighting Gradients -->
+              <radialGradient id="clay-highlight-grad" cx="40%" cy="32%" r="68%">
+                <stop offset="0%" stop-color="#FFF5F0" />
+                <stop offset="25%" stop-color="#F7DFD6" />
+                <stop offset="60%" stop-color="#E8C7BC" />
+                <stop offset="85%" stop-color="#D4A79A" />
+                <stop offset="100%" stop-color="#B88577" />
+              </radialGradient>
+
+              <!-- Cerebellum & Brainstem Shading -->
+              <radialGradient id="stem-clay-grad" cx="45%" cy="35%" r="65%">
+                <stop offset="0%" stop-color="#F2DFD8" />
+                <stop offset="50%" stop-color="#D9B7AC" />
+                <stop offset="100%" stop-color="#AB8274" />
+              </radialGradient>
+            </defs>
+
+            <!-- Brain Base Group with Idle Floating Breathing Motion -->
+            <g class="sculpture-float-group" filter="url(#brain-soft-shadow)">
+              
+              <!-- Brain Shadow Underneath -->
+              <ellipse cx="430" cy="510" rx="220" ry="24" fill="#8C5A56" opacity="0.12" />
+
+              <!-- Brainstem (Pons & Medulla) -->
+              <path class="sculpture-stem" fill="url(#stem-clay-grad)" stroke="#CBA093" stroke-width="1.5" d="
+                M 440 390
+                C 435 430, 420 470, 410 500
+                C 400 530, 395 550, 415 545
+                C 435 540, 445 500, 455 460
+                C 465 420, 475 395, 470 380 Z
+              " />
+              <g stroke="#9E766B" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.6">
+                <path d="M 425 430 Q 440 435, 455 425" />
+                <path d="M 420 460 Q 435 465, 450 455" />
+                <path d="M 415 490 Q 430 495, 442 485" />
+              </g>
+
+              <!-- Cerebellum (Characteristic Horizontal Striations) -->
+              <path class="sculpture-cerebellum" fill="url(#stem-clay-grad)" stroke="#CBA093" stroke-width="1.8" d="
+                M 470 370
+                C 515 365, 560 385, 575 425
+                C 585 455, 565 490, 520 495
+                C 475 500, 445 470, 435 430
+                C 430 400, 445 375, 470 370 Z
+              " />
+              <!-- Cerebellum Folia Horizontal Striations -->
+              <g stroke="#9E766B" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.75">
+                <path d="M 455 390 C 490 385, 530 395, 560 415" />
+                <path d="M 450 410 C 485 405, 530 412, 568 435" />
+                <path d="M 445 430 C 480 425, 525 430, 560 455" />
+                <path d="M 445 450 C 475 448, 515 452, 545 475" />
+                <path d="M 460 470 C 485 468, 510 472, 530 488" />
+              </g>
+              <g stroke="#FFF8F5" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.6">
+                <path d="M 455 388 C 490 383, 530 393, 560 413" />
+                <path d="M 450 408 C 485 403, 530 410, 568 433" />
+                <path d="M 445 428 C 480 423, 525 428, 560 453" />
+              </g>
+
+              <!-- Cerebral Cortex Main Anatomical Mass -->
+              <path class="sculpture-cortex-silhouette" fill="url(#clay-highlight-grad)" stroke="#CBA093" stroke-width="2.5" d="
+                M 270 280
+                C 250 230, 260 175, 300 130
+                C 350 80, 450 65, 550 75
+                C 640 85, 710 120, 745 175
+                C 780 230, 785 290, 765 345
+                C 745 395, 695 425, 635 430
+                C 590 435, 550 400, 500 410
+                C 455 420, 420 440, 375 435
+                C 325 430, 285 395, 270 350
+                C 255 315, 265 295, 270 280 Z
+              " />
+
+              <!-- Intricate Gyri Convolutions & Sulci Fold Grooves -->
+              <!-- Layer 1: Dark Sulci Fissures -->
+              <g class="gyri-sulci-fissures" stroke="#9A6E62" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.75">
+                <!-- Frontal Convolutions -->
+                <path d="M 285 230 C 315 210, 360 220, 395 195 C 425 175, 460 180, 490 155" />
+                <path d="M 275 285 C 310 265, 355 280, 395 255 C 430 235, 470 245, 505 215" />
+                <path d="M 315 155 C 345 180, 385 145, 425 140 C 455 135, 485 125, 520 115" />
+                <path d="M 305 340 C 340 320, 380 340, 420 315 C 450 295, 485 310, 525 285" />
+                <path d="M 350 245 C 375 220, 410 235, 435 210" />
+
+                <!-- Sylvian (Lateral) Fissure Separation -->
+                <path d="M 330 365 C 390 360, 450 335, 510 335 C 570 335, 630 315, 680 335" stroke-width="4.2" opacity="0.9" />
+
+                <!-- Temporal Lobe Gyri -->
+                <path d="M 335 395 C 385 390, 435 410, 485 395 C 535 380, 585 395, 630 375" />
+                <path d="M 360 425 C 410 415, 460 430, 510 415 C 555 405, 595 418, 630 405" />
+
+                <!-- Parietal Lobe Gyri -->
+                <path d="M 525 110 C 565 140, 615 120, 660 150 C 695 175, 735 155, 760 190" />
+                <path d="M 505 165 C 550 190, 600 170, 645 200 C 690 225, 735 205, 765 240" />
+                <path d="M 500 220 C 545 245, 595 225, 640 250 C 685 270, 730 255, 765 285" />
+                <path d="M 570 95 C 605 125, 645 105, 685 125" />
+
+                <!-- Occipital Lobe Gyri -->
+                <path d="M 745 235 C 770 260, 755 295, 775 325" />
+                <path d="M 715 255 C 738 290, 720 325, 745 360 C 758 380, 740 405, 715 418" />
+                <path d="M 675 280 C 700 315, 680 350, 700 385" />
+              </g>
+
+              <!-- Layer 2: Creamy Sunlit Ridge Highlights (Bevel 3D Relief) -->
+              <g class="gyri-highlights" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.85">
+                <path d="M 285 227 C 315 207, 360 217, 395 192 C 425 172, 460 177, 490 152" />
+                <path d="M 275 282 C 310 262, 355 277, 395 252 C 430 232, 470 242, 505 212" />
+                <path d="M 315 152 C 345 177, 385 142, 425 137 C 455 132, 485 122, 520 112" />
+                <path d="M 305 337 C 340 317, 380 337, 420 312 C 450 292, 485 307, 525 282" />
+                <path d="M 525 107 C 565 137, 615 117, 660 147 C 695 172, 735 152, 760 187" />
+                <path d="M 505 162 C 550 187, 600 167, 645 197 C 690 222, 735 202, 765 237" />
+                <path d="M 335 392 C 385 387, 435 407, 485 392 C 535 377, 585 392, 630 372" />
+              </g>
+
+              <!-- 6 Glowing Spark Synapse Nodes on Key Anatomical Centers -->
+              
+              <!-- Synapse 1: SOCIAL MIND (Frontal / Temporal Boundary) -->
+              <g id="synapse-social" class="synapse-node" data-target="social" tabindex="0" role="button" aria-label="Social Mind Synapse">
+                <circle cx="370" cy="245" r="14" fill="#FFFFFF" opacity="0.3" filter="url(#synapse-glow)" class="synapse-aura" />
+                <circle cx="370" cy="245" r="6" fill="#FFFDF8" filter="url(#synapse-glow)" class="synapse-core" />
+                <circle cx="370" cy="245" r="3" fill="#FFFFFF" />
+                <!-- Sparkle Flare Lines -->
+                <path d="M 370 234 L 370 256 M 359 245 L 381 245" stroke="#FFFFFF" stroke-width="1.2" opacity="0.9" />
+              </g>
+
+              <!-- Synapse 2: THINKING LAB (Prefrontal Cortex) -->
+              <g id="synapse-thinking" class="synapse-node" data-target="about" tabindex="0" role="button" aria-label="Thinking Lab Synapse">
+                <circle cx="345" cy="325" r="14" fill="#FFFFFF" opacity="0.3" filter="url(#synapse-glow)" class="synapse-aura" />
+                <circle cx="345" cy="325" r="6" fill="#FFFDF8" filter="url(#synapse-glow)" class="synapse-core" />
+                <circle cx="345" cy="325" r="3" fill="#FFFFFF" />
+                <path d="M 345 314 L 345 336 M 334 325 L 356 325" stroke="#FFFFFF" stroke-width="1.2" opacity="0.9" />
+              </g>
+
+              <!-- Synapse 3: GROWTH ZONE (Inferior Temporal / Limbic Core) -->
+              <g id="synapse-growth" class="synapse-node" data-target="journey" tabindex="0" role="button" aria-label="Growth Zone Synapse">
+                <circle cx="410" cy="405" r="14" fill="#FFFFFF" opacity="0.3" filter="url(#synapse-glow)" class="synapse-aura" />
+                <circle cx="410" cy="405" r="6" fill="#FFFDF8" filter="url(#synapse-glow)" class="synapse-core" />
+                <circle cx="410" cy="405" r="3" fill="#FFFFFF" />
+                <path d="M 410 394 L 410 416 M 399 405 L 421 405" stroke="#FFFFFF" stroke-width="1.2" opacity="0.9" />
+              </g>
+
+              <!-- Synapse 4: LEARNING CENTER (Superior Parietal Lobe) -->
+              <g id="synapse-learning" class="synapse-node" data-target="academics" tabindex="0" role="button" aria-label="Learning Center Synapse">
+                <circle cx="585" cy="235" r="14" fill="#FFFFFF" opacity="0.3" filter="url(#synapse-glow)" class="synapse-aura" />
+                <circle cx="585" cy="235" r="6" fill="#FFFDF8" filter="url(#synapse-glow)" class="synapse-core" />
+                <circle cx="585" cy="235" r="3" fill="#FFFFFF" />
+                <path d="M 585 224 L 585 246 M 574 235 L 596 235" stroke="#FFFFFF" stroke-width="1.2" opacity="0.9" />
+              </g>
+
+              <!-- Synapse 5: IDEA STUDIO (Occipital Visual Cortex) -->
+              <g id="synapse-idea" class="synapse-node" data-target="skills" tabindex="0" role="button" aria-label="Idea Studio Synapse">
+                <circle cx="630" cy="315" r="14" fill="#FFFFFF" opacity="0.3" filter="url(#synapse-glow)" class="synapse-aura" />
+                <circle cx="630" cy="315" r="6" fill="#FFFDF8" filter="url(#synapse-glow)" class="synapse-core" />
+                <circle cx="630" cy="315" r="3" fill="#FFFFFF" />
+                <path d="M 630 304 L 630 326 M 619 315 L 641 315" stroke="#FFFFFF" stroke-width="1.2" opacity="0.9" />
+              </g>
+
+              <!-- Synapse 6: FUTURE PATH (Cerebellum & Lower Cortex) -->
+              <g id="synapse-future" class="synapse-node" data-target="ventures" tabindex="0" role="button" aria-label="Future Path Synapse">
+                <circle cx="575" cy="410" r="14" fill="#FFFFFF" opacity="0.3" filter="url(#synapse-glow)" class="synapse-aura" />
+                <circle cx="575" cy="410" r="6" fill="#FFFDF8" filter="url(#synapse-glow)" class="synapse-core" />
+                <circle cx="575" cy="410" r="3" fill="#FFFFFF" />
+                <path d="M 575 399 L 575 421 M 564 410 L 586 410" stroke="#FFFFFF" stroke-width="1.2" opacity="0.9" />
+              </g>
+
+            </g> <!-- End sculpture-float-group -->
+          </svg>
+
+        </div> <!-- End brain-center-visual-wrap -->
+
+        <!-- RIGHT COLUMN: 3 Navigation Cards -->
+        <div class="brain-cards-col col-right">
+          
+          <!-- Card 4: LEARNING CENTER -->
+          <div class="nav-feature-card" id="card-learning" data-target="academics" data-synapse="synapse-learning" tabindex="0" role="button" aria-label="Learning Center: Academics, psychology learnings, research and certifications">
+            <div class="card-icon-box icon-learning">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div class="card-info-box">
+              <h3 class="card-title">LEARNING CENTER</h3>
+              <div class="card-keywords">Knowledge. Growth. Curiosity.</div>
+              <p class="card-desc">Academics, psychology learnings, <strong>research &amp; certifications</strong></p>
+            </div>
+            <span class="card-arrow">→</span>
+          </div>
+
+          <!-- Card 5: IDEA STUDIO -->
+          <div class="nav-feature-card" id="card-idea" data-target="skills" data-synapse="synapse-idea" tabindex="0" role="button" aria-label="Idea Studio: Creative projects, content, designs and storytelling">
+            <div class="card-icon-box icon-idea">
+              <i class="fa-regular fa-lightbulb"></i>
+            </div>
+            <div class="card-info-box">
+              <h3 class="card-title">IDEA STUDIO</h3>
+              <div class="card-keywords">Creativity. Imagination. Vision.</div>
+              <p class="card-desc">Creative projects, content, designs &amp; storytelling</p>
+            </div>
+            <span class="card-arrow">→</span>
+          </div>
+
+          <!-- Card 6: FUTURE PATH -->
+          <div class="nav-feature-card" id="card-future" data-target="ventures" data-synapse="synapse-future" tabindex="0" role="button" aria-label="Future Path: Career interests, neuromarketing, plans and future aspirations">
+            <div class="card-icon-box icon-future">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div class="card-info-box">
+              <h3 class="card-title">FUTURE PATH</h3>
+              <div class="card-keywords">Purpose. Career. Impact.</div>
+              <p class="card-desc">Career interests, neuromarketing, plans &amp; future aspirations</p>
+            </div>
+            <span class="card-arrow">→</span>
+          </div>
+
+        </div> <!-- End col-right -->
+
+      </div> <!-- End brain-interactive-stage -->
+
+      <!-- Center Bottom Quote -->
+      <div class="hero-bottom-quote">
+        <span class="quote-mark font-serif">“</span>
+        <p class="quote-text">
+          Understanding minds. Creating impact.<br>
+          Living with purpose.
+        </p>
+        <div class="quote-brain-icon">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+      </div>
+
+    </div> <!-- End brain-dashboard-container -->
   </main>
 
   <!-- ========================================================================
-       5. PORTFOLIO CONTENT VIEWS (Pure Editorial Layout — Zero Images)
+       3. PORTFOLIO SECTIONS (Pure Editorial Layout — 100% Preserved Authentic Content)
        ======================================================================== -->
   <div id="portfolio-content-view">
     
@@ -501,9 +444,9 @@
     <div class="content-container">
 
       <!-- ------------------------------------------------------------------
-           SECTION: ABOUT ME / PHILOSOPHY (Mapped from THINKING)
+           SECTION 01: ABOUT ME / PHILOSOPHY (THINKING LAB)
            ------------------------------------------------------------------ -->
-      <section id="about" class="mb-24">
+      <section id="about" class="mb-24 pt-8">
         <div class="section-banner">
           <div class="section-pretitle">01 / Overview &amp; Personal Identity</div>
           <h2 class="section-title editorial-heading">Thinking, Decisions &amp; Philosophy</h2>
@@ -539,7 +482,7 @@
                 Psychology undergraduate with experience in social-impact initiatives, student leadership, entrepreneurship, marketing, public speaking and community engagement. Currently serving as <strong>Vice President – Social Vertical (2026–27)</strong>, with prior experience as <strong>Joint Secretary – Social Vertical (2025–26)</strong>.
               </p>
               <p class="text-charcoal-600 leading-relaxed">
-                Currently pursuing a 20-week industry-integrated innovation fellowship at <strong>PRICE ProtoSem</strong> on a 100% scholarship, focusing on applying cognitive science and behavioral insights to solve real-world retail and commerce challenges through intelligent systems, AI, and human-centered prototyping.
+                Founder of <strong>Memorea</strong>, a personalized accessories and keepsakes venture, with practical experience in product development, pricing, customer interaction, marketing, packaging and sales.
               </p>
               <div class="editorial-quote">
                 "Interested in opportunities combining psychology, human behaviour, communication, marketing, entrepreneurship and social impact."
@@ -564,11 +507,11 @@
       </section>
 
       <!-- ------------------------------------------------------------------
-           SECTION: SOCIAL VERTICAL & LEADERSHIP (Mapped from PEOPLE & CONNECTIONS)
+           SECTION 02: SOCIAL VERTICAL (SOCIAL MIND)
            ------------------------------------------------------------------ -->
-      <section id="social" class="mb-24">
+      <section id="social" class="mb-24 pt-8">
         <div class="section-banner">
-          <div class="section-pretitle">02 / People &amp; Connections</div>
+          <div class="section-pretitle">02 / Social Mind &amp; Governance</div>
           <h2 class="section-title editorial-heading">Social Vertical &amp; Community Impact</h2>
           <p class="section-tagline editorial-subheading">"Where psychology meets people, leadership &amp; collective change."</p>
         </div>
@@ -587,84 +530,47 @@
               </div>
             </div>
 
-            <p class="text-charcoal-700 leading-relaxed mb-4">
-              Leading and coordinating social-impact initiatives, student representation, and community engagement activities across the student body. Spearheading institutional campaigns on sustainability, food-waste mitigation, mental health advocacy, and peer mentoring.
-            </p>
+            <ul class="space-y-2.5 text-charcoal-700 leading-relaxed text-sm sm:text-base">
+              <li class="flex items-start gap-2.5">
+                <span class="text-terracotta font-serif text-base">•</span>
+                <span>Leading and coordinating social-impact initiatives and community engagement activities.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-terracotta font-serif text-base">•</span>
+                <span>Supporting the planning and execution of awareness campaigns and community-focused programs.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-terracotta font-serif text-base">•</span>
+                <span>Working with student teams to develop and execute initiatives addressing social and environmental concerns.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-terracotta font-serif text-base">•</span>
+                <span>Collaborating with different stakeholders and student teams to create meaningful community impact.</span>
+              </li>
+            </ul>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 border-t border-border text-xs">
-              <div>
-                <span class="font-bold text-charcoal-900 block mb-1">Key Focus</span>
-                <span class="text-charcoal-600">Community Outreach, Awareness Drives, Multi-Department Collaboration</span>
-              </div>
-              <div>
-                <span class="font-bold text-charcoal-900 block mb-1">Prior Governance</span>
-                <span class="text-charcoal-600">Joint Secretary — Social (2025–2026)</span>
-              </div>
-              <div>
-                <span class="font-bold text-charcoal-900 block mb-1">Impact Reach</span>
-                <span class="text-charcoal-600">3000+ Students engaged across campus and community chapters</span>
-              </div>
+            <div class="mt-6 pt-4 border-t border-border flex flex-wrap gap-3 text-xs font-mono text-charcoal-600">
+              <span>Prior Role: <strong>Joint Secretary – Social Vertical (2025–26)</strong></span>
+              <span>•</span>
+              <span>Focus: Food Waste, E-Waste &amp; Community Engagement</span>
             </div>
           </div>
 
-          <!-- Major Social Projects & Key Initiatives -->
-          <div class="editorial-card">
-            <h4 class="font-serif text-xl font-bold text-charcoal-900 mb-4">Major Campaigns &amp; Collaborative Initiatives</h4>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="p-5 bg-ivory-200 border border-border flex flex-col justify-between">
-                <div>
-                  <div class="text-xs font-mono text-terracotta font-semibold uppercase mb-1">Collaborative Campaign</div>
-                  <h5 class="font-serif text-xl font-bold text-charcoal-900">Food Waste Awareness Campaign</h5>
-                  <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
-                    Contributed to a food-waste awareness campaign in collaboration with Microcosm &amp; K-GEO. Conducted awareness activities focused on reducing food waste and worked with a student coordination team to execute the campaign.
-                  </p>
-                </div>
-                <div class="mt-4 pt-3 border-t border-border flex items-center justify-between text-xs text-charcoal-500 font-mono">
-                  <span>Target: Zero Cafeteria Waste</span>
-                  <span class="text-terracotta font-semibold">Microcosm &amp; K-GEO</span>
-                </div>
-              </div>
-
-              <div class="p-5 bg-ivory-200 border border-border flex flex-col justify-between">
-                <div>
-                  <div class="text-xs font-mono text-terracotta font-semibold uppercase mb-1">Environmental Action</div>
-                  <h5 class="font-serif text-xl font-bold text-charcoal-900">The Green Shift — E-Waste Drive</h5>
-                  <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
-                    Contributed to an e-waste awareness and collection initiative. Supported responsible e-waste disposal and environmental awareness, participating in planning and execution of the student-led drive.
-                  </p>
-                </div>
-                <div class="mt-4 pt-3 border-t border-border flex items-center justify-between text-xs text-charcoal-500 font-mono">
-                  <span>Focus: Circular Lifecycle</span>
-                  <span class="text-terracotta font-semibold">Student-Led Drive</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Structured Governance & Engagement Framework -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Major Campaigns -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="editorial-card">
-              <span class="text-xs font-mono text-terracotta uppercase font-bold">Initiative 01</span>
-              <h5 class="font-serif text-lg font-bold text-charcoal-900 mt-1 mb-2">Food Waste Mitigation</h5>
-              <p class="text-xs text-charcoal-600 leading-relaxed">
-                Spearheaded campus-wide behavioral nudges and awareness initiatives to minimize dining hall food waste.
+              <div class="text-xs font-mono text-terracotta font-semibold uppercase mb-1">Collaborative Campaign</div>
+              <h4 class="font-serif text-xl font-bold text-charcoal-900">Food Waste Awareness Campaign</h4>
+              <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
+                Contributed to a food-waste awareness campaign in collaboration with Microcosm &amp; K-GEO. Conducted awareness activities focused on reducing food waste and worked with a student coordination team to execute the campaign.
               </p>
             </div>
 
             <div class="editorial-card">
-              <span class="text-xs font-mono text-teal uppercase font-bold">Initiative 02</span>
-              <h5 class="font-serif text-lg font-bold text-charcoal-900 mt-1 mb-2">Community Outreach</h5>
-              <p class="text-xs text-charcoal-600 leading-relaxed">
-                Participated in activities supporting children, elderly communities, neurodivergent individuals, sanitary workers and tribal communities.
-              </p>
-            </div>
-
-            <div class="editorial-card">
-              <span class="text-xs font-mono text-lavender uppercase font-bold">Initiative 03</span>
-              <h5 class="font-serif text-lg font-bold text-charcoal-900 mt-1 mb-2">Social Representation</h5>
-              <p class="text-xs text-charcoal-600 leading-relaxed">
-                Worked with student teams and administration to plan, coordinate, and execute community-focused programs.
+              <div class="text-xs font-mono text-terracotta font-semibold uppercase mb-1">Environmental Action</div>
+              <h4 class="font-serif text-xl font-bold text-charcoal-900">The Green Shift — E-Waste Drive</h4>
+              <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
+                Contributed to an e-waste awareness and collection initiative. Supported responsible e-waste disposal and environmental awareness, participating in planning and execution of the student-led drive.
               </p>
             </div>
           </div>
@@ -672,17 +578,17 @@
       </section>
 
       <!-- ------------------------------------------------------------------
-           SECTION: ACADEMICS & PROTOSEM (Mapped from LEARNING & MEMORY)
+           SECTION 03: ACADEMICS & PROTOSEM (LEARNING CENTER)
            ------------------------------------------------------------------ -->
-      <section id="academics" class="mb-24">
+      <section id="academics" class="mb-24 pt-8">
         <div class="section-banner">
-          <div class="section-pretitle">03 / Learning &amp; Memory</div>
+          <div class="section-pretitle">03 / Learning &amp; Academic Center</div>
           <h2 class="section-title editorial-heading">Academics &amp; PRICE ProtoSem</h2>
           <p class="section-tagline editorial-subheading">"What I learn, question, prototype and build upon."</p>
         </div>
 
         <div class="space-y-8">
-          <!-- Academic Degrees -->
+          <!-- Degrees -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="editorial-card">
               <div class="text-xs font-mono text-terracotta font-semibold uppercase mb-1">Undergraduate Studies</div>
@@ -719,21 +625,12 @@
               </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 text-charcoal-700 text-base leading-relaxed">
-              <div class="lg:col-span-6">
-                <p>
-                  Selected for a 20-week industry-integrated innovation programme focused on solving real-world retail and commerce challenges through AI, analytics, intelligent systems, IoT, prototyping, and entrepreneurship.
-                </p>
-              </div>
-              <div class="lg:col-span-6">
-                <p class="text-charcoal-600">
-                  Working with industry problem statements to explore, develop, and validate practical technology solutions beyond conventional classroom learning.
-                </p>
-              </div>
-            </div>
+            <p class="text-charcoal-700 text-base leading-relaxed mb-4">
+              Selected for a 20-week industry-integrated innovation programme focused on solving real-world retail and commerce challenges through AI, analytics, intelligent systems, IoT, prototyping, and entrepreneurship.
+            </p>
 
-            <div class="mt-6 pt-4 border-t border-border flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-white border border-border text-xs font-mono">Phygital Retail &amp; Intelligent Commerce</span>
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-border">
+              <span class="px-3 py-1 bg-white border border-border text-xs font-mono">Phygital Retail</span>
               <span class="px-3 py-1 bg-white border border-border text-xs font-mono">AI &amp; Analytics</span>
               <span class="px-3 py-1 bg-white border border-border text-xs font-mono">Intelligent Systems &amp; IoT</span>
               <span class="px-3 py-1 bg-white border border-border text-xs font-mono">Prototyping</span>
@@ -741,39 +638,119 @@
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- ------------------------------------------------------------------
-           SECTION: PROTOSEM 20-WEEK JOURNAL TIMELINE (Dedicated Section)
-           ------------------------------------------------------------------ -->
-      <section id="protosem" class="mb-24">
-        <div class="section-banner">
-          <div class="section-pretitle">04 / Dedicated Archive</div>
-          <h2 class="section-title editorial-heading">PRICE ProtoSem Journal</h2>
-          <p class="section-tagline editorial-subheading">"The 20-Week Continuous Journey — Week 00 through Week 20."</p>
-        </div>
+        <!-- 20-Week ProtoSem Interactive Journal Section -->
+        <div id="protosem" class="mt-16 pt-8 border-t border-border">
+          <div class="section-banner">
+            <div class="section-pretitle">PRICE ProtoSem Archive</div>
+            <h3 class="section-title editorial-heading">The 20-Week Continuous Journey</h3>
+            <p class="section-tagline editorial-subheading">"Week 00 through Week 20 — Innovation Journal &amp; Field Notes."</p>
+          </div>
 
-        <!-- 4-Phase Navigation Filter -->
-        <div class="protosem-phase-nav" role="tablist">
-          <button class="phase-btn active" onclick="filterProtoPhase('all', this)">ALL WEEKS (00–20)</button>
-          <button class="phase-btn" onclick="filterProtoPhase(1, this)">PHASE 01 (W00–W05) • Discovery</button>
-          <button class="phase-btn" onclick="filterProtoPhase(2, this)">PHASE 02 (W06–W10) • Prototyping</button>
-          <button class="phase-btn" onclick="filterProtoPhase(3, this)">PHASE 03 (W11–W15) • Pilot Testing</button>
-          <button class="phase-btn" onclick="filterProtoPhase(4, this)">PHASE 04 (W16–W20) • Scale &amp; Capstone</button>
-        </div>
+          <!-- Phase Navigation Tabs -->
+          <div class="protosem-phase-nav" role="tablist">
+            <button class="phase-btn active" onclick="filterProtoPhase('all', this)">ALL WEEKS (00–20)</button>
+            <button class="phase-btn" onclick="filterProtoPhase(1, this)">PHASE 01 (W00–W05) • Discovery</button>
+            <button class="phase-btn" onclick="filterProtoPhase(2, this)">PHASE 02 (W06–W10) • Prototyping</button>
+            <button class="phase-btn" onclick="filterProtoPhase(3, this)">PHASE 03 (W11–W15) • Pilot Testing</button>
+            <button class="phase-btn" onclick="filterProtoPhase(4, this)">PHASE 04 (W16–W20) • Scale &amp; Capstone</button>
+          </div>
 
-        <!-- Dynamic Weeks Grid Container -->
-        <div id="protosem-weeks-grid" class="weeks-grid">
-          <!-- Injected dynamically by js/app.js -->
+          <!-- 20 Weeks Dynamic Grid -->
+          <div id="protosem-weeks-grid" class="weeks-grid">
+            <!-- Injected by js/app.js -->
+          </div>
         </div>
       </section>
 
       <!-- ------------------------------------------------------------------
-           SECTION: MEMOREA VENTURE (Mapped from VENTURES)
+           SECTION 04: SKILLS & CREATIVITY (IDEA STUDIO)
            ------------------------------------------------------------------ -->
-      <section id="ventures" class="mb-24">
+      <section id="skills" class="mb-24 pt-8">
         <div class="section-banner">
-          <div class="section-pretitle">05 / Entrepreneurship &amp; Venture</div>
+          <div class="section-pretitle">04 / Idea Studio &amp; Competencies</div>
+          <h2 class="section-title editorial-heading">Seeing, Creativity &amp; Movement</h2>
+          <p class="section-tagline editorial-subheading">"Dance, guitar, storytelling, leadership &amp; digital craft."</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="editorial-card">
+            <div class="border-b-2 border-charcoal-900 pb-2 mb-3">
+              <h3 class="font-serif text-lg font-bold text-charcoal-900">Leadership &amp; Communication</h3>
+            </div>
+            <ul class="text-xs text-charcoal-700 space-y-2">
+              <li>Public Speaking</li>
+              <li>Team Coordination</li>
+              <li>Event Management</li>
+              <li>Leadership</li>
+              <li>Presentation</li>
+              <li>Debate</li>
+              <li>Networking</li>
+              <li>Community Engagement</li>
+            </ul>
+          </div>
+
+          <div class="editorial-card">
+            <div class="border-b-2 border-charcoal-900 pb-2 mb-3">
+              <h3 class="font-serif text-lg font-bold text-charcoal-900">Business &amp; Marketing</h3>
+            </div>
+            <ul class="text-xs text-charcoal-700 space-y-2">
+              <li>Sales</li>
+              <li>Customer Communication</li>
+              <li>Product Positioning</li>
+              <li>Marketing</li>
+              <li>Brand Building</li>
+              <li>Pricing</li>
+              <li>Entrepreneurship</li>
+              <li>Storytelling</li>
+            </ul>
+          </div>
+
+          <div class="editorial-card">
+            <div class="border-b-2 border-charcoal-900 pb-2 mb-3">
+              <h3 class="font-serif text-lg font-bold text-charcoal-900">Psychology &amp; Behavioral</h3>
+            </div>
+            <ul class="text-xs text-charcoal-700 space-y-2">
+              <li>Human Behaviour</li>
+              <li>Psychology</li>
+              <li>Research &amp; Learning</li>
+              <li>Observation</li>
+              <li>Neuromarketing</li>
+              <li>Consumer Behaviour</li>
+            </ul>
+          </div>
+
+          <div class="editorial-card">
+            <div class="border-b-2 border-charcoal-900 pb-2 mb-3">
+              <h3 class="font-serif text-lg font-bold text-charcoal-900">Creative Arts &amp; Tools</h3>
+            </div>
+            <ul class="text-xs text-charcoal-700 space-y-2">
+              <li><strong>Dance:</strong> Choreography &amp; Performance</li>
+              <li><strong>Guitar:</strong> Melodies &amp; Chords</li>
+              <li>Microsoft PowerPoint</li>
+              <li>Canva</li>
+              <li>Instagram &amp; Social Media</li>
+              <li>AI-assisted Productivity Tools</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-8 p-6 bg-white border border-border">
+          <h4 class="font-mono text-xs uppercase tracking-widest text-charcoal-500 font-semibold mb-2">
+            Areas of Interest
+          </h4>
+          <p class="font-serif text-base sm:text-lg text-charcoal-900 leading-relaxed italic">
+            Psychology • Human Behaviour • Neuromarketing • Consumer Behaviour • Marketing • Entrepreneurship • Social Impact • Communication • Innovation • Community Development
+          </p>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------------------
+           SECTION 05: MEMOREA VENTURE & FUTURE ASPIRATIONS (FUTURE PATH)
+           ------------------------------------------------------------------ -->
+      <section id="ventures" class="mb-24 pt-8">
+        <div class="section-banner">
+          <div class="section-pretitle">05 / Future Path &amp; Entrepreneurship</div>
           <h2 class="section-title editorial-heading">Memorea — "Memories, made to wear."</h2>
           <p class="section-tagline editorial-subheading">"A personalized accessories &amp; keepsakes venture connecting memory to tangible form."</p>
         </div>
@@ -807,8 +784,6 @@
           </div>
         </div>
 
-        <!-- Product Line & Offerings Cards -->
-        <h4 class="font-serif text-xl font-bold text-charcoal-900 mb-4">Curated Product Range &amp; Offerings</h4>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="editorial-card">
             <div class="w-10 h-10 rounded bg-terracotta/10 text-terracotta flex items-center justify-center mb-3 font-mono font-bold text-xs">
@@ -818,9 +793,6 @@
             <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
               Custom phone charms designed with meaningful color palettes and personalized accents.
             </p>
-            <div class="mt-4 pt-3 border-t border-border text-[11px] font-mono text-terracotta font-semibold">
-              Curated Keepsake
-            </div>
           </div>
 
           <div class="editorial-card">
@@ -831,183 +803,27 @@
             <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
               Handcrafted customized bracelets and charm accessories celebrating personal milestones.
             </p>
-            <div class="mt-4 pt-3 border-t border-border text-[11px] font-mono text-teal font-semibold">
-              Everyday Wear
-            </div>
           </div>
 
           <div class="editorial-card">
             <div class="w-10 h-10 rounded bg-lavender/10 text-lavender flex items-center justify-center mb-3 font-mono font-bold text-xs">
               03
             </div>
-            <h5 class="font-serif text-lg font-bold text-charcoal-900">Plushie Charms &amp; Hair Accessories</h5>
+            <h5 class="font-serif text-lg font-bold text-charcoal-900">Plushie &amp; Hair Accessories</h5>
             <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
               Whimsical plushie bag charms, hair accessories, and small keepsakes made to preserve moments.
             </p>
-            <div class="mt-4 pt-3 border-t border-border text-[11px] font-mono text-lavender font-semibold">
-              Sentimental Design
-            </div>
           </div>
         </div>
       </section>
 
       <!-- ------------------------------------------------------------------
-           SECTION: SKILLS & CREATIVITY (Mapped from SEEING & CREATIVITY)
+           SECTION 06: MY JOURNEY & GROWTH (GROWTH ZONE)
            ------------------------------------------------------------------ -->
-      <section id="skills" class="mb-24">
+      <section id="journey" class="mb-24 pt-8">
         <div class="section-banner">
-          <div class="section-pretitle">06 / Creative Arts &amp; Competencies</div>
-          <h2 class="section-title editorial-heading">Seeing, Creativity &amp; Movement</h2>
-          <p class="section-tagline editorial-subheading">"Dance, guitar, storytelling, leadership &amp; digital craft."</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Leadership & Communication -->
-          <div class="editorial-card">
-            <div class="border-b-2 border-charcoal-900 pb-2 mb-3">
-              <h3 class="font-serif text-lg font-bold text-charcoal-900">Leadership &amp; Communication</h3>
-            </div>
-            <ul class="text-xs text-charcoal-700 space-y-2">
-              <li>Public Speaking</li>
-              <li>Team Coordination</li>
-              <li>Event Management</li>
-              <li>Leadership</li>
-              <li>Presentation</li>
-              <li>Debate</li>
-              <li>Networking</li>
-              <li>Community Engagement</li>
-            </ul>
-          </div>
-
-          <!-- Business & Marketing -->
-          <div class="editorial-card">
-            <div class="border-b-2 border-charcoal-900 pb-2 mb-3">
-              <h3 class="font-serif text-lg font-bold text-charcoal-900">Business &amp; Marketing</h3>
-            </div>
-            <ul class="text-xs text-charcoal-700 space-y-2">
-              <li>Sales</li>
-              <li>Customer Communication</li>
-              <li>Product Positioning</li>
-              <li>Marketing</li>
-              <li>Brand Building</li>
-              <li>Pricing</li>
-              <li>Entrepreneurship</li>
-              <li>Storytelling</li>
-            </ul>
-          </div>
-
-          <!-- Psychology -->
-          <div class="editorial-card">
-            <div class="border-b-2 border-charcoal-900 pb-2 mb-3">
-              <h3 class="font-serif text-lg font-bold text-charcoal-900">Psychology &amp; Behavioral</h3>
-            </div>
-            <ul class="text-xs text-charcoal-700 space-y-2">
-              <li>Human Behaviour</li>
-              <li>Psychology</li>
-              <li>Research &amp; Learning</li>
-              <li>Observation</li>
-              <li>Neuromarketing</li>
-              <li>Consumer Behaviour</li>
-            </ul>
-          </div>
-
-          <!-- Creative Arts & Tools -->
-          <div class="editorial-card">
-            <div class="border-b-2 border-charcoal-900 pb-2 mb-3">
-              <h3 class="font-serif text-lg font-bold text-charcoal-900">Creative Arts &amp; Tools</h3>
-            </div>
-            <ul class="text-xs text-charcoal-700 space-y-2">
-              <li><strong>Dance:</strong> Choreography &amp; Performance</li>
-              <li><strong>Guitar:</strong> Melodies &amp; Chords</li>
-              <li>Microsoft PowerPoint</li>
-              <li>Canva</li>
-              <li>Instagram &amp; Social Media</li>
-              <li>AI-assisted Productivity Tools</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Areas of Interest Banner -->
-        <div class="mt-8 p-6 bg-white border border-border">
-          <h4 class="font-mono text-xs uppercase tracking-widest text-charcoal-500 font-semibold mb-2">
-            Areas of Interest
-          </h4>
-          <p class="font-serif text-base sm:text-lg text-charcoal-900 leading-relaxed italic">
-            Psychology • Human Behaviour • Neuromarketing • Consumer Behaviour • Marketing • Entrepreneurship • Social Impact • Communication • Innovation • Community Development
-          </p>
-        </div>
-      </section>
-
-      <!-- ------------------------------------------------------------------
-           SECTION: RESEARCH & REFLECTIONS (Mapped from CURIOSITY & RESEARCH)
-           ------------------------------------------------------------------ -->
-      <section id="research" class="mb-24">
-        <div class="section-banner">
-          <div class="section-pretitle">07 / Inquiries &amp; Mindset</div>
-          <h2 class="section-title editorial-heading">Curiosity, Research &amp; Reflections</h2>
-          <p class="section-tagline editorial-subheading">"Questions I keep coming back to — where psychology meets inquiry."</p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-8">
-          <!-- Research Project Feature 01 -->
-          <div class="lg:col-span-6">
-            <div class="editorial-card h-full flex flex-col justify-between">
-              <div>
-                <span class="text-xs font-mono text-terracotta uppercase font-semibold">Academic Study</span>
-                <h3 class="font-serif text-2xl font-bold text-charcoal-900 mt-1 mb-3">Experimental Research Methods</h3>
-                <p class="text-xs text-charcoal-600 mb-4 leading-relaxed">
-                  Investigation into psychological research designs, variable isolation controls, double-blind testing frameworks, and empirical hypothesis validation methodologies.
-                </p>
-                <div class="space-y-2 text-xs text-charcoal-700 pt-2 border-t border-border">
-                  <div><strong>Key Areas:</strong> Quantitative Sampling, Behavioral Observation, Ethics in Psychological Testing.</div>
-                  <div><strong>Outcome:</strong> Structured experimental protocols for validating user interaction nudges.</div>
-                </div>
-              </div>
-              <div class="mt-6 pt-4 border-t border-border flex justify-between items-center text-xs font-mono text-charcoal-500">
-                <span>Methodology Framework</span>
-                <span class="text-terracotta font-semibold">Empirical Rigor</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Research Project Feature 02 -->
-          <div class="lg:col-span-6">
-            <div class="editorial-card h-full flex flex-col justify-between">
-              <div>
-                <span class="text-xs font-mono text-teal uppercase font-semibold">Cognitive Psychology Investigation</span>
-                <h3 class="font-serif text-2xl font-bold text-charcoal-900 mt-1 mb-3">Memory Systems &amp; Cognitive Architecture</h3>
-                <p class="text-xs text-charcoal-600 mb-4 leading-relaxed">
-                  Analyzing multi-store memory models, sensory registers, working memory capacity limitations, and semantic retention pathways in digital and physical environments.
-                </p>
-                <div class="space-y-2 text-xs text-charcoal-700 pt-2 border-t border-border">
-                  <div><strong>Key Areas:</strong> Atkinson-Shiffrin Model, Chunking Strategies, Cognitive Load Theory.</div>
-                  <div><strong>Application:</strong> Designing clutter-free experiences that minimize decision fatigue.</div>
-                </div>
-              </div>
-              <div class="mt-6 pt-4 border-t border-border flex justify-between items-center text-xs font-mono text-charcoal-500">
-                <span>Cognitive Models</span>
-                <span class="text-teal font-semibold">Memory Science</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Personal Reflective Note -->
-        <div class="editorial-card bg-ivory-200">
-          <h4 class="font-serif text-2xl font-bold text-charcoal-900 mb-2">My Reflective Lens</h4>
-          <p class="text-charcoal-700 leading-relaxed">
-            "My journey through psychology and innovation has taught me that problems are rarely purely technical or purely emotional. They live in the nuanced friction between how people feel, how systems respond, and how meaning is communicated. Every leadership role, every sprint at ProtoSem, and every piece created at Memorea is an experiment in understanding what makes us human."
-          </p>
-        </div>
-      </section>
-
-      <!-- ------------------------------------------------------------------
-           SECTION: MY JOURNEY & MILESTONES (Mapped from EXPERIENCES)
-           ------------------------------------------------------------------ -->
-      <section id="journey" class="mb-24">
-        <div class="section-banner">
-          <div class="section-pretitle">08 / Trajectory &amp; Milestones</div>
-          <h2 class="section-title editorial-heading">My Journey &amp; Growth</h2>
+          <div class="section-pretitle">06 / Growth Zone &amp; Trajectory</div>
+          <h2 class="section-title editorial-heading">My Journey &amp; Milestones</h2>
           <p class="section-tagline editorial-subheading">"The moments that shaped my journey."</p>
         </div>
 
@@ -1047,24 +863,15 @@
             </div>
             <span class="px-3 py-1 bg-ivory-200 border border-border text-xs font-mono text-charcoal-800">Leadership</span>
           </div>
-
-          <div class="editorial-card flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div>
-              <span class="text-xs font-mono text-sage uppercase font-semibold">Foundation • Student Leadership</span>
-              <h3 class="font-serif text-xl font-bold text-charcoal-900">Assistant School Pupil Leader (ASPL)</h3>
-              <p class="text-xs text-charcoal-600">Gedee Public School — student representation and school-level coordination.</p>
-            </div>
-            <span class="px-3 py-1 bg-ivory-200 border border-border text-xs font-mono text-charcoal-800">Foundation</span>
-          </div>
         </div>
       </section>
 
       <!-- ------------------------------------------------------------------
-           SECTION: CONTACT & CORRESPONDENCE
+           SECTION 07: CONTACT & CORRESPONDENCE
            ------------------------------------------------------------------ -->
-      <section id="contact" class="mb-16">
+      <section id="contact" class="mb-16 pt-8">
         <div class="section-banner">
-          <div class="section-pretitle">09 / Correspondence</div>
+          <div class="section-pretitle">07 / Correspondence</div>
           <h2 class="section-title editorial-heading">Let's Connect &amp; Collaborate</h2>
           <p class="section-tagline editorial-subheading">"Open for discussions on psychology, innovation, social impact &amp; ventures."</p>
         </div>
@@ -1079,7 +886,7 @@
           <a href="https://www.linkedin.com/in/shree-varsha-vk-458909373" target="_blank" class="editorial-card text-center block hover:border-terracotta">
             <i class="fa-brands fa-linkedin-in text-3xl text-terracotta mb-3"></i>
             <h3 class="font-serif text-lg font-bold text-charcoal-900">LinkedIn</h3>
-            <p class="text-xs font-mono text-charcoal-600 mt-1">linkedin.com/in/shree-varsha-vk-458909373</p>
+            <p class="text-xs font-mono text-charcoal-600 mt-1">linkedin.com/in/shreevarshavk</p>
           </a>
 
           <div class="editorial-card text-center">
@@ -1088,21 +895,34 @@
             <p class="text-xs font-mono text-charcoal-600 mt-1">Coimbatore, Tamil Nadu, India</p>
           </div>
         </div>
-
-        <div class="text-center mt-12">
-          <a href="resume.html" class="inline-flex items-center gap-3 px-8 py-4 bg-terracotta text-white font-bold text-sm uppercase tracking-widest hover:bg-terracotta-dark transition-colors shadow-sm">
-            <i class="fa-regular fa-file-lines text-lg"></i>
-            <span>View Full ATS Printable Resume</span>
-          </a>
-        </div>
       </section>
 
     </div>
   </div>
 
   <!-- ========================================================================
-       6. ABOUT ME QUICK MODAL (Opened from Top-Left Permanent Profile Anchor)
+       4. FOOTER BANNER (Matches Exact Design Screenshot)
        ======================================================================== -->
+  <footer id="site-footer-banner" class="footer-rose-bar">
+    <div class="footer-inner">
+      <div class="footer-tagline">
+        Let's connect and create a better world together.
+      </div>
+      <div class="footer-social-links">
+        <a href="https://instagram.com" target="_blank" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/shree-varsha-vk-458909373" target="_blank" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:shreevarsha80@gmail.com" title="Email" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+      <div class="footer-copyright">
+        © 2025 Shree Varsha V K
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       5. MODAL DIALOGS (About Me & ProtoSem Detail Modal)
+       ======================================================================== -->
+  <!-- About Me Modal -->
   <div id="about-me-modal" class="editorial-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="about-modal-name">
     <div class="editorial-modal-window p-8 sm:p-12">
       <button id="close-about-modal-btn" class="modal-close-btn" title="Close Modal" aria-label="Close profile modal">
@@ -1142,9 +962,7 @@
     </div>
   </div>
 
-  <!-- ========================================================================
-       7. PROTOSEM WEEK DETAIL MODAL
-       ======================================================================== -->
+  <!-- ProtoSem Detail Modal -->
   <div id="protosem-week-modal" class="editorial-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-proto-title">
     <div class="editorial-modal-window p-8 sm:p-12">
       <button id="close-protosem-modal-btn" class="modal-close-btn" title="Close Modal" aria-label="Close ProtoSem week modal">
@@ -1170,9 +988,7 @@
     </div>
   </div>
 
-  <!-- ========================================================================
-       SCRIPTS: PROTOSEM DATA & SVG BRAIN NEURO-APP
-       ======================================================================== -->
+  <!-- Scripts -->
   <script src="js/protosem-data.js"></script>
   <script src="js/app.js"></script>
 
