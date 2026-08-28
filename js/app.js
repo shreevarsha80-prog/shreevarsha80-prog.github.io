@@ -4,7 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Cinematic Opening Sequence
+  // 1. Cinematic Opening Sequence ("Person -> Mind -> Portfolio")
   const openingScreen = document.getElementById('opening-screen');
   const skipBtn = document.getElementById('opening-skip-btn');
 
@@ -20,9 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
     skipBtn.addEventListener('click', endOpeningSequence);
   }
 
+  // Auto-transition to main screen after 2.4s
   setTimeout(() => {
     endOpeningSequence();
-  }, 2600);
+  }, 2400);
 
   // 2. Navigation Breadcrumb Coordinator
   const breadcrumbCurrent = document.getElementById('breadcrumb-current-section');
@@ -105,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const hotspotElements = document.querySelectorAll('.brain-lobe-hotspot, .brain-satellite-node');
 
   hotspotElements.forEach(elem => {
-    function activateHotspot(e) {
+    function activateHotspot() {
       const id = elem.id;
       const label = elem.getAttribute('data-label');
       const subtitle = elem.getAttribute('data-subtitle');
@@ -115,9 +116,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (brainGroup) brainGroup.classList.add('has-focus');
       elem.classList.add('is-active');
 
-      if (calloutTitle) calloutTitle.innerText = label;
+      if (calloutTitle) calloutTitle.innerHTML = label;
       if (calloutSubtitle) calloutSubtitle.innerText = subtitle;
-      if (calloutCategory) calloutCategory.innerText = id.includes('satellite') ? 'EXPLORE' : 'HOTSPOT';
+      if (calloutCategory) calloutCategory.innerText = id.includes('satellite') ? 'EXPLORE' : 'LOBE HOTSPOT';
       if (calloutDot) calloutDot.style.backgroundColor = color;
       if (calloutCard) calloutCard.style.borderLeftColor = color;
 
@@ -174,12 +175,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isMobile) {
       targetLeft = window.innerWidth / 2;
-      targetTop = window.innerHeight - 150;
+      targetTop = window.innerHeight - 160;
       calloutBadge.style.left = `${targetLeft}px`;
       calloutBadge.style.top = `${targetTop}px`;
       calloutBadge.style.transform = 'translateX(-50%)';
     } else {
-      targetLeft = Math.max(20, Math.min(window.innerWidth - 300, screenX + anchor.calloutOffset.x * scaleX));
+      targetLeft = Math.max(20, Math.min(window.innerWidth - 320, screenX + anchor.calloutOffset.x * scaleX));
       targetTop = Math.max(80, Math.min(window.innerHeight - 180, screenY + anchor.calloutOffset.y * scaleY));
       calloutBadge.style.left = `${targetLeft}px`;
       calloutBadge.style.top = `${targetTop}px`;
@@ -199,14 +200,29 @@ document.addEventListener('DOMContentLoaded', () => {
         d="M ${anchor.x} ${anchor.y} Q ${midX} ${midY}, ${endSvgX} ${endSvgY}" 
         fill="none" 
         stroke="${color}" 
-        stroke-width="1.8" 
+        stroke-width="2" 
         stroke-dasharray="5 3" 
         stroke-linecap="round"
-        opacity="0.85"
+        opacity="0.9"
       />
-      <circle cx="${anchor.x}" cy="${anchor.y}" r="4" fill="${color}" />
-      <circle cx="${endSvgX}" cy="${endSvgY}" r="3" fill="${color}" />
+      <circle cx="${anchor.x}" cy="${anchor.y}" r="4.5" fill="${color}" />
+      <circle cx="${endSvgX}" cy="${endSvgY}" r="3.5" fill="${color}" />
     `;
+  }
+
+  // Gentle 3D Cursor Parallax Tilt on Central Brain
+  const brainWrapper = document.querySelector('.brain-svg-wrapper');
+  if (brainWrapper && brainGroup) {
+    brainWrapper.addEventListener('mousemove', (e) => {
+      const rect = brainWrapper.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      brainGroup.style.transform = `perspective(1000px) rotateY(${x * 8}deg) rotateX(${-y * 6}deg)`;
+    });
+
+    brainWrapper.addEventListener('mouseleave', () => {
+      brainGroup.style.transform = 'none';
+    });
   }
 
   // 5. Top-Left Profile Anchor & About Me Modal
@@ -242,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
     weeksGridContainer.innerHTML = filtered.map(item => {
       const weekPad = item.week < 10 ? `0${item.week}` : `${item.week}`;
       return `
-        <div class="week-journal-card" onclick="openProtoSemModal(${item.week})" role="button" tabindex="0">
+        <div class="week-journal-card" onclick="openProtoSemModal(${item.week})" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ') openProtoSemModal(${item.week})">
           <div class="week-card-top">
             <span class="week-phase-tag">PHASE 0${item.phase}</span>
             <span class="week-card-num">#W${weekPad}</span>
