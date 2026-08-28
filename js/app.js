@@ -1,31 +1,10 @@
 /**
  * APPLICATION COORDINATOR — Shree Varsha V K Portfolio
- * Pure Editorial Neuro-Navigation System & Inline SVG Brain Hotspots
+ * 3D Interactive Mind & Brain Navigation Matching Screenshot Design
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Cinematic Opening Sequence ("Person -> Mind -> Portfolio")
-  const openingScreen = document.getElementById('opening-screen');
-  const skipBtn = document.getElementById('opening-skip-btn');
-
-  function endOpeningSequence() {
-    if (!openingScreen) return;
-    openingScreen.classList.add('fade-out');
-    setTimeout(() => {
-      openingScreen.style.display = 'none';
-    }, 800);
-  }
-
-  if (skipBtn) {
-    skipBtn.addEventListener('click', endOpeningSequence);
-  }
-
-  // Auto-transition to main screen after 2.4s
-  setTimeout(() => {
-    endOpeningSequence();
-  }, 2400);
-
-  // 2. Navigation Breadcrumb Coordinator
+  // 1. Navigation Breadcrumb Coordinator
   const breadcrumbCurrent = document.getElementById('breadcrumb-current-section');
 
   function updateBreadcrumbs(sectionName) {
@@ -34,40 +13,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 3. Section View Controller
-  const brainStageView = document.getElementById('brain-stage-view');
-  const portfolioContentView = document.getElementById('portfolio-content-view');
+  // 2. Section Navigation & Scroll Controller
   const stickyBackBar = document.getElementById('sticky-back-bar');
 
-  function openSectionView(sectionId, sectionDisplayName) {
-    if (!portfolioContentView || !brainStageView) return;
-
+  function navigateToSection(sectionId, sectionDisplayName) {
     updateBreadcrumbs(sectionDisplayName || sectionId);
 
-    // Hide brain stage & reveal content
-    brainStageView.classList.add('stage-hidden');
-    portfolioContentView.classList.add('view-active');
-    if (stickyBackBar) stickyBackBar.style.display = 'flex';
-
-    // Scroll to specific section
     const targetSection = document.getElementById(sectionId);
     if (targetSection) {
-      setTimeout(() => {
-        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 50);
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (stickyBackBar) stickyBackBar.style.display = 'flex';
     }
   }
 
   function returnToBrainHome() {
-    if (!portfolioContentView || !brainStageView) return;
-
     updateBreadcrumbs('CENTRAL BRAIN');
     window.scrollTo({ top: 0, behavior: 'smooth' });
-
-    portfolioContentView.classList.remove('view-active');
-    brainStageView.classList.remove('stage-hidden');
     if (stickyBackBar) stickyBackBar.style.display = 'none';
   }
 
@@ -78,154 +39,146 @@ document.addEventListener('DOMContentLoaded', () => {
   if (backToBrainBtn) backToBrainBtn.addEventListener('click', returnToBrainHome);
   if (headerBrainBtn) headerBrainBtn.addEventListener('click', returnToBrainHome);
 
-  // =========================================================================
-  // 4. INLINE SVG BRAIN HOTSPOT INTERACTION & DYNAMIC CURVED ARROWS
-  // =========================================================================
-  const svg = document.getElementById('anatomical-brain-svg');
-  const brainGroup = document.getElementById('interactive-brain-group');
-  const arrowGroup = document.getElementById('dynamic-callout-arrow-group');
-  const calloutBadge = document.getElementById('brain-hover-callout');
-  const calloutCategory = document.getElementById('callout-category');
-  const calloutTitle = document.getElementById('callout-title');
-  const calloutSubtitle = document.getElementById('callout-subtitle');
-  const calloutDot = document.querySelector('.callout-dot');
-  const calloutCard = document.querySelector('.callout-card');
-
-  // Lobe Anchor Points on SVG Coordinate Plane (1000x700 viewBox)
-  const lobeAnchors = {
-    'region-frontal': { x: 380, y: 220, calloutOffset: { x: -300, y: -90 } },
-    'region-parietal': { x: 620, y: 190, calloutOffset: { x: 260, y: -110 } },
-    'region-occipital': { x: 740, y: 380, calloutOffset: { x: 280, y: 40 } },
-    'region-temporal': { x: 420, y: 410, calloutOffset: { x: -310, y: 80 } },
-    'region-hippocampus': { x: 570, y: 260, calloutOffset: { x: 260, y: -20 } },
-    'region-cerebellum': { x: 570, y: 530, calloutOffset: { x: -280, y: 160 } },
-    'satellite-research': { x: 160, y: 140, calloutOffset: { x: -20, y: -120 } },
-    'satellite-memorea': { x: 830, y: 490, calloutOffset: { x: 40, y: 80 } }
-  };
-
-  const hotspotElements = document.querySelectorAll('.brain-lobe-hotspot, .brain-satellite-node');
-
-  hotspotElements.forEach(elem => {
-    function activateHotspot() {
-      const id = elem.id;
-      const label = elem.getAttribute('data-label');
-      const subtitle = elem.getAttribute('data-subtitle');
-      const target = elem.getAttribute('data-target');
-      const color = elem.getAttribute('data-color') || '#C85A32';
-
-      if (brainGroup) brainGroup.classList.add('has-focus');
-      elem.classList.add('is-active');
-
-      if (calloutTitle) calloutTitle.innerHTML = label;
-      if (calloutSubtitle) calloutSubtitle.innerText = subtitle;
-      if (calloutCategory) calloutCategory.innerText = id.includes('satellite') ? 'EXPLORE' : 'LOBE HOTSPOT';
-      if (calloutDot) calloutDot.style.backgroundColor = color;
-      if (calloutCard) calloutCard.style.borderLeftColor = color;
-
-      positionCalloutAndArrow(id, color);
-
-      if (calloutBadge) {
-        calloutBadge.onclick = () => {
-          openSectionView(target, label);
-        };
-      }
+  // Monitor Scroll for Sticky Back to Brain
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      if (stickyBackBar) stickyBackBar.style.display = 'flex';
+    } else {
+      if (stickyBackBar) stickyBackBar.style.display = 'none';
+      updateBreadcrumbs('CENTRAL BRAIN');
     }
-
-    function deactivateHotspot() {
-      if (brainGroup) brainGroup.classList.remove('has-focus');
-      elem.classList.remove('is-active');
-      if (calloutBadge) calloutBadge.style.display = 'none';
-      if (arrowGroup) arrowGroup.innerHTML = '';
-    }
-
-    function clickHotspot() {
-      const label = elem.getAttribute('data-label');
-      const target = elem.getAttribute('data-target');
-      deactivateHotspot();
-      openSectionView(target, label);
-    }
-
-    elem.addEventListener('mouseenter', activateHotspot);
-    elem.addEventListener('mouseleave', deactivateHotspot);
-    elem.addEventListener('focus', activateHotspot);
-    elem.addEventListener('blur', deactivateHotspot);
-    elem.addEventListener('click', clickHotspot);
-    elem.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        clickHotspot();
-      }
-    });
   });
 
-  function positionCalloutAndArrow(lobeId, color) {
-    if (!svg || !calloutBadge || !arrowGroup) return;
+  // 3. Dynamic Connector Lines & Synapse-Card Sync
+  const svgLinesLayer = document.getElementById('connector-lines-svg');
+  const stage = document.querySelector('.brain-interactive-stage');
 
-    const anchor = lobeAnchors[lobeId] || { x: 500, y: 350, calloutOffset: { x: 250, y: -50 } };
-    const svgRect = svg.getBoundingClientRect();
+  const cardSynapseMap = [
+    { cardId: 'card-social', synapseId: 'synapse-social', lineId: 'connector-line-social', target: 'social', label: 'SOCIAL MIND' },
+    { cardId: 'card-thinking', synapseId: 'synapse-thinking', lineId: 'connector-line-thinking', target: 'about', label: 'THINKING LAB' },
+    { cardId: 'card-growth', synapseId: 'synapse-growth', lineId: 'connector-line-growth', target: 'journey', label: 'GROWTH ZONE' },
+    { cardId: 'card-learning', synapseId: 'synapse-learning', lineId: 'connector-line-learning', target: 'academics', label: 'LEARNING CENTER' },
+    { cardId: 'card-idea', synapseId: 'synapse-idea', lineId: 'connector-line-idea', target: 'skills', label: 'IDEA STUDIO' },
+    { cardId: 'card-future', synapseId: 'synapse-future', lineId: 'connector-line-future', target: 'ventures', label: 'FUTURE PATH' }
+  ];
 
-    const scaleX = svgRect.width / 1000;
-    const scaleY = svgRect.height / 700;
+  function updateDynamicConnectors() {
+    if (!stage || !svgLinesLayer || window.innerWidth <= 1100) return;
 
-    const screenX = svgRect.left + anchor.x * scaleX;
-    const screenY = svgRect.top + anchor.y * scaleY;
+    const stageRect = stage.getBoundingClientRect();
+    svgLinesLayer.setAttribute('viewBox', `0 0 ${stageRect.width} ${stageRect.height}`);
 
-    const isMobile = window.innerWidth < 768;
-    let targetLeft, targetTop;
+    cardSynapseMap.forEach(item => {
+      const card = document.getElementById(item.cardId);
+      const synapse = document.getElementById(item.synapseId);
+      const lineGroup = document.getElementById(item.lineId);
 
-    if (isMobile) {
-      targetLeft = window.innerWidth / 2;
-      targetTop = window.innerHeight - 160;
-      calloutBadge.style.left = `${targetLeft}px`;
-      calloutBadge.style.top = `${targetTop}px`;
-      calloutBadge.style.transform = 'translateX(-50%)';
-    } else {
-      targetLeft = Math.max(20, Math.min(window.innerWidth - 320, screenX + anchor.calloutOffset.x * scaleX));
-      targetTop = Math.max(80, Math.min(window.innerHeight - 180, screenY + anchor.calloutOffset.y * scaleY));
-      calloutBadge.style.left = `${targetLeft}px`;
-      calloutBadge.style.top = `${targetTop}px`;
-      calloutBadge.style.transform = 'none';
-    }
+      if (!card || !synapse || !lineGroup) return;
 
-    calloutBadge.style.display = 'block';
+      const cardRect = card.getBoundingClientRect();
+      const synCircle = synapse.querySelector('.synapse-core') || synapse.querySelector('circle');
+      const synRect = synCircle ? synCircle.getBoundingClientRect() : synapse.getBoundingClientRect();
 
-    const endSvgX = (targetLeft + 120 - svgRect.left) / scaleX;
-    const endSvgY = (targetTop + 40 - svgRect.top) / scaleY;
+      // Synapse Center relative to Stage
+      const sx = synRect.left + synRect.width / 2 - stageRect.left;
+      const sy = synRect.top + synRect.height / 2 - stageRect.top;
 
-    const midX = (anchor.x + endSvgX) / 2;
-    const midY = Math.min(anchor.y, endSvgY) - 35;
+      const isLeft = cardRect.left < stageRect.left + stageRect.width / 2;
+      
+      // Card target point
+      const cx = isLeft ? (cardRect.right - stageRect.left) : (cardRect.left - stageRect.left);
+      const cy = cardRect.top + cardRect.height / 2 - stageRect.top;
 
-    arrowGroup.innerHTML = `
-      <path 
-        d="M ${anchor.x} ${anchor.y} Q ${midX} ${midY}, ${endSvgX} ${endSvgY}" 
-        fill="none" 
-        stroke="${color}" 
-        stroke-width="2" 
-        stroke-dasharray="5 3" 
-        stroke-linecap="round"
-        opacity="0.9"
-      />
-      <circle cx="${anchor.x}" cy="${anchor.y}" r="4.5" fill="${color}" />
-      <circle cx="${endSvgX}" cy="${endSvgY}" r="3.5" fill="${color}" />
-    `;
+      // Calculate elbow bend
+      const midX = isLeft ? (sx - 40) : (sx + 40);
+      const elbowX = isLeft ? (cx + 30) : (cx - 30);
+
+      const pathData = `M ${sx} ${sy} L ${midX} ${sy} L ${elbowX} ${cy} L ${cx} ${cy}`;
+
+      const pathElem = lineGroup.querySelector('.connector-line');
+      const dotElem = lineGroup.querySelector('.connector-dot');
+
+      if (pathElem) pathElem.setAttribute('d', pathData);
+      if (dotElem) {
+        dotElem.setAttribute('cx', sx);
+        dotElem.setAttribute('cy', sy);
+      }
+    });
   }
 
+  // Initial connector update & on resize
+  setTimeout(updateDynamicConnectors, 100);
+  window.addEventListener('resize', updateDynamicConnectors);
+
+  // Bind Card & Synapse Interactions
+  cardSynapseMap.forEach(item => {
+    const card = document.getElementById(item.cardId);
+    const synapse = document.getElementById(item.synapseId);
+    const lineGroup = document.getElementById(item.lineId);
+
+    function activatePair() {
+      if (card) card.classList.add('is-hovered');
+      if (synapse) synapse.classList.add('is-active');
+      if (lineGroup) lineGroup.classList.add('active');
+    }
+
+    function deactivatePair() {
+      if (card) card.classList.remove('is-hovered');
+      if (synapse) synapse.classList.remove('is-active');
+      if (lineGroup) lineGroup.classList.remove('active');
+    }
+
+    function triggerNav() {
+      navigateToSection(item.target, item.label);
+    }
+
+    if (card) {
+      card.addEventListener('mouseenter', activatePair);
+      card.addEventListener('mouseleave', deactivatePair);
+      card.addEventListener('focus', activatePair);
+      card.addEventListener('blur', deactivatePair);
+      card.addEventListener('click', triggerNav);
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          triggerNav();
+        }
+      });
+    }
+
+    if (synapse) {
+      synapse.addEventListener('mouseenter', activatePair);
+      synapse.addEventListener('mouseleave', deactivatePair);
+      synapse.addEventListener('focus', activatePair);
+      synapse.addEventListener('blur', deactivatePair);
+      synapse.addEventListener('click', triggerNav);
+      synapse.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          triggerNav();
+        }
+      });
+    }
+  });
+
   // Gentle 3D Cursor Parallax Tilt on Central Brain
-  const brainWrapper = document.querySelector('.brain-svg-wrapper');
-  if (brainWrapper && brainGroup) {
-    brainWrapper.addEventListener('mousemove', (e) => {
-      const rect = brainWrapper.getBoundingClientRect();
+  const brainVisualWrap = document.querySelector('.brain-center-visual-wrap');
+  const brainGroup = document.querySelector('.sculpture-float-group');
+
+  if (brainVisualWrap && brainGroup) {
+    brainVisualWrap.addEventListener('mousemove', (e) => {
+      const rect = brainVisualWrap.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width - 0.5;
       const y = (e.clientY - rect.top) / rect.height - 0.5;
-      brainGroup.style.transform = `perspective(1000px) rotateY(${x * 8}deg) rotateX(${-y * 6}deg)`;
+      brainGroup.style.transform = `perspective(1000px) rotateY(${x * 10}deg) rotateX(${-y * 8}deg)`;
     });
 
-    brainWrapper.addEventListener('mouseleave', () => {
+    brainVisualWrap.addEventListener('mouseleave', () => {
       brainGroup.style.transform = 'none';
     });
   }
 
-  // 5. Top-Left Profile Anchor & About Me Modal
+  // 4. Top-Left Profile Anchor & About Me Modal
   const profileAnchorBtn = document.getElementById('profile-anchor-btn');
   const aboutMeModal = document.getElementById('about-me-modal');
   const closeAboutModalBtn = document.getElementById('close-about-modal-btn');
@@ -242,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. ProtoSem 20-Week Journal Timeline Renderer
+  // 5. ProtoSem 20-Week Journal Timeline Renderer
   const weeksGridContainer = document.getElementById('protosem-weeks-grid');
   const protoModal = document.getElementById('protosem-week-modal');
   const closeProtoModalBtn = document.getElementById('close-protosem-modal-btn');
@@ -309,15 +262,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial ProtoSem Render
   renderProtoSemGrid('all');
 
-  // 7. Global Keyboard Shortcuts (Escape to Close Modals / Return to Brain)
+  // 6. Global Keyboard Shortcuts
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       if (aboutMeModal && aboutMeModal.classList.contains('modal-open')) {
         aboutMeModal.classList.remove('modal-open');
       } else if (protoModal && protoModal.classList.contains('modal-open')) {
         protoModal.classList.remove('modal-open');
-      } else if (portfolioContentView && portfolioContentView.classList.contains('view-active')) {
-        returnToBrainHome();
       }
     }
   });
