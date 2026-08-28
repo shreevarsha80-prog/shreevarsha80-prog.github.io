@@ -24,8 +24,8 @@
        ======================================================================== -->
   <div id="opening-screen">
     <div class="opening-stage">
-      <div class="opening-photo-frame">
-        <img src="assets/profile.jpg" alt="Shree Varsha V K" onerror="this.src='profile.jpg'">
+      <div class="opening-monogram-frame">
+        <div class="opening-monogram font-serif">SV</div>
       </div>
       <div class="opening-meta">
         <h1 class="opening-name">Shree Varsha V K</h1>
@@ -50,8 +50,8 @@
   <header id="site-header">
     <!-- Top-Left Clickable Profile Anchor -->
     <button id="profile-anchor-btn" class="profile-anchor-wrap" title="View Shree Varsha's Profile">
-      <div class="profile-thumb">
-        <img src="assets/profile.jpg" alt="Shree Varsha V K" onerror="this.src='profile.jpg'">
+      <div class="profile-monogram-thumb font-serif">
+        SV
       </div>
       <div class="profile-text-block">
         <div class="profile-name">Shree Varsha V K</div>
@@ -194,7 +194,7 @@
 
         <!-- Ambient Neural Synaptic Connecting Filaments (Background) -->
         <g class="neural-filaments" opacity="0.35" stroke="#DDD5C8" stroke-width="1.2" stroke-dasharray="3 3" fill="none">
-          <path d="M 280 220 Q 220 180, 160 160" />
+          <path d="M 280 220 Q 220 180, 160 140" />
           <path d="M 680 430 Q 760 480, 840 510" />
           <path d="M 460 300 Q 520 220, 580 180" />
           <path d="M 330 380 Q 240 440, 180 500" />
@@ -226,7 +226,6 @@
 
           <!-- 1. FRONTAL LOBE (THINKING -> About Me) -->
           <g id="region-frontal" class="brain-lobe-hotspot" data-label="THINKING" data-subtitle="Decisions, self-reflection & personal philosophy" data-target="about" data-color="#8E82A6" tabindex="0" role="button" aria-label="Thinking Region: About Me">
-            <!-- Clay Base Layer with Convolutions -->
             <path class="lobe-base" fill="url(#base-clay-grad)" d="
               M 270 330
               C 255 265, 265 205, 295 165
@@ -235,7 +234,6 @@
               C 415 340, 360 365, 310 365
               C 285 365, 275 350, 270 330 Z
             " />
-            <!-- Tint Overlay Layer -->
             <path class="lobe-tint" fill="url(#tint-frontal)" d="
               M 270 330
               C 255 265, 265 205, 295 165
@@ -244,7 +242,6 @@
               C 415 340, 360 365, 310 365
               C 285 365, 275 350, 270 330 Z
             " />
-            <!-- Frontal Gyri / Sulci Folds & Convolutions -->
             <g class="gyri-strokes" stroke="#C5B8A5" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.85">
               <path d="M 290 220 C 320 200, 365 210, 395 185 C 420 165, 455 160, 480 140" />
               <path d="M 275 270 C 305 255, 340 270, 375 250 C 405 235, 440 240, 465 215" />
@@ -401,22 +398,18 @@
         <!-- ==============================================================
              7 & 8. SATELLITE NODES (Curiosity & Research, Memorea Venture)
              ============================================================== -->
-        <!-- Satellite 1: CURIOSITY & RESEARCH (Prefrontal Superior Filament Node) -->
+        <!-- Satellite 1: CURIOSITY & RESEARCH -->
         <g id="satellite-research" class="brain-satellite-node" data-label="CURIOSITY & RESEARCH" data-subtitle="Psychology research methods, cognitive inquiries & behavioral nudges" data-target="research" data-color="#B87D8A" tabindex="0" role="button" aria-label="Curiosity and Research Node">
-          <!-- Connection Neural Tendril -->
           <path d="M 330 120 Q 220 110, 160 140" stroke="#B87D8A" stroke-width="1.8" stroke-dasharray="4 3" fill="none" opacity="0.6" />
-          <!-- Node Clay Core & Halo -->
           <circle cx="160" cy="140" r="32" fill="url(#base-clay-grad)" stroke="#D6CBB9" stroke-width="2" filter="url(#clay-shadow)" />
           <circle cx="160" cy="140" r="32" fill="url(#tint-research)" />
           <circle cx="160" cy="140" r="22" stroke="#B87D8A" stroke-width="1.5" stroke-dasharray="3 2" fill="none" opacity="0.75" />
           <text x="160" y="144" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#44403C" letter-spacing="1">RESEARCH</text>
         </g>
 
-        <!-- Satellite 2: MEMOREA VENTURE (Entrepreneurial Association Node) -->
+        <!-- Satellite 2: MEMOREA VENTURE -->
         <g id="satellite-memorea" class="brain-satellite-node" data-label="MEMOREA VENTURE" data-subtitle="Founder / Entrepreneurship — 'Memories, made to wear'" data-target="ventures" data-color="#D8A878" tabindex="0" role="button" aria-label="Memorea Venture Node">
-          <!-- Connection Neural Tendril -->
           <path d="M 680 480 Q 770 510, 830 490" stroke="#D8A878" stroke-width="1.8" stroke-dasharray="4 3" fill="none" opacity="0.6" />
-          <!-- Node Clay Core & Halo -->
           <circle cx="830" cy="490" r="34" fill="url(#base-clay-grad)" stroke="#D6CBB9" stroke-width="2" filter="url(#clay-shadow)" />
           <circle cx="830" cy="490" r="34" fill="url(#tint-memorea)" />
           <circle cx="830" cy="490" r="24" stroke="#D8A878" stroke-width="1.5" stroke-dasharray="3 2" fill="none" opacity="0.75" />
@@ -433,7 +426,7 @@
         <div class="callout-card">
           <div class="callout-header">
             <span class="callout-dot"></span>
-            <span id="callout-category" class="callout-category-tag">REGION</span>
+            <span id="callout-category" class="callout-category-tag">HOTSPOT</span>
           </div>
           <h3 id="callout-title" class="callout-title font-serif">THINKING</h3>
           <p id="callout-subtitle" class="callout-subtitle">Decisions, self-reflection & personal philosophy</p>
@@ -455,7 +448,7 @@
   </main>
 
   <!-- ========================================================================
-       5. PORTFOLIO CONTENT VIEWS (100% Authentic Content Preserved)
+       5. PORTFOLIO CONTENT VIEWS (Pure Editorial Layout — Zero Images)
        ======================================================================== -->
   <div id="portfolio-content-view">
     
@@ -482,8 +475,8 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div class="lg:col-span-4">
             <div class="editorial-card text-center">
-              <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-2 border-border shadow-sm mb-6">
-                <img src="assets/profile.jpg" alt="Shree Varsha V K" class="w-full h-full object-cover">
+              <div class="w-24 h-24 mx-auto rounded-full bg-ivory-200 border-2 border-border flex items-center justify-center font-serif text-3xl text-terracotta font-bold mb-6 shadow-sm">
+                SV
               </div>
               <h3 class="font-serif text-2xl font-bold text-charcoal-900">Shree Varsha V K</h3>
               <p class="text-xs font-mono text-terracotta uppercase tracking-wider mt-1">B.Sc. Psychology Undergraduate</p>
@@ -495,8 +488,8 @@
                 <a href="resume.html" class="hover:text-terracotta" title="Resume"><i class="fa-regular fa-file-lines text-lg"></i></a>
               </div>
 
-              <div class="mt-6">
-                <img src="assets/signature.jpg" alt="Signature" class="h-10 mx-auto opacity-75">
+              <div class="mt-6 pt-4 border-t border-border">
+                <span class="font-handwriting text-xl text-charcoal-700">Shree Varsha V K</span>
               </div>
             </div>
           </div>
@@ -576,66 +569,65 @@
             </div>
           </div>
 
-          <!-- Major Social Projects & Campaigns -->
+          <!-- Major Social Projects & Key Initiatives -->
           <div class="editorial-card">
             <h4 class="font-serif text-xl font-bold text-charcoal-900 mb-4">Major Campaigns & Collaborative Initiatives</h4>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="p-4 bg-ivory-200 border border-border">
-                <div class="text-xs font-mono text-terracotta font-semibold uppercase mb-1">Collaborative Campaign</div>
-                <h5 class="font-serif text-lg font-bold text-charcoal-900">Microcosm & K-GEO Food Waste Awareness</h5>
-                <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
-                  Contributed to a food-waste awareness campaign in collaboration with Microcosm and K-GEO. Designed behavioral nudge posters, tracked cafeteria waste metrics, and organized interactive student engagement booths.
-                </p>
-                <div class="mt-4 flex items-center gap-3">
-                  <img src="assets/qrcode_foodwaste.png" alt="Food Waste QR Campaign" class="w-14 h-14 border border-border p-1 bg-white cursor-pointer" onclick="openLightbox('assets/qrcode_foodwaste.png', 'International Food Waste Awareness Day Campaign QR Code')">
-                  <span class="text-[11px] text-charcoal-500 font-mono">Interactive Campaign QR Asset</span>
+              <div class="p-5 bg-ivory-200 border border-border flex flex-col justify-between">
+                <div>
+                  <div class="text-xs font-mono text-terracotta font-semibold uppercase mb-1">Collaborative Campaign</div>
+                  <h5 class="font-serif text-xl font-bold text-charcoal-900">Microcosm & K-GEO Food Waste Awareness</h5>
+                  <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
+                    Contributed to a food-waste awareness campaign in collaboration with Microcosm and K-GEO. Designed behavioral nudge posters, tracked cafeteria waste metrics, and organized interactive student engagement booths across dining halls.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-border flex items-center justify-between text-xs text-charcoal-500 font-mono">
+                  <span>Target: Zero Cafeteria Waste</span>
+                  <span class="text-terracotta font-semibold">Campus Nudge Initiative</span>
                 </div>
               </div>
 
-              <div class="p-4 bg-ivory-200 border border-border">
-                <div class="text-xs font-mono text-terracotta font-semibold uppercase mb-1">Community Action</div>
-                <h5 class="font-serif text-lg font-bold text-charcoal-900">Youth Leadership & Mentorship Circles</h5>
-                <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
-                  Organized structured peer-support forums, debate circles, and interactive storytelling workshops to foster open dialogue on psychological well-being, empathy, and social responsibility.
-                </p>
-                <div class="mt-4">
-                  <span class="inline-block px-2.5 py-1 bg-white border border-border text-[11px] font-mono text-charcoal-700">Empathy In Action</span>
+              <div class="p-5 bg-ivory-200 border border-border flex flex-col justify-between">
+                <div>
+                  <div class="text-xs font-mono text-terracotta font-semibold uppercase mb-1">Community Action</div>
+                  <h5 class="font-serif text-xl font-bold text-charcoal-900">Youth Leadership & Mentorship Circles</h5>
+                  <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
+                    Organized structured peer-support forums, debate circles, and interactive storytelling workshops to foster open dialogue on psychological well-being, empathy, and social responsibility among incoming cohorts.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-border flex items-center justify-between text-xs text-charcoal-500 font-mono">
+                  <span>Focus: Mental Well-being</span>
+                  <span class="text-terracotta font-semibold">Peer Support</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Authentic Event Photo Gallery -->
-          <div>
-            <h4 class="font-serif text-xl font-bold text-charcoal-900 mb-2">Social Vertical Gallery</h4>
-            <p class="text-xs text-charcoal-600 mb-4">Moments from campus governance, community drives, and team collaborations.</p>
-            
-            <div class="photo-gallery-grid">
-              <div class="gallery-item" onclick="openLightbox('assets/social_event_1.jpg', 'Social Vertical Leadership & Student Assembly')">
-                <img src="assets/social_event_1.jpg" alt="Social Vertical Event">
-                <div class="gallery-caption font-serif">Campus Assembly & Leadership Briefing</div>
-              </div>
-              <div class="gallery-item" onclick="openLightbox('assets/social_event_2.jpg', 'Community Engagement & Outreach Session')">
-                <img src="assets/social_event_2.jpg" alt="Community Engagement">
-                <div class="gallery-caption font-serif">Community Outreach & Interactive Forum</div>
-              </div>
-              <div class="gallery-item" onclick="openLightbox('assets/social_event_3.jpg', 'Student Council Coordination & Planning')">
-                <img src="assets/social_event_3.jpg" alt="Student Council">
-                <div class="gallery-caption font-serif">Student Council Strategy Session</div>
-              </div>
-              <div class="gallery-item" onclick="openLightbox('assets/social_event_4.jpg', 'Social Impact Campaign Gathering')">
-                <img src="assets/social_event_4.jpg" alt="Social Impact">
-                <div class="gallery-caption font-serif">Youth Impact Campaign Milestone</div>
-              </div>
-              <div class="gallery-item" onclick="openLightbox('assets/social_event_5.jpg', 'Department Presentation & Workshop')">
-                <img src="assets/social_event_5.jpg" alt="Workshop">
-                <div class="gallery-caption font-serif">Psychology & Behavior Workshop</div>
-              </div>
-              <div class="gallery-item" onclick="openLightbox('assets/social_event_6.jpg', 'Collaborative Team Meet')">
-                <img src="assets/social_event_6.jpg" alt="Team Meet">
-                <div class="gallery-caption font-serif">Vertical Planning & Team Synchronization</div>
-              </div>
+          <!-- Structured Governance & Engagement Framework -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="editorial-card">
+              <span class="text-xs font-mono text-terracotta uppercase font-bold">Initiative 01</span>
+              <h5 class="font-serif text-lg font-bold text-charcoal-900 mt-1 mb-2">The Green Shift E-Waste Drive</h5>
+              <p class="text-xs text-charcoal-600 leading-relaxed">
+                Spearheaded responsible campus-wide electronic waste collection points and educational awareness on circular electronics life-cycles.
+              </p>
+            </div>
+
+            <div class="editorial-card">
+              <span class="text-xs font-mono text-teal uppercase font-bold">Initiative 02</span>
+              <h5 class="font-serif text-lg font-bold text-charcoal-900 mt-1 mb-2">Community Chapter Drives</h5>
+              <p class="text-xs text-charcoal-600 leading-relaxed">
+                Coordinated outreach drives supporting children, elderly residential care communities, and sanitary support teams across Coimbatore.
+              </p>
+            </div>
+
+            <div class="editorial-card">
+              <span class="text-xs font-mono text-lavender uppercase font-bold">Initiative 03</span>
+              <h5 class="font-serif text-lg font-bold text-charcoal-900 mt-1 mb-2">Social Policy & Representation</h5>
+              <p class="text-xs text-charcoal-600 leading-relaxed">
+                Represented undergraduate students in student council forums, translating feedback into structured social wellness programs.
+              </p>
             </div>
           </div>
         </div>
@@ -752,8 +744,9 @@
         <div class="editorial-card mb-8">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div class="lg:col-span-4 text-center">
-              <div class="p-6 bg-ivory-200 border border-border inline-block">
-                <img src="assets/memorea_logo.png" alt="Memorea Logo" class="w-44 mx-auto cursor-pointer" onclick="openLightbox('assets/memorea_logo.png', 'Memorea Brand Logo')">
+              <div class="p-6 bg-ivory-200 border border-border inline-block text-center">
+                <span class="font-serif text-3xl font-bold tracking-widest text-charcoal-900 block">MEMOREA</span>
+                <span class="text-[10px] font-mono text-terracotta uppercase tracking-widest mt-1 block">Est. 2025</span>
               </div>
               <p class="text-xs font-mono text-terracotta uppercase tracking-widest font-semibold mt-3">Founder & Creator</p>
             </div>
@@ -764,37 +757,72 @@
                 Memorea is a personalized lifestyle accessories and keepsakes venture built around transforming personal memories, milestone dates, and emotional connections into wearable, artistic artifacts.
               </p>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                <div class="p-3 bg-ivory-200 border border-border">
+                <div class="p-4 bg-ivory-200 border border-border">
                   <span class="text-xs font-bold text-charcoal-900 block mb-1">Product Crafting</span>
-                  <span class="text-xs text-charcoal-600">Handcrafted bespoke keychains, bracelets, photo pendants, and memory capsules.</span>
+                  <span class="text-xs text-charcoal-600">Handcrafted bespoke keychains, bracelets, personalized charms, and memory capsules.</span>
                 </div>
-                <div class="p-3 bg-ivory-200 border border-border">
+                <div class="p-4 bg-ivory-200 border border-border">
                   <span class="text-xs font-bold text-charcoal-900 block mb-1">Brand & Marketing</span>
-                  <span class="text-xs text-charcoal-600">Instagram community building, visual storytelling, and direct consumer fulfillment.</span>
+                  <span class="text-xs text-charcoal-600">Instagram community building, emotional storytelling, pricing strategy, and direct customer fulfillment.</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Product Gallery Grid -->
-        <h4 class="font-serif text-xl font-bold text-charcoal-900 mb-4">Venture Showcase & Creations</h4>
-        <div class="photo-gallery-grid">
-          <div class="gallery-item" onclick="openLightbox('assets/memorea_product_1.png', 'Memorea Keepsake Collection 1')">
-            <img src="assets/memorea_product_1.png" alt="Memorea Keepsake">
-            <div class="gallery-caption font-serif">Custom Keepsake Piece 01</div>
+        <!-- Product Line & Offerings Cards -->
+        <h4 class="font-serif text-xl font-bold text-charcoal-900 mb-4">Curated Product Line & Offerings</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="editorial-card">
+            <div class="w-10 h-10 rounded bg-terracotta/10 text-terracotta flex items-center justify-center mb-3 font-mono font-bold text-xs">
+              01
+            </div>
+            <h5 class="font-serif text-lg font-bold text-charcoal-900">Personalized Charms</h5>
+            <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
+              Custom engraved date tags and alphanumeric charms designed to immortalize personal milestones.
+            </p>
+            <div class="mt-4 pt-3 border-t border-border text-[11px] font-mono text-terracotta font-semibold">
+              Handcrafted Detail
+            </div>
           </div>
-          <div class="gallery-item" onclick="openLightbox('assets/memorea_product_2.png', 'Memorea Keepsake Collection 2')">
-            <img src="assets/memorea_product_2.png" alt="Memorea Keepsake">
-            <div class="gallery-caption font-serif">Custom Keepsake Piece 02</div>
+
+          <div class="editorial-card">
+            <div class="w-10 h-10 rounded bg-teal/10 text-teal flex items-center justify-center mb-3 font-mono font-bold text-xs">
+              02
+            </div>
+            <h5 class="font-serif text-lg font-bold text-charcoal-900">Bespoke Bracelets</h5>
+            <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
+              Minimalist braided cords and semi-precious stone bands tailored to sentimental color palettes.
+            </p>
+            <div class="mt-4 pt-3 border-t border-border text-[11px] font-mono text-teal font-semibold">
+              Everyday Wear
+            </div>
           </div>
-          <div class="gallery-item" onclick="openLightbox('assets/memorea_product_3.png', 'Memorea Keepsake Collection 3')">
-            <img src="assets/memorea_product_3.png" alt="Memorea Keepsake">
-            <div class="gallery-caption font-serif">Custom Keepsake Piece 03</div>
+
+          <div class="editorial-card">
+            <div class="w-10 h-10 rounded bg-lavender/10 text-lavender flex items-center justify-center mb-3 font-mono font-bold text-xs">
+              03
+            </div>
+            <h5 class="font-serif text-lg font-bold text-charcoal-900">Memory Keepsakes</h5>
+            <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
+              Resin capsules and micro-photo lockets preserving tangible tokens and shared memories.
+            </p>
+            <div class="mt-4 pt-3 border-t border-border text-[11px] font-mono text-lavender font-semibold">
+              Sentimental Design
+            </div>
           </div>
-          <div class="gallery-item" onclick="openLightbox('assets/memorea_product_4.png', 'Memorea Keepsake Collection 4')">
-            <img src="assets/memorea_product_4.png" alt="Memorea Keepsake">
-            <div class="gallery-caption font-serif">Custom Keepsake Piece 04</div>
+
+          <div class="editorial-card">
+            <div class="w-10 h-10 rounded bg-ochre/10 text-ochre flex items-center justify-center mb-3 font-mono font-bold text-xs">
+              04
+            </div>
+            <h5 class="font-serif text-lg font-bold text-charcoal-900">Plushie & Bag Charms</h5>
+            <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
+              Whimsical tactile companions and phone charms combining soft textures with custom hardware.
+            </p>
+            <div class="mt-4 pt-3 border-t border-border text-[11px] font-mono text-ochre font-semibold">
+              Playful Craft
+            </div>
           </div>
         </div>
       </section>
@@ -861,35 +889,49 @@
         <div class="section-banner">
           <div class="section-pretitle">07 / Inquiries & Mindset</div>
           <h2 class="section-title editorial-heading">Curiosity, Research & Reflections</h2>
-          <p class="section-tagline editorial-subheading">"Investigating psychological concepts, experimental posters & personal growth."</p>
+          <p class="section-tagline editorial-subheading">"Investigating psychological concepts, experimental studies & personal growth."</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-8">
-          <!-- Research Poster Feature -->
+          <!-- Research Project Feature 01 -->
           <div class="lg:col-span-6">
-            <div class="editorial-card">
-              <span class="text-xs font-mono text-terracotta uppercase font-semibold">Academic Poster Presentation</span>
-              <h3 class="font-serif text-xl font-bold text-charcoal-900 mt-1 mb-3">Experimental Research Methods</h3>
-              <p class="text-xs text-charcoal-600 mb-4">Poster presentation investigating psychological research designs, variable controls, and hypothesis validation.</p>
-              
-              <div class="overflow-hidden border border-border cursor-pointer" onclick="openLightbox('assets/research_poster.jpg', 'Experimental Research Methods Poster Presentation')">
-                <img src="assets/research_poster.jpg" alt="Research Methods Poster" class="w-full object-cover hover:scale-105 transition-transform duration-500">
+            <div class="editorial-card h-full flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-mono text-terracotta uppercase font-semibold">Academic Study</span>
+                <h3 class="font-serif text-2xl font-bold text-charcoal-900 mt-1 mb-3">Experimental Research Methods</h3>
+                <p class="text-xs text-charcoal-600 mb-4 leading-relaxed">
+                  Investigation into psychological research designs, variable isolation controls, double-blind testing frameworks, and empirical hypothesis validation methodologies.
+                </p>
+                <div class="space-y-2 text-xs text-charcoal-700 pt-2 border-t border-border">
+                  <div><strong>Key Areas:</strong> Quantitative Sampling, Behavioral Observation, Ethics in Psychological Testing.</div>
+                  <div><strong>Outcome:</strong> Structured experimental protocols for validating user interaction nudges.</div>
+                </div>
               </div>
-              <p class="text-[11px] text-charcoal-500 font-mono mt-2 text-center">Click to expand research poster in high resolution</p>
+              <div class="mt-6 pt-4 border-t border-border flex justify-between items-center text-xs font-mono text-charcoal-500">
+                <span>Methodology Framework</span>
+                <span class="text-terracotta font-semibold">Empirical Rigor</span>
+              </div>
             </div>
           </div>
 
-          <!-- Memory Studies Feature -->
+          <!-- Research Project Feature 02 -->
           <div class="lg:col-span-6">
-            <div class="editorial-card">
-              <span class="text-xs font-mono text-teal uppercase font-semibold">Cognitive Psychology Investigation</span>
-              <h3 class="font-serif text-xl font-bold text-charcoal-900 mt-1 mb-3">Memory Models & Semantic Architecture</h3>
-              <p class="text-xs text-charcoal-600 mb-4">Investigating short-term recall, sensory registers, and semantic retention pathways in learning environments.</p>
-              
-              <div class="overflow-hidden border border-border cursor-pointer" onclick="openLightbox('assets/memory_sem2.png', 'Cognitive Psychology Memory Studies')">
-                <img src="assets/memory_sem2.png" alt="Memory Model" class="w-full object-cover hover:scale-105 transition-transform duration-500">
+            <div class="editorial-card h-full flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-mono text-teal uppercase font-semibold">Cognitive Psychology Investigation</span>
+                <h3 class="font-serif text-2xl font-bold text-charcoal-900 mt-1 mb-3">Memory Systems & Cognitive Architecture</h3>
+                <p class="text-xs text-charcoal-600 mb-4 leading-relaxed">
+                  Analyzing multi-store memory models, sensory registers, working memory capacity limitations, and semantic retention pathways in digital and physical environments.
+                </p>
+                <div class="space-y-2 text-xs text-charcoal-700 pt-2 border-t border-border">
+                  <div><strong>Key Areas:</strong> Atkinson-Shiffrin Model, Chunking Strategies, Cognitive Load Theory.</div>
+                  <div><strong>Application:</strong> Designing clutter-free interfaces that minimize customer decision fatigue.</div>
+                </div>
               </div>
-              <p class="text-[11px] text-charcoal-500 font-mono mt-2 text-center">Click to expand cognitive memory schema</p>
+              <div class="mt-6 pt-4 border-t border-border flex justify-between items-center text-xs font-mono text-charcoal-500">
+                <span>Cognitive Models</span>
+                <span class="text-teal font-semibold">Memory Science</span>
+              </div>
             </div>
           </div>
         </div>
@@ -1003,7 +1045,7 @@
   </div>
 
   <!-- ========================================================================
-       6. ABOUT ME QUICK MODAL (Opened from Top-Left Permanent Photo Anchor)
+       6. ABOUT ME QUICK MODAL (Opened from Top-Left Permanent Profile Anchor)
        ======================================================================== -->
   <div id="about-me-modal" class="editorial-modal-backdrop">
     <div class="editorial-modal-window p-8 sm:p-12">
@@ -1011,9 +1053,9 @@
         <i class="fa-solid fa-xmark"></i>
       </button>
 
-      <div class="flex flex-col sm:flex-row items-center sm:items-start gap-8 pb-8 border-b border-border">
-        <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-terracotta flex-shrink-0 shadow-sm">
-          <img src="assets/profile.jpg" alt="Shree Varsha V K" class="w-full h-full object-cover">
+      <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 pb-8 border-b border-border">
+        <div class="w-20 h-20 rounded-full bg-ivory-200 border-2 border-terracotta flex items-center justify-center font-serif text-2xl text-terracotta font-bold flex-shrink-0 shadow-sm">
+          SV
         </div>
         <div>
           <span class="text-xs font-mono text-terracotta uppercase font-bold tracking-wider">Profile Overview</span>
@@ -1034,7 +1076,7 @@
 
       <div class="pt-6 border-t border-border flex flex-wrap items-center justify-between gap-4">
         <div>
-          <img src="assets/signature.jpg" alt="Signature" class="h-10 opacity-75">
+          <span class="font-handwriting text-2xl text-charcoal-800">Shree Varsha V K</span>
         </div>
         <div class="flex items-center gap-3">
           <a href="mailto:shreevarsha80@gmail.com" class="px-4 py-2 border border-border text-xs font-mono text-charcoal-800 hover:border-terracotta">Email Me</a>
@@ -1069,19 +1111,6 @@
           <!-- Injected dynamically -->
         </ul>
       </div>
-    </div>
-  </div>
-
-  <!-- ========================================================================
-       8. IMAGE LIGHTBOX MODAL
-       ======================================================================== -->
-  <div id="lightbox-modal" class="editorial-modal-backdrop">
-    <div class="relative max-w-4xl w-full p-4 flex flex-col items-center">
-      <button id="close-lightbox-btn" class="modal-close-btn" style="top: 0; right: 0;">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-      <img id="lightbox-image" src="" alt="Expanded View" class="max-h-[80vh] w-auto border-2 border-border shadow-2xl bg-white">
-      <p id="lightbox-caption" class="font-serif text-center text-ivory-100 text-lg mt-4"></p>
     </div>
   </div>
 

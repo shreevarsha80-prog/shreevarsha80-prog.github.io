@@ -1,6 +1,6 @@
 /* ==========================================================================
    SHREE VARSHA V K — INLINE SVG PSYCHOLOGY BRAIN PORTFOLIO
-   Editorial Magazine Design System & Neuro-Navigation Styles
+   Editorial Magazine Design System & Pure Typographic Layouts (No Images)
    ========================================================================== */
 
 /* --- CSS Root Variables & Tokens --- */
@@ -79,12 +79,6 @@ button {
   background: none;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 /* --- Typography Utilities --- */
 .font-serif {
   font-family: var(--font-serif);
@@ -152,23 +146,27 @@ img {
   padding: 2rem;
 }
 
-.opening-photo-frame {
-  width: 130px;
-  height: 130px;
+.opening-monogram-frame {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid var(--color-ivory-300);
-  box-shadow: 0 8px 24px rgba(28, 25, 23, 0.06);
+  background: var(--color-ivory-200);
+  border: 2px solid var(--color-terracotta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(200, 90, 50, 0.12);
   opacity: 0;
   transform: scale(0.92);
   animation: openingPhotoIn 1.2s var(--ease-editorial) forwards 0.2s;
   position: relative;
 }
 
-.opening-photo-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.opening-monogram {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-terracotta);
+  letter-spacing: -0.05em;
 }
 
 .opening-meta {
@@ -261,7 +259,7 @@ img {
   transition: all 0.3s ease;
 }
 
-/* Top-Left Profile Anchor */
+/* Top-Left Profile Anchor Monogram */
 .profile-anchor-wrap {
   display: flex;
   align-items: center;
@@ -278,19 +276,19 @@ img {
   background: var(--color-ivory-200);
 }
 
-.profile-thumb {
-  width: 40px;
-  height: 40px;
+.profile-monogram-thumb {
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  overflow: hidden;
+  background: var(--color-ivory-200);
   border: 1.5px solid var(--color-terracotta);
+  color: var(--color-terracotta);
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
-}
-
-.profile-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .profile-text-block {
@@ -403,7 +401,7 @@ img {
   user-select: none;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  opacity: 0.07; /* Strict 6-9% subtle low-contrast */
+  opacity: 0.07;
   transition: transform 0.5s ease-out;
   white-space: nowrap;
 }
@@ -507,7 +505,7 @@ img {
 .brain-lobe-hotspot:hover .lobe-tint,
 .brain-lobe-hotspot:focus-visible .lobe-tint,
 .brain-lobe-hotspot.is-active .lobe-tint {
-  opacity: 1.5; /* Rich highlighted tint */
+  opacity: 1.5;
 }
 
 .brain-satellite-node:hover,
@@ -516,7 +514,6 @@ img {
   transform: scale(1.08);
 }
 
-/* Dim non-hovered lobes when one lobe is focused */
 #interactive-brain-group.has-focus .brain-lobe-hotspot:not(.is-active):not(:hover) {
   opacity: 0.75;
 }
@@ -617,7 +614,6 @@ img {
   }
 }
 
-/* Subtle Stage Subtext */
 .brain-stage-subtext {
   margin-top: 1rem;
   text-align: center;
@@ -649,7 +645,6 @@ img {
   padding: 2.5rem 1.5rem 6rem;
 }
 
-/* Section Header Structure */
 .section-banner {
   padding-bottom: 1.75rem;
   border-bottom: 1px solid var(--color-border);
@@ -681,7 +676,6 @@ img {
   margin-top: 0.4rem;
 }
 
-/* Sticky Minimal Floating "Back to Brain" Button */
 .sticky-back-bar {
   position: fixed;
   bottom: 2rem;
@@ -719,7 +713,6 @@ img {
   font-size: 0.9rem;
 }
 
-/* Editorial Cards */
 .editorial-card {
   background-color: #FFFFFF;
   border: 1px solid var(--color-border);
@@ -732,47 +725,6 @@ img {
   border-color: var(--color-terracotta);
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(28, 25, 23, 0.04);
-}
-
-/* Photo Gallery Grid */
-.photo-gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1.75rem;
-}
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-  background: #FFFFFF;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.gallery-item:hover {
-  border-color: var(--color-terracotta);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  transition: transform 0.5s var(--ease-editorial);
-}
-
-.gallery-item:hover img {
-  transform: scale(1.04);
-}
-
-.gallery-caption {
-  padding: 0.85rem;
-  border-top: 1px solid var(--color-border);
-  font-size: 0.78rem;
-  color: var(--color-charcoal-700);
 }
 
 /* ==========================================================================

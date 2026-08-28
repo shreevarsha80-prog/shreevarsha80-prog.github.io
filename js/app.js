@@ -1,6 +1,6 @@
 /**
  * APPLICATION COORDINATOR — Shree Varsha V K Portfolio
- * Manages Inline SVG Brain Hotspots, Curved Arrows, Modals & Section Views
+ * Pure Editorial Neuro-Navigation System & Inline SVG Brain Hotspots
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setTimeout(() => {
     endOpeningSequence();
-  }, 2800);
+  }, 2600);
 
   // 2. Navigation Breadcrumb Coordinator
   const breadcrumbCurrent = document.getElementById('breadcrumb-current-section');
@@ -105,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const hotspotElements = document.querySelectorAll('.brain-lobe-hotspot, .brain-satellite-node');
 
   hotspotElements.forEach(elem => {
-    // 1. Hover & Focus Event
     function activateHotspot(e) {
       const id = elem.id;
       const label = elem.getAttribute('data-label');
@@ -113,21 +112,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = elem.getAttribute('data-target');
       const color = elem.getAttribute('data-color') || '#C85A32';
 
-      // Mark brain group as focused to subtly dim other lobes
       if (brainGroup) brainGroup.classList.add('has-focus');
       elem.classList.add('is-active');
 
-      // Update Callout Content
       if (calloutTitle) calloutTitle.innerText = label;
       if (calloutSubtitle) calloutSubtitle.innerText = subtitle;
       if (calloutCategory) calloutCategory.innerText = id.includes('satellite') ? 'EXPLORE' : 'HOTSPOT';
       if (calloutDot) calloutDot.style.backgroundColor = color;
       if (calloutCard) calloutCard.style.borderLeftColor = color;
 
-      // Position Callout & Render Curved Bezier Arrow
       positionCalloutAndArrow(id, color);
 
-      // Bind Callout click to same section
       if (calloutBadge) {
         calloutBadge.onclick = () => {
           openSectionView(target, label);
@@ -135,7 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // 2. Mouse Leave Event
     function deactivateHotspot() {
       if (brainGroup) brainGroup.classList.remove('has-focus');
       elem.classList.remove('is-active');
@@ -143,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (arrowGroup) arrowGroup.innerHTML = '';
     }
 
-    // 3. Click Event
     function clickHotspot() {
       const label = elem.getAttribute('data-label');
       const target = elem.getAttribute('data-target');
@@ -170,14 +163,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const anchor = lobeAnchors[lobeId] || { x: 500, y: 350, calloutOffset: { x: 250, y: -50 } };
     const svgRect = svg.getBoundingClientRect();
 
-    // Scale factors from SVG 1000x700 coordinate plane to screen pixels
     const scaleX = svgRect.width / 1000;
     const scaleY = svgRect.height / 700;
 
     const screenX = svgRect.left + anchor.x * scaleX;
     const screenY = svgRect.top + anchor.y * scaleY;
 
-    // Callout Target Coordinate in screen pixels
     const isMobile = window.innerWidth < 768;
     let targetLeft, targetTop;
 
@@ -197,11 +188,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     calloutBadge.style.display = 'block';
 
-    // Calculate Arrow End Point on SVG canvas
     const endSvgX = (targetLeft + 120 - svgRect.left) / scaleX;
     const endSvgY = (targetTop + 40 - svgRect.top) / scaleY;
 
-    // Quadratic Bezier Control Point for Hand-Drawn Arc
     const midX = (anchor.x + endSvgX) / 2;
     const midY = Math.min(anchor.y, endSvgY) - 35;
 
@@ -304,34 +293,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial ProtoSem Render
   renderProtoSemGrid('all');
 
-  // 7. Lightbox for Media Gallery
-  const lightboxModal = document.getElementById('lightbox-modal');
-  const lightboxImg = document.getElementById('lightbox-image');
-  const lightboxCaption = document.getElementById('lightbox-caption');
-  const closeLightboxBtn = document.getElementById('close-lightbox-btn');
-
-  window.openLightbox = function(src, caption) {
-    if (!lightboxModal || !lightboxImg) return;
-    lightboxImg.src = src;
-    if (lightboxCaption) lightboxCaption.innerText = caption || '';
-    lightboxModal.classList.add('modal-open');
-  };
-
-  if (closeLightboxBtn && lightboxModal) {
-    closeLightboxBtn.addEventListener('click', () => {
-      lightboxModal.classList.remove('modal-open');
-    });
-  }
-
-  // 8. Global Keyboard Shortcuts (Escape to Close Modals / Return to Brain)
+  // 7. Global Keyboard Shortcuts (Escape to Close Modals / Return to Brain)
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       if (aboutMeModal && aboutMeModal.classList.contains('modal-open')) {
         aboutMeModal.classList.remove('modal-open');
       } else if (protoModal && protoModal.classList.contains('modal-open')) {
         protoModal.classList.remove('modal-open');
-      } else if (lightboxModal && lightboxModal.classList.contains('modal-open')) {
-        lightboxModal.classList.remove('modal-open');
       } else if (portfolioContentView && portfolioContentView.classList.contains('view-active')) {
         returnToBrainHome();
       }
@@ -339,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Click outside modal window to dismiss
-  [aboutMeModal, protoModal, lightboxModal].forEach(modal => {
+  [aboutMeModal, protoModal].forEach(modal => {
     if (!modal) return;
     modal.addEventListener('click', (e) => {
       if (e.target === modal) {
