@@ -1029,86 +1029,137 @@
     // ===============================================
     const editorialProtoSemWeeks = [
       // Phase 01: Weeks 01-05
-      { week: 1, phase: 1, label: "WEEK 01", status: "FIELD NOTES IN PROGRESS", slug: "week-01" },
-      { week: 2, phase: 1, label: "WEEK 02", status: "FIELD NOTES IN PROGRESS", slug: "week-02" },
-      { week: 3, phase: 1, label: "WEEK 03", status: "FIELD NOTES IN PROGRESS", slug: "week-03" },
-      { week: 4, phase: 1, label: "WEEK 04", status: "FIELD NOTES IN PROGRESS", slug: "week-04" },
-      { week: 5, phase: 1, label: "WEEK 05", status: "FIELD NOTES IN PROGRESS", slug: "week-05" },
+      { week: 1, phase: 1, label: "WEEK 00", status: "FIELD NOTES IN PROGRESS", slug: "week-01" },
+      { week: 2, phase: 1, label: "WEEK 01", status: "FIELD NOTES IN PROGRESS", slug: "week-02" },
+      { week: 3, phase: 1, label: "WEEK 02", status: "FIELD NOTES IN PROGRESS", slug: "week-03" },
+      { week: 4, phase: 1, label: "WEEK 03", status: "FIELD NOTES IN PROGRESS", slug: "week-04" },
+      { week: 5, phase: 1, label: "WEEK 04", status: "FIELD NOTES IN PROGRESS", slug: "week-05" },
 
       // Phase 02: Weeks 06-10
-      { week: 6, phase: 2, label: "WEEK 06", status: "FIELD NOTES IN PROGRESS", slug: "week-06" },
-      { week: 7, phase: 2, label: "WEEK 07", status: "FIELD NOTES IN PROGRESS", slug: "week-07" },
-      { week: 8, phase: 2, label: "WEEK 08", status: "FIELD NOTES IN PROGRESS", slug: "week-08" },
-      { week: 9, phase: 2, label: "WEEK 09", status: "FIELD NOTES IN PROGRESS", slug: "week-09" },
-      { week: 10, phase: 2, label: "WEEK 10", status: "FIELD NOTES IN PROGRESS", slug: "week-10" },
+      { week: 6, phase: 2, label: "WEEK 05", status: "FIELD NOTES IN PROGRESS", slug: "week-06" },
+      { week: 7, phase: 2, label: "WEEK 06", status: "FIELD NOTES IN PROGRESS", slug: "week-07" },
+      { week: 8, phase: 2, label: "WEEK 07", status: "FIELD NOTES IN PROGRESS", slug: "week-08" },
+      { week: 9, phase: 2, label: "WEEK 08", status: "FIELD NOTES IN PROGRESS", slug: "week-09" },
+      { week: 10, phase: 2, label: "WEEK 09", status: "FIELD NOTES IN PROGRESS", slug: "week-10" },
 
       // Phase 03: Weeks 11-15
-      { week: 11, phase: 3, label: "WEEK 11", status: "FIELD NOTES IN PROGRESS", slug: "week-11" },
-      { week: 12, phase: 3, label: "WEEK 12", status: "FIELD NOTES IN PROGRESS", slug: "week-12" },
-      { week: 13, phase: 3, label: "WEEK 13", status: "FIELD NOTES IN PROGRESS", slug: "week-13" },
-      { week: 14, phase: 3, label: "WEEK 14", status: "FIELD NOTES IN PROGRESS", slug: "week-14" },
-      { week: 15, phase: 3, label: "WEEK 15", status: "FIELD NOTES IN PROGRESS", slug: "week-15" },
+      { week: 11, phase: 3, label: "WEEK 10", status: "FIELD NOTES IN PROGRESS", slug: "week-11" },
+      { week: 12, phase: 3, label: "WEEK 11", status: "FIELD NOTES IN PROGRESS", slug: "week-12" },
+      { week: 13, phase: 3, label: "WEEK 12", status: "FIELD NOTES IN PROGRESS", slug: "week-13" },
+      { week: 14, phase: 3, label: "WEEK 13", status: "FIELD NOTES IN PROGRESS", slug: "week-14" },
+      { week: 15, phase: 3, label: "WEEK 14", status: "FIELD NOTES IN PROGRESS", slug: "week-15" },
 
       // Phase 04: Weeks 16-20
-      { week: 16, phase: 4, label: "WEEK 16", status: "FIELD NOTES IN PROGRESS", slug: "week-16" },
-      { week: 17, phase: 4, label: "WEEK 17", status: "FIELD NOTES IN PROGRESS", slug: "week-17" },
-      { week: 18, phase: 4, label: "WEEK 18", status: "FIELD NOTES IN PROGRESS", slug: "week-18" },
-      { week: 19, phase: 4, label: "WEEK 19", status: "FIELD NOTES IN PROGRESS", slug: "week-19" },
-      { week: 20, phase: 4, label: "WEEK 20", status: "FIELD NOTES IN PROGRESS", slug: "week-20" },
+      { week: 16, phase: 4, label: "WEEK 15", status: "FIELD NOTES IN PROGRESS", slug: "week-16" },
+      { week: 17, phase: 4, label: "WEEK 16", status: "FIELD NOTES IN PROGRESS", slug: "week-17" },
+      { week: 18, phase: 4, label: "WEEK 17", status: "FIELD NOTES IN PROGRESS", slug: "week-18" },
+      { week: 19, phase: 4, label: "WEEK 18", status: "FIELD NOTES IN PROGRESS", slug: "week-19" },
+      { week: 20, phase: 4, label: "WEEK 19", status: "FIELD NOTES IN PROGRESS", slug: "week-20" },
     ];
 
-    function renderEditorialWeekCards(phaseFilter = 'all') {
-      const container = document.getElementById('editorial-weeks-container');
-      if (!container) return;
+  function renderEditorialWeekCards(phaseFilter = 'all') {
+  const container = document.getElementById('editorial-weeks-container');
+  if (!container) return;
 
-      const filtered = phaseFilter === 'all' 
-        ? editorialProtoSemWeeks 
-        : editorialProtoSemWeeks.filter(item => item.phase === parseInt(phaseFilter));
+  const filtered = phaseFilter === 'all'
+    ? editorialProtoSemWeeks
+    : editorialProtoSemWeeks.filter(
+        item => item.phase === parseInt(phaseFilter)
+      );
 
-      container.innerHTML = filtered.map(item => {
-        const weekPad = item.week < 10 ? `0${item.week}` : `${item.week}`;
-        return `
-          <div 
-            onclick="openEditorialWeekModal(${item.week})"
-            class="week-entry p-5 cursor-pointer flex flex-col justify-between group focus:outline-none focus:ring-1 focus:ring-terracotta"
-            role="button"
-            tabindex="0"
-            aria-label="${item.label} Placeholder Story"
-            onkeydown="if(event.key==='Enter'||event.key===' ') openEditorialWeekModal(${item.week})"
-          >
-            <!-- Top Metadata -->
-            <div class="flex items-center justify-between border-b border-[#E6DFD5] pb-2 mb-3">
-              <span class="text-[10px] font-mono font-semibold text-charcoal-500 uppercase">
-                PHASE 0${item.phase}
-              </span>
-              <span class="text-[10px] font-mono text-terracotta font-semibold">
-                #${weekPad}
-              </span>
-            </div>
+  container.innerHTML = filtered.map(item => {
+    const weekPad = item.week < 10 ? `0${item.week}` : `${item.week}`;
 
-            <!-- Primary Week Title -->
-            <div class="my-2">
-              <div class="flex items-baseline justify-between">
-                <h4 class="font-serif text-2xl font-bold text-charcoal-900 group-hover:text-terracotta transition-colors">
-                  ${item.label}
-                </h4>
-                <span class="text-xs text-charcoal-400 group-hover:text-terracotta transition-colors font-serif">→</span>
-              </div>
-              <p class="text-[10px] font-mono text-charcoal-500 uppercase tracking-widest mt-1">
-                ${item.status}
-              </p>
-            </div>
+    if (item.week === 1) {
+      return `
+        <a
+          href="week-00.html"
+          class="week-entry p-5 cursor-pointer flex flex-col justify-between group focus:outline-none focus:ring-1 focus:ring-terracotta"
+          aria-label="Open Week 00"
+        >
+          <div class="flex items-center justify-between border-b border-[#E6DFD5] pb-2 mb-3">
+            <span class="text-[10px] font-mono font-semibold text-charcoal-500 uppercase">
+              PHASE 0${item.phase}
+            </span>
 
-            <!-- Footer Marker -->
-            <div class="pt-3 border-t border-[#E6DFD5] flex items-center justify-between text-[10px] font-mono text-charcoal-500">
-              <span>Chapter ${weekPad}/20</span>
-              <span class="text-terracotta group-hover:underline">Story Outline</span>
-            </div>
+            <span class="text-[10px] font-mono text-terracotta font-semibold">
+              #${weekPad}
+            </span>
           </div>
-        `;
-      }).join('');
+
+          <div class="my-2">
+            <div class="flex items-baseline justify-between">
+              <h4 class="font-serif text-2xl font-bold text-charcoal-900 group-hover:text-terracotta transition-colors">
+                ${item.label}
+              </h4>
+
+              <span class="text-xs text-charcoal-400 group-hover:text-terracotta transition-colors font-serif">
+                →
+              </span>
+            </div>
+
+            <p class="text-[10px] font-mono text-charcoal-500 uppercase tracking-widest mt-1">
+              OPEN WEEK 00
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-[#E6DFD5] flex items-center justify-between text-[10px] font-mono text-charcoal-500">
+            <span>Chapter ${weekPad}/20</span>
+
+            <span class="text-terracotta group-hover:underline">
+              Read Week 00
+            </span>
+          </div>
+        </a>
+      `;
     }
 
+    return `
+      <div
+        onclick="openEditorialWeekModal(${item.week})"
+        class="week-entry p-5 cursor-pointer flex flex-col justify-between group focus:outline-none focus:ring-1 focus:ring-terracotta"
+        role="button"
+        tabindex="0"
+        aria-label="${item.label} Placeholder Story"
+        onkeydown="if(event.key==='Enter'||event.key===' ') openEditorialWeekModal(${item.week})"
+      >
+        <div class="flex items-center justify-between border-b border-[#E6DFD5] pb-2 mb-3">
+          <span class="text-[10px] font-mono font-semibold text-charcoal-500 uppercase">
+            PHASE 0${item.phase}
+          </span>
+
+          <span class="text-[10px] font-mono text-terracotta font-semibold">
+            #${weekPad}
+          </span>
+        </div>
+
+        <div class="my-2">
+          <div class="flex items-baseline justify-between">
+            <h4 class="font-serif text-2xl font-bold text-charcoal-900 group-hover:text-terracotta transition-colors">
+              ${item.label}
+            </h4>
+
+            <span class="text-xs text-charcoal-400 group-hover:text-terracotta transition-colors font-serif">
+              →
+            </span>
+          </div>
+
+          <p class="text-[10px] font-mono text-charcoal-500 uppercase tracking-widest mt-1">
+            ${item.status}
+          </p>
+        </div>
+
+        <div class="pt-3 border-t border-[#E6DFD5] flex items-center justify-between text-[10px] font-mono text-charcoal-500">
+          <span>Chapter ${weekPad}/20</span>
+
+          <span class="text-terracotta group-hover:underline">
+            Story Outline
+          </span>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
     function filterEditorialPhase(phase, buttonElement) {
       document.querySelectorAll('.phase-tab').forEach(btn => {
         btn.classList.remove('active');
