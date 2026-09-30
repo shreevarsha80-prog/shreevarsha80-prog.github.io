@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Week 6 — My First Experience with Laser Cutting 🔥 | Shree Varsha V K — PRICE ProtoSem</title>
-  <meta name="description" content="Week 6 reflection on laser cutting — from choosing Van Gogh's Starry Night, preparing designs in RDWorks, learning from a mirrored first attempt, to a beautiful final keychain. By Shree Varsha V K.">
+  <title>Laser Cutting – Portfolio Entry | Shree Varsha V K</title>
+  <meta name="description" content="My First Experience with Laser Cutting — Week 6 reflection by Shree Varsha V K. Converting Van Gogh's Starry Night into a physical laser-cut keychain.">
   
-  <!-- Google Fonts: Cormorant Garamond, Newsreader, Plus Jakarta Sans, JetBrains Mono, Caveat -->
+  <!-- Google Fonts: Cormorant Garamond, Plus Jakarta Sans, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN with custom Warm Ivory & Terracotta palette -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -59,9 +59,7 @@
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
             serif: ['"Cormorant Garamond"', 'serif'],
-            newsreader: ['"Newsreader"', 'serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-            script: ['"Caveat"', 'cursive']
+            mono: ['"JetBrains Mono"', 'monospace']
           }
         }
       }
@@ -88,20 +86,6 @@
       box-shadow: 0 4px 20px -6px rgba(77, 69, 62, 0.05);
     }
 
-    .takeaway-box {
-      background: #FDF6F3;
-      border-left: 3px solid #C85A32;
-      border-top: 1px solid #FAECE6;
-      border-right: 1px solid #FAECE6;
-      border-bottom: 1px solid #FAECE6;
-    }
-
-    .monogram-box {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 700;
-      letter-spacing: -0.05em;
-    }
-
     .custom-scrollbar::-webkit-scrollbar {
       width: 6px;
     }
@@ -121,35 +105,35 @@
       color: #1E1B18;
     }
 
-    /* Image gallery styles */
     .blog-image {
       border-radius: 12px;
       border: 1px solid #E8DEC8;
       box-shadow: 0 4px 16px -4px rgba(77, 69, 62, 0.08);
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.3s ease;
       overflow: hidden;
+      background: #FFFFFF;
     }
 
     .blog-image:hover {
       border-color: rgba(200, 90, 50, 0.4);
-      box-shadow: 0 12px 32px -8px rgba(200, 90, 50, 0.12);
-      transform: translateY(-3px);
+      box-shadow: 0 10px 28px -6px rgba(200, 90, 50, 0.12);
+      transform: translateY(-2px);
     }
 
     .blog-image img {
       width: 100%;
       height: auto;
       display: block;
-      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.4s ease;
     }
 
     .blog-image:hover img {
-      transform: scale(1.02);
+      transform: scale(1.015);
     }
 
     .blog-image .image-caption {
       padding: 10px 14px;
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       font-family: 'JetBrains Mono', monospace;
       color: #645B53;
       background: #FDFCF9;
@@ -161,53 +145,9 @@
 
     .blog-image .image-caption i {
       color: #C85A32;
-      font-size: 0.65rem;
+      font-size: 0.7rem;
     }
 
-    /* Process flow arrow styling */
-    .process-flow {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 16px;
-      background: #F7F2EB;
-      border-radius: 12px;
-      border: 1px solid #E6DCCD;
-    }
-
-    .process-step {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      background: white;
-      border-radius: 8px;
-      border: 1px solid #E8DEC8;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: #38322D;
-      transition: all 0.25s ease;
-    }
-
-    .process-step:hover {
-      border-color: #C85A32;
-      color: #B54924;
-      transform: translateY(-1px);
-    }
-
-    .process-step i {
-      color: #C85A32;
-    }
-
-    .flow-arrow {
-      color: #C85A32;
-      font-size: 0.85rem;
-      font-weight: 700;
-    }
-
-    /* Comparison grid */
     .comparison-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -220,7 +160,7 @@
       }
     }
 
-    .comparison-label {
+    .comparison-badge {
       position: absolute;
       top: 10px;
       left: 10px;
@@ -231,25 +171,24 @@
       font-family: 'JetBrains Mono', monospace;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.05em;
     }
 
-    .label-fail {
-      background: rgba(220, 53, 69, 0.9);
+    .badge-fail {
+      background: rgba(185, 28, 28, 0.9);
       color: white;
     }
 
-    .label-success {
-      background: rgba(40, 167, 69, 0.88);
+    .badge-success {
+      background: rgba(21, 128, 61, 0.9);
       color: white;
     }
 
-    /* Lightbox overlay */
     .lightbox-overlay {
       position: fixed;
       inset: 0;
       z-index: 100;
-      background: rgba(20, 18, 16, 0.88);
+      background: rgba(20, 18, 16, 0.9);
       backdrop-filter: blur(8px);
       display: none;
       align-items: center;
@@ -265,8 +204,8 @@
     .lightbox-overlay img {
       max-width: 90vw;
       max-height: 85vh;
-      border-radius: 12px;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+      border-radius: 10px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
     }
   </style>
 </head>
@@ -295,285 +234,156 @@
   <main class="relative z-10 pt-28 pb-24 max-w-4xl mx-auto px-4 sm:px-6">
 
     <!-- Article Header -->
-    <header class="space-y-5 pb-10 border-b border-ivory-300">
+    <header class="space-y-4 pb-8 border-b border-ivory-300">
       <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
-        <span class="px-2.5 py-1 rounded bg-terracotta-50 text-terracotta-700 font-bold border border-terracotta-500/30">PHASE 02</span>
+        <span class="px-2.5 py-1 rounded bg-terracotta-50 text-terracotta-700 font-bold border border-terracotta-500/30">WEEK 06</span>
         <span class="text-charcoal-400">&bull;</span>
-        <span class="text-charcoal-600">FABRICATION &amp; MAKING</span>
+        <span class="text-charcoal-600">PRICE PROTOSEM</span>
         <span class="text-charcoal-400">&bull;</span>
-        <span class="text-terracotta-700 font-semibold">LASER CUTTING</span>
+        <span class="text-terracotta-700 font-semibold">PORTFOLIO ENTRY</span>
       </div>
 
-      <h1 class="font-serif text-3xl sm:text-5xl font-bold text-charcoal-900 tracking-tight leading-tight">
-        WEEK 6 — MY FIRST EXPERIENCE WITH LASER CUTTING 🔥
-      </h1>
+      <div class="space-y-2">
+        <div class="text-xs sm:text-sm font-mono tracking-wider uppercase text-terracotta-600 font-semibold">
+          Laser Cutting – Portfolio Entry
+        </div>
+        <h1 class="font-serif text-3xl sm:text-5xl font-bold text-charcoal-900 tracking-tight leading-tight">
+          My First Experience with Laser Cutting
+        </h1>
+      </div>
 
-      <p class="text-base sm:text-lg text-charcoal-700 font-serif italic leading-relaxed">
-        "From an image on screen to a physical product in my hands — this week, I watched art, technology, and making collide in the most satisfying way."
-      </p>
-
-      <!-- Byline / Author Tag -->
-      <div class="flex items-center gap-3.5 pt-2 text-xs text-charcoal-600">
-        <div class="w-10 h-10 rounded-lg bg-ivory-150 border border-terracotta-500/30 flex items-center justify-center text-terracotta-600 font-serif font-bold text-base shadow-2xs">
+      <!-- Author Byline -->
+      <div class="flex items-center gap-3 pt-2 text-xs text-charcoal-600">
+        <div class="w-9 h-9 rounded-lg bg-ivory-150 border border-terracotta-500/30 flex items-center justify-center text-terracotta-600 font-serif font-bold text-base shadow-2xs">
           SV
         </div>
         <div>
           <div class="font-bold text-charcoal-900 text-sm">Shree Varsha V K</div>
-          <div class="text-charcoal-500 font-mono text-[11px]">Innovation Engineer Trainee &bull; PRICE ProtoSem</div>
+          <div class="text-charcoal-500 font-mono text-[11px]">ProtoSem 25.2 &bull; Forge Innovation &amp; Ventures</div>
         </div>
       </div>
     </header>
 
-    <!-- Article Body -->
-    <article class="pt-10 space-y-12 text-charcoal-700 text-sm sm:text-base leading-relaxed">
+    <!-- Article Content -->
+    <article class="pt-8 space-y-10 text-charcoal-700 text-base leading-relaxed">
 
-      <!-- ==================== SECTION 1: INTRODUCTION ==================== -->
+      <!-- ==================== SECTION 1 ==================== -->
       <section class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
-        <div class="flex items-center justify-between border-b border-ivory-300 pb-3">
-          <h2 class="font-serif text-xl sm:text-2xl font-bold text-charcoal-900 flex items-center gap-2.5">
-            <span class="text-terracotta-600 font-mono text-base">01 &mdash;</span> Introduction to Laser Cutting
-          </h2>
-          <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-ivory-150 text-charcoal-600 border border-ivory-300">Learning</span>
-        </div>
+        <p>
+          This week, I got to try something completely new — <strong class="text-charcoal-900 font-semibold">laser cutting</strong>.
+        </p>
 
-        <div class="space-y-4">
-          <p>
-            This week, I got to try something completely new — <span class="text-charcoal-900 font-semibold">laser cutting</span>.
-          </p>
-          <p>
-            <span class="text-terracotta-700 font-medium">Sabresh</span> introduced us to the basics of laser cutting — the different types, how the machine works, and the safety precautions we need to follow. We also learned how to use <span class="text-charcoal-900 font-semibold">RDWorks</span>, the software used to prepare designs for the laser cutter.
-          </p>
-        </div>
+        <p>
+          <strong class="text-charcoal-900 font-semibold">Sabresh</strong> introduced us to the basics of laser cutting, the different types, how the machine works, and the safety precautions we need to follow. We also learned how to use <strong class="text-charcoal-900 font-semibold">RDWorks</strong>, the software used to prepare designs for the laser cutter.
+        </p>
 
-        <!-- Hero image: Working at the laser cutter -->
+        <!-- Image: Laser cutting machine -->
         <div class="blog-image cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="images/week-06/laser-cutter-machine.jpg" alt="Working at the laser cutting machine in the Forge lab" loading="lazy">
+          <img src="images/week-06/laser-cutter-machine.jpg" alt="Operating the laser cutter machine" loading="lazy">
           <div class="image-caption">
             <i class="fa-solid fa-camera"></i>
-            Operating the laser cutter at the Forge fabrication lab
+            Operating the laser cutting machine
           </div>
         </div>
 
-        <div class="space-y-4 pt-2">
-          <h3 class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Choosing My Design</h3>
-          <p>
-            For the practical activity, we had to choose an image and turn it into a physical design. I chose <span class="text-charcoal-900 font-semibold italic">Van Gogh's The Starry Night</span> because I wanted to see how a painting would translate into a laser-cut design.
-          </p>
-        </div>
+        <p>
+          For the practical activity, we had to choose an image and turn it into a physical design. I chose <strong class="text-charcoal-900 font-semibold">Van Gogh’s The Starry Night</strong> because I wanted to see how a painting would translate into a laser-cut design.
+        </p>
 
-        <!-- Original Starry Night reference -->
+        <!-- Image: Starry Night Original -->
         <div class="blog-image cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="images/week-06/starry-night-original.jpg" alt="Van Gogh's The Starry Night — the original painting used as reference" loading="lazy">
+          <img src="images/week-06/starry-night-original.jpg" alt="Van Gogh's The Starry Night original painting" loading="lazy">
           <div class="image-caption">
             <i class="fa-solid fa-palette"></i>
-            Van Gogh's "The Starry Night" — my chosen reference image
+            Van Gogh’s The Starry Night
           </div>
-        </div>
-
-        <div class="takeaway-box p-4 rounded-xl space-y-1">
-          <div class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Key Concept:</div>
-          <p class="text-xs sm:text-sm text-charcoal-900 font-medium">
-            Laser cutting uses a focused beam of light to cut or engrave materials with precision. Different colours in the design file represent different operations — cutting vs. scanning (engraving).
-          </p>
         </div>
       </section>
 
-      <!-- ==================== SECTION 2: THE DIGITAL WORKFLOW ==================== -->
+      <!-- ==================== SECTION 2 ==================== -->
       <section class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
-        <div class="flex items-center justify-between border-b border-ivory-300 pb-3">
-          <h2 class="font-serif text-xl sm:text-2xl font-bold text-charcoal-900 flex items-center gap-2.5">
-            <span class="text-terracotta-600 font-mono text-base">02 &mdash;</span> The Digital Workflow
-          </h2>
-          <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-ivory-150 text-charcoal-600 border border-ivory-300">Process</span>
-        </div>
+        <p>
+          We first converted the JPG image into a <strong class="text-charcoal-900 font-semibold">DXF file</strong> using <strong class="text-charcoal-900 font-semibold">Converto</strong> and then imported it into <strong class="text-charcoal-900 font-semibold">RDWorks</strong>. From there, we worked on the design, assigned different colours for cutting and scanning, and added text to it.
+        </p>
 
-        <div class="space-y-4">
-          <p>
-            We first converted the JPG image into a <span class="text-charcoal-900 font-semibold">DXF file</span> using <span class="text-terracotta-700 font-medium">Converto</span> and then imported it into <span class="text-charcoal-900 font-semibold">RDWorks</span>. From there, we worked on the design, assigned different colours for cutting and scanning, and added text to it.
-          </p>
-        </div>
-
-        <!-- Process Flow Visualization -->
-        <div class="process-flow">
-          <div class="process-step">
-            <i class="fa-solid fa-image"></i> JPG Image
-          </div>
-          <span class="flow-arrow">→</span>
-          <div class="process-step">
-            <i class="fa-solid fa-file-code"></i> DXF (Converto)
-          </div>
-          <span class="flow-arrow">→</span>
-          <div class="process-step">
-            <i class="fa-solid fa-pen-ruler"></i> RDWorks
-          </div>
-          <span class="flow-arrow">→</span>
-          <div class="process-step">
-            <i class="fa-solid fa-print"></i> Laser Cutter
-          </div>
-          <span class="flow-arrow">→</span>
-          <div class="process-step">
-            <i class="fa-solid fa-gem"></i> Physical Product
-          </div>
-        </div>
-
-        <!-- RDWorks design screenshot -->
+        <!-- Image: RDWorks Design -->
         <div class="blog-image cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="images/week-06/rdworks-design.png" alt="The Starry Night design prepared in RDWorks software — DXF vector outlines with keychain hole" loading="lazy">
+          <img src="images/week-06/rdworks-design.png" alt="RDWorks design preparation with DXF file" loading="lazy">
           <div class="image-caption">
             <i class="fa-solid fa-vector-square"></i>
-            DXF design in RDWorks — vector outlines with "Van gogh starry night" text and keychain hole
+            Design prepared in RDWorks with cutting and scanning layers
           </div>
-        </div>
-
-        <div class="takeaway-box p-4 rounded-xl space-y-1">
-          <div class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Workflow Note:</div>
-          <p class="text-xs sm:text-sm text-charcoal-900 font-medium">
-            Converting a raster image (JPG) to vector (DXF) is a critical step — it translates pixels into mathematical paths the laser can follow precisely.
-          </p>
         </div>
       </section>
 
-      <!-- ==================== SECTION 3: LEARNING FROM FAILURE ==================== -->
+      <!-- ==================== SECTION 3 ==================== -->
       <section class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
-        <div class="flex items-center justify-between border-b border-ivory-300 pb-3">
-          <h2 class="font-serif text-xl sm:text-2xl font-bold text-charcoal-900 flex items-center gap-2.5">
-            <span class="text-terracotta-600 font-mono text-base">03 &mdash;</span> Learning Through My First Attempt
-          </h2>
-          <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-ivory-150 text-charcoal-600 border border-ivory-300">Iteration</span>
-        </div>
+        <h2 class="font-serif text-2xl font-bold text-charcoal-900 pb-2 border-b border-ivory-300">
+          Learning Through My First Attempt
+        </h2>
 
-        <div class="space-y-4">
-          <p>
-            My first attempt did not go as planned. I forgot to <span class="text-charcoal-900 font-semibold">mirror the design</span> before printing, and the result was completely wrong — the letters came out reversed and the design looked nothing like what I had expected.
-          </p>
-          <p>
-            Thankfully, I got a second chance to print it. This time, I corrected the orientation and mirrored the design before sending it to the machine. The second output came out <span class="text-terracotta-700 font-semibold">beautifully</span> and much closer to what I had imagined.
-          </p>
-        </div>
+        <p>
+          My first attempt did not go as planned. I forgot to mirror the design before printing, and the result was completely wrong. the letters came out reversed and the design looked nothing like what I had expected.
+        </p>
 
-        <!-- Comparison: Failed vs. Success -->
+        <p>
+          Thankfully, I got a second chance to print it. This time, I corrected the orientation and mirrored the design before sending it to the machine. The second output came out beautifully and much closer to what I had imagined.
+        </p>
+
+        <!-- Images: First attempt vs Second attempt -->
         <div class="comparison-grid">
           <div class="blog-image relative cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-            <span class="comparison-label label-fail"><i class="fa-solid fa-xmark mr-1"></i> Attempt 01 — Mirrored</span>
-            <img src="images/week-06/failed-attempt.jpg" alt="First attempt — design was not mirrored, resulting in reversed text" loading="lazy">
+            <span class="comparison-badge badge-fail"><i class="fa-solid fa-xmark mr-1"></i> First Attempt</span>
+            <img src="images/week-06/failed-attempt.jpg" alt="First attempt with reversed letters" loading="lazy">
             <div class="image-caption">
               <i class="fa-solid fa-rotate-left"></i>
-              Text came out reversed — forgot to mirror
+              First attempt — letters came out reversed (forgot to mirror)
             </div>
           </div>
 
           <div class="blog-image relative cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-            <span class="comparison-label label-success"><i class="fa-solid fa-check mr-1"></i> Attempt 02 — Corrected</span>
-            <img src="images/week-06/final-keychain.jpg" alt="Second attempt — correctly mirrored design with readable text" loading="lazy">
+            <span class="comparison-badge badge-success"><i class="fa-solid fa-check mr-1"></i> Second Attempt</span>
+            <img src="images/week-06/final-keychain.jpg" alt="Second attempt with corrected orientation" loading="lazy">
             <div class="image-caption">
               <i class="fa-solid fa-circle-check"></i>
-              Corrected orientation — "Van gogh starry night" reads perfectly
+              Second attempt — orientation corrected and mirrored
             </div>
           </div>
         </div>
-
-        <div class="takeaway-box p-4 rounded-xl space-y-1">
-          <div class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Lesson Learned:</div>
-          <p class="text-xs sm:text-sm text-charcoal-900 font-medium">
-            Even a small step in the preparation process — like forgetting to mirror — can completely change the final result. The failed first attempt taught me to always double-check orientation before sending a design to the machine.
-          </p>
-        </div>
       </section>
 
-      <!-- ==================== SECTION 4: THE FINAL PRODUCT ==================== -->
+      <!-- ==================== SECTION 4 ==================== -->
       <section class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
-        <div class="flex items-center justify-between border-b border-ivory-300 pb-3">
-          <h2 class="font-serif text-xl sm:text-2xl font-bold text-charcoal-900 flex items-center gap-2.5">
-            <span class="text-terracotta-600 font-mono text-base">04 &mdash;</span> The Final Product
-          </h2>
-          <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-ivory-150 text-charcoal-600 border border-ivory-300">Result</span>
-        </div>
-
-        <div class="space-y-4">
-          <p>
-            The final design was made on a <span class="text-charcoal-900 font-semibold">black plastic board</span> and turned into a <span class="text-terracotta-700 font-semibold">keychain</span>. The actual laser-processing took less than five minutes.
-          </p>
-        </div>
-
-        <!-- Final product showcase -->
-        <div class="blog-image cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="images/week-06/final-keychain.jpg" alt="The final laser-cut Starry Night keychain on black plastic board" loading="lazy">
-          <div class="image-caption">
-            <i class="fa-solid fa-star"></i>
-            Final product — Van Gogh's Starry Night laser-engraved keychain
-          </div>
-        </div>
-
-        <!-- Quick Stats -->
-        <div class="grid grid-cols-3 gap-3 text-center">
-          <div class="p-4 bg-ivory-150 rounded-xl border border-ivory-300">
-            <div class="text-2xl font-serif font-bold text-terracotta-600">&lt; 5</div>
-            <div class="text-[10px] font-mono text-charcoal-600 mt-1 uppercase tracking-wider">Minutes to cut</div>
-          </div>
-          <div class="p-4 bg-ivory-150 rounded-xl border border-ivory-300">
-            <div class="text-2xl font-serif font-bold text-terracotta-600">2</div>
-            <div class="text-[10px] font-mono text-charcoal-600 mt-1 uppercase tracking-wider">Attempts Made</div>
-          </div>
-          <div class="p-4 bg-ivory-150 rounded-xl border border-ivory-300">
-            <div class="text-2xl font-serif font-bold text-terracotta-600">1</div>
-            <div class="text-[10px] font-mono text-charcoal-600 mt-1 uppercase tracking-wider">Keychain Created</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==================== SECTION 5: REFLECTION ==================== -->
-      <section class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
-        <div class="flex items-center justify-between border-b border-ivory-300 pb-3">
-          <h2 class="font-serif text-xl sm:text-2xl font-bold text-charcoal-900 flex items-center gap-2.5">
-            <span class="text-terracotta-600 font-mono text-base">05 &mdash;</span> What I Enjoyed Most
-          </h2>
-          <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-ivory-150 text-charcoal-600 border border-ivory-300">Reflection</span>
-        </div>
-
-        <div class="space-y-4">
-          <p>
-            What I enjoyed most was seeing the entire journey — from an image on a screen, to a prepared digital file, to a machine, to a <span class="text-terracotta-700 font-semibold">physical product</span>.
-          </p>
-          <p>
-            The failed first attempt also taught me that even a small step in the preparation process can completely change the final result. It's a lesson that applies far beyond laser cutting — in <span class="text-charcoal-900 font-semibold italic">any</span> process where preparation matters, which is essentially everything.
-          </p>
-        </div>
-
-        <!-- Journey visualization -->
-        <div class="p-3.5 bg-ivory-100 rounded-lg border border-ivory-300 font-mono text-xs text-terracotta-700 text-center font-medium">
-          Image on Screen &rarr; Digital File (DXF) &rarr; RDWorks Design &rarr; Laser Machine &rarr; Physical Keychain ✨
-        </div>
-
-        <div class="takeaway-box p-4 rounded-xl space-y-1">
-          <div class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Week 6 Takeaway:</div>
-          <p class="text-xs sm:text-sm text-charcoal-900 font-medium">
-            Making things tangible is deeply satisfying. And mistakes in the process aren't setbacks — they're the best teachers. Every mirrored letter, every reversed design is a lesson that sticks.
-          </p>
-        </div>
-      </section>
-
-      <!-- ==================== FINAL SYNTHESIS ==================== -->
-      <section class="editorial-card rounded-2xl p-8 sm:p-10 text-center space-y-5 border-terracotta-500/30">
-        <span class="text-xs font-mono uppercase tracking-widest text-terracotta-700 font-bold">SYNTHESIS</span>
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-charcoal-900">
-          WEEK 6 &mdash; FROM PIXELS TO PRODUCT 🔥
+        <h2 class="font-serif text-2xl font-bold text-charcoal-900 pb-2 border-b border-ivory-300">
+          The Final Product
         </h2>
-        <p class="text-charcoal-700 font-serif italic text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-          "This week taught me that the magic of making isn't just in the final product — it's in the entire journey. From Van Gogh's painting to a keychain in my hand, every conversion, every mistake, and every correction was part of the creation."
+
+        <p>
+          The final design was made on a black plastic board and turned into a keychain. The actual laser-processing took less than five minutes.
         </p>
-        <div class="text-xs font-mono text-terracotta-700 uppercase tracking-wider font-semibold">
-          &bull; Art meets engineering &bull;
+
+        <!-- Image: Final Keychain -->
+        <div class="blog-image cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="images/week-06/final-keychain.jpg" alt="The final laser-cut keychain on black plastic board" loading="lazy">
+          <div class="image-caption">
+            <i class="fa-solid fa-key"></i>
+            The final keychain made on black plastic board
+          </div>
         </div>
+
+        <p>
+          What I enjoyed most was seeing the entire journey from an image on a screen → a prepared digital file → a machine → a physical product. The failed first attempt also taught me that even a small step in the preparation process can completely change the final result.
+        </p>
       </section>
 
     </article>
 
     <!-- Bottom Navigation -->
-    <div class="pt-12 mt-12 border-t border-ivory-300 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="pt-10 mt-10 border-t border-ivory-300 flex flex-col sm:flex-row items-center justify-between gap-4">
       <a href="index.html#protosem" class="px-5 py-2.5 rounded-lg bg-white border border-ivory-300 hover:border-terracotta-400 hover:text-terracotta-600 text-xs font-mono text-charcoal-700 transition flex items-center gap-2 shadow-2xs">
-        <i class="fa-solid fa-arrow-left text-terracotta-500"></i> Back to 20-Week Road
+        <i class="fa-solid fa-arrow-left text-terracotta-500"></i> Back to ProtoSem Timeline
       </a>
-      <span class="text-xs font-mono text-charcoal-500">Next: Week 07 (Field Notes in Progress)</span>
+      <span class="text-xs font-mono text-charcoal-500">Week 06 &bull; Laser Cutting</span>
     </div>
 
   </main>
@@ -589,7 +399,6 @@
   </div>
 
   <script>
-    // Lightbox functionality for image zoom
     function openLightbox(src) {
       const lightbox = document.getElementById('lightbox');
       const img = document.getElementById('lightbox-img');
@@ -604,7 +413,6 @@
       document.body.style.overflow = '';
     }
 
-    // Close lightbox with Escape key
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeLightbox();
     });
