@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 0 — The Journey Begins ✈️ | Shree Varsha V K — PRICE ProtoSem</title>
+  <meta name="description" content="Day-by-day reflection and field notes from Week 0 of PRICE ProtoSem by Shree Varsha V K — Innovation Engineer Trainee.">
+  
+  <!-- Google Fonts: Cormorant Garamond, Newsreader, Plus Jakarta Sans, JetBrains Mono, Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN with custom Warm Ivory & Terracotta palette -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            ivory: {
+              50: '#FDFCF9',
+              100: '#FAF7F2',
+              150: '#F7F2EB',
+              200: '#F2ECE2',
+              250: '#EDE4D8',
+              300: '#E6DCCD',
+              400: '#D6C8B8',
+              500: '#C2B19F'
+            },
+            charcoal: {
+              950: '#141210',
+              900: '#1E1B18',
+              850: '#2A2521',
+              800: '#38322D',
+              700: '#4D453E',
+              600: '#645B53',
+              500: '#7E736A',
+              400: '#9B9086',
+              300: '#BEB4AA',
+              200: '#DDD5CC',
+              100: '#EFEAE3'
+            },
+            terracotta: {
+              50: '#FDF6F3',
+              100: '#FAECE6',
+              200: '#F4D6CA',
+              300: '#EBB6A2',
+              400: '#DE8E71',
+              500: '#C85A32',
+              600: '#B54924',
+              700: '#983918',
+              800: '#7E3015',
+              900: '#672A14',
+              950: '#3D1508'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Cormorant Garamond"', 'serif'],
+            newsreader: ['"Newsreader"', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+            script: ['"Caveat"', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    body {
+      background-color: #FAF7F2;
+      background-image: radial-gradient(#E8DEC8 0.75px, transparent 0.75px);
+      background-size: 24px 24px;
+      color: #1E1B18;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .editorial-card {
+      background: #FFFFFF;
+      border: 1px solid #E8DEC8;
+      box-shadow: 0 4px 20px -6px rgba(77, 69, 62, 0.05);
+    }
+
+    .takeaway-box {
+      background: #FDF6F3;
+      border-left: 3px solid #C85A32;
+      border-top: 1px solid #FAECE6;
+      border-right: 1px solid #FAECE6;
+      border-bottom: 1px solid #FAECE6;
+    }
+
+    .monogram-box {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      letter-spacing: -0.05em;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #FAF7F2;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #D8CAAF;
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #C85A32;
+    }
+
+    ::selection {
+      background-color: #EBB6A2;
+      color: #1E1B18;
+    }
+  </style>
+</head>
+<body class="custom-scrollbar antialiased">
+
+  <!-- ==================== TOP NAVIGATION ==================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#FAF7F2]/90 backdrop-blur-md border-b border-ivory-300">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html#protosem" class="flex items-center gap-2 text-charcoal-700 hover:text-terracotta-600 text-xs sm:text-sm font-semibold transition group">
+        <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition text-xs text-terracotta-500"></i>
+        <span>Back to ProtoSem Timeline</span>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <span class="text-xs font-mono px-2.5 py-1 rounded bg-terracotta-50 border border-terracotta-500/30 text-terracotta-700 font-semibold">
+          CHAPTER 00 / 20
+        </span>
+        <a href="index.html" class="hidden sm:inline-block px-3 py-1.5 text-xs font-semibold text-white bg-terracotta-500 hover:bg-terracotta-600 rounded-lg transition shadow-2xs">
+          Full Portfolio
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN BLOG ARTICLE ==================== -->
+  <main class="relative z-10 pt-28 pb-24 max-w-4xl mx-auto px-4 sm:px-6">
+
+    <!-- Article Header -->
+    <header class="space-y-5 pb-10 border-b border-ivory-300">
+      <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+        <span class="px-2.5 py-1 rounded bg-terracotta-50 text-terracotta-700 font-bold border border-terracotta-500/30">PHASE 01</span>
+        <span class="text-charcoal-400">&bull;</span>
+        <span class="text-charcoal-600">INDUCTION &amp; DISCOVERY</span>
+        <span class="text-charcoal-400">&bull;</span>
+        <span class="text-terracotta-700 font-semibold">5-DAY REFLECTION</span>
+      </div>
+
+      <h1 class="font-serif text-3xl sm:text-5xl font-bold text-charcoal-900 tracking-tight leading-tight">
+        WEEK 0 — THE JOURNEY BEGINS ✈️
+      </h1>
+
+      <p class="text-base sm:text-lg text-charcoal-700 font-serif italic leading-relaxed">
+        “The first landing of my PRICE ProtoSem journey—a week that made me look inward, look around, and finally start looking at what I could create.”
+      </p>
+
+      <!-- Byline / Author Tag (Clean Editorial - No image space) -->
+      <div class="flex items-center gap-3.5 pt-2 text-xs text-charcoal-600">
+        <div class="w-10 h-10 rounded-lg bg-ivory-150 border border-terracotta-500/30 flex items-center justify-center text-terracotta-600 font-serif font-bold text-base shadow-2xs">
+          SV
+        </div>
+        <div>
+          <div class="font-bold text-charcoal-900 text-sm">Shree Varsha V K</div>
+          <div class="text-charcoal-500 font-mono text-[11px]">Innovation Engineer Trainee &bull; PRICE ProtoSem</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Article Body -->
+    <article class="pt-10 space-y-12 text-charcoal-700 text-sm sm:text-base leading-relaxed">
+
+      <!-- ==================== DAY 1 ==================== -->
+      <section class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
+        <div class="flex items-center justify-between border-b border-ivory-300 pb-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-charcoal-900 flex items-center gap-2.5">
+            <span class="text-terracotta-600 font-mono text-base">Day 1 &mdash;</span> Finding My Place
+          </h2>
+          <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-ivory-150 text-charcoal-600 border border-ivory-300">Day 01/05</span>
+        </div>
+
+        <div class="space-y-4">
+          <h3 class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Morning &mdash; Starting With Introductions</h3>
+          <p>
+            The first day of PRICE Protosem began with something simple—introducing ourselves.
+          </p>
+          <p>
+            We were made to sit in a circle, where each of us introduced ourselves so that the person next to us could get to know who we were. When it was my turn, I felt quite confident speaking about myself. It was a small beginning, but it felt like the first step into a completely new journey.
+          </p>
+        </div>
+
+        <div class="space-y-4 pt-2">
+          <h3 class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Afternoon &mdash; From Ideas to Reality</h3>
+          <p>
+            The afternoon took us from conversations to making. We explored different labs and got a glimpse of the tools that turn ideas into something tangible.
+          </p>
+          <p>
+            We saw 3D printing machines, laser-cutting processes, and different prototyping facilities. Watching an idea take shape physically made the concept of prototyping feel much more real to me.
+          </p>
+        </div>
+
+        <!-- Day 1 Takeaway -->
+        <div class="takeaway-box p-4 rounded-xl space-y-1">
+          <div class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Day 1 Takeaway:</div>
+          <p class="text-xs sm:text-sm text-charcoal-900 font-medium">
+            The journey began with knowing the people around me—and then seeing how ideas can actually take shape.
+          </p>
+        </div>
+      </section>
+
+      <!-- ==================== DAY 2 ==================== -->
+      <section class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
+        <div class="flex items-center justify-between border-b border-ivory-300 pb-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-charcoal-900 flex items-center gap-2.5">
+            <span class="text-terracotta-600 font-mono text-base">Day 2 &mdash;</span> Wonder, Identity &amp; Discovering Myself
+          </h2>
+          <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-ivory-150 text-charcoal-600 border border-ivory-300">Day 02/05</span>
+        </div>
+
+        <div class="space-y-4">
+          <h3 class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Morning &mdash; Finding a Story That Felt Like Me</h3>
+          <p>
+            We were asked to pick a comic story from Zenzi Pencils, and I chose <span class="text-charcoal-900 font-semibold italic">Wonder &amp; Excitement</span>.
+          </p>
+          <p>
+            The story spoke about preserving the sense of wonder that we have as children—the curiosity that makes us see something new and immediately think, “I want to try that.”
+          </p>
+          <p>
+            That idea felt very close to me because wonder and excitement are two things that naturally drive me. Whenever I come across something new or different, I feel the urge to explore it. If something excites me, I want to go and try it. And if something else looks completely different, I want to explore that too.
+          </p>
+          <p class="font-serif italic text-terracotta-700">
+            Maybe that curiosity is one of the things that keeps me moving.
+          </p>
+        </div>
+
+        <div class="space-y-4 pt-2">
+          <h3 class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Another Story &mdash; Mary Shelley’s Teenage Dream</h3>
+          <p>
+            I also shared <span class="text-charcoal-900 font-semibold italic">Mary Shelley’s Teenage Dream</span>. What connected with me was the pressure of expectations—knowing that people around you are constantly asking where you are heading, while you are still trying to figure things out yourself.
+          </p>
+          <p>
+            The struggles of the author, the pressure of having to create something, and the feeling of being unable to produce what is expected of you made me reflect on my own experiences. It made me think about how often we are asked: <span class="text-charcoal-900 font-semibold">“What do you want to become?”</span> even when we are still discovering what genuinely excites us.
+          </p>
+        </div>
+
+        <div class="space-y-4 pt-2">
+          <h3 class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Discovering My Personality</h3>
+          <p>
+            We also took the 16Personalities test, and I received the <span class="text-terracotta-700 font-bold">Campaigner (ENFP)</span> personality.
+          </p>
+          <p>
+            It gave me another perspective on myself—my curiosity, enthusiasm, openness to new experiences, and the way I naturally get excited about possibilities. At the same time, I realised that the way we behave can also change depending on the environment, the people around us, and the experiences we go through. Our personality is not just a label; it is also something we understand better through the situations we experience.
+          </p>
+        </div>
+
+        <div class="space-y-4 pt-2">
+          <h3 class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Understanding LinkedIn</h3>
+          <p>
+            The day also introduced me to LinkedIn and how it works as a platform for building and communicating our professional identity. I learned more about how people present their experiences, skills, achievements, and interests—and how all these pieces eventually become part of our professional story.
+          </p>
+        </div>
+
+        <!-- Day 2 Takeaway -->
+        <div class="takeaway-box p-4 rounded-xl space-y-1">
+          <div class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Day 2 Takeaway:</div>
+          <p class="text-xs sm:text-sm text-charcoal-900 font-medium">
+            I discovered that my curiosity isn't just something I have—it might actually be one of the things that drives me.
+          </p>
+        </div>
+      </section>
+
+      <!-- ==================== DAY 3 ==================== -->
+      <section class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
+        <div class="flex items-center justify-between border-b border-ivory-300 pb-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-charcoal-900 flex items-center gap-2.5">
+            <span class="text-terracotta-600 font-mono text-base">Day 3 &mdash;</span> Choices, Strategy &amp; Teamwork
+          </h2>
+          <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-ivory-150 text-charcoal-600 border border-ivory-300">Day 03/05</span>
+        </div>
+
+        <div class="space-y-4">
+          <h3 class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Morning &mdash; The Marshmallow Challenge</h3>
+          <p>
+            Day 3 started with the Marshmallow Challenge. I arrived a little late because I had a meeting with my mentor. But even being late became a small lesson for me—every day is filled with choices, and sometimes the choices we make also mean missing out on something else.
+          </p>
+          <p>
+            Even though I joined late, our team quickly got into the challenge. We built a <span class="text-terracotta-700 font-bold">52 cm tower</span>, which placed us first in the challenge. It was a simple activity, but it showed me how quickly a team can adapt, divide responsibilities, and work towards a common goal.
+          </p>
+          <p class="text-charcoal-600 text-xs sm:text-sm italic">
+            One funny moment I remember was Tarunika taking the marshmallow, removing its centre, and sharing pieces with everyone. I couldn't eat any because I had a cough, but it definitely added to the fun of the activity.
+          </p>
+        </div>
+
+        <div class="space-y-4 pt-2">
+          <h3 class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Among Us &mdash; Observe Before You Assume</h3>
+          <p>
+            We also played an Among Us-inspired game, and this turned out to be much more about observation and strategy than I expected.
+          </p>
+          <p>
+            In the first round, we weren't the imposters. We started watching the reactions of people as they opened their chits. Whenever someone called the mentor to ask what was written on their chit, we realised that they probably weren't the imposter, because the imposter already knew their role. By combining these observations, we identified the correct imposter team.
+          </p>
+          <p>
+            In the second round, our Beta Team became the imposters! I came up with a plan to collect everyone's water bottles and place them in the centre to make it look like a team task. It wasn't really about winning—it was about creating an experience together.
+          </p>
+        </div>
+
+        <div class="space-y-4 pt-2">
+          <h3 class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Beta Team &mdash; The Beginning of a Team</h3>
+          <p>
+            Day 3 marked the formation of our <span class="text-charcoal-900 font-semibold">Beta Team</span>. I joined <span class="text-terracotta-700 font-medium">Tarunika, Visakan, Maha, and Affrina</span>, and this was the beginning of working together as a team rather than simply participating as individuals.
+          </p>
+        </div>
+
+        <!-- Day 3 Takeaway -->
+        <div class="takeaway-box p-4 rounded-xl space-y-1">
+          <div class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Day 3 Takeaway:</div>
+          <p class="text-xs sm:text-sm text-charcoal-900 font-medium">
+            From building a 52 cm tower to decoding people's reactions, Day 3 reminded me that good teamwork is a mix of observation, strategy, adaptability, and a little bit of fun.
+          </p>
+        </div>
+      </section>
+
+      <!-- ==================== DAY 4 ==================== -->
+      <section class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
+        <div class="flex items-center justify-between border-b border-ivory-300 pb-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-charcoal-900 flex items-center gap-2.5">
+            <span class="text-terracotta-600 font-mono text-base">Day 4 &mdash;</span> Taking the Stage &amp; Thinking Beyond the Obvious
+          </h2>
+          <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-ivory-150 text-charcoal-600 border border-ivory-300">Day 04/05</span>
+        </div>
+
+        <div class="space-y-4">
+          <h3 class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Preparing for the Inauguration</h3>
+          <p>
+            Day 4 was largely focused on preparing for the PRICE Protosem inauguration in the evening. As a member of the <span class="text-charcoal-900 font-semibold">Voice &amp; Views</span> team, I had the opportunity to step onto the stage and speak about what I expected from the programme.
+          </p>
+          <p>
+            For me, two things stood out—<span class="text-terracotta-700 font-semibold">interdisciplinary learning and networking</span>. I was excited about learning with people from different disciplines, because every field brings a different way of looking at the same problem.
+          </p>
+        </div>
+
+        <div class="space-y-4 pt-2">
+          <h3 class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Evening &mdash; From Consumer Problems to Wild Ideas</h3>
+          <p>
+            We also had an engaging session with <span class="text-charcoal-900 font-semibold">CEO Rajagopalan</span>, where we were encouraged to look at problems from the consumer's perspective.
+          </p>
+          <p>
+            Instead of immediately asking what we could build, we were encouraged to first understand the problems and pain points consumers actually face and then think about how we could create meaningful solutions around them.
+          </p>
+          <p>
+            What stood out to me was the encouragement to think about <span class="text-charcoal-900 font-semibold italic">wild ideas</span>—ideas that might initially seem unusual or even unrealistic. He also shared his experience connecting physical and digital retail, helping me understand the essence of <span class="text-terracotta-700 font-semibold">phygital retail</span>.
+          </p>
+        </div>
+
+        <!-- Day 4 Takeaway -->
+        <div class="takeaway-box p-4 rounded-xl space-y-1">
+          <div class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Day 4 Takeaway:</div>
+          <p class="text-xs sm:text-sm text-charcoal-900 font-medium">
+            Don't begin by asking, “What can we build?” Begin by asking, “What problem are people actually experiencing?”
+          </p>
+        </div>
+      </section>
+
+      <!-- ==================== DAY 5 ==================== -->
+      <section class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
+        <div class="flex items-center justify-between border-b border-ivory-300 pb-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-charcoal-900 flex items-center gap-2.5">
+            <span class="text-terracotta-600 font-mono text-base">Day 5 &mdash;</span> Learning From Those Who Took the Path
+          </h2>
+          <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-ivory-150 text-charcoal-600 border border-ivory-300">Day 05/05</span>
+        </div>
+
+        <div class="space-y-4">
+          <h3 class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Accelerator Program &mdash; Kickoff 2026</h3>
+          <p>
+            Day 5 began with the Accelerator Program Kickoff 2026, where we had the opportunity to listen to <span class="text-charcoal-900 font-semibold">R. Krishnan, Managing Director of Tulasi Pharmacy</span>.
+          </p>
+          <p>
+            What stayed with me was his journey—from starting out as a medical representative to eventually taking on a leadership role. It reminded me that successful careers rarely follow a straight line; they are built through setbacks, persistence, and seizing opportunities.
+          </p>
+        </div>
+
+        <div class="space-y-4 pt-2">
+          <h3 class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">An Unexpected Connection &mdash; An Alumna on Stage</h3>
+          <p>
+            We also had <span class="text-charcoal-900 font-semibold">Swati Shree, founder of The Toilet Thing</span>, join us. I had already seen her on Shark Tank India, but what made the moment even more memorable was discovering that she is an alumna of our own college. Seeing someone who had once been a student in the same institution standing on that stage as a founder made entrepreneurship feel much closer to home.
+          </p>
+        </div>
+
+        <div class="space-y-4 pt-2">
+          <h3 class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Closing Week 0 &mdash; Looking Back</h3>
+          <p>
+            The day ended with our presentation of everything we had worked on throughout the week. The week slowly moved from:
+          </p>
+          <div class="p-3.5 bg-ivory-100 rounded-lg border border-ivory-300 font-mono text-xs text-terracotta-700 text-center font-medium">
+            “Who am I?” &rarr; “What excites me?” &rarr; “How do I work with others?” &rarr; “What problems can I solve?” &rarr; “What can I create?”
+          </div>
+          <p>
+            And perhaps that is what made Week 0 special. It didn't give me all the answers. It made me more curious about the questions.
+          </p>
+        </div>
+
+        <!-- Day 5 Takeaway -->
+        <div class="takeaway-box p-4 rounded-xl space-y-1">
+          <div class="text-xs font-mono font-bold text-terracotta-700 uppercase tracking-wider">Day 5 Takeaway:</div>
+          <p class="text-xs sm:text-sm text-charcoal-900 font-medium">
+            The journey doesn't become inspiring because the destination is impressive. It becomes inspiring because of everything you learn, overcome, and discover along the way.
+          </p>
+        </div>
+      </section>
+
+      <!-- ==================== FINAL SYNTHESIS ==================== -->
+      <section class="editorial-card rounded-2xl p-8 sm:p-10 text-center space-y-5 border-terracotta-500/30">
+        <span class="text-xs font-mono uppercase tracking-widest text-terracotta-700 font-bold">SYNTHESIS</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-charcoal-900">
+          WEEK 0 &mdash; FIRST LANDING ✈️
+        </h2>
+        <p class="text-charcoal-700 font-serif italic text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          “It was the first landing of my PRICE Protosem journey—a week that made me look inward, look around, and finally start looking at what I could create. From wonder to teamwork, from curiosity to consumer problems, and from ideas to possibilities, Week 0 gave me the first glimpse of what this journey could become.”
+        </p>
+        <div class="text-xs font-mono text-terracotta-700 uppercase tracking-wider font-semibold">
+          &bull; And this is only the beginning &bull;
+        </div>
+      </section>
+
+    </article>
+
+    <!-- Bottom Navigation -->
+    <div class="pt-12 mt-12 border-t border-ivory-300 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <a href="index.html#protosem" class="px-5 py-2.5 rounded-lg bg-white border border-ivory-300 hover:border-terracotta-400 hover:text-terracotta-600 text-xs font-mono text-charcoal-700 transition flex items-center gap-2 shadow-2xs">
+        <i class="fa-solid fa-arrow-left text-terracotta-500"></i> Back to 20-Week Road
+      </a>
+      <span class="text-xs font-mono text-charcoal-500">Next: Week 01 (Field Notes in Progress)</span>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-ivory-300 bg-ivory-150/70 py-8 text-center text-xs text-charcoal-500 font-mono">
+    &copy; 2026 Shree Varsha V K &bull; PRICE ProtoSem Innovation Log
+  </footer>
+
+</body>
+</html>
