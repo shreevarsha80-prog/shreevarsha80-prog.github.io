@@ -1384,7 +1384,7 @@
                 </div>
                 <div class="pt-1">
                   <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-terracotta-50 text-terracotta-700 border border-terracotta-500/30 text-[10px] font-mono font-semibold">
-                    <i class="fa-solid fa-book-open text-[9px]"></i> READ 5-DAY LOG
+                    <i class="fa-solid fa-book-open text-[9px]"></i> ${item.week === 0 ? 'READ 5-DAY LOG' : 'READ STORY'}
                   </span>
                 </div>
               </div>
@@ -1449,8 +1449,8 @@
       modalWeekNum.textContent = formattedNum;
       modalPhaseLabel.innerHTML = item.phaseLabel;
 
-      if (item.hasStory) {
-        modalWeekTitle.textContent = "WEEK 0 — THE JOURNEY BEGINS ✈️";
+      if (item.week === 0) {
+        modalWeekTitle.textContent = "WEEK 00 — THE JOURNEY BEGINS ✈️";
         modalFullArticleBtn.classList.remove('hidden');
         modalFullArticleBtn.href = item.storyUrl || "week-00.html";
 
@@ -1531,6 +1531,71 @@
               </div>
             </div>
 
+          </div>
+        `;
+      } else if (item.week === 6) {
+        modalWeekTitle.textContent = "WEEK 06 — My First Experience with Laser Cutting";
+        modalFullArticleBtn.classList.remove('hidden');
+        modalFullArticleBtn.href = item.storyUrl || "week-06.html";
+
+        modalDynamicBody.innerHTML = `
+          <div class="space-y-4 text-charcoal-700 text-xs sm:text-sm leading-relaxed font-sans">
+            
+            <p class="font-serif italic text-terracotta-700 border-l-2 border-terracotta-500 pl-3 py-1.5 bg-terracotta-50/60 rounded-r-lg">
+              “Seeing the entire journey from an image on a screen → a prepared digital file → a machine → a physical product.”
+            </p>
+
+            <!-- Overview -->
+            <div class="p-3.5 rounded-xl bg-ivory-100 border border-ivory-300 space-y-2">
+              <div class="flex items-center justify-between font-bold text-charcoal-900">
+                <span class="text-terracotta-700 font-mono">Basics &amp; Design Preparation</span>
+                <span class="text-[10px] text-charcoal-500 font-mono">RDWorks &amp; Converto</span>
+              </div>
+              <p class="text-charcoal-700 text-xs">
+                Learned laser cutting essentials, machine mechanics, safety precautions, and RDWorks from Sabresh. Chose Van Gogh's <em>The Starry Night</em>, converted JPG to DXF via Converto, and assigned cutting and scanning layers with custom text.
+              </p>
+              <div class="text-[11px] text-terracotta-800 font-medium bg-terracotta-50 px-2.5 py-1 rounded border border-terracotta-500/20 font-sans">
+                &bull; Practical Activity: Translating iconic artwork into physical laser vector paths.
+              </div>
+            </div>
+
+            <!-- Iteration -->
+            <div class="p-3.5 rounded-xl bg-ivory-100 border border-ivory-300 space-y-2">
+              <div class="flex items-center justify-between font-bold text-charcoal-900">
+                <span class="text-terracotta-700 font-mono">Learning Through My First Attempt</span>
+                <span class="text-[10px] text-charcoal-500 font-mono">Mirrored Orientation</span>
+              </div>
+              <p class="text-charcoal-700 text-xs">
+                First attempt failed because the design wasn't mirrored before printing, causing letters to come out reversed. On the second print, corrected the orientation and mirrored the design, resulting in a beautiful finish.
+              </p>
+              <div class="text-[11px] text-terracotta-800 font-medium bg-terracotta-50 px-2.5 py-1 rounded border border-terracotta-500/20 font-sans">
+                &bull; Key Insight: Even a small step in preparation completely changes the final result.
+              </div>
+            </div>
+
+            <!-- Final Product -->
+            <div class="p-3.5 rounded-xl bg-ivory-100 border border-ivory-300 space-y-2">
+              <div class="flex items-center justify-between font-bold text-charcoal-900">
+                <span class="text-terracotta-700 font-mono">The Final Product</span>
+                <span class="text-[10px] text-charcoal-500 font-mono">Black Plastic Board Keychain</span>
+              </div>
+              <p class="text-charcoal-700 text-xs">
+                The final design was cut on black plastic board into a durable keychain in under five minutes of laser processing.
+              </p>
+              <div class="text-[11px] text-terracotta-800 font-medium bg-terracotta-50 px-2.5 py-1 rounded border border-terracotta-500/20 font-sans">
+                &bull; Outcome: A completed, tangible keepsake connecting digital design to hardware.
+              </div>
+            </div>
+
+          </div>
+        `;
+      } else if (item.hasStory) {
+        modalWeekTitle.textContent = `${item.label} — ${item.subtitle || ''}`;
+        modalFullArticleBtn.classList.remove('hidden');
+        modalFullArticleBtn.href = item.storyUrl || "#";
+        modalDynamicBody.innerHTML = `
+          <div class="p-4 rounded-xl bg-ivory-100 border border-ivory-300">
+            <p class="text-xs text-charcoal-700">${item.subtitle || 'Read story article.'}</p>
           </div>
         `;
       } else {
