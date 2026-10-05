@@ -325,7 +325,7 @@
         <a href="#nesting" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">7. Nesting</a>
         <a href="#settings" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">8. Settings</a>
         <a href="#process" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">9. Cutting</a>
-        <a href="#hero" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">10. Hero Shot</a>
+        <a href="#final-output" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">10. Final Output</a>
         <a href="#problems" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">11. Problems &amp; Fixes</a>
         <a href="#reflection" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">12. Reflection</a>
         <a href="#source-files" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">13. Source Files</a>
@@ -871,7 +871,7 @@
         <!-- Figure 6: Laser-cutting process in progress (Video Player) -->
         <div class="blog-media-container max-w-2xl mx-auto shadow-md">
           <div class="relative bg-black rounded-t-xl overflow-hidden aspect-video">
-            <video controls class="w-full h-full object-contain" playsinline preload="metadata">
+            <video autoplay loop muted playsinline controls class="w-full h-full object-contain" preload="auto">
               <source src="images/week-06/laser%20cutting%20video.mp4" type="video/mp4">
               <source src="images/week-06/laser cutting video.mp4" type="video/mp4">
               Your browser does not support the video tag.
@@ -884,19 +884,19 @@
         </div>
       </section>
 
-      <!-- ==================== 10. FINAL RESULT – HERO SHOT ==================== -->
-      <section id="hero" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
+      <!-- ==================== 10. FINAL RESULT – FINAL OUTPUT ==================== -->
+      <section id="final-output" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
         <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
           <span class="text-xs font-mono text-terracotta-600 font-bold uppercase tracking-wider">10</span>
           <span class="text-charcoal-300">&bull;</span>
-          <h2 class="font-serif text-2xl font-bold text-charcoal-900">Final Result – Hero Shot</h2>
+          <h2 class="font-serif text-2xl font-bold text-charcoal-900">Final Result – Final Output</h2>
         </div>
 
         <p class="text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal">
           The final result was a black acrylic keychain featuring the selected Starry Night-inspired design and text. After correcting the mirroring issue, the second output came out clean and matched the intended orientation much better.
         </p>
 
-        <!-- Figure 7: Final black acrylic laser-cut keychain (Hero Photograph) -->
+        <!-- Figure 7: Final black acrylic laser-cut keychain (Final Output Photograph) -->
         <div class="blog-media-container cursor-pointer shadow-lg max-w-2xl mx-auto" onclick="openLightbox(this.querySelector('img').src)">
           <img src="images/week-06/final-keychain.jpg" alt="Final black acrylic laser-cut keychain" loading="lazy" class="w-full">
           <div class="media-caption">
@@ -908,7 +908,7 @@
         <!-- Video: Correction of the Failed Product Demonstration -->
         <div class="blog-media-container max-w-2xl mx-auto shadow-md mt-6">
           <div class="relative bg-black rounded-t-xl overflow-hidden aspect-video">
-            <video controls class="w-full h-full object-contain" playsinline preload="metadata">
+            <video autoplay loop muted playsinline controls class="w-full h-full object-contain" preload="auto">
               <source src="images/week-06/correction%20of%20the%20failed%20product.mp4" type="video/mp4">
               <source src="images/week-06/correction of the failed product.mp4" type="video/mp4">
               Your browser does not support the video tag.
@@ -1150,6 +1150,17 @@
 
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Ensure all videos play automatically muted
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('video').forEach(vid => {
+        vid.muted = true;
+        const playPromise = vid.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {});
+        }
+      });
     });
   </script>
 
