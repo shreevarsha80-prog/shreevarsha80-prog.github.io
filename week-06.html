@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LASER CUTTING | Shree Varsha V K — PRICE ProtoSem</title>
-  <meta name="description" content="Laser Cutting case study by Shree Varsha V K at FORGE. A digital-to-physical fabrication story translating Van Gogh's Starry Night into a laser-cut acrylic keychain.">
+  <title>WEEK 06: DIGITAL FABRICATION | Shree Varsha V K — PRICE ProtoSem</title>
+  <meta name="description" content="Digital Fabrication portfolio by Shree Varsha V K at FORGE. Chapter 01: CNC Laser Cutting of Starry Night acrylic keychain. Chapter 02: Additive Manufacturing of lip balm holder with Bambu Lab H2S.">
   
   <!-- Google Fonts: Cormorant Garamond, Plus Jakarta Sans, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
+  <!-- Google model-viewer for WebGL 3D model rendering -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+
   <!-- Tailwind CSS CDN with custom Warm Ivory & Terracotta palette -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -240,6 +243,12 @@
       border-bottom: 1px solid #EDE4D8;
     }
 
+    /* 3D Model Viewer Customization */
+    model-viewer {
+      --poster-color: transparent;
+      outline: none;
+    }
+
     /* Reading Progress Bar */
     #progress-bar {
       position: fixed;
@@ -278,27 +287,24 @@
   </header>
 
   <!-- ==================== MAIN BLOG ARTICLE ==================== -->
-  <main class="relative z-10 pt-28 pb-24 max-w-4xl mx-auto px-4 sm:px-6">
+  <main class="relative z-10 pt-24 pb-24 max-w-4xl mx-auto px-4 sm:px-6">
 
-    <!-- Article Header -->
+    <!-- Overall Week 06 Article Header -->
     <header class="space-y-4 pb-8 border-b border-ivory-300">
       <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
         <span class="px-2.5 py-1 rounded bg-terracotta-50 text-terracotta-700 font-bold border border-terracotta-500/30">WEEK 06</span>
         <span class="text-charcoal-400">&bull;</span>
         <span class="text-charcoal-600">PRICE PROTOSEM</span>
         <span class="text-charcoal-400">&bull;</span>
-        <span class="text-terracotta-700 font-semibold">DIGITAL FABRICATION CASE STUDY</span>
+        <span class="text-terracotta-700 font-semibold">RAPID PROTOTYPING &amp; FABRICATION</span>
       </div>
 
       <div class="space-y-2">
         <h1 class="font-serif text-3xl sm:text-5xl font-bold text-charcoal-900 tracking-tight leading-tight">
-          LASER CUTTING
+          WEEK 06 &mdash; DIGITAL FABRICATION
         </h1>
         <p class="font-serif italic text-lg sm:text-xl text-terracotta-600">
-          From a digital artwork to a physical acrylic keychain.
-        </p>
-        <p class="text-sm sm:text-base text-charcoal-600 font-normal leading-relaxed pt-1">
-          This activity introduced me to the digital-to-physical workflow of laser cutting—translating Vincent van Gogh's <em>The Starry Night</em> from an image on screen into a precision-cut and engraved acrylic keychain at FORGE.
+          Two modalities of digital-to-physical realization: Subtractive CO₂ Laser Processing &amp; Additive Layered 3D Manufacturing.
         </p>
       </div>
 
@@ -312,95 +318,120 @@
           <div class="text-charcoal-500 font-mono text-[11px]">ProtoSem 25.2 &bull; Forge Innovation &amp; Ventures</div>
         </div>
       </div>
-
-      <!-- Case Study Story Pipeline Map -->
-      <div class="pt-4 flex flex-wrap items-center gap-1.5 text-[11px] font-mono text-charcoal-600">
-        <span class="font-semibold text-terracotta-700 mr-1">Story Arc:</span>
-        <a href="#understanding" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">01 Understand</a>
-        <span class="text-charcoal-300">&rarr;</span>
-        <a href="#machine-safety" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">02 Machine &amp; Safety</a>
-        <span class="text-charcoal-300">&rarr;</span>
-        <a href="#idea-material" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">03 Idea &amp; Material</a>
-        <span class="text-charcoal-300">&rarr;</span>
-        <a href="#image-to-file" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">04 File Conversion</a>
-        <span class="text-charcoal-300">&rarr;</span>
-        <a href="#preparing-design" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">05 Design Prep</a>
-        <span class="text-charcoal-300">&rarr;</span>
-        <a href="#fabrication" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">06 Fabrication</a>
-        <span class="text-charcoal-300">&rarr;</span>
-        <a href="#first-attempt" class="px-2 py-0.5 rounded bg-rose-50 hover:bg-rose-100 text-rose-800 border border-rose-200 transition font-bold">07 The Mistake &amp; Fix</a>
-        <span class="text-charcoal-300">&rarr;</span>
-        <a href="#final-outcome" class="px-2 py-0.5 rounded bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 transition font-bold">08 Final Outcome</a>
-        <span class="text-charcoal-300">&rarr;</span>
-        <a href="#what-i-learned" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">09 Reflection</a>
-      </div>
     </header>
 
-    <!-- Case Study Content -->
-    <article class="pt-8 space-y-12 text-charcoal-700 text-base leading-relaxed">
+    <!-- STICKY CHAPTER SWITCHER -->
+    <div class="sticky top-16 z-40 py-3 bg-[#FAF7F2]/90 backdrop-blur-md border-b border-ivory-300">
+      <nav aria-label="Chapter navigation" class="flex items-center gap-2 p-1.5 rounded-2xl bg-white border border-ivory-300 shadow-xs">
+        <a href="#laser-cutting" id="tab-laser" class="flex-1 py-2.5 px-3 text-center rounded-xl text-xs sm:text-sm font-mono font-bold transition flex items-center justify-center gap-2 bg-terracotta-500 text-white shadow-2xs">
+          <i class="fa-solid fa-bolt text-xs"></i>
+          <span>01 / LASER CUTTING</span>
+        </a>
+        <a href="#3d-printing" id="tab-3d" class="flex-1 py-2.5 px-3 text-center rounded-xl text-xs sm:text-sm font-mono font-bold transition flex items-center justify-center gap-2 bg-ivory-50 text-charcoal-700 hover:text-terracotta-600 hover:bg-terracotta-50/50 border border-ivory-200">
+          <i class="fa-solid fa-cube text-xs"></i>
+          <span>02 / 3D PRINTING</span>
+        </a>
+      </nav>
+    </div>
 
-      <!-- ==================== 01 — UNDERSTANDING LASER CUTTING ==================== -->
+    <!-- ========================================================================= -->
+    <!-- ==================== CHAPTER 01 — LASER CUTTING ========================= -->
+    <!-- ========================================================================= -->
+    <section id="laser-cutting" class="pt-8 space-y-12 text-charcoal-700 text-base leading-relaxed">
+
+      <!-- Chapter 01 Intro Banner -->
+      <div class="space-y-3 pb-6 border-b border-ivory-300">
+        <div class="flex items-center gap-2 text-xs font-mono">
+          <span class="px-2.5 py-1 rounded bg-terracotta-50 text-terracotta-700 font-bold border border-terracotta-500/30">CHAPTER 01</span>
+          <span class="text-charcoal-400">&bull;</span>
+          <span class="text-charcoal-600">SUBTRACTIVE &amp; VECTOR PROCESSING</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal-900 tracking-tight">
+          01 / LASER CUTTING
+        </h2>
+        <p class="font-serif italic text-lg sm:text-xl text-terracotta-600">
+          From a digital artwork to a physical acrylic keychain.
+        </p>
+        <p class="text-sm sm:text-base text-charcoal-600 font-normal leading-relaxed pt-1">
+          This activity introduced me to the digital-to-physical workflow of laser cutting—translating Vincent van Gogh's <em>The Starry Night</em> from an image on screen into a precision-cut and engraved acrylic keychain at FORGE.
+        </p>
+
+        <!-- Laser Story Pipeline Map -->
+        <div class="pt-3 flex flex-wrap items-center gap-1.5 text-[11px] font-mono text-charcoal-600">
+          <span class="font-semibold text-terracotta-700 mr-1">Laser Flow:</span>
+          <a href="#understanding" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">01 Understand</a>
+          <span class="text-charcoal-300">&rarr;</span>
+          <a href="#machine-safety" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">02 Machine &amp; Safety</a>
+          <span class="text-charcoal-300">&rarr;</span>
+          <a href="#idea-material" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">03 Idea &amp; Material</a>
+          <span class="text-charcoal-300">&rarr;</span>
+          <a href="#image-to-file" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">04 File Conversion</a>
+          <span class="text-charcoal-300">&rarr;</span>
+          <a href="#preparing-design" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">05 Design Prep</a>
+          <span class="text-charcoal-300">&rarr;</span>
+          <a href="#fabrication" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">06 Fabrication</a>
+          <span class="text-charcoal-300">&rarr;</span>
+          <a href="#first-attempt" class="px-2 py-0.5 rounded bg-rose-50 hover:bg-rose-100 text-rose-800 border border-rose-200 transition font-bold">07 The Mistake &amp; Fix</a>
+          <span class="text-charcoal-300">&rarr;</span>
+          <a href="#final-outcome" class="px-2 py-0.5 rounded bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 transition font-bold">08 Final Outcome</a>
+          <span class="text-charcoal-300">&rarr;</span>
+          <a href="#what-i-learned" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">09 Reflection</a>
+        </div>
+      </div>
+
+      <!-- 01 — UNDERSTANDING LASER CUTTING -->
       <section id="understanding" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
         <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
           <span class="text-xs font-mono text-terracotta-600 font-bold uppercase tracking-wider">01</span>
           <span class="text-charcoal-300">&bull;</span>
-          <h2 class="font-serif text-2xl font-bold text-charcoal-900">UNDERSTANDING LASER CUTTING</h2>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">UNDERSTANDING LASER CUTTING</h3>
         </div>
 
-        <!-- WHAT IS LASER CUTTING? -->
         <div class="space-y-2">
-          <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
+          <h4 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
             <i class="fa-solid fa-bullseye text-terracotta-500"></i> What is Laser Cutting?
-          </h3>
+          </h4>
           <p class="text-sm sm:text-base text-charcoal-700 leading-relaxed">
             Laser cutting is a digital fabrication process that uses a focused laser beam to cut, engrave, or mark materials according to a digital design. The laser is computer-controlled, allowing accurate and repeatable reproduction of digital designs with high precision.
           </p>
         </div>
 
-        <!-- HOW IT WORKS -->
         <div class="space-y-4 pt-2">
-          <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
+          <h4 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
             <i class="fa-solid fa-arrows-split-up-and-left text-terracotta-500"></i> How it Works
-          </h3>
+          </h4>
 
-          <!-- Text-Based Workflow Pipeline -->
           <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2 text-center text-xs font-mono">
             <div class="p-3 rounded-xl bg-ivory-50 border border-ivory-200 flex flex-col justify-between items-center gap-1.5">
               <span class="w-6 h-6 rounded-full bg-ivory-200 text-charcoal-800 font-bold flex items-center justify-center text-[11px]">1</span>
               <span class="font-bold text-charcoal-900">Digital Design</span>
               <span class="text-[10px] text-charcoal-500 leading-tight">Digital artwork reference</span>
             </div>
-
             <div class="p-3 rounded-xl bg-ivory-50 border border-ivory-200 flex flex-col justify-between items-center gap-1.5">
               <span class="w-6 h-6 rounded-full bg-ivory-200 text-charcoal-800 font-bold flex items-center justify-center text-[11px]">2</span>
               <span class="font-bold text-charcoal-900">File Prep</span>
               <span class="text-[10px] text-charcoal-500 leading-tight">Vector cleaning &amp; scaling</span>
             </div>
-
             <div class="p-3 rounded-xl bg-ivory-50 border border-ivory-200 flex flex-col justify-between items-center gap-1.5">
               <span class="w-6 h-6 rounded-full bg-ivory-200 text-charcoal-800 font-bold flex items-center justify-center text-[11px]">3</span>
               <span class="font-bold text-charcoal-900">DXF Vector</span>
               <span class="text-[10px] text-charcoal-500 leading-tight">Coordinate geometry</span>
             </div>
-
             <div class="p-3 rounded-xl bg-ivory-50 border border-ivory-200 flex flex-col justify-between items-center gap-1.5">
               <span class="w-6 h-6 rounded-full bg-ivory-200 text-charcoal-800 font-bold flex items-center justify-center text-[11px]">4</span>
               <span class="font-bold text-charcoal-900">RDWorks</span>
               <span class="text-[10px] text-charcoal-500 leading-tight">Layer CAM setup</span>
             </div>
-
             <div class="p-3 rounded-xl bg-ivory-50 border border-ivory-200 flex flex-col justify-between items-center gap-1.5">
               <span class="w-6 h-6 rounded-full bg-ivory-200 text-charcoal-800 font-bold flex items-center justify-center text-[11px]">5</span>
               <span class="font-bold text-charcoal-900">Settings</span>
               <span class="text-[10px] text-charcoal-500 leading-tight">Speed &amp; power limits</span>
             </div>
-
             <div class="p-3 rounded-xl bg-ivory-50 border border-ivory-200 flex flex-col justify-between items-center gap-1.5">
               <span class="w-6 h-6 rounded-full bg-ivory-200 text-charcoal-800 font-bold flex items-center justify-center text-[11px]">6</span>
               <span class="font-bold text-charcoal-900">Laser Process</span>
               <span class="text-[10px] text-charcoal-500 leading-tight">CO₂ beam execution</span>
             </div>
-
             <div class="p-3 rounded-xl bg-terracotta-50 border border-terracotta-300 flex flex-col justify-between items-center gap-1.5">
               <span class="w-6 h-6 rounded-full bg-terracotta-500 text-white font-bold flex items-center justify-center text-[11px]">7</span>
               <span class="font-bold text-terracotta-800">Physical Part</span>
@@ -409,14 +440,12 @@
           </div>
         </div>
 
-        <!-- CUTTING VS SCANNING / ENGRAVING -->
         <div class="space-y-3 pt-2">
-          <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
+          <h4 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
             <i class="fa-solid fa-layer-group text-terracotta-500"></i> Cutting vs. Scanning / Engraving
-          </h3>
+          </h4>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- Cutting Card -->
             <div class="p-4 rounded-xl bg-ivory-50 border border-ivory-200 space-y-2">
               <div class="flex items-center gap-2">
                 <span class="w-3 h-3 rounded-full bg-red-600"></span>
@@ -426,8 +455,6 @@
                 The laser passes through the material to separate a section.
               </p>
             </div>
-
-            <!-- Scanning / Engraving Card -->
             <div class="p-4 rounded-xl bg-ivory-50 border border-ivory-200 space-y-2">
               <div class="flex items-center gap-2">
                 <span class="w-3 h-3 rounded-full bg-black"></span>
@@ -440,11 +467,10 @@
           </div>
         </div>
 
-        <!-- TYPES OF LASER SYSTEMS -->
         <div class="space-y-3 pt-2">
-          <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
+          <h4 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
             <i class="fa-solid fa-microchip text-terracotta-500"></i> Types of Laser Systems
-          </h3>
+          </h4>
 
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
             <div class="p-3.5 rounded-lg bg-ivory-50 border border-ivory-200 space-y-1">
@@ -468,75 +494,39 @@
         </div>
       </section>
 
-      <!-- ==================== 02 — THE MACHINE & ITS SAFETY ==================== -->
+      <!-- 02 — THE MACHINE & ITS SAFETY -->
       <section id="machine-safety" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
         <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
           <span class="text-xs font-mono text-terracotta-600 font-bold uppercase tracking-wider">02</span>
           <span class="text-charcoal-300">&bull;</span>
-          <h2 class="font-serif text-2xl font-bold text-charcoal-900">THE MACHINE &amp; ITS SAFETY</h2>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">THE MACHINE &amp; ITS SAFETY</h3>
         </div>
 
-        <!-- THE MACHINE -->
         <div class="space-y-4">
-          <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
+          <h4 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
             <i class="fa-solid fa-sliders text-terracotta-500"></i> The Machine
-          </h3>
+          </h4>
 
-          <!-- Clean Specification Layout -->
           <div class="overflow-x-auto rounded-xl border border-ivory-300 bg-white">
             <table class="w-full text-left text-xs sm:text-sm tech-table border-collapse">
               <tbody class="divide-y divide-ivory-200 font-sans">
-                <tr class="hover:bg-ivory-50/60 transition">
-                  <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700 w-1/2">Facility</td>
-                  <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900 w-1/2">FORGE</td>
-                </tr>
-                <tr class="hover:bg-ivory-50/60 transition">
-                  <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Model</td>
-                  <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">1490 CO₂ Laser</td>
-                </tr>
-                <tr class="hover:bg-ivory-50/60 transition">
-                  <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Working Area</td>
-                  <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">1300 × 900 mm</td>
-                </tr>
-                <tr class="hover:bg-ivory-50/60 transition">
-                  <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Laser Tube Power</td>
-                  <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">150 W</td>
-                </tr>
-                <tr class="hover:bg-ivory-50/60 transition">
-                  <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Machine Power</td>
-                  <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">1000 W</td>
-                </tr>
-                <tr class="hover:bg-ivory-50/60 transition">
-                  <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Control Software</td>
-                  <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">RDWorks</td>
-                </tr>
-                <tr class="hover:bg-ivory-50/60 transition">
-                  <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Listed Cutting Speed</td>
-                  <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">25 m/min</td>
-                </tr>
-                <tr class="hover:bg-ivory-50/60 transition">
-                  <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Listed Engraving Speed</td>
-                  <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">55 m/min</td>
-                </tr>
-                <tr class="hover:bg-ivory-50/60 transition">
-                  <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Accuracy</td>
-                  <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">0.1 mm</td>
-                </tr>
-                <tr class="hover:bg-ivory-50/60 transition">
-                  <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Working Temperature</td>
-                  <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">0–40 °C</td>
-                </tr>
-                <tr class="hover:bg-ivory-50/60 transition">
-                  <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Blowing System</td>
-                  <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">Lower Blowing System</td>
-                </tr>
+                <tr class="hover:bg-ivory-50/60 transition"><td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700 w-1/2">Facility</td><td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900 w-1/2">FORGE</td></tr>
+                <tr class="hover:bg-ivory-50/60 transition"><td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Model</td><td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">1490 CO₂ Laser</td></tr>
+                <tr class="hover:bg-ivory-50/60 transition"><td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Working Area</td><td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">1300 × 900 mm</td></tr>
+                <tr class="hover:bg-ivory-50/60 transition"><td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Laser Tube Power</td><td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">150 W</td></tr>
+                <tr class="hover:bg-ivory-50/60 transition"><td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Machine Power</td><td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">1000 W</td></tr>
+                <tr class="hover:bg-ivory-50/60 transition"><td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Control Software</td><td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">RDWorks</td></tr>
+                <tr class="hover:bg-ivory-50/60 transition"><td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Listed Cutting Speed</td><td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">25 m/min</td></tr>
+                <tr class="hover:bg-ivory-50/60 transition"><td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Listed Engraving Speed</td><td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">55 m/min</td></tr>
+                <tr class="hover:bg-ivory-50/60 transition"><td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Accuracy</td><td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">0.1 mm</td></tr>
+                <tr class="hover:bg-ivory-50/60 transition"><td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Working Temperature</td><td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">0–40 °C</td></tr>
+                <tr class="hover:bg-ivory-50/60 transition"><td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Blowing System</td><td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">Lower Blowing System</td></tr>
               </tbody>
             </table>
           </div>
 
-          <!-- Machine Photo -->
           <div class="blog-media-container cursor-pointer max-w-2xl mx-auto" onclick="openLightbox(this.querySelector('img').src)">
-            <img src="images/week-06/laser-cutter-machine.jpg" alt="1490 CO2 Laser cutter machine operated in FORGE laboratory" loading="lazy">
+            <img src="images/week-06/laser%20printing/laser-cutter-machine.jpg" alt="1490 CO2 Laser cutter machine operated in FORGE laboratory" loading="lazy">
             <div class="media-caption">
               <i class="fa-solid fa-camera"></i>
               <span>1490 CO₂ Laser cutter machine at the FORGE laboratory.</span>
@@ -544,13 +534,11 @@
           </div>
         </div>
 
-        <!-- BEFORE FABRICATION -->
         <div class="space-y-4 pt-2">
-          <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
+          <h4 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
             <i class="fa-solid fa-shield-halved text-terracotta-500"></i> Before Fabrication
-          </h3>
+          </h4>
 
-          <!-- Concise Safety Rule Cards -->
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
             <div class="p-3.5 rounded-xl bg-ivory-50 border border-ivory-200 flex items-start gap-2.5">
               <i class="fa-solid fa-glasses text-terracotta-600 mt-0.5"></i>
@@ -599,9 +587,7 @@
           </div>
         </div>
 
-        <!-- AUTHORIZED & BANNED MATERIALS -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-          <!-- Authorized Materials -->
           <div class="p-4 rounded-xl bg-emerald-50/70 border border-emerald-200 space-y-2.5">
             <div class="flex items-center gap-2 text-emerald-900 font-bold text-xs uppercase font-mono">
               <i class="fa-solid fa-circle-check text-emerald-600"></i> Authorized Materials
@@ -619,7 +605,6 @@
             </div>
           </div>
 
-          <!-- Banned Materials -->
           <div class="p-4 rounded-xl bg-rose-50/70 border border-rose-200 space-y-2.5">
             <div class="flex items-center gap-2 text-rose-900 font-bold text-xs uppercase font-mono">
               <i class="fa-solid fa-triangle-exclamation text-rose-600"></i> Banned Materials
@@ -637,26 +622,24 @@
         </div>
       </section>
 
-      <!-- ==================== 03 — FROM IDEA TO MATERIAL ==================== -->
+      <!-- 03 — FROM IDEA TO MATERIAL -->
       <section id="idea-material" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
         <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
           <span class="text-xs font-mono text-terracotta-600 font-bold uppercase tracking-wider">03</span>
           <span class="text-charcoal-300">&bull;</span>
-          <h2 class="font-serif text-2xl font-bold text-charcoal-900">FROM IDEA TO MATERIAL</h2>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">FROM IDEA TO MATERIAL</h3>
         </div>
 
-        <!-- MY DESIGN -->
         <div class="space-y-3">
-          <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
+          <h4 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
             <i class="fa-solid fa-palette text-terracotta-500"></i> My Design
-          </h3>
+          </h4>
           <p class="text-sm sm:text-base text-charcoal-700 leading-relaxed">
             For my laser-cutting project, I selected Vincent van Gogh's <em>The Starry Night</em>. I chose this artwork because I liked its visual style and wanted to experiment with how a detailed artwork could be translated into a physical laser-cut/engraved object.
           </p>
 
-          <!-- Selected Starry Night Artwork -->
           <div class="blog-media-container cursor-pointer max-w-xl mx-auto" onclick="openLightbox(this.querySelector('img').src)">
-            <img src="images/week-06/starry-night-original.jpg" alt="Vincent van Gogh - The Starry Night" loading="lazy">
+            <img src="images/week-06/laser%20printing/starry-night-original.jpg" alt="Vincent van Gogh - The Starry Night" loading="lazy">
             <div class="media-caption">
               <i class="fa-solid fa-image"></i>
               <span>Vincent van Gogh's The Starry Night — selected reference artwork.</span>
@@ -664,36 +647,19 @@
           </div>
         </div>
 
-        <!-- MY MATERIAL -->
         <div class="space-y-3 pt-2">
-          <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
+          <h4 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
             <i class="fa-solid fa-gem text-terracotta-500"></i> My Material
-          </h3>
+          </h4>
 
-          <!-- Technical Card -->
           <div class="overflow-x-auto rounded-xl border border-ivory-300 bg-white">
             <table class="w-full text-left text-xs sm:text-sm tech-table border-collapse">
               <tbody class="divide-y divide-ivory-200 font-sans">
-                <tr class="hover:bg-ivory-50/60 transition">
-                  <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700 w-1/2">Material</td>
-                  <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900 w-1/2">Acrylic</td>
-                </tr>
-                <tr class="hover:bg-ivory-50/60 transition">
-                  <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Thickness</td>
-                  <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">2 mm</td>
-                </tr>
-                <tr class="hover:bg-ivory-50/60 transition">
-                  <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Colour</td>
-                  <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">Black</td>
-                </tr>
-                <tr class="hover:bg-ivory-50/60 transition">
-                  <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Final Product</td>
-                  <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">Keychain</td>
-                </tr>
-                <tr class="hover:bg-ivory-50/60 transition">
-                  <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Source</td>
-                  <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">Laboratory-provided material</td>
-                </tr>
+                <tr class="hover:bg-ivory-50/60 transition"><td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700 w-1/2">Material</td><td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900 w-1/2">Acrylic</td></tr>
+                <tr class="hover:bg-ivory-50/60 transition"><td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Thickness</td><td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">2 mm</td></tr>
+                <tr class="hover:bg-ivory-50/60 transition"><td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Colour</td><td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">Black</td></tr>
+                <tr class="hover:bg-ivory-50/60 transition"><td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Final Product</td><td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">Keychain</td></tr>
+                <tr class="hover:bg-ivory-50/60 transition"><td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Source</td><td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">Laboratory-provided material</td></tr>
               </tbody>
             </table>
           </div>
@@ -705,15 +671,14 @@
         </div>
       </section>
 
-      <!-- ==================== 04 — FROM IMAGE TO LASER-READY FILE ==================== -->
+      <!-- 04 — FROM IMAGE TO LASER-READY FILE -->
       <section id="image-to-file" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
         <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
           <span class="text-xs font-mono text-terracotta-600 font-bold uppercase tracking-wider">04</span>
           <span class="text-charcoal-300">&bull;</span>
-          <h2 class="font-serif text-2xl font-bold text-charcoal-900">FROM IMAGE TO LASER-READY FILE</h2>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">FROM IMAGE TO LASER-READY FILE</h3>
         </div>
 
-        <!-- Text-Based Process Pipeline -->
         <div class="p-5 rounded-xl bg-ivory-50 border border-ivory-300 space-y-3">
           <div class="font-mono text-xs font-bold uppercase text-terracotta-700 tracking-wide">Conversion Pipeline:</div>
           <div class="flex flex-wrap items-center justify-between gap-2 text-center text-xs font-mono font-bold">
@@ -729,7 +694,6 @@
           </div>
         </div>
 
-        <!-- Actual Process Steps -->
         <div class="p-5 rounded-xl bg-white border border-ivory-300 space-y-2.5">
           <div class="font-mono text-xs font-bold uppercase text-charcoal-900">Actual Process:</div>
           <ol class="text-xs sm:text-sm text-charcoal-700 space-y-2 list-decimal pl-5">
@@ -742,19 +706,18 @@
         </div>
       </section>
 
-      <!-- ==================== 05 — PREPARING THE DESIGN ==================== -->
+      <!-- 05 — PREPARING THE DESIGN -->
       <section id="preparing-design" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
         <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
           <span class="text-xs font-mono text-terracotta-600 font-bold uppercase tracking-wider">05</span>
           <span class="text-charcoal-300">&bull;</span>
-          <h2 class="font-serif text-2xl font-bold text-charcoal-900">PREPARING THE DESIGN</h2>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">PREPARING THE DESIGN</h3>
         </div>
 
         <p class="text-sm sm:text-base text-charcoal-700 leading-relaxed">
           Inside RDWorks, I completed the digital design preparation:
         </p>
 
-        <!-- Preparation Checklist -->
         <div class="p-5 rounded-xl bg-ivory-50 border border-ivory-200 space-y-2 text-xs sm:text-sm text-charcoal-800">
           <div class="flex items-center gap-2.5"><i class="fa-solid fa-check text-terracotta-500"></i> Checked imported geometry</div>
           <div class="flex items-center gap-2.5"><i class="fa-solid fa-check text-terracotta-500"></i> Adjusted the design size</div>
@@ -766,27 +729,24 @@
           <div class="flex items-center gap-2.5"><i class="fa-solid fa-check text-terracotta-500"></i> Verified the final layout</div>
         </div>
 
-        <!-- RDWorks Design Screenshot -->
         <div class="blog-media-container cursor-pointer max-w-xl mx-auto" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="images/week-06/rdworks-design.png" alt="RDWorks design layout with text and contour" loading="lazy">
+          <img src="images/week-06/laser%20printing/rdworks-design.png" alt="RDWorks design layout with text and contour" loading="lazy">
           <div class="media-caption">
             <i class="fa-solid fa-vector-square"></i>
             <span>RDWorks design preparation showing vector contours, added text, and keychain perimeter.</span>
           </div>
         </div>
 
-        <!-- WHY THE LAYERS MATTER -->
         <div class="space-y-3 pt-2">
-          <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
+          <h4 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
             <i class="fa-solid fa-layer-group text-terracotta-500"></i> Why the Layers Matter
-          </h3>
+          </h4>
           <p class="text-xs sm:text-sm text-charcoal-700 leading-relaxed">
             Different colours were used to distinguish different laser operations—assigning red for vector cutting through the 2 mm acrylic boundary and black for surface raster scanning/engraving the artwork and text.
           </p>
 
-          <!-- RDWorks Nesting Screenshot -->
           <div class="blog-media-container cursor-pointer shadow-md" onclick="openLightbox(this.querySelector('img').src)">
-            <img src="images/week-06/rdworks.png" alt="Final design layout and nesting in RDWorks" loading="lazy">
+            <img src="images/week-06/laser%20printing/rdworks.png" alt="Final design layout and nesting in RDWorks" loading="lazy">
             <div class="media-caption">
               <i class="fa-solid fa-desktop"></i>
               <span>Final design layout and operation layers prepared in RDWorks.</span>
@@ -795,15 +755,14 @@
         </div>
       </section>
 
-      <!-- ==================== 06 — FABRICATION ==================== -->
+      <!-- 06 — FABRICATION -->
       <section id="fabrication" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
         <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
           <span class="text-xs font-mono text-terracotta-600 font-bold uppercase tracking-wider">06</span>
           <span class="text-charcoal-300">&bull;</span>
-          <h2 class="font-serif text-2xl font-bold text-charcoal-900">FABRICATION</h2>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">FABRICATION</h3>
         </div>
 
-        <!-- Machine Process Pipeline -->
         <div class="p-4 rounded-xl bg-ivory-50 border border-ivory-300">
           <div class="flex flex-wrap items-center justify-between gap-2 text-center text-xs font-mono font-bold">
             <span class="px-2.5 py-1 rounded bg-white border border-ivory-200 text-charcoal-900">DESIGN</span>
@@ -827,12 +786,11 @@
           </p>
         </div>
 
-        <!-- Laser Cutting Video Player -->
         <div class="blog-media-container max-w-2xl mx-auto shadow-md">
           <div class="relative bg-black rounded-t-xl overflow-hidden aspect-video">
             <video autoplay loop muted playsinline controls class="w-full h-full object-contain" preload="auto">
-              <source src="images/week-06/laser%20cutting%20video.mp4" type="video/mp4">
-              <source src="images/week-06/laser cutting video.mp4" type="video/mp4">
+              <source src="images/week-06/laser%20printing/laser%20cutting%20video.mp4" type="video/mp4">
+              <source src="images/week-06/laser printing/laser cutting video.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
@@ -843,15 +801,14 @@
         </div>
       </section>
 
-      <!-- ==================== 07 — THE FIRST ATTEMPT ==================== -->
+      <!-- 07 — THE FIRST ATTEMPT -->
       <section id="first-attempt" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
         <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
           <span class="text-xs font-mono text-rose-700 font-bold uppercase tracking-wider">07</span>
           <span class="text-charcoal-300">&bull;</span>
-          <h2 class="font-serif text-2xl font-bold text-charcoal-900">THE FIRST ATTEMPT</h2>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">THE FIRST ATTEMPT</h3>
         </div>
 
-        <!-- Natural Troubleshooting Narrative -->
         <div class="space-y-4">
           <div class="p-4 rounded-xl bg-rose-50/70 border border-rose-200 text-xs sm:text-sm text-charcoal-800 space-y-1">
             <div class="font-mono font-bold text-rose-900 uppercase">The First Attempt:</div>
@@ -875,7 +832,6 @@
           </div>
         </div>
 
-        <!-- Visual Troubleshooting Progression -->
         <div class="p-4 rounded-xl bg-ivory-50 border border-ivory-200">
           <div class="grid grid-cols-1 sm:grid-cols-4 gap-2 text-center text-xs font-mono">
             <div class="p-2.5 rounded-lg bg-white border border-rose-200">
@@ -897,26 +853,23 @@
           </div>
         </div>
 
-        <!-- Visual Comparison: Failed Output vs Corrected Output -->
         <div class="space-y-3 pt-1">
           <div class="text-xs font-mono font-bold uppercase tracking-wider text-charcoal-800">
             Physical Proof: Attempt 01 vs. Attempt 02
           </div>
           <div class="comparison-grid">
-            <!-- First attempt -->
             <div class="blog-media-container relative cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
               <span class="comparison-badge badge-fail"><i class="fa-solid fa-xmark mr-1"></i> Failed Output</span>
-              <img src="images/week-06/failed-attempt.jpg" alt="Failed output of starry nights showing reversed letters" loading="lazy">
+              <img src="images/week-06/laser%20printing/failed-attempt.jpg" alt="Failed output of starry nights showing reversed letters" loading="lazy">
               <div class="media-caption">
                 <i class="fa-solid fa-rotate-left"></i>
                 <span>Failed output: unmirrored orientation caused letters to appear reversed.</span>
               </div>
             </div>
 
-            <!-- Second attempt -->
             <div class="blog-media-container relative cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
               <span class="comparison-badge badge-success"><i class="fa-solid fa-check mr-1"></i> Corrected Output</span>
-              <img src="images/week-06/final-keychain.jpg" alt="Corrected output with proper orientation" loading="lazy">
+              <img src="images/week-06/laser%20printing/final-keychain.jpg" alt="Corrected output with proper orientation" loading="lazy">
               <div class="media-caption">
                 <i class="fa-solid fa-circle-check"></i>
                 <span>Corrected output: mirrored in RDWorks; text reads forward with clean edges.</span>
@@ -926,28 +879,26 @@
         </div>
       </section>
 
-      <!-- ==================== 08 — FINAL OUTCOME ==================== -->
+      <!-- 08 — FINAL OUTCOME -->
       <section id="final-outcome" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
         <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
           <span class="text-xs font-mono text-emerald-700 font-bold uppercase tracking-wider">08</span>
           <span class="text-charcoal-300">&bull;</span>
-          <h2 class="font-serif text-2xl font-bold text-charcoal-900">FINAL OUTCOME</h2>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">FINAL OUTCOME</h3>
         </div>
 
         <p class="text-sm sm:text-base text-charcoal-700 leading-relaxed font-normal">
           The final result was a black acrylic keychain featuring the Starry Night-inspired design and text. After correcting the mirroring issue, the second output came out clean and correctly oriented.
         </p>
 
-        <!-- Large Hero Photograph -->
         <div class="blog-media-container cursor-pointer shadow-lg max-w-2xl mx-auto" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="images/week-06/final-keychain.jpg" alt="Final black acrylic laser-cut keychain" loading="lazy" class="w-full">
+          <img src="images/week-06/laser%20printing/final-keychain.jpg" alt="Final black acrylic laser-cut keychain" loading="lazy" class="w-full">
           <div class="media-caption">
             <i class="fa-solid fa-key"></i>
             <span>Final black acrylic laser-cut keychain featuring Starry Night design and typography.</span>
           </div>
         </div>
 
-        <!-- Compact Technical Summary Card -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-xs font-mono">
           <div class="p-3 rounded-xl bg-ivory-50 border border-ivory-200">
             <div class="text-charcoal-500 text-[10px] uppercase font-bold">Material</div>
@@ -971,12 +922,11 @@
           <strong class="text-charcoal-800">Job Settings Note:</strong> The machine's listed cutting/engraving speeds (25 m/min and 55 m/min) represent nominal maximum mechanical limits. Actual job settings (power and speed percentages) are configured and logged directly inside RDWorks.
         </div>
 
-        <!-- Video: Demonstration of the Corrected Keychain -->
         <div class="blog-media-container max-w-2xl mx-auto shadow-md">
           <div class="relative bg-black rounded-t-xl overflow-hidden aspect-video">
             <video autoplay loop muted playsinline controls class="w-full h-full object-contain" preload="auto">
-              <source src="images/week-06/correction%20of%20the%20failed%20product.mp4" type="video/mp4">
-              <source src="images/week-06/correction of the failed product.mp4" type="video/mp4">
+              <source src="images/week-06/laser%20printing/correction%20of%20the%20failed%20product.mp4" type="video/mp4">
+              <source src="images/week-06/laser printing/correction of the failed product.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
@@ -987,12 +937,12 @@
         </div>
       </section>
 
-      <!-- ==================== 09 — WHAT I LEARNED ==================== -->
+      <!-- 09 — WHAT I LEARNED -->
       <section id="what-i-learned" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
         <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
           <span class="text-xs font-mono text-terracotta-600 font-bold uppercase tracking-wider">09</span>
           <span class="text-charcoal-300">&bull;</span>
-          <h2 class="font-serif text-2xl font-bold text-charcoal-900">WHAT I LEARNED</h2>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">WHAT I LEARNED</h3>
         </div>
 
         <div class="space-y-4 text-sm sm:text-base text-charcoal-800 leading-relaxed">
@@ -1004,9 +954,7 @@
           </p>
         </div>
 
-        <!-- Four Organized Learning Blocks -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <!-- Block 1: What I Learned -->
           <div class="p-5 rounded-xl bg-ivory-50 border border-ivory-200 space-y-2">
             <div class="font-mono text-xs font-bold uppercase text-terracotta-700 flex items-center gap-2">
               <i class="fa-solid fa-graduation-cap"></i> What I Learned
@@ -1020,7 +968,6 @@
             </ul>
           </div>
 
-          <!-- Block 2: What Challenged Me -->
           <div class="p-5 rounded-xl bg-rose-50/50 border border-rose-200 space-y-2">
             <div class="font-mono text-xs font-bold uppercase text-rose-800 flex items-center gap-2">
               <i class="fa-solid fa-triangle-exclamation"></i> What Challenged Me
@@ -1032,7 +979,6 @@
             </ul>
           </div>
 
-          <!-- Block 3: What I Improved -->
           <div class="p-5 rounded-xl bg-emerald-50/50 border border-emerald-200 space-y-2">
             <div class="font-mono text-xs font-bold uppercase text-emerald-800 flex items-center gap-2">
               <i class="fa-solid fa-arrow-trend-up"></i> What I Improved
@@ -1045,7 +991,6 @@
             </ul>
           </div>
 
-          <!-- Block 4: Next Time -->
           <div class="p-5 rounded-xl bg-terracotta-50/50 border border-terracotta-200 space-y-2">
             <div class="font-mono text-xs font-bold uppercase text-terracotta-800 flex items-center gap-2">
               <i class="fa-solid fa-forward-step"></i> Next Time
@@ -1059,38 +1004,518 @@
         </div>
       </section>
 
-      <!-- ==================== 10 — REFERENCES & CREDITS ==================== -->
+      <!-- 10 — REFERENCES & CREDITS -->
       <section id="references" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-4">
         <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
           <span class="text-xs font-mono text-terracotta-600 font-bold uppercase tracking-wider">10</span>
           <span class="text-charcoal-300">&bull;</span>
-          <h2 class="font-serif text-2xl font-bold text-charcoal-900">REFERENCES &amp; CREDITS</h2>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">REFERENCES &amp; CREDITS</h3>
         </div>
 
         <ol class="text-xs sm:text-sm text-charcoal-700 space-y-2 list-decimal pl-5 font-sans leading-relaxed">
-          <li>
-            <strong class="text-charcoal-900 font-semibold">FORGE Lab</strong> &mdash; Laser cutter safety rules and machine information displayed in the laboratory.
-          </li>
-          <li>
-            <strong class="text-charcoal-900 font-semibold">RDWorks</strong> &mdash; Software used for laser-cutting design preparation.
-          </li>
-          <li>
-            <strong class="text-charcoal-900 font-semibold">Converto</strong> &mdash; Used for JPG-to-DXF conversion.
-          </li>
-          <li>
-            <strong class="text-charcoal-900 font-semibold">Vincent van Gogh — The Starry Night</strong> &mdash; Selected as the reference artwork for the design.
-          </li>
+          <li><strong class="text-charcoal-900 font-semibold">FORGE Lab</strong> &mdash; Laser cutter safety rules and machine information displayed in the laboratory.</li>
+          <li><strong class="text-charcoal-900 font-semibold">RDWorks</strong> &mdash; Software used for laser-cutting design preparation.</li>
+          <li><strong class="text-charcoal-900 font-semibold">Converto</strong> &mdash; Used for JPG-to-DXF conversion.</li>
+          <li><strong class="text-charcoal-900 font-semibold">Vincent van Gogh — The Starry Night</strong> &mdash; Selected as the reference artwork for the design.</li>
         </ol>
       </section>
 
-    </article>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- ==================== CHAPTER 02 — 3D PRINTING =========================== -->
+    <!-- ========================================================================= -->
+    <section id="3d-printing" class="pt-16 mt-16 border-t-2 border-dashed border-ivory-300 space-y-12 text-charcoal-700 text-base leading-relaxed">
+
+      <!-- Chapter 02 Opening Section -->
+      <div class="space-y-4 pb-6 border-b border-ivory-300">
+        <div class="flex items-center gap-2 text-xs font-mono">
+          <span class="px-2.5 py-1 rounded bg-terracotta-50 text-terracotta-700 font-bold border border-terracotta-500/30">CHAPTER 02</span>
+          <span class="text-charcoal-400">&bull;</span>
+          <span class="text-charcoal-600">ADDITIVE MANUFACTURING</span>
+        </div>
+        
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal-900 tracking-tight">
+          02 / 3D PRINTING
+        </h2>
+        
+        <p class="font-serif italic text-lg sm:text-xl text-terracotta-600">
+          From a digital model to something you can hold.
+        </p>
+        
+        <blockquote class="p-4 sm:p-5 rounded-2xl bg-ivory-50 border-l-4 border-terracotta-500 text-sm sm:text-base text-charcoal-800 leading-relaxed font-normal shadow-2xs">
+          &ldquo;3D printing turns a digital model into a physical object by building it layer by layer. In this session, I explored the basics of additive manufacturing, worked with the Bambu Lab H2S, and turned a downloaded lip balm holder model into a functional keychain.&rdquo;
+        </blockquote>
+
+        <!-- 3D Printing Story Arc Jump Links -->
+        <div class="pt-3 flex flex-wrap items-center gap-1.5 text-[11px] font-mono text-charcoal-600">
+          <span class="font-semibold text-terracotta-700 mr-1">3D Flow:</span>
+          <a href="#3d-understanding" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">01 Understand</a>
+          <span class="text-charcoal-300">&rarr;</span>
+          <a href="#3d-printer-material" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">02 Printer &amp; Material</a>
+          <span class="text-charcoal-300">&rarr;</span>
+          <a href="#3d-idea-to-object" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">03 Idea to Object</a>
+          <span class="text-charcoal-300">&rarr;</span>
+          <a href="#3d-interactive-model" class="px-2 py-0.5 rounded bg-terracotta-50 text-terracotta-800 font-bold border border-terracotta-300 transition">04 Interactive 3D Model</a>
+          <span class="text-charcoal-300">&rarr;</span>
+          <a href="#3d-designing-strength" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">05 Strength &amp; Infill</a>
+          <span class="text-charcoal-300">&rarr;</span>
+          <a href="#3d-preparing-model" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">06 Model Prep</a>
+          <span class="text-charcoal-300">&rarr;</span>
+          <a href="#3d-preparing-print" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">07 Bambu Studio</a>
+          <span class="text-charcoal-300">&rarr;</span>
+          <a href="#3d-digital-to-physical" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">08 Print Execution</a>
+          <span class="text-charcoal-300">&rarr;</span>
+          <a href="#3d-final-result" class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-bold border border-emerald-200 transition">09 Final Result</a>
+          <span class="text-charcoal-300">&rarr;</span>
+          <a href="#3d-what-i-learned" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">10 Reflection</a>
+          <span class="text-charcoal-300">&rarr;</span>
+          <a href="#3d-source-files" class="px-2 py-0.5 rounded bg-ivory-100 hover:bg-terracotta-50 hover:text-terracotta-700 border border-ivory-200 transition">11 Source Files</a>
+        </div>
+      </div>
+
+      <!-- 1. UNDERSTANDING 3D PRINTING -->
+      <section id="3d-understanding" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
+        <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
+          <span class="text-xs font-mono text-terracotta-600 font-bold uppercase tracking-wider">01</span>
+          <span class="text-charcoal-300">&bull;</span>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">UNDERSTANDING 3D PRINTING</h3>
+        </div>
+
+        <p class="text-sm sm:text-base text-charcoal-700 leading-relaxed">
+          3D printing is an <strong>additive manufacturing process</strong>. Objects are created layer by layer from a digital 3D model. Unlike subtractive manufacturing (such as CNC milling or carving), where material is removed from a solid block, additive manufacturing builds geometry by depositing material precisely only where needed.
+        </p>
+
+        <!-- General Workflow Pipeline -->
+        <div class="space-y-3 pt-2">
+          <div class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
+            <i class="fa-solid fa-arrow-progress text-terracotta-500"></i> General Workflow Pipeline
+          </div>
+          
+          <div class="p-4 rounded-xl bg-ivory-50 border border-ivory-300">
+            <div class="flex flex-wrap items-center justify-between gap-2 text-center text-xs font-mono font-bold">
+              <span class="px-2.5 py-1.5 rounded-lg bg-white border border-ivory-200 text-charcoal-900">3D MODEL</span>
+              <span class="text-terracotta-500">&rarr;</span>
+              <span class="px-2.5 py-1.5 rounded-lg bg-white border border-ivory-200 text-charcoal-900">SLICING</span>
+              <span class="text-terracotta-500">&rarr;</span>
+              <span class="px-2.5 py-1.5 rounded-lg bg-white border border-ivory-200 text-charcoal-900">PRINTER SETUP</span>
+              <span class="text-terracotta-500">&rarr;</span>
+              <span class="px-2.5 py-1.5 rounded-lg bg-white border border-ivory-200 text-charcoal-900">LAYER-BY-LAYER PRINTING</span>
+              <span class="text-terracotta-500">&rarr;</span>
+              <span class="px-2.5 py-1.5 rounded-lg bg-terracotta-50 border border-terracotta-300 text-terracotta-800">FINAL OBJECT</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STL File Format Callout -->
+        <div class="p-4 rounded-xl bg-ivory-50 border border-ivory-200 space-y-1 text-xs sm:text-sm">
+          <div class="font-mono font-bold text-charcoal-900 flex items-center gap-2">
+            <i class="fa-solid fa-shapes text-terracotta-500"></i> STL (Stereolithography)
+          </div>
+          <p class="text-charcoal-700 leading-relaxed">
+            A common file format used to represent the surface geometry of a 3D object as a triangular mesh.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. THE PRINTER & MATERIAL -->
+      <section id="3d-printer-material" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
+        <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
+          <span class="text-xs font-mono text-terracotta-600 font-bold uppercase tracking-wider">02</span>
+          <span class="text-charcoal-300">&bull;</span>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">THE PRINTER &amp; MATERIAL</h3>
+        </div>
+
+        <!-- Clean Specification Layout -->
+        <div class="overflow-x-auto rounded-xl border border-ivory-300 bg-white">
+          <table class="w-full text-left text-xs sm:text-sm tech-table border-collapse">
+            <tbody class="divide-y divide-ivory-200 font-sans">
+              <tr class="hover:bg-ivory-50/60 transition">
+                <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700 w-1/2">Printer</td>
+                <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900 w-1/2">Bambu Lab H2S</td>
+              </tr>
+              <tr class="hover:bg-ivory-50/60 transition">
+                <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Material</td>
+                <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">Bambu PLA Basic</td>
+              </tr>
+              <tr class="hover:bg-ivory-50/60 transition">
+                <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Colour</td>
+                <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">White</td>
+              </tr>
+              <tr class="hover:bg-ivory-50/60 transition">
+                <td class="py-2.5 px-4 sm:px-6 font-mono font-medium text-charcoal-700">Software</td>
+                <td class="py-2.5 px-4 sm:px-6 font-semibold text-charcoal-900">Bambu Studio</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Printer Photograph -->
+        <div class="blog-media-container cursor-pointer max-w-2xl mx-auto" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="images/week-06/3D%20printing/bambu%20H2S.jpeg" alt="Bambu Lab H2S 3D Printer at FORGE laboratory" loading="lazy">
+          <div class="media-caption">
+            <i class="fa-solid fa-print"></i>
+            <span>Bambu Lab H2S 3D printer operated in the laboratory.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. FROM IDEA TO OBJECT -->
+      <section id="3d-idea-to-object" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
+        <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
+          <span class="text-xs font-mono text-terracotta-600 font-bold uppercase tracking-wider">03</span>
+          <span class="text-charcoal-300">&bull;</span>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">FROM IDEA TO OBJECT</h3>
+        </div>
+
+        <p class="text-sm sm:text-base text-charcoal-700 leading-relaxed">
+          I chose an online <strong>lip balm holder</strong> model and decided to turn it into a <strong>keychain</strong>, so the lip balm could be kept outside the bag and made more accessible during daily use.
+        </p>
+
+        <!-- Design Journey Specification Card -->
+        <div class="p-5 rounded-2xl bg-ivory-50 border border-ivory-200 space-y-3">
+          <div class="font-mono text-xs font-bold uppercase text-terracotta-700 tracking-wide">
+            Design Journey Parameters:
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-charcoal-800">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta-500"></i> <strong>Original idea:</strong> Lip balm holder</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta-500"></i> <strong>Intended use:</strong> Keychain attachment</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta-500"></i> <strong>Source:</strong> Downloaded online model</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta-500"></i> <strong>Modification:</strong> Rescaled/resized according to preference</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta-500"></i> <strong>Weight constraint:</strong> 50 g target</div>
+            <div class="flex items-center gap-2 font-semibold text-emerald-800"><i class="fa-solid fa-scale-balanced text-emerald-600"></i> <strong>Final model weight:</strong> Approximately 27 g</div>
+            <div class="flex items-center gap-2 sm:col-span-2 text-charcoal-700"><i class="fa-solid fa-circle-info text-terracotta-500"></i> <strong>Supports:</strong> Not required for this self-supporting vertical geometry</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. INTERACTIVE 3D MODEL (HERO 3D VIEWER) -->
+      <section id="3d-interactive-model" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
+        <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
+          <span class="text-xs font-mono text-terracotta-600 font-bold uppercase tracking-wider">04</span>
+          <span class="text-charcoal-300">&bull;</span>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">INTERACTIVE 3D MODEL</h3>
+        </div>
+
+        <div class="text-center space-y-1">
+          <p class="text-sm text-charcoal-700 leading-relaxed">
+            Inspect the actual web-ready 3D model of the lip balm holder keychain:
+          </p>
+          <div class="font-mono text-xs font-bold text-terracotta-700 tracking-wide uppercase flex items-center justify-center gap-2">
+            <i class="fa-solid fa-hand-pointer text-terracotta-500"></i>
+            <span>Drag to rotate &bull; Scroll to zoom</span>
+          </div>
+        </div>
+
+        <!-- WebGL 3D Model Viewer Container -->
+        <div class="blog-media-container shadow-md bg-[#FBF9F5] border border-ivory-300 rounded-2xl overflow-hidden relative">
+          <model-viewer
+            src="images/week-06/3D%20printing/Heart_lipbalm_holder_17x85.3mf.glb"
+            alt="Interactive 3D model of the Lip Balm Holder Keychain"
+            camera-controls
+            touch-action="pan-y"
+            shadow-intensity="1"
+            shadow-softness="0.8"
+            exposure="1.0"
+            camera-orbit="45deg 75deg 105%"
+            min-camera-orbit="auto auto 40%"
+            max-camera-orbit="auto auto 250%"
+            style="width: 100%; height: 500px; background-color: #FAF7F2;"
+          >
+            <div slot="poster" class="flex flex-col items-center justify-center h-full text-charcoal-500 font-mono text-xs gap-2">
+              <i class="fa-solid fa-spinner fa-spin text-terracotta-500 text-2xl"></i>
+              <span>Loading 3D model...</span>
+            </div>
+          </model-viewer>
+          
+          <div class="media-caption justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-cube"></i>
+              <span>Interactive GLB Model: Heart Lip Balm Holder Keychain (27 g)</span>
+            </div>
+            <a href="images/week-06/3D%20printing/Heart_lipbalm_holder_17x85.3mf.glb" download class="text-[11px] font-mono text-terracotta-600 hover:text-terracotta-700 hover:underline flex items-center gap-1">
+              <i class="fa-solid fa-download"></i> Download GLB
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. DESIGNING FOR STRENGTH -->
+      <section id="3d-designing-strength" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
+        <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
+          <span class="text-xs font-mono text-terracotta-600 font-bold uppercase tracking-wider">05</span>
+          <span class="text-charcoal-300">&bull;</span>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">DESIGNING FOR STRENGTH</h3>
+        </div>
+
+        <!-- Infill Explanation -->
+        <div class="space-y-3">
+          <h4 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
+            <i class="fa-solid fa-border-all text-terracotta-500"></i> Infill
+          </h4>
+          <p class="text-sm sm:text-base text-charcoal-700 leading-relaxed">
+            Infill is the internal structure inside a 3D printed object and affects weight, strength, and print time. Rather than printing solid plastic, a geometric pattern is generated inside the walls.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+            <div class="p-4 rounded-xl bg-ivory-50 border border-ivory-200 space-y-1">
+              <div class="font-mono font-bold text-charcoal-900">Triangle Infill</div>
+              <p class="text-charcoal-600 leading-relaxed">Provides balanced multi-directional stability and high stiffness with moderate print time.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-ivory-50 border border-ivory-200 space-y-1">
+              <div class="font-mono font-bold text-charcoal-900">Honeycomb Infill</div>
+              <p class="text-charcoal-600 leading-relaxed">My observation was that while triangle infill provides stability, honeycomb can provide greater structural stability depending on the application.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Directional Pressures & Orientation -->
+        <div class="space-y-3 pt-2">
+          <h4 class="font-mono text-xs font-bold uppercase tracking-wider text-charcoal-900 flex items-center gap-2">
+            <i class="fa-solid fa-arrows-up-down-left-right text-terracotta-500"></i> Directional Pressures &amp; Orientation
+          </h4>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+            <div class="p-4 rounded-xl bg-ivory-50 border border-ivory-200 space-y-1">
+              <div class="font-mono font-bold text-charcoal-900">Vertical Pressure</div>
+              <p class="text-charcoal-600 leading-relaxed">Force acting along the height/orientation of the object.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-ivory-50 border border-ivory-200 space-y-1">
+              <div class="font-mono font-bold text-charcoal-900">Horizontal Pressure</div>
+              <p class="text-charcoal-600 leading-relaxed">Force acting across the object.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-ivory-50 border border-ivory-200 text-xs sm:text-sm text-charcoal-700 leading-relaxed">
+            Because 3D printed objects are built layer by layer, print orientation and internal structure strongly determine where the part can resist force and prevent delamination under mechanical load.
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. PREPARING MY MODEL -->
+      <section id="3d-preparing-model" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
+        <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
+          <span class="text-xs font-mono text-terracotta-600 font-bold uppercase tracking-wider">06</span>
+          <span class="text-charcoal-300">&bull;</span>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">PREPARING MY MODEL</h3>
+        </div>
+
+        <!-- Process Progression -->
+        <div class="p-4 rounded-xl bg-ivory-50 border border-ivory-300">
+          <div class="flex flex-wrap items-center justify-between gap-2 text-center text-xs font-mono font-bold">
+            <span class="px-2.5 py-1.5 rounded-lg bg-white border border-ivory-200 text-charcoal-900">Online model</span>
+            <span class="text-terracotta-500">&rarr;</span>
+            <span class="px-2.5 py-1.5 rounded-lg bg-white border border-ivory-200 text-charcoal-900">Resize</span>
+            <span class="text-terracotta-500">&rarr;</span>
+            <span class="px-2.5 py-1.5 rounded-lg bg-white border border-ivory-200 text-charcoal-900">Check weight</span>
+            <span class="text-terracotta-500">&rarr;</span>
+            <span class="px-2.5 py-1.5 rounded-lg bg-terracotta-50 border border-terracotta-300 text-terracotta-800">Prepare for printing</span>
+          </div>
+        </div>
+
+        <ul class="text-xs sm:text-sm text-charcoal-700 space-y-2 list-disc pl-5 leading-relaxed font-sans">
+          <li>The downloaded model was approximately within the project requirements.</li>
+          <li>The target constraint was <strong>50 g</strong>.</li>
+          <li>My final model was approximately <strong>27 g</strong>.</li>
+          <li>I resized/rescaled the model according to my preference.</li>
+          <li>Supports were not required.</li>
+        </ul>
+      </section>
+
+      <!-- 7. PREPARING THE PRINT -->
+      <section id="3d-preparing-print" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
+        <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
+          <span class="text-xs font-mono text-terracotta-600 font-bold uppercase tracking-wider">07</span>
+          <span class="text-charcoal-300">&bull;</span>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">PREPARING THE PRINT</h3>
+        </div>
+
+        <div class="space-y-3 text-sm sm:text-base text-charcoal-700 leading-relaxed">
+          <p>
+            <strong>Bambu Studio</strong> was used to prepare and slice the model for printing and to interface with the printer setup.
+          </p>
+          <p>
+            Slicing converts the digital 3D model into printable layers and precise motion instructions for the printer's extruder.
+          </p>
+        </div>
+
+        <!-- Bambu Studio Software Preview -->
+        <div class="blog-media-container cursor-pointer max-w-2xl mx-auto shadow-md" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="images/week-06/3D%20printing/bambu%20labs%20preview.jpeg" alt="Bambu Studio slicer preview showing lip balm holder" loading="lazy">
+          <div class="media-caption">
+            <i class="fa-solid fa-desktop"></i>
+            <span>Bambu Studio model preview and slicing setup for the lip balm holder.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. FROM DIGITAL MODEL TO PHYSICAL PRINT -->
+      <section id="3d-digital-to-physical" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
+        <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
+          <span class="text-xs font-mono text-terracotta-600 font-bold uppercase tracking-wider">08</span>
+          <span class="text-charcoal-300">&bull;</span>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">FROM DIGITAL MODEL TO PHYSICAL PRINT</h3>
+        </div>
+
+        <!-- Process Flow -->
+        <div class="p-4 rounded-xl bg-ivory-50 border border-ivory-300">
+          <div class="flex flex-wrap items-center justify-between gap-2 text-center text-xs font-mono font-bold">
+            <span class="px-2.5 py-1.5 rounded-lg bg-white border border-ivory-200 text-charcoal-900">MODEL</span>
+            <span class="text-terracotta-500">&rarr;</span>
+            <span class="px-2.5 py-1.5 rounded-lg bg-white border border-ivory-200 text-charcoal-900">SLICE</span>
+            <span class="text-terracotta-500">&rarr;</span>
+            <span class="px-2.5 py-1.5 rounded-lg bg-white border border-ivory-200 text-charcoal-900">PREPARE</span>
+            <span class="text-terracotta-500">&rarr;</span>
+            <span class="px-2.5 py-1.5 rounded-lg bg-white border border-ivory-200 text-charcoal-900">PRINT</span>
+            <span class="text-terracotta-500">&rarr;</span>
+            <span class="px-2.5 py-1.5 rounded-lg bg-terracotta-50 border border-terracotta-300 text-terracotta-800">OBJECT</span>
+          </div>
+        </div>
+
+        <p class="text-sm sm:text-base text-charcoal-800 leading-relaxed font-normal">
+          Watching the digital 3D model transform into a tangible, physical lip balm holder on the printer bed was an eye-opening experience. Seeing the Bambu Lab H2S deposit each horizontal layer of white PLA with microscopic accuracy brought the CAD geometry to life as a functional, real-world accessory.
+        </p>
+
+        <!-- 3D Printing Video Player -->
+        <div class="blog-media-container max-w-2xl mx-auto shadow-md">
+          <div class="relative bg-black rounded-t-xl overflow-hidden aspect-video">
+            <video autoplay loop muted playsinline controls class="w-full h-full object-contain" preload="auto">
+              <source src="images/week-06/3D%20printing/3D%20printing%20video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="media-caption">
+            <i class="fa-solid fa-video"></i>
+            <span>3D printing process in progress on the Bambu Lab H2S.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. FINAL RESULT -->
+      <section id="3d-final-result" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
+        <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
+          <span class="text-xs font-mono text-emerald-700 font-bold uppercase tracking-wider">09</span>
+          <span class="text-charcoal-300">&bull;</span>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">FINAL RESULT</h3>
+        </div>
+
+        <blockquote class="p-4 sm:p-5 rounded-2xl bg-emerald-50/70 border-l-4 border-emerald-600 text-sm sm:text-base text-emerald-950 leading-relaxed font-medium">
+          &ldquo;A compact lip balm holder designed to stay outside the bag, making the lip balm easier to carry and access.&rdquo;
+        </blockquote>
+
+        <!-- Side-by-Side Photographs of the Final Physical Print -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="blog-media-container cursor-pointer shadow-md" onclick="openLightbox(this.querySelector('img').src)">
+            <img src="images/week-06/3D%20printing/lip%20balm.jpeg" alt="Final 3D printed lip balm holder keychain" loading="lazy">
+            <div class="media-caption">
+              <i class="fa-solid fa-camera"></i>
+              <span>Final white PLA 3D printed lip balm holder keychain.</span>
+            </div>
+          </div>
+
+          <div class="blog-media-container cursor-pointer shadow-md" onclick="openLightbox(this.querySelector('img').src)">
+            <img src="images/week-06/3D%20printing/lip%20balm%201.jpeg" alt="Final 3D printed lip balm holder showing keyring attachment" loading="lazy">
+            <div class="media-caption">
+              <i class="fa-solid fa-key"></i>
+              <span>Keyring attachment view for outside-the-bag accessibility.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. WHAT I LEARNED -->
+      <section id="3d-what-i-learned" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
+        <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
+          <span class="text-xs font-mono text-terracotta-600 font-bold uppercase tracking-wider">10</span>
+          <span class="text-charcoal-300">&bull;</span>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">WHAT I LEARNED</h3>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-ivory-50 via-white to-terracotta-50/40 border border-terracotta-200/80 shadow-xs space-y-4 text-charcoal-800 text-sm sm:text-base leading-relaxed">
+          <p>
+            Working with the Bambu Lab H2S taught me the foundational principles of additive manufacturing. I learned how a digital 3D model becomes printable through slicing, converting mesh polygons into toolpaths that the machine executes layer by layer.
+          </p>
+          <p>
+            I understood the importance of infill geometry and structural design—how triangle versus honeycomb patterns balance weight, printing time, and rigidity, and how horizontal and vertical forces require thoughtful print orientation to prevent delamination.
+          </p>
+          <p>
+            Preparing the model in Bambu Studio also highlighted how weight constraints directly shape design decisions: resizing the downloaded model allowed me to keep the holder durable while bringing the final piece to approximately 27 g—well under the 50 g target. Most importantly, I learned the critical distinction between simply downloading a 3D model and systematically preparing it for real-world fabrication.
+          </p>
+        </div>
+      </section>
+
+      <!-- 11. SOURCE FILES -->
+      <section id="3d-source-files" class="editorial-card rounded-2xl p-6 sm:p-8 space-y-6">
+        <div class="flex items-center gap-2 pb-2 border-b border-ivory-300">
+          <span class="text-xs font-mono text-terracotta-600 font-bold uppercase tracking-wider">11</span>
+          <span class="text-charcoal-300">&bull;</span>
+          <h3 class="font-serif text-2xl font-bold text-charcoal-900">SOURCE FILES</h3>
+        </div>
+
+        <p class="text-xs sm:text-sm text-charcoal-600">
+          Downloadable 3D project files for reproduction and digital inspection:
+        </p>
+
+        <!-- Working Source File Download Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <!-- GLB Card -->
+          <a href="images/week-06/3D%20printing/Heart_lipbalm_holder_17x85.3mf.glb" download class="p-4 rounded-xl border border-ivory-300 hover:border-terracotta-400 bg-ivory-50/60 hover:bg-terracotta-50/30 transition flex flex-col justify-between group">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 rounded-lg bg-terracotta-100 text-terracotta-700 flex items-center justify-center text-lg font-bold font-mono group-hover:scale-105 transition">
+                <i class="fa-solid fa-cube"></i>
+              </div>
+              <div>
+                <div class="font-mono font-bold text-charcoal-900 text-xs sm:text-sm">GLB Model</div>
+                <div class="text-[11px] text-charcoal-500 font-mono">Web 3D Asset</div>
+              </div>
+            </div>
+            <span class="text-xs font-mono font-semibold text-terracotta-700 flex items-center gap-1.5">
+              <i class="fa-solid fa-download text-[11px]"></i> Download GLB
+            </span>
+          </a>
+
+          <!-- STL Card -->
+          <a href="images/week-06/3D%20printing/Heart_lipbalm_holder_17x85.stl" download class="p-4 rounded-xl border border-ivory-300 hover:border-terracotta-400 bg-ivory-50/60 hover:bg-terracotta-50/30 transition flex flex-col justify-between group">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center text-lg font-bold font-mono group-hover:scale-105 transition">
+                <i class="fa-solid fa-shapes"></i>
+              </div>
+              <div>
+                <div class="font-mono font-bold text-charcoal-900 text-xs sm:text-sm">STL Mesh File</div>
+                <div class="text-[11px] text-charcoal-500 font-mono">3D Printable Mesh</div>
+              </div>
+            </div>
+            <span class="text-xs font-mono font-semibold text-terracotta-700 flex items-center gap-1.5">
+              <i class="fa-solid fa-download text-[11px]"></i> Download STL
+            </span>
+          </a>
+
+          <!-- 3MF Card -->
+          <a href="images/week-06/3D%20printing/Heart_lipbalm_holder_17x85.3mf" download class="p-4 rounded-xl border border-ivory-300 hover:border-terracotta-400 bg-ivory-50/60 hover:bg-terracotta-50/30 transition flex flex-col justify-between group">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center text-lg font-bold font-mono group-hover:scale-105 transition">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <div>
+                <div class="font-mono font-bold text-charcoal-900 text-xs sm:text-sm">3MF Project</div>
+                <div class="text-[11px] text-charcoal-500 font-mono">Bambu Studio File</div>
+              </div>
+            </div>
+            <span class="text-xs font-mono font-semibold text-terracotta-700 flex items-center gap-1.5">
+              <i class="fa-solid fa-download text-[11px]"></i> Download 3MF
+            </span>
+          </a>
+        </div>
+      </section>
+
+    </section>
 
     <!-- Bottom Navigation -->
     <div class="pt-10 mt-10 border-t border-ivory-300 flex flex-col sm:flex-row items-center justify-between gap-4">
       <a href="index.html#protosem" class="px-5 py-2.5 rounded-lg bg-white border border-ivory-300 hover:border-terracotta-400 hover:text-terracotta-600 text-xs font-mono text-charcoal-700 transition flex items-center gap-2 shadow-2xs">
         <i class="fa-solid fa-arrow-left text-terracotta-500"></i> Back to ProtoSem Timeline
       </a>
-      <span class="text-xs font-mono text-charcoal-500">Week 06 &bull; Laser Cutting &bull; ProtoSem 25.2</span>
+      <span class="text-xs font-mono text-charcoal-500">Week 06 &bull; Digital Fabrication &bull; ProtoSem 25.2</span>
     </div>
 
   </main>
@@ -1112,6 +1537,29 @@
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (winScroll / height) * 100;
       document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+
+    // Chapter Switcher Highlight on Scroll
+    window.addEventListener('scroll', () => {
+      const laserSec = document.getElementById('laser-cutting');
+      const printSec = document.getElementById('3d-printing');
+      const tabLaser = document.getElementById('tab-laser');
+      const tab3d = document.getElementById('tab-3d');
+      
+      if (!laserSec || !printSec || !tabLaser || !tab3d) return;
+      
+      const scrollPos = window.scrollY + 200;
+      if (scrollPos >= printSec.offsetTop) {
+        tab3d.classList.add('bg-terracotta-500', 'text-white', 'shadow-2xs');
+        tab3d.classList.remove('bg-ivory-50', 'text-charcoal-700', 'border');
+        tabLaser.classList.remove('bg-terracotta-500', 'text-white', 'shadow-2xs');
+        tabLaser.classList.add('bg-ivory-50', 'text-charcoal-700', 'border');
+      } else {
+        tabLaser.classList.add('bg-terracotta-500', 'text-white', 'shadow-2xs');
+        tabLaser.classList.remove('bg-ivory-50', 'text-charcoal-700', 'border');
+        tab3d.classList.remove('bg-terracotta-500', 'text-white', 'shadow-2xs');
+        tab3d.classList.add('bg-ivory-50', 'text-charcoal-700', 'border');
+      }
     });
 
     // Lightbox Controls
